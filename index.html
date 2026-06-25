@@ -10,208 +10,39 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <h1 class="site-name">Christine Corry</h1>
+    <a class="site-name" href="index.html">Christine Corry</a>
     <nav class="site-nav">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#publications">Publications</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">Substack</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <section id="about" class="hero">
+  <section class="hero">
     <div class="container">
       <div class="headshot">
         <img src="assets/headshot.jpg" alt="Christine Corry" onerror="this.parentElement.classList.add('headshot--empty')">
       </div>
       <h2 class="hero-name">Christine Corry</h2>
-      <p class="tagline">Perpetually concerned, trying to do something about it. Recent UC Berkeley graduate interested in AI Safety empirical research or public policy.</p>
+      <p class="tagline">Perpetually concerned, trying to do something about it.</p>
     </div>
   </section>
 
-  <section id="experience" class="section">
-    <div class="container">
-      <h2>Work Experience</h2>
-
-      <article class="entry">
-        <div class="entry-header">
-          <h3>AI Safety Research Fellow</h3>
-          <span class="entry-date">Jun 2026 – Present</span>
-        </div>
-        <p class="entry-org">Second Look Research — University of Chicago Existential Risk Laboratory (XLab) · Chicago, IL</p>
-        <ul>
-          <li>Producing open-source replications of empirical AI safety research as part of a 10-week fellowship focused on strengthening the epistemic foundations of the field.</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <div class="entry-header">
-          <h3>Rubin Observatory ML and Optical Astrophysics Student Researcher</h3>
-          <span class="entry-date">Sep 2025 – Jun 2026</span>
-        </div>
-        <p class="entry-org">Legacy Survey of Space and Time — SLAC Laboratory · Berkeley, CA</p>
-        <ul>
-          <li>Applied Pearson correlation, OLS/Ridge regression, and PCA across 13 thermal sensors to characterize residual Z4 focus drift across 23 open-loop stability runs at the Vera C. Rubin Observatory.</li>
-          <li>Found thermal-focus coupling to be distributed across multiple mechanisms and timescales, ruling out simple linear models and motivating future nonlinear and multivariate approaches.</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <div class="entry-header">
-          <h3>Human Systems Integration Research Assistant</h3>
-          <span class="entry-date">May 2023 – May 2026</span>
-        </div>
-        <p class="entry-org">NASA Ames Research Center / SJSURF · Moffett Field, CA</p>
-        <ul>
-          <li>Analyzed pilot anticipatory monitoring performance across a pre-test/intervention/post-test web-based study of 38 airline pilots, contributing to findings of significant post-tutorial gains on scenario-based assessment tasks.</li>
-          <li>Visualized statistical findings on &gt;2,000 data points in RStudio and formalized method descriptions and cognitive findings for technical memorandums submitted for government use.</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <div class="entry-header">
-          <h3>AI Policy and Computer Vision Student Researcher</h3>
-          <span class="entry-date">Jan 2026 – Apr 2026</span>
-        </div>
-        <p class="entry-org">UC Berkeley School of Information — Farid Lab · Berkeley, CA</p>
-        <ul>
-          <li>Analytically compared machine learning image inverse problem systems, from linear and nearest neighbor to denoising, deblurring, and super-resolution, with optical character recognition and a human perceptual study.</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <div class="entry-header">
-          <h3>Applied ML Software Engineering Intern</h3>
-          <span class="entry-date">May 2025 – Aug 2025</span>
-        </div>
-        <p class="entry-org">Apple · Cupertino, CA</p>
-        <ul>
-          <li>Designed and developed an internal LLM-based tool to streamline Quality Engineering workflows, reducing manual testing overhead and improving bug detection accuracy across product development cycles.</li>
-          <li>Built end-to-end ML pipeline from data preprocessing to model deployment, implementing scalable algorithms to expand use across Quality Engineering and Software Engineering teams.</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <div class="entry-header">
-          <h3>Program Manager</h3>
-          <span class="entry-date">Jan 2023 – Present</span>
-        </div>
-        <p class="entry-org">Science Corps · Remote</p>
-        <ul>
-          <li>Managed recruitment pipeline targeting top university graduate programs to place PhD fellows in underprivileged communities abroad, expanding access to science education.</li>
-          <li>Coordinated social media outreach and strategic planning to support fellow operations and program growth.</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <div class="entry-header">
-          <h3>Machine Learning Research Intern</h3>
-          <span class="entry-date">Jan 2024 – May 2025</span>
-        </div>
-        <p class="entry-org">Innovative Genomics Institute — Rubin Lab · Berkeley, CA</p>
-        <ul>
-          <li>Optimized hyperparameters for a 229M parameter DNA generation LLM trained from scratch, evaluating novel sequence outputs via BLAST, Foldseek, and InterPro.</li>
-        </ul>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="education" class="section">
-    <div class="container">
-      <h2>Education</h2>
-      <article class="entry">
-        <div class="entry-header">
-          <h3>University of California, Berkeley</h3>
-          <span class="entry-date">May 2026</span>
-        </div>
-        <p class="entry-org">B.A. Computer Science — College of Computing, Data Science, and Society · GPA 3.95</p>
-        <p class="entry-org">B.A. Astrophysics — College of Letters &amp; Sciences · Honors Distinction</p>
-        <p class="coursework">
-          <strong>Relevant Coursework:</strong> Data Ethics, AI Public Policy, Computer Architecture, Data Structures,
-          Algorithms, Cybersecurity, Databases, Computability &amp; Complexity Theory, Deep Learning, Discrete Math,
-          Probability, Abstract Linear Algebra, Quantum Mechanics, Electromagnetism, Planetary Astrophysics,
-          Relativistic Cosmology, Cognitive Science
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section id="awards" class="section">
-    <div class="container">
-      <h2>Awards &amp; Achievements</h2>
-      <ul class="plain-list">
-        <li><strong>Department Honors, Astrophysics</strong> — College of Letters &amp; Sciences</li>
-        <li><strong>Dean's List</strong> — College of Computing, Data Science, &amp; Society; College of Letters &amp; Sciences</li>
-        <li>
-          <strong>Best Overall Paper</strong> — HFES ASPIRE Aerospace Systems 2025 ·
-          Billman, D., Baron, B., Jr., Corry, P. C., Cusano, L., Peterson, M., &amp; Mumaw, R. J. (2025).
-          Measuring anticipatory monitoring skills using a crew briefing task.
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="publications" class="section">
-    <div class="container">
-      <h2>Papers &amp; Publications</h2>
-      <ul class="pub-list">
-        <li>Corry, C. (2026). Optimized for agreement: Sycophancy, RLHF, and the political economy of AI validation. Unpublished manuscript, Division of Computing, Data Science, and Society, University of California, Berkeley. <a href="assets/documents/sycophancy-rlhf.pdf" target="_blank" rel="noopener">[Read PDF]</a></li>
-        <li>Corry, C. (2026). Deepfakes and democratic integrity: A policy framework for AI-generated political content. Unpublished manuscript, Goldman School of Public Policy, University of California, Berkeley. <a href="assets/documents/deepfakes-democratic-integrity.pdf" target="_blank" rel="noopener">[Read PDF]</a></li>
-        <li>Corry, C. (2026). Thermal predictors of open-loop focus drift at the Vera C. Rubin Observatory (Honors thesis). Department of Astronomy, University of California, Berkeley. <a href="assets/documents/honors-thesis-rubin-focus-drift.pdf" target="_blank" rel="noopener">[Read PDF]</a></li>
-        <li>Billman, D., Baron Jr, B., Corry, P. C., Cusano, L., Peterson, M., &amp; Mumaw, R. J. (2025). Measuring Anticipatory Monitoring Skills Using a Crew Briefing Task. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (p. 10711813251360012). SAGE Publications. <a href="https://doi.org/10.1177/10711813251360012" target="_blank" rel="noopener">doi.org/10.1177/10711813251360012</a> — Awarded Best Overall Paper, HFES ASPIRE Aerospace Systems 2025.</li>
-        <li>Peterson, M., Baron Jr, B., Cusano, L., Mumaw, R. J., Corry, P. C., Hoffman, D., &amp; Billman, D. O. (2025). Scenario-Based Task Design for Airline Pilot Anticipatory Behaviors: Asynchronous Assessment of Complex Cognitive Skills. <em>Journal of Applied Instructional Design</em>. <a href="https://doi.org/10.59668/2222.21502" target="_blank" rel="noopener">doi.org/10.59668/2222.21502</a></li>
-        <li>Billman, D., Baron Jr, B., Corry, P. C., Cusano, L., Peterson, M., &amp; Mumaw, R. J. (2025, May). Initial Measures Show Web-Delivered Learning Module Improves Pilots' Monitoring and Anticipation. <em>Proceedings of the 23rd International Symposium for Aviation Psychologists</em>.</li>
-        <li>Corry, C. (2026, January 11). AI 101: Artificial intelligence and machine learning basics. <em>Reductions</em>. <a href="https://proofbyvibes.substack.com/p/ai-101" target="_blank" rel="noopener">proofbyvibes.substack.com/p/ai-101</a></li>
-        <li>Corry, C. (2026, March 4). Misalignment and deception: A short overview. <em>Reductions</em>. <a href="https://proofbyvibes.substack.com/p/misalignment-and-deception" target="_blank" rel="noopener">proofbyvibes.substack.com/p/misalignment-and-deception</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="extracurriculars" class="section">
-    <div class="container">
-      <h2>Extracurriculars</h2>
-      <ul class="plain-list">
-        <li><strong>CDSS Dean's Undergraduate Leadership Forum</strong> — Advisor · Oct 2025 – Present</li>
-        <li><strong>Motorsport Mechanics of Berkeley</strong> — Treasurer · Jan 2025 – Present</li>
-        <li><strong>Princeton Review</strong> — SAT Tutor · Jun 2024 – Apr 2025</li>
-        <li><strong>California Youth Crisis Line</strong> — Crisis Hotline Volunteer · May 2021 – Mar 2022</li>
-        <li><strong>Women in Politics Magazine</strong> — Manager · Jun 2021 – Sep 2022</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-block">
-          <h3>Programming Languages</h3>
-          <p>Python, Java, C, C++, R, SQL, NoSQL, Swift</p>
-        </div>
-        <div class="skill-block">
-          <h3>Libraries &amp; Frameworks</h3>
-          <p>PyTorch, Hugging Face, scikit-learn, XGBoost, FastAPI, Astropy, Photutils, W&amp;B, Tinker</p>
-        </div>
-        <div class="skill-block">
-          <h3>Skills</h3>
-          <p>Statistical Modeling, Data Visualization, Cross-Functional &amp; Technical Communication, Crisis Intervention, Advocacy</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2>Contact</h2>
+  <section class="section narrative-section">
+    <div class="container narrative">
       <p>
-        <a href="mailto:christinecorry1405@gmail.com">christinecorry1405@gmail.com</a><br>
-        <a href="https://www.linkedin.com/in/christinecorry/" target="_blank" rel="noopener">linkedin.com/in/christinecorry</a>
+        Hello! I'm Christine. I am perpetually worried about AI and trying to find the best things
+        I can do to help make sure it goes right.
+      </p>
+      <p>
+        I just graduated from UC Berkeley with degrees in Computer Science and Astrophysics. I've
+        built internal LLM-based tooling for Apple, trained DNA prediction LLMs at the Innovative
+        Genomics Institute, and spent three years studying pilot cognition at NASA. Now I am a
+        Second Look Research Fellow at UChicago's XLab, replicating empirical AI safety research.
       </p>
     </div>
   </section>
