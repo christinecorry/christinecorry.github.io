@@ -76,6 +76,7 @@ h2 {
   font-size: 1.4rem;
   margin: 0;
   color: var(--color-green-dark);
+  border-bottom: none;
 }
 
 .site-nav {
@@ -92,6 +93,11 @@ h2 {
 
 .site-nav a:hover {
   color: var(--color-green-dark);
+}
+
+.site-nav a.active {
+  color: var(--color-green-dark);
+  font-style: italic;
 }
 
 /* Hero */
@@ -147,6 +153,58 @@ h2 {
   color: var(--color-text-soft);
   font-style: italic;
   font-size: 0.95rem;
+}
+
+.no-border {
+  border-bottom: none;
+}
+
+/* Narrative */
+
+.narrative-section {
+  background-color: var(--color-bg);
+}
+
+.narrative {
+  max-width: 620px;
+}
+
+.narrative p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+.narrative p:last-child {
+  margin-bottom: 0;
+}
+
+/* CV intro / PDF button */
+
+.cv-intro-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cv-intro-inner h2 {
+  margin-bottom: 0;
+}
+
+.pdf-button {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid var(--color-green-dark);
+  border-radius: 4px;
+  color: var(--color-green-dark);
+  font-size: 0.95rem;
+}
+
+.pdf-button:hover {
+  background-color: var(--color-green-dark);
+  color: var(--color-bg);
 }
 
 /* Sections */
