@@ -23,8 +23,9 @@ if (starmap) {
   starmap.querySelectorAll(".const").forEach(c => {
     c.addEventListener("click", e => {
       e.preventDefault();
+      const vb = starmap.viewBox.baseVal;
       starmap.style.transformOrigin =
-        (c.dataset.cx / 9) + "% " + (c.dataset.cy / 5.6) + "%";
+        (c.dataset.cx / vb.width * 100) + "% " + (c.dataset.cy / vb.height * 100) + "%";
       starmap.classList.add("zooming");
       setTimeout(() => {
         const href = c.getAttribute("href");
