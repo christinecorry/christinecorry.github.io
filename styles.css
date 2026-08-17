@@ -604,13 +604,22 @@ h1, h2, h3, h4 {
   border-radius: 10px;
 }
 
-.curio-song {
-  padding: 0;
+.curio-song-card {
+  display: block;
+  color: var(--text);
+  transition: border-color 0.15s ease;
 }
 
-.curio-song .curio-type {
-  padding-left: 2px;
-  margin-bottom: 8px;
+.curio-song-card:hover {
+  border-color: var(--accent);
+}
+
+.curio-song-card .item-attr {
+  margin-bottom: 0;
+}
+
+.curio-song-card .soundwave {
+  margin-bottom: 6px;
 }
 
 .plate-item {
