@@ -40,48 +40,135 @@
       <!-- Each constellation is a clickable "galaxy" — the map zooms into it -->
       <svg class="starmap" viewBox="0 0 900 560" aria-label="Map of this website: each constellation is a section">
 
-        <!-- chart ring + ecliptic -->
+        <defs>
+          <g id="st3"><path d="M0 -8 L0 8 M-8 0 L8 0 M-4 -4 L4 4 M-4 4 L4 -4" fill="none"/><circle r="1.7" stroke="none"/></g>
+          <g id="st2"><path d="M0 -5 L0 5 M-5 0 L5 0" fill="none"/><circle r="1.4" stroke="none"/></g>
+          <g id="st1"><circle r="1.1" stroke="none"/></g>
+        </defs>
+
+        <!-- graduated chart ring -->
+        <circle class="lines ring" cx="450" cy="280" r="262"/>
         <circle class="lines ring" cx="450" cy="280" r="258"/>
-        <circle class="lines ring" cx="450" cy="280" r="250" stroke-dasharray="1.5 9"/>
-        <path class="lines" d="M 160 430 Q 450 90 740 400" stroke-dasharray="6 8" opacity="0.5"/>
+        <circle class="lines ring" cx="450" cy="280" r="240" opacity="0.7"/>
+        <g>
+          <line class="tick" x1="690.0" y1="280.0" x2="700.0" y2="280.0"/>
+          <line class="tick" x1="689.1" y1="300.9" x2="694.1" y2="301.4"/>
+          <line class="tick" x1="686.4" y1="321.7" x2="691.3" y2="322.5"/>
+          <line class="tick" x1="681.8" y1="342.1" x2="691.5" y2="344.7"/>
+          <line class="tick" x1="675.5" y1="362.1" x2="680.2" y2="363.8"/>
+          <line class="tick" x1="667.5" y1="381.4" x2="672.0" y2="383.5"/>
+          <line class="tick" x1="657.8" y1="400.0" x2="666.5" y2="405.0"/>
+          <line class="tick" x1="646.6" y1="417.7" x2="650.7" y2="420.5"/>
+          <line class="tick" x1="633.9" y1="434.3" x2="637.7" y2="437.5"/>
+          <line class="tick" x1="619.7" y1="449.7" x2="626.8" y2="456.8"/>
+          <line class="tick" x1="604.3" y1="463.9" x2="607.5" y2="467.7"/>
+          <line class="tick" x1="587.7" y1="476.6" x2="590.5" y2="480.7"/>
+          <line class="tick" x1="570.0" y1="487.8" x2="575.0" y2="496.5"/>
+          <line class="tick" x1="551.4" y1="497.5" x2="553.5" y2="502.0"/>
+          <line class="tick" x1="532.1" y1="505.5" x2="533.8" y2="510.2"/>
+          <line class="tick" x1="512.1" y1="511.8" x2="514.7" y2="521.5"/>
+          <line class="tick" x1="491.7" y1="516.4" x2="492.5" y2="521.3"/>
+          <line class="tick" x1="470.9" y1="519.1" x2="471.4" y2="524.1"/>
+          <line class="tick" x1="450.0" y1="520.0" x2="450.0" y2="530.0"/>
+          <line class="tick" x1="429.1" y1="519.1" x2="428.6" y2="524.1"/>
+          <line class="tick" x1="408.3" y1="516.4" x2="407.5" y2="521.3"/>
+          <line class="tick" x1="387.9" y1="511.8" x2="385.3" y2="521.5"/>
+          <line class="tick" x1="367.9" y1="505.5" x2="366.2" y2="510.2"/>
+          <line class="tick" x1="348.6" y1="497.5" x2="346.5" y2="502.0"/>
+          <line class="tick" x1="330.0" y1="487.8" x2="325.0" y2="496.5"/>
+          <line class="tick" x1="312.3" y1="476.6" x2="309.5" y2="480.7"/>
+          <line class="tick" x1="295.7" y1="463.9" x2="292.5" y2="467.7"/>
+          <line class="tick" x1="280.3" y1="449.7" x2="273.2" y2="456.8"/>
+          <line class="tick" x1="266.1" y1="434.3" x2="262.3" y2="437.5"/>
+          <line class="tick" x1="253.4" y1="417.7" x2="249.3" y2="420.5"/>
+          <line class="tick" x1="242.2" y1="400.0" x2="233.5" y2="405.0"/>
+          <line class="tick" x1="232.5" y1="381.4" x2="228.0" y2="383.5"/>
+          <line class="tick" x1="224.5" y1="362.1" x2="219.8" y2="363.8"/>
+          <line class="tick" x1="218.2" y1="342.1" x2="208.5" y2="344.7"/>
+          <line class="tick" x1="213.6" y1="321.7" x2="208.7" y2="322.5"/>
+          <line class="tick" x1="210.9" y1="300.9" x2="205.9" y2="301.4"/>
+          <line class="tick" x1="210.0" y1="280.0" x2="200.0" y2="280.0"/>
+          <line class="tick" x1="210.9" y1="259.1" x2="205.9" y2="258.6"/>
+          <line class="tick" x1="213.6" y1="238.3" x2="208.7" y2="237.5"/>
+          <line class="tick" x1="218.2" y1="217.9" x2="208.5" y2="215.3"/>
+          <line class="tick" x1="224.5" y1="197.9" x2="219.8" y2="196.2"/>
+          <line class="tick" x1="232.5" y1="178.6" x2="228.0" y2="176.5"/>
+          <line class="tick" x1="242.2" y1="160.0" x2="233.5" y2="155.0"/>
+          <line class="tick" x1="253.4" y1="142.3" x2="249.3" y2="139.5"/>
+          <line class="tick" x1="266.1" y1="125.7" x2="262.3" y2="122.5"/>
+          <line class="tick" x1="280.3" y1="110.3" x2="273.2" y2="103.2"/>
+          <line class="tick" x1="295.7" y1="96.1" x2="292.5" y2="92.3"/>
+          <line class="tick" x1="312.3" y1="83.4" x2="309.5" y2="79.3"/>
+          <line class="tick" x1="330.0" y1="72.2" x2="325.0" y2="63.5"/>
+          <line class="tick" x1="348.6" y1="62.5" x2="346.5" y2="58.0"/>
+          <line class="tick" x1="367.9" y1="54.5" x2="366.2" y2="49.8"/>
+          <line class="tick" x1="387.9" y1="48.2" x2="385.3" y2="38.5"/>
+          <line class="tick" x1="408.3" y1="43.6" x2="407.5" y2="38.7"/>
+          <line class="tick" x1="429.1" y1="40.9" x2="428.6" y2="35.9"/>
+          <line class="tick" x1="450.0" y1="40.0" x2="450.0" y2="30.0"/>
+          <line class="tick" x1="470.9" y1="40.9" x2="471.4" y2="35.9"/>
+          <line class="tick" x1="491.7" y1="43.6" x2="492.5" y2="38.7"/>
+          <line class="tick" x1="512.1" y1="48.2" x2="514.7" y2="38.5"/>
+          <line class="tick" x1="532.1" y1="54.5" x2="533.8" y2="49.8"/>
+          <line class="tick" x1="551.4" y1="62.5" x2="553.5" y2="58.0"/>
+          <line class="tick" x1="570.0" y1="72.2" x2="575.0" y2="63.5"/>
+          <line class="tick" x1="587.7" y1="83.4" x2="590.5" y2="79.3"/>
+          <line class="tick" x1="604.3" y1="96.1" x2="607.5" y2="92.3"/>
+          <line class="tick" x1="619.7" y1="110.3" x2="626.8" y2="103.2"/>
+          <line class="tick" x1="633.9" y1="125.7" x2="637.7" y2="122.5"/>
+          <line class="tick" x1="646.6" y1="142.3" x2="650.7" y2="139.5"/>
+          <line class="tick" x1="657.8" y1="160.0" x2="666.5" y2="155.0"/>
+          <line class="tick" x1="667.5" y1="178.6" x2="672.0" y2="176.5"/>
+          <line class="tick" x1="675.5" y1="197.9" x2="680.2" y2="196.2"/>
+          <line class="tick" x1="681.8" y1="217.9" x2="691.5" y2="215.3"/>
+          <line class="tick" x1="686.4" y1="238.3" x2="691.3" y2="237.5"/>
+          <line class="tick" x1="689.1" y1="259.1" x2="694.1" y2="258.6"/>
+        </g>
+        <path class="lines" d="M 160 430 Q 450 90 740 400" stroke-dasharray="5 7" opacity="0.45"/>
 
         <!-- scattered background stars -->
         <g class="bgstars">
-          <circle class="star" cx="150" cy="140" r="1.4" opacity=".5"/>
-          <circle class="star pulse" cx="420" cy="90"  r="1.8" opacity=".7"/>
-          <circle class="star" cx="700" cy="150" r="1.2" opacity=".45"/>
-          <circle class="star" cx="820" cy="330" r="1.5" opacity=".55"/>
-          <circle class="star pulse" cx="90"  cy="330" r="1.6" opacity=".6"/>
-          <circle class="star" cx="200" cy="480" r="1.2" opacity=".4"/>
-          <circle class="star pulse" cx="740" cy="490" r="1.7" opacity=".65"/>
-          <circle class="star" cx="500" cy="530" r="1.1" opacity=".4"/>
-          <circle class="star" cx="360" cy="180" r="1.3" opacity=".5"/>
-          <circle class="star pulse" cx="560" cy="330" r="1.2" opacity=".5"/>
-          <circle class="star" cx="330" cy="300" r="1.1" opacity=".4"/>
-          <circle class="star" cx="640" cy="220" r="1.3" opacity=".5"/>
+          <use href="#st1" transform="translate(150,140)" opacity=".5"/>
+          <use href="#st2" transform="translate(420,90)" opacity=".7" class="pulse"/>
+          <use href="#st1" transform="translate(700,150)" opacity=".45"/>
+          <use href="#st1" transform="translate(820,330)" opacity=".55"/>
+          <use href="#st2" transform="translate(90,330)" opacity=".6" class="pulse"/>
+          <use href="#st1" transform="translate(200,480)" opacity=".4"/>
+          <use href="#st2" transform="translate(740,490)" opacity=".65" class="pulse"/>
+          <use href="#st1" transform="translate(500,530)" opacity=".4"/>
+          <use href="#st1" transform="translate(360,180)" opacity=".5"/>
+          <use href="#st1" transform="translate(560,330)" opacity=".5" class="pulse"/>
+          <use href="#st1" transform="translate(330,300)" opacity=".4"/>
+          <use href="#st1" transform="translate(640,220)" opacity=".5"/>
+          <use href="#st1" transform="translate(770,210)" opacity=".45"/>
+          <use href="#st1" transform="translate(130,220)" opacity=".4"/>
         </g>
 
-        <!-- corner flourishes: moon, compass star, sprigs -->
-        <g class="figure" opacity="0.9">
+        <!-- corner flourishes: moon, compass rose, sprigs -->
+        <g class="figure" opacity="0.85">
           <path d="M812 52 A30 30 0 1 0 812 112 A24 24 0 1 1 812 52 Z"/>
-          <circle cx="792" cy="72" r="1.8"/>
-          <circle cx="787" cy="86" r="2.6"/>
+          <circle cx="792" cy="72" r="1.6" fill="none"/>
+          <circle cx="787" cy="86" r="2.4" fill="none"/>
         </g>
-        <path class="star4c" d="M92 62 L95 76 L109 79 L95 82 L92 96 L89 82 L75 79 L89 76 Z"/>
+        <g class="compass">
+          <path d="M92 54 L96 76 L118 80 L96 84 L92 106 L88 84 L66 80 L88 76 Z"/>
+          <path d="M92 66 L101 71 L106 80 L101 89 L92 94 L83 89 L78 80 L83 71 Z" fill="none"/>
+          <circle cx="92" cy="80" r="1.6"/>
+        </g>
         <g class="sprigline">
-          <path d="M60 520 Q 120 500 185 512" fill="none"/>
+          <path d="M60 520 Q 120 500 185 512"/>
           <path d="M100 510 Q 94 496 106 494 Q 110 506 100 510 Z"/>
           <path d="M140 508 Q 148 496 154 501 Q 150 511 140 508 Z"/>
         </g>
         <g class="sprigline">
-          <path d="M840 520 Q 780 500 715 512" fill="none"/>
+          <path d="M840 520 Q 780 500 715 512"/>
           <path d="M800 510 Q 806 496 794 494 Q 790 506 800 510 Z"/>
           <path d="M760 508 Q 752 496 746 501 Q 750 511 760 508 Z"/>
         </g>
 
         <!-- name, center of the chart -->
-        <text class="map-name" x="450" y="262">Christine Corry</text>
-        <text class="map-tagline" x="450" y="298">perpetually concerned, trying to do something about it</text>
+        <text class="map-name" x="450" y="268">Christine Corry</text>
+        <text class="map-tagline" x="450" y="300">perpetually concerned, trying to do something about it</text>
 
         <!-- ABOUT: ringed planet, upper left -->
         <a class="const" href="#about" data-cx="295" data-cy="165">
@@ -91,8 +178,8 @@
             <circle cx="295" cy="160" r="24"/>
             <ellipse cx="295" cy="160" rx="46" ry="15" transform="rotate(-18 295 160)"/>
           </g>
-          <circle class="star" cx="337" cy="143" r="3"/>
-          <text class="const-label" x="295" y="218">about me</text>
+          <use href="#st2" transform="translate(337,143)"/>
+          <text class="const-label" x="295" y="220">About Me</text>
         </a>
 
         <!-- WRITING: quill, upper right -->
@@ -102,14 +189,14 @@
           <polyline class="lines" points="556,200 582,172 608,146 636,124"/>
           <polyline class="lines" points="596,134 608,146"/>
           <polyline class="lines" points="570,162 582,172"/>
-          <circle class="star" cx="556" cy="200" r="3"/>
-          <circle class="star" cx="582" cy="172" r="2.5"/>
-          <circle class="star" cx="608" cy="146" r="3.2"/>
-          <circle class="star" cx="636" cy="124" r="2.6"/>
-          <circle class="star" cx="596" cy="134" r="2.2"/>
-          <circle class="star" cx="570" cy="162" r="2.2"/>
-          <circle class="star" cx="546" cy="216" r="1.8"/>
-          <text class="const-label" x="600" y="242">writing</text>
+          <use href="#st3" transform="translate(556,200)"/>
+          <use href="#st2" transform="translate(582,172)"/>
+          <use href="#st3" transform="translate(608,146)"/>
+          <use href="#st2" transform="translate(636,124)"/>
+          <use href="#st1" transform="translate(596,134)"/>
+          <use href="#st1" transform="translate(570,162)"/>
+          <use href="#st1" transform="translate(546,216)"/>
+          <text class="const-label" x="600" y="244">Writing</text>
         </a>
 
         <!-- SONGS: lyre, left -->
@@ -121,14 +208,14 @@
           <polyline class="lines" points="248,298 300,302"/>
           <polyline class="lines" points="248,298 240,284"/>
           <polyline class="lines" points="300,302 308,288"/>
-          <circle class="star" cx="272" cy="384" r="3.2"/>
-          <circle class="star" cx="256" cy="342" r="2.4"/>
-          <circle class="star" cx="248" cy="298" r="3"/>
-          <circle class="star" cx="289" cy="344" r="2.4"/>
-          <circle class="star" cx="300" cy="302" r="3"/>
-          <circle class="star" cx="240" cy="284" r="2"/>
-          <circle class="star" cx="308" cy="288" r="2"/>
-          <text class="const-label" x="274" y="416">songs</text>
+          <use href="#st3" transform="translate(272,384)"/>
+          <use href="#st1" transform="translate(256,342)"/>
+          <use href="#st2" transform="translate(248,298)"/>
+          <use href="#st1" transform="translate(289,344)"/>
+          <use href="#st2" transform="translate(300,302)"/>
+          <use href="#st1" transform="translate(240,284)"/>
+          <use href="#st1" transform="translate(308,288)"/>
+          <text class="const-label" x="274" y="418">Songs</text>
         </a>
 
         <!-- PICTURES: frame, right -->
@@ -136,12 +223,12 @@
           <circle class="hit" cx="636" cy="340" r="58"/>
           <path class="galaxy" d="M687 268 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
           <polyline class="lines" points="602,302 666,298 670,358 606,362 602,302"/>
-          <circle class="star" cx="602" cy="302" r="2.8"/>
-          <circle class="star" cx="666" cy="298" r="2.8"/>
-          <circle class="star" cx="670" cy="358" r="2.8"/>
-          <circle class="star" cx="606" cy="362" r="2.8"/>
-          <path class="star4c" d="M636 322 L638 328 L644 330 L638 332 L636 338 L634 332 L628 330 L634 328 Z"/>
-          <text class="const-label" x="636" y="394">pictures</text>
+          <use href="#st2" transform="translate(602,302)"/>
+          <use href="#st2" transform="translate(666,298)"/>
+          <use href="#st2" transform="translate(670,358)"/>
+          <use href="#st2" transform="translate(606,362)"/>
+          <use href="#st2" transform="translate(636,330)"/>
+          <text class="const-label" x="636" y="396">Pictures</text>
         </a>
 
         <!-- THINGS I LIKE: heart, bottom -->
@@ -149,13 +236,13 @@
           <circle class="hit" cx="392" cy="442" r="55"/>
           <path class="galaxy" d="M342 452 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
           <polyline class="lines" points="374,410 392,420 410,410 418,426 392,456 366,426 374,410"/>
-          <circle class="star" cx="374" cy="410" r="2.6"/>
-          <circle class="star" cx="392" cy="420" r="2.2"/>
-          <circle class="star" cx="410" cy="410" r="2.6"/>
-          <circle class="star" cx="418" cy="426" r="2.4"/>
-          <circle class="star" cx="392" cy="456" r="3"/>
-          <circle class="star" cx="366" cy="426" r="2.4"/>
-          <text class="const-label" x="392" y="484">things i like</text>
+          <use href="#st2" transform="translate(374,410)"/>
+          <use href="#st1" transform="translate(392,420)"/>
+          <use href="#st2" transform="translate(410,410)"/>
+          <use href="#st1" transform="translate(418,426)"/>
+          <use href="#st2" transform="translate(392,456)"/>
+          <use href="#st1" transform="translate(366,426)"/>
+          <text class="const-label" x="392" y="486">Things I Like</text>
         </a>
 
         <!-- CV: scroll, bottom right -->
@@ -164,10 +251,10 @@
           <polyline class="lines" points="528,430 556,424 584,432"/>
           <polyline class="lines" points="528,430 522,444"/>
           <polyline class="lines" points="584,432 590,446"/>
-          <circle class="star" cx="528" cy="430" r="2.4"/>
-          <circle class="star" cx="556" cy="424" r="2.8"/>
-          <circle class="star" cx="584" cy="432" r="2.4"/>
-          <text class="const-label" x="556" y="472">cv</text>
+          <use href="#st1" transform="translate(528,430)"/>
+          <use href="#st2" transform="translate(556,424)"/>
+          <use href="#st1" transform="translate(584,432)"/>
+          <text class="const-label" x="556" y="474">CV</text>
         </a>
       </svg>
 
