@@ -482,6 +482,16 @@ h1, h2, h3, h4 {
 
 /* Songs */
 
+.song-embed {
+  padding: 14px;
+}
+
+.song-embed iframe {
+  display: block;
+  border: 0;
+  border-radius: 10px;
+}
+
 .soundwave {
   width: 130px;
   height: 32px;
