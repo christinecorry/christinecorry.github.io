@@ -604,6 +604,15 @@ h1, h2, h3, h4 {
   border-radius: 10px;
 }
 
+.curio-song {
+  padding: 0;
+}
+
+.curio-song .curio-type {
+  padding-left: 2px;
+  margin-bottom: 8px;
+}
+
 .plate-item {
   margin-left: 0;
   margin-right: 0;
