@@ -21,11 +21,7 @@
       <span class="nav-star" aria-hidden="true">✦</span>
       <a href="#writing" data-tab="writing" class="tab-link">writing</a>
       <span class="nav-star" aria-hidden="true">✦</span>
-      <a href="#songs" data-tab="songs" class="tab-link">songs</a>
-      <span class="nav-star" aria-hidden="true">✦</span>
-      <a href="#pictures" data-tab="pictures" class="tab-link">pictures</a>
-      <span class="nav-star" aria-hidden="true">✦</span>
-      <a href="#things" data-tab="things" class="tab-link">things i like</a>
+      <a href="#curios" data-tab="curios" class="tab-link">curiosities</a>
       <span class="nav-star" aria-hidden="true">✦</span>
       <a href="cv.html">cv</a>
     </nav>
@@ -45,8 +41,6 @@
           <g id="st2"><path d="M0 -5 L0 5 M-5 0 L5 0" fill="none"/><circle r="1.4" stroke="none"/></g>
           <g id="st1"><circle r="1.1" stroke="none"/></g>
           <clipPath id="discclip"><circle cx="450" cy="352" r="290"/></clipPath>
-          <path id="rim-top" d="M 126 352 A 324 324 0 0 1 774 352" fill="none"/>
-          <path id="rim-bottom" d="M 126 352 A 324 324 0 0 0 774 352" fill="none"/>
           <path id="lab-about" d="M 215 226 Q 295 212 375 226" fill="none"/>
           <path id="lab-writing" d="M 520 252 Q 600 238 680 252" fill="none"/>
           <path id="lab-songs" d="M 194 424 Q 274 410 354 424" fill="none"/>
@@ -62,9 +56,6 @@
         <circle class="rim" cx="450" cy="352" r="288"/>
         <polygon class="rim" points="741.5,352.0 747.2,372.8 739.6,392.7 741.2,413.9 730.8,432.5 730.6,454.1 715.5,470.2 714.0,492.4 696.5,506.0 691.7,527.6 672.7,538.9 664.2,558.8 645.2,568.8 634.7,588.4 612.7,593.1 599.1,610.2 578.2,614.8 562.5,630.5 540.3,629.9 522.3,641.8 501.0,641.0 481.1,648.0 460.2,644.9 439.6,650.2 419.6,641.3 398.3,645.3 379.5,634.8 357.3,637.3 341.0,621.8 318.8,621.0 303.8,605.2 283.0,599.6 270.1,582.2 250.8,573.2 240.9,553.9 221.6,543.6 213.3,524.0 196.6,510.3 192.7,488.8 176.6,473.7 175.7,451.8 163.2,434.2 163.5,412.9 153.3,393.7 159.5,372.3 150.8,352.0 158.6,331.6 152.8,310.2 163.7,291.1 163.2,269.8 174.3,251.6 177.9,230.9 192.4,215.0 195.8,193.1 214.6,181.0 221.0,159.8 240.9,150.1 249.6,129.4 269.7,121.3 282.7,103.9 303.4,98.1 319.2,83.8 340.4,80.7 357.5,67.4 379.3,68.4 398.1,57.7 419.4,60.6 439.5,51.8 460.2,60.3 481.3,54.1 500.5,65.7 522.5,61.3 540.4,73.9 562.6,73.4 578.4,88.7 599.2,93.6 613.1,110.2 634.4,116.0 644.4,136.1 665.0,144.4 672.9,164.9 691.0,176.9 696.5,198.0 714.7,211.3 715.7,233.7 730.3,250.0 730.4,271.6 743.6,289.6 737.9,311.5 748.1,331.2"/>
 
-        <!-- curved horizon text on the paper -->
-        <text class="rim-text"><textPath href="#rim-top" startOffset="50%" text-anchor="middle">&#183; Perpetually concerned &#183;</textPath></text>
-        <text class="rim-text"><textPath href="#rim-bottom" startOffset="50%" text-anchor="middle">&#183; Trying to do something about it &#183;</textPath></text>
 
         <!-- celestial grid -->
         <g class="grid">
@@ -670,12 +661,12 @@
 
         <!-- name, center of the chart -->
         <text class="map-name" x="450" y="346">Christine Corry</text>
-        <text class="map-tagline" x="450" y="380">a map of my mind</text>
+        <text class="map-tagline" x="450" y="380">a chart of the visible heavens</text>
 
         <!-- ABOUT: ringed planet -->
         <a class="const" href="#about" data-cx="267" data-cy="216" transform="translate(-28,51)">
           <circle class="hit" cx="295" cy="165" r="62"/>
-          <path class="galaxy" d="M247 118 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
+          <g class="nebula"><circle cx="252.3" cy="121.7" r="0.55" opacity="0.56"/><circle cx="251.6" cy="117.6" r="0.41" opacity="0.64"/><circle cx="251.9" cy="119.8" r="0.80" opacity="0.51"/><circle cx="253.7" cy="115.1" r="0.66" opacity="0.40"/><circle cx="248.2" cy="113.7" r="0.61" opacity="0.61"/><circle cx="251.7" cy="117.5" r="0.70" opacity="0.56"/><circle cx="251.9" cy="118.3" r="0.75" opacity="0.52"/><circle cx="250.9" cy="112.3" r="0.69" opacity="0.67"/><circle cx="247.8" cy="121.3" r="0.58" opacity="0.68"/></g>
           <g class="figure">
             <circle cx="295" cy="160" r="24"/>
             <ellipse cx="295" cy="160" rx="46" ry="15" transform="rotate(-18 295 160)"/>
@@ -687,7 +678,7 @@
         <!-- WRITING: quill -->
         <a class="const" href="#writing" data-cx="645" data-cy="184" transform="translate(45,4)">
           <circle class="hit" cx="600" cy="180" r="64"/>
-          <path class="galaxy" d="M652 100 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
+          <g class="nebula"><circle cx="657.6" cy="99.4" r="0.45" opacity="0.43"/><circle cx="660.0" cy="99.3" r="0.65" opacity="0.46"/><circle cx="654.2" cy="99.9" r="0.54" opacity="0.55"/><circle cx="651.9" cy="97.0" r="0.67" opacity="0.68"/><circle cx="661.0" cy="94.9" r="0.67" opacity="0.41"/><circle cx="661.0" cy="95.2" r="0.76" opacity="0.55"/><circle cx="656.6" cy="98.4" r="0.73" opacity="0.55"/><circle cx="656.9" cy="100.5" r="0.74" opacity="0.70"/><circle cx="661.5" cy="102.8" r="0.56" opacity="0.40"/></g>
           <polyline class="lines" points="556,200 582,172 608,146 636,124"/>
           <polyline class="lines" points="596,134 608,146"/>
           <polyline class="lines" points="570,162 582,172"/>
@@ -701,54 +692,24 @@
           <text class="const-label"><textPath href="#lab-writing" startOffset="50%" text-anchor="middle">Writing</textPath></text>
         </a>
 
-        <!-- SONGS: lyre -->
-        <a class="const" href="#songs" data-cx="240" data-cy="432" transform="translate(-32,84)">
-          <circle class="hit" cx="272" cy="348" r="64"/>
-          <path class="galaxy" d="M222 252 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
-          <polyline class="lines" points="272,384 256,342 248,298"/>
-          <polyline class="lines" points="272,384 289,344 300,302"/>
-          <polyline class="lines" points="248,298 300,302"/>
-          <polyline class="lines" points="248,298 240,284"/>
-          <polyline class="lines" points="300,302 308,288"/>
-          <use href="#st3" transform="translate(272.0,384.0)"/>
-          <use href="#st1" transform="translate(256.0,342.0)"/>
-          <use href="#st2" transform="translate(248.0,298.0)"/>
-          <use href="#st1" transform="translate(289.0,344.0)"/>
-          <use href="#st2" transform="translate(300.0,302.0)"/>
-          <use href="#st1" transform="translate(240.0,284.0)"/>
-          <use href="#st1" transform="translate(308.0,288.0)"/>
-          <text class="const-label"><textPath href="#lab-songs" startOffset="50%" text-anchor="middle">Songs</textPath></text>
-        </a>
 
-        <!-- PICTURES: frame -->
-        <a class="const" href="#pictures" data-cx="669" data-cy="423" transform="translate(33,83)">
-          <circle class="hit" cx="636" cy="340" r="58"/>
-          <path class="galaxy" d="M687 268 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
-          <polyline class="lines" points="602,302 666,298 670,358 606,362 602,302"/>
-          <use href="#st2" transform="translate(602.0,302.0)"/>
-          <use href="#st2" transform="translate(666.0,298.0)"/>
-          <use href="#st2" transform="translate(670.0,358.0)"/>
-          <use href="#st2" transform="translate(606.0,362.0)"/>
-          <use href="#st2" transform="translate(636.0,330.0)"/>
-          <text class="const-label"><textPath href="#lab-pictures" startOffset="50%" text-anchor="middle">Pictures</textPath></text>
-        </a>
 
-        <!-- THINGS I LIKE: heart -->
-        <a class="const" href="#things" data-cx="382" data-cy="543" transform="translate(-10,101)">
+        <!-- CURIOSITIES: heart -->
+        <a class="const" href="#curios" data-cx="300" data-cy="470" transform="translate(-92,38)">
           <circle class="hit" cx="392" cy="442" r="55"/>
-          <path class="galaxy" d="M342 452 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
-          <polyline class="lines" points="374,410 392,420 410,410 418,426 392,456 366,426 374,410"/>
-          <use href="#st2" transform="translate(374.0,410.0)"/>
-          <use href="#st1" transform="translate(392.0,420.0)"/>
-          <use href="#st2" transform="translate(410.0,410.0)"/>
-          <use href="#st1" transform="translate(418.0,426.0)"/>
-          <use href="#st2" transform="translate(392.0,456.0)"/>
-          <use href="#st1" transform="translate(366.0,426.0)"/>
-          <text class="const-label"><textPath href="#lab-things" startOffset="50%" text-anchor="middle">Things I Like</textPath></text>
+          <g class="nebula"><circle cx="346.4" cy="453.6" r="0.72" opacity="0.43"/><circle cx="348.2" cy="454.8" r="0.68" opacity="0.39"/><circle cx="345.9" cy="454.2" r="0.73" opacity="0.50"/><circle cx="347.8" cy="451.0" r="0.53" opacity="0.58"/><circle cx="349.4" cy="449.9" r="0.49" opacity="0.39"/><circle cx="345.6" cy="451.7" r="0.72" opacity="0.64"/><circle cx="347.8" cy="453.9" r="0.72" opacity="0.57"/><circle cx="347.9" cy="449.7" r="0.45" opacity="0.45"/><circle cx="347.5" cy="450.1" r="0.54" opacity="0.50"/></g>
+          <polyline class="lines" points="372,408 394,422 408,404 422,428 390,458 364,430 372,408"/>
+          <use href="#st2" transform="translate(372.0,408.0)"/>
+          <use href="#st1" transform="translate(394.0,422.0)"/>
+          <use href="#st2" transform="translate(408.0,404.0)"/>
+          <use href="#st1" transform="translate(422.0,428.0)"/>
+          <use href="#st2" transform="translate(390.0,458.0)"/>
+          <use href="#st1" transform="translate(364.0,430.0)"/>
+          <text class="const-label"><textPath href="#lab-things" startOffset="50%" text-anchor="middle">Curiosities</textPath></text>
         </a>
 
         <!-- CV: scroll -->
-        <a class="const" href="cv.html" data-cx="575" data-cy="543" transform="translate(19,101)">
+        <a class="const" href="cv.html" data-cx="610" data-cy="470" transform="translate(54,35)">
           <circle class="hit" cx="556" cy="442" r="48"/>
           <polyline class="lines" points="528,430 556,424 584,432"/>
           <polyline class="lines" points="528,430 522,444"/>
@@ -850,16 +811,18 @@
     </div>
   </section>
 
-  <!-- ============ SONGS ============ -->
-  <section class="tab-panel" id="panel-songs">
-    <h2 class="panel-title">Songs</h2>
+  <!-- ============ CURIOSITIES: songs, pictures, things i love ============ -->
+  <section class="tab-panel" id="panel-curios">
+    <h2 class="panel-title">Curiosities</h2>
     <svg class="sprig sprig-left" viewBox="0 0 220 34" aria-hidden="true">
       <path d="M6 22 Q 60 12 110 17 Q 165 22 214 15" fill="none"/>
       <path d="M78 17 Q 86 5 92 10 Q 88 20 78 17 Z"/>
       <path d="M168 18 Q 176 7 182 12 Q 178 21 168 18 Z"/>
       <circle cx="30" cy="20" r="2"/>
     </svg>
-    <p class="panel-intro">Things I've written, recorded, or can't stop humming.</p>
+    <p class="panel-intro">Songs, pictures, and other things I love.</p>
+
+    <h3 class="subheading">Songs</h3>
     <div class="card-grid">
       <!-- Copy this card to add a song. Swap the href for a
            Spotify/SoundCloud/YouTube link, or replace the whole card
@@ -881,18 +844,8 @@
         <p>Swap these for real songs or embeds.</p>
       </a>
     </div>
-  </section>
 
-  <!-- ============ PICTURES ============ -->
-  <section class="tab-panel" id="panel-pictures">
-    <h2 class="panel-title">Pictures</h2>
-    <svg class="sprig sprig-left" viewBox="0 0 220 34" aria-hidden="true">
-      <path d="M6 22 Q 60 12 110 17 Q 165 22 214 15" fill="none"/>
-      <path d="M40 19 Q 34 6 46 4 Q 50 15 40 19 Z"/>
-      <path d="M168 18 Q 176 7 182 12 Q 178 21 168 18 Z"/>
-      <circle cx="110" cy="17" r="2"/>
-    </svg>
-    <p class="panel-intro">Photos, drawings, and other things I've pointed a lens or pencil at.</p>
+    <h3 class="subheading">Pictures</h3>
     <div class="photo-grid">
       <!-- Copy this figure to add a picture. Put image files in assets/pictures/ -->
       <figure class="plate sketch-box">
@@ -908,17 +861,6 @@
         <figcaption class="plate-caption">a third caption</figcaption>
       </figure>
     </div>
-  </section>
-
-  <!-- ============ THINGS I LIKE ============ -->
-  <section class="tab-panel" id="panel-things">
-    <h2 class="panel-title">Things I Like</h2>
-    <svg class="sprig sprig-left" viewBox="0 0 220 34" aria-hidden="true">
-      <path d="M6 22 Q 60 12 110 17 Q 165 22 214 15" fill="none"/>
-      <path d="M78 17 Q 86 5 92 10 Q 88 20 78 17 Z"/>
-      <path d="M130 18 Q 124 30 134 32 Q 140 22 130 18 Z"/>
-      <circle cx="200" cy="16" r="2"/>
-    </svg>
 
     <h3 class="subheading">Websites of Cool People I Know</h3>
     <p class="pill-row">
@@ -946,6 +888,7 @@
       </div>
     </div>
   </section>
+
 
 </main>
 

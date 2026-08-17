@@ -266,11 +266,8 @@ h1, h2, h3, h4 {
   fill: none;
 }
 
-.starmap .galaxy {
-  stroke: var(--disc-line);
-  stroke-width: 0.7;
-  fill: none;
-  opacity: 0.7;
+.starmap .nebula circle {
+  fill: var(--starlight);
 }
 
 .starmap text {
@@ -348,6 +345,10 @@ h1, h2, h3, h4 {
 
 .starmap .const:hover .figure {
   stroke: var(--starlight);
+}
+
+.starmap .const:hover .nebula circle {
+  opacity: 0.9;
 }
 
 /* ink medallions + legend on the paper margin */

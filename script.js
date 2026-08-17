@@ -3,7 +3,10 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // Tab switching (index page only)
 const tabLinks = document.querySelectorAll(".tab-link");
 
+const TAB_ALIASES = { songs: "curios", pictures: "curios", things: "curios" };
+
 function showTab(name) {
+  name = TAB_ALIASES[name] || name;
   const panel = document.getElementById("panel-" + name);
   if (!panel) return;
   document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
