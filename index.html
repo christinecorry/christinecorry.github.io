@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Christine Corry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,36 +15,181 @@
   <div class="container header-inner">
     <a class="site-name" href="#home">Christine Corry</a>
     <nav class="site-nav">
-      <a href="#home" data-tab="home" class="tab-link active">Home</a>
-      <a href="#writing" data-tab="writing" class="tab-link">Writing</a>
-      <a href="#songs" data-tab="songs" class="tab-link">Songs</a>
-      <a href="#pictures" data-tab="pictures" class="tab-link">Pictures</a>
-      <a href="#things" data-tab="things" class="tab-link">Things I Like</a>
-      <a href="cv.html">CV</a>
+      <a href="#home" data-tab="home" class="tab-link active">home</a>
+      <span class="nav-star" aria-hidden="true">✦</span>
+      <a href="#about" data-tab="about" class="tab-link">about</a>
+      <span class="nav-star" aria-hidden="true">✦</span>
+      <a href="#writing" data-tab="writing" class="tab-link">writing</a>
+      <span class="nav-star" aria-hidden="true">✦</span>
+      <a href="#songs" data-tab="songs" class="tab-link">songs</a>
+      <span class="nav-star" aria-hidden="true">✦</span>
+      <a href="#pictures" data-tab="pictures" class="tab-link">pictures</a>
+      <span class="nav-star" aria-hidden="true">✦</span>
+      <a href="#things" data-tab="things" class="tab-link">things i like</a>
+      <span class="nav-star" aria-hidden="true">✦</span>
+      <a href="cv.html">cv</a>
     </nav>
   </div>
 </header>
 
 <main class="container">
 
-  <!-- ============ HOME ============ -->
+  <!-- ============ HOME: the celestial map ============ -->
   <section class="tab-panel active" id="panel-home">
     <div class="hero">
-      <div class="polaroid headshot-polaroid">
-        <img src="assets/headshot.jpg" alt="Christine Corry">
-        <span class="polaroid-caption">hi, it's me</span>
-      </div>
-      <h1 class="hero-name">Christine Corry</h1>
-      <p class="tagline">Perpetually concerned, trying to do something about it.</p>
+      <!-- Each constellation is a clickable "galaxy" — the map zooms into it -->
+      <svg class="starmap" viewBox="0 0 900 560" aria-label="Map of this website: each constellation is a section">
+
+        <!-- chart ring + ecliptic -->
+        <circle class="lines ring" cx="450" cy="280" r="258"/>
+        <circle class="lines ring" cx="450" cy="280" r="250" stroke-dasharray="1.5 9"/>
+        <path class="lines" d="M 160 430 Q 450 90 740 400" stroke-dasharray="6 8" opacity="0.5"/>
+
+        <!-- scattered background stars -->
+        <g class="bgstars">
+          <circle class="star" cx="150" cy="140" r="1.4" opacity=".5"/>
+          <circle class="star pulse" cx="420" cy="90"  r="1.8" opacity=".7"/>
+          <circle class="star" cx="700" cy="150" r="1.2" opacity=".45"/>
+          <circle class="star" cx="820" cy="330" r="1.5" opacity=".55"/>
+          <circle class="star pulse" cx="90"  cy="330" r="1.6" opacity=".6"/>
+          <circle class="star" cx="200" cy="480" r="1.2" opacity=".4"/>
+          <circle class="star pulse" cx="740" cy="490" r="1.7" opacity=".65"/>
+          <circle class="star" cx="500" cy="530" r="1.1" opacity=".4"/>
+          <circle class="star" cx="360" cy="180" r="1.3" opacity=".5"/>
+          <circle class="star pulse" cx="560" cy="330" r="1.2" opacity=".5"/>
+          <circle class="star" cx="330" cy="300" r="1.1" opacity=".4"/>
+          <circle class="star" cx="640" cy="220" r="1.3" opacity=".5"/>
+        </g>
+
+        <!-- corner flourishes: moon, compass star, sprigs -->
+        <g class="figure" opacity="0.9">
+          <path d="M812 52 A30 30 0 1 0 812 112 A24 24 0 1 1 812 52 Z"/>
+          <circle cx="792" cy="72" r="1.8"/>
+          <circle cx="787" cy="86" r="2.6"/>
+        </g>
+        <path class="star4c" d="M92 62 L95 76 L109 79 L95 82 L92 96 L89 82 L75 79 L89 76 Z"/>
+        <g class="sprigline">
+          <path d="M60 520 Q 120 500 185 512" fill="none"/>
+          <path d="M100 510 Q 94 496 106 494 Q 110 506 100 510 Z"/>
+          <path d="M140 508 Q 148 496 154 501 Q 150 511 140 508 Z"/>
+        </g>
+        <g class="sprigline">
+          <path d="M840 520 Q 780 500 715 512" fill="none"/>
+          <path d="M800 510 Q 806 496 794 494 Q 790 506 800 510 Z"/>
+          <path d="M760 508 Q 752 496 746 501 Q 750 511 760 508 Z"/>
+        </g>
+
+        <!-- name, center of the chart -->
+        <text class="map-name" x="450" y="262">Christine Corry</text>
+        <text class="map-tagline" x="450" y="298">perpetually concerned, trying to do something about it</text>
+
+        <!-- ABOUT: ringed planet, upper left -->
+        <a class="const" href="#about" data-cx="295" data-cy="165">
+          <circle class="hit" cx="295" cy="165" r="62"/>
+          <path class="galaxy" d="M247 118 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
+          <g class="figure">
+            <circle cx="295" cy="160" r="24"/>
+            <ellipse cx="295" cy="160" rx="46" ry="15" transform="rotate(-18 295 160)"/>
+          </g>
+          <circle class="star" cx="337" cy="143" r="3"/>
+          <text class="const-label" x="295" y="218">about me</text>
+        </a>
+
+        <!-- WRITING: quill, upper right -->
+        <a class="const" href="#writing" data-cx="615" data-cy="135" transform="translate(15,-42)">
+          <circle class="hit" cx="600" cy="180" r="64"/>
+          <path class="galaxy" d="M652 100 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
+          <polyline class="lines" points="556,200 582,172 608,146 636,124"/>
+          <polyline class="lines" points="596,134 608,146"/>
+          <polyline class="lines" points="570,162 582,172"/>
+          <circle class="star" cx="556" cy="200" r="3"/>
+          <circle class="star" cx="582" cy="172" r="2.5"/>
+          <circle class="star" cx="608" cy="146" r="3.2"/>
+          <circle class="star" cx="636" cy="124" r="2.6"/>
+          <circle class="star" cx="596" cy="134" r="2.2"/>
+          <circle class="star" cx="570" cy="162" r="2.2"/>
+          <circle class="star" cx="546" cy="216" r="1.8"/>
+          <text class="const-label" x="600" y="242">writing</text>
+        </a>
+
+        <!-- SONGS: lyre, left -->
+        <a class="const" href="#songs" data-cx="272" data-cy="350">
+          <circle class="hit" cx="272" cy="348" r="64"/>
+          <path class="galaxy" d="M222 252 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
+          <polyline class="lines" points="272,384 256,342 248,298"/>
+          <polyline class="lines" points="272,384 289,344 300,302"/>
+          <polyline class="lines" points="248,298 300,302"/>
+          <polyline class="lines" points="248,298 240,284"/>
+          <polyline class="lines" points="300,302 308,288"/>
+          <circle class="star" cx="272" cy="384" r="3.2"/>
+          <circle class="star" cx="256" cy="342" r="2.4"/>
+          <circle class="star" cx="248" cy="298" r="3"/>
+          <circle class="star" cx="289" cy="344" r="2.4"/>
+          <circle class="star" cx="300" cy="302" r="3"/>
+          <circle class="star" cx="240" cy="284" r="2"/>
+          <circle class="star" cx="308" cy="288" r="2"/>
+          <text class="const-label" x="274" y="416">songs</text>
+        </a>
+
+        <!-- PICTURES: frame, right -->
+        <a class="const" href="#pictures" data-cx="636" data-cy="340">
+          <circle class="hit" cx="636" cy="340" r="58"/>
+          <path class="galaxy" d="M687 268 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
+          <polyline class="lines" points="602,302 666,298 670,358 606,362 602,302"/>
+          <circle class="star" cx="602" cy="302" r="2.8"/>
+          <circle class="star" cx="666" cy="298" r="2.8"/>
+          <circle class="star" cx="670" cy="358" r="2.8"/>
+          <circle class="star" cx="606" cy="362" r="2.8"/>
+          <path class="star4c" d="M636 322 L638 328 L644 330 L638 332 L636 338 L634 332 L628 330 L634 328 Z"/>
+          <text class="const-label" x="636" y="394">pictures</text>
+        </a>
+
+        <!-- THINGS I LIKE: heart, bottom -->
+        <a class="const" href="#things" data-cx="392" data-cy="440">
+          <circle class="hit" cx="392" cy="442" r="55"/>
+          <path class="galaxy" d="M342 452 a5 5 0 0 1 10 0 a9 9 0 0 1 -18 0 a13 13 0 0 1 26 0"/>
+          <polyline class="lines" points="374,410 392,420 410,410 418,426 392,456 366,426 374,410"/>
+          <circle class="star" cx="374" cy="410" r="2.6"/>
+          <circle class="star" cx="392" cy="420" r="2.2"/>
+          <circle class="star" cx="410" cy="410" r="2.6"/>
+          <circle class="star" cx="418" cy="426" r="2.4"/>
+          <circle class="star" cx="392" cy="456" r="3"/>
+          <circle class="star" cx="366" cy="426" r="2.4"/>
+          <text class="const-label" x="392" y="484">things i like</text>
+        </a>
+
+        <!-- CV: scroll, bottom right -->
+        <a class="const" href="cv.html" data-cx="556" data-cy="440">
+          <circle class="hit" cx="556" cy="442" r="48"/>
+          <polyline class="lines" points="528,430 556,424 584,432"/>
+          <polyline class="lines" points="528,430 522,444"/>
+          <polyline class="lines" points="584,432 590,446"/>
+          <circle class="star" cx="528" cy="430" r="2.4"/>
+          <circle class="star" cx="556" cy="424" r="2.8"/>
+          <circle class="star" cx="584" cy="432" r="2.4"/>
+          <text class="const-label" x="556" y="472">cv</text>
+        </a>
+      </svg>
+
       <p class="hero-links">
-        <a href="mailto:christinecorry1405@gmail.com">Email</a>
-        <a href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">Substack</a>
-        <a href="https://www.linkedin.com/in/christinecorry/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://calendly.com/christinecorry" target="_blank" rel="noopener">Calendly</a>
+        <a href="mailto:christinecorry1405@gmail.com">email</a>
+        <a href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">substack</a>
+        <a href="https://www.linkedin.com/in/christinecorry/" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://calendly.com/christinecorry" target="_blank" rel="noopener">calendly</a>
       </p>
     </div>
+  </section>
 
-    <div class="narrative">
+  <!-- ============ ABOUT ============ -->
+  <section class="tab-panel" id="panel-about">
+    <h2 class="panel-title">About</h2>
+    <svg class="sprig sprig-left" viewBox="0 0 220 34" aria-hidden="true">
+      <path d="M6 22 Q 60 12 110 17 Q 165 22 214 15" fill="none"/>
+      <path d="M40 19 Q 34 6 46 4 Q 50 15 40 19 Z"/>
+      <path d="M130 18 Q 124 30 134 32 Q 140 22 130 18 Z"/>
+      <circle cx="180" cy="17" r="2"/>
+    </svg>
+    <div class="narrative sketch-box">
       <p>
         Hello! I'm Christine. I am perpetually worried about AI and trying to find the best things
         I can do to help make sure it goes right.
@@ -58,6 +206,12 @@
   <!-- ============ WRITING ============ -->
   <section class="tab-panel" id="panel-writing">
     <h2 class="panel-title">Writing</h2>
+    <svg class="sprig sprig-left" viewBox="0 0 220 34" aria-hidden="true">
+      <path d="M6 22 Q 60 12 110 17 Q 165 22 214 15" fill="none"/>
+      <path d="M40 19 Q 34 6 46 4 Q 50 15 40 19 Z"/>
+      <path d="M130 18 Q 124 30 134 32 Q 140 22 130 18 Z"/>
+      <circle cx="180" cy="17" r="2"/>
+    </svg>
     <p class="panel-intro">
       Most of my writing lives on my Substack,
       <a href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">Proof by Vibes</a>.
@@ -65,17 +219,17 @@
     </p>
     <div class="card-grid">
       <!-- Copy this card to add a piece of writing -->
-      <a class="card" href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">
+      <a class="card sketch-box" href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">
         <h3>Placeholder essay title</h3>
-        <p class="card-date">Month 2026</p>
+        <p class="card-date">month 2026</p>
         <p>A one-line description of what this piece is about.</p>
-        <p class="tags"><span class="tag tag-green">AI safety</span><span class="tag tag-pink">essay</span></p>
+        <p class="tags"><span class="tag">AI safety</span><span class="tag">essay</span></p>
       </a>
-      <a class="card" href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">
+      <a class="card sketch-box" href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">
         <h3>Another placeholder</h3>
-        <p class="card-date">Month 2026</p>
+        <p class="card-date">month 2026</p>
         <p>Swap these cards for links to your real posts.</p>
-        <p class="tags"><span class="tag tag-yellow">musings</span></p>
+        <p class="tags"><span class="tag">musings</span></p>
       </a>
     </div>
   </section>
@@ -83,23 +237,29 @@
   <!-- ============ SONGS ============ -->
   <section class="tab-panel" id="panel-songs">
     <h2 class="panel-title">Songs</h2>
+    <svg class="sprig sprig-left" viewBox="0 0 220 34" aria-hidden="true">
+      <path d="M6 22 Q 60 12 110 17 Q 165 22 214 15" fill="none"/>
+      <path d="M78 17 Q 86 5 92 10 Q 88 20 78 17 Z"/>
+      <path d="M168 18 Q 176 7 182 12 Q 178 21 168 18 Z"/>
+      <circle cx="30" cy="20" r="2"/>
+    </svg>
     <p class="panel-intro">Things I've written, recorded, or can't stop humming.</p>
     <div class="card-grid">
       <!-- Copy this card to add a song. Swap the href for a
            Spotify/SoundCloud/YouTube link, or replace the whole card
            with an <iframe> embed from those platforms. -->
-      <a class="card song-card" href="#" >
-        <div class="equalizer" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
+      <a class="card sketch-box song-card" href="#">
+        <svg class="soundwave" viewBox="0 0 120 30" aria-hidden="true">
+          <path d="M2 16 Q 8 4 14 16 Q 20 28 26 16 Q 32 6 38 16 Q 44 26 50 16 Q 56 2 62 16 Q 68 28 74 16 Q 80 8 86 16 Q 92 24 98 16 Q 104 6 110 16 L 118 16" fill="none"/>
+        </svg>
         <h3>Placeholder song</h3>
         <p class="card-date">a demo, 2026</p>
         <p>A sentence about this song.</p>
       </a>
-      <a class="card song-card" href="#">
-        <div class="equalizer eq-pink" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
+      <a class="card sketch-box song-card" href="#">
+        <svg class="soundwave" viewBox="0 0 120 30" aria-hidden="true">
+          <path d="M2 16 Q 10 24 18 15 Q 26 4 34 16 Q 42 27 50 16 Q 58 6 66 16 Q 74 25 82 15 Q 90 3 98 16 Q 106 26 118 14" fill="none"/>
+        </svg>
         <h3>Another placeholder</h3>
         <p class="card-date">a cover, 2026</p>
         <p>Swap these for real songs or embeds.</p>
@@ -110,20 +270,26 @@
   <!-- ============ PICTURES ============ -->
   <section class="tab-panel" id="panel-pictures">
     <h2 class="panel-title">Pictures</h2>
+    <svg class="sprig sprig-left" viewBox="0 0 220 34" aria-hidden="true">
+      <path d="M6 22 Q 60 12 110 17 Q 165 22 214 15" fill="none"/>
+      <path d="M40 19 Q 34 6 46 4 Q 50 15 40 19 Z"/>
+      <path d="M168 18 Q 176 7 182 12 Q 178 21 168 18 Z"/>
+      <circle cx="110" cy="17" r="2"/>
+    </svg>
     <p class="panel-intro">Photos, drawings, and other things I've pointed a lens or pencil at.</p>
     <div class="photo-grid">
       <!-- Copy this figure to add a picture. Put image files in assets/pictures/ -->
-      <figure class="polaroid">
+      <figure class="plate sketch-box">
         <div class="photo-placeholder">your photo here</div>
-        <figcaption class="polaroid-caption">a caption</figcaption>
+        <figcaption class="plate-caption">a caption</figcaption>
       </figure>
-      <figure class="polaroid">
+      <figure class="plate sketch-box">
         <div class="photo-placeholder">another one</div>
-        <figcaption class="polaroid-caption">another caption</figcaption>
+        <figcaption class="plate-caption">another caption</figcaption>
       </figure>
-      <figure class="polaroid">
+      <figure class="plate sketch-box">
         <div class="photo-placeholder">and another</div>
-        <figcaption class="polaroid-caption">a third caption</figcaption>
+        <figcaption class="plate-caption">a third caption</figcaption>
       </figure>
     </div>
   </section>
@@ -131,6 +297,12 @@
   <!-- ============ THINGS I LIKE ============ -->
   <section class="tab-panel" id="panel-things">
     <h2 class="panel-title">Things I Like</h2>
+    <svg class="sprig sprig-left" viewBox="0 0 220 34" aria-hidden="true">
+      <path d="M6 22 Q 60 12 110 17 Q 165 22 214 15" fill="none"/>
+      <path d="M78 17 Q 86 5 92 10 Q 88 20 78 17 Z"/>
+      <path d="M130 18 Q 124 30 134 32 Q 140 22 130 18 Z"/>
+      <circle cx="200" cy="16" r="2"/>
+    </svg>
 
     <h3 class="subheading">Websites of Cool People I Know</h3>
     <p class="pill-row">
@@ -141,17 +313,17 @@
     <h3 class="subheading">Poems, Paintings, and Other Content</h3>
     <div class="masonry">
       <!-- Copy these blocks to add things you like -->
-      <div class="masonry-item">
+      <div class="masonry-item sketch-box">
         <h4 class="item-title">A poem you love</h4>
         <p class="item-attr">Poet, year</p>
         <p class="item-body">Paste a favorite stanza or the whole poem here.</p>
       </div>
-      <div class="masonry-item">
+      <div class="masonry-item sketch-box">
         <h4 class="item-title">A painting</h4>
         <p class="item-attr">Artist, year</p>
         <p class="item-body">Add an image with &lt;img&gt;, or just describe why you love it.</p>
       </div>
-      <div class="masonry-item">
+      <div class="masonry-item sketch-box">
         <h4 class="item-title">A song by someone else</h4>
         <p class="item-attr">Artist</p>
         <p class="item-body">Link it, embed it, or quote the line that gets you.</p>
@@ -162,8 +334,12 @@
 </main>
 
 <footer class="site-footer">
+  <!-- hand-drawn hills on the horizon -->
+  <svg class="hills" viewBox="0 0 900 60" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 55 Q 90 18 200 42 Q 290 58 380 38 Q 470 20 560 44 Q 650 60 740 34 Q 820 14 900 48 L 900 60 L 0 60 Z"/>
+  </svg>
   <div class="container">
-    <p>&copy; <span id="year"></span> Christine Corry</p>
+    <p>&copy; <span id="year"></span> Christine Corry <span class="footer-star">✦</span></p>
   </div>
 </footer>
 
