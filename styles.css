@@ -411,9 +411,21 @@ h1, h2, h3, h4 {
   border-color: var(--accent);
 }
 
+.about-portrait {
+  width: 230px;
+  margin: 36px auto 0;
+  padding: 12px;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+}
+
 .narrative {
   max-width: 640px;
-  margin: 44px auto 0;
+  margin: 30px auto 0;
   padding: 30px 36px;
 }
 
