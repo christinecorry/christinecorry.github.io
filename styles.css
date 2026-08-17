@@ -549,6 +549,66 @@ h1, h2, h3, h4 {
   padding: 8px 0 4px;
 }
 
+/* Curiosities */
+
+.mag {
+  width: 15px;
+  height: 15px;
+  stroke: var(--ink-soft);
+  fill: var(--ink-soft);
+  stroke-width: 1;
+  flex-shrink: 0;
+}
+
+.curio-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+
+.curio-legend {
+  margin: 0 0 28px;
+}
+
+.legend-caption {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+}
+
+.legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  margin: 0;
+}
+
+.legend-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+}
+
+.curio-player {
+  display: block;
+  border: 0;
+  border-radius: 10px;
+}
+
+.plate-item {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* Things I Like */
 
 .pill-row {
