@@ -10,30 +10,38 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="site-name" href="index.html">Christine Corry</a>
+    <a class="site-name" href="#home">Christine Corry</a>
     <nav class="site-nav">
-      <a href="index.html" class="active">Home</a>
+      <a href="#home" data-tab="home" class="tab-link active">Home</a>
+      <a href="#writing" data-tab="writing" class="tab-link">Writing</a>
+      <a href="#songs" data-tab="songs" class="tab-link">Songs</a>
+      <a href="#pictures" data-tab="pictures" class="tab-link">Pictures</a>
+      <a href="#things" data-tab="things" class="tab-link">Things I Like</a>
       <a href="cv.html">CV</a>
-      <a href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">Substack</a>
-      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main class="container">
 
-  <section class="hero">
-    <div class="container">
-      <div class="headshot">
-        <img src="assets/headshot.jpg" alt="Christine Corry" onerror="this.parentElement.classList.add('headshot--empty')">
+  <!-- ============ HOME ============ -->
+  <section class="tab-panel active" id="panel-home">
+    <div class="hero">
+      <div class="polaroid headshot-polaroid">
+        <img src="assets/headshot.jpg" alt="Christine Corry">
+        <span class="polaroid-caption">hi, it's me</span>
       </div>
-      <h2 class="hero-name">Christine Corry</h2>
+      <h1 class="hero-name">Christine Corry</h1>
       <p class="tagline">Perpetually concerned, trying to do something about it.</p>
+      <p class="hero-links">
+        <a href="mailto:christinecorry1405@gmail.com">Email</a>
+        <a href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">Substack</a>
+        <a href="https://www.linkedin.com/in/christinecorry/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://calendly.com/christinecorry" target="_blank" rel="noopener">Calendly</a>
+      </p>
     </div>
-  </section>
 
-  <section class="section narrative-section">
-    <div class="container narrative">
+    <div class="narrative">
       <p>
         Hello! I'm Christine. I am perpetually worried about AI and trying to find the best things
         I can do to help make sure it goes right.
@@ -44,6 +52,110 @@
         Genomics Institute, and spent three years studying pilot cognition at NASA. Now I am a
         Second Look Research Fellow at UChicago's XLab, replicating empirical AI safety research.
       </p>
+    </div>
+  </section>
+
+  <!-- ============ WRITING ============ -->
+  <section class="tab-panel" id="panel-writing">
+    <h2 class="panel-title">Writing</h2>
+    <p class="panel-intro">
+      Most of my writing lives on my Substack,
+      <a href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">Proof by Vibes</a>.
+      Some favorites:
+    </p>
+    <div class="card-grid">
+      <!-- Copy this card to add a piece of writing -->
+      <a class="card" href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">
+        <h3>Placeholder essay title</h3>
+        <p class="card-date">Month 2026</p>
+        <p>A one-line description of what this piece is about.</p>
+        <p class="tags"><span class="tag tag-green">AI safety</span><span class="tag tag-pink">essay</span></p>
+      </a>
+      <a class="card" href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">
+        <h3>Another placeholder</h3>
+        <p class="card-date">Month 2026</p>
+        <p>Swap these cards for links to your real posts.</p>
+        <p class="tags"><span class="tag tag-yellow">musings</span></p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ SONGS ============ -->
+  <section class="tab-panel" id="panel-songs">
+    <h2 class="panel-title">Songs</h2>
+    <p class="panel-intro">Things I've written, recorded, or can't stop humming.</p>
+    <div class="card-grid">
+      <!-- Copy this card to add a song. Swap the href for a
+           Spotify/SoundCloud/YouTube link, or replace the whole card
+           with an <iframe> embed from those platforms. -->
+      <a class="card song-card" href="#" >
+        <div class="equalizer" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <h3>Placeholder song</h3>
+        <p class="card-date">a demo, 2026</p>
+        <p>A sentence about this song.</p>
+      </a>
+      <a class="card song-card" href="#">
+        <div class="equalizer eq-pink" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <h3>Another placeholder</h3>
+        <p class="card-date">a cover, 2026</p>
+        <p>Swap these for real songs or embeds.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ PICTURES ============ -->
+  <section class="tab-panel" id="panel-pictures">
+    <h2 class="panel-title">Pictures</h2>
+    <p class="panel-intro">Photos, drawings, and other things I've pointed a lens or pencil at.</p>
+    <div class="photo-grid">
+      <!-- Copy this figure to add a picture. Put image files in assets/pictures/ -->
+      <figure class="polaroid">
+        <div class="photo-placeholder">your photo here</div>
+        <figcaption class="polaroid-caption">a caption</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <div class="photo-placeholder">another one</div>
+        <figcaption class="polaroid-caption">another caption</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <div class="photo-placeholder">and another</div>
+        <figcaption class="polaroid-caption">a third caption</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ THINGS I LIKE ============ -->
+  <section class="tab-panel" id="panel-things">
+    <h2 class="panel-title">Things I Like</h2>
+
+    <h3 class="subheading">Websites of Cool People I Know</h3>
+    <p class="pill-row">
+      <a class="pill" href="https://eviehu612.github.io" target="_blank" rel="noopener">Evie</a>
+      <!-- Add more friends: <a class="pill" href="...">Name</a> -->
+    </p>
+
+    <h3 class="subheading">Poems, Paintings, and Other Content</h3>
+    <div class="masonry">
+      <!-- Copy these blocks to add things you like -->
+      <div class="masonry-item">
+        <h4 class="item-title">A poem you love</h4>
+        <p class="item-attr">Poet, year</p>
+        <p class="item-body">Paste a favorite stanza or the whole poem here.</p>
+      </div>
+      <div class="masonry-item">
+        <h4 class="item-title">A painting</h4>
+        <p class="item-attr">Artist, year</p>
+        <p class="item-body">Add an image with &lt;img&gt;, or just describe why you love it.</p>
+      </div>
+      <div class="masonry-item">
+        <h4 class="item-title">A song by someone else</h4>
+        <p class="item-attr">Artist</p>
+        <p class="item-body">Link it, embed it, or quote the line that gets you.</p>
+      </div>
     </div>
   </section>
 
