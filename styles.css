@@ -633,35 +633,10 @@ h1, h2, h3, h4 {
   border-radius: 2px;
 }
 
-.poem-details {
-  margin-top: 12px;
-}
-
-.poem-details summary {
-  cursor: pointer;
+.poem-link {
+  margin: 12px 0 0;
   font-style: italic;
   font-size: 0.95rem;
-  color: var(--accent);
-  list-style: none;
-}
-
-.poem-details summary::after {
-  content: " \203A";
-}
-
-.poem-details[open] summary::after {
-  content: " \2039";
-}
-
-.poem-details summary:hover {
-  color: var(--accent-strong);
-}
-
-.poem-text {
-  white-space: pre-line;
-  font-size: 0.98rem;
-  color: var(--text);
-  margin: 10px 0 0;
 }
 
 /* Things I Like */
