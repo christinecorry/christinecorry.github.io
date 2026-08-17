@@ -633,6 +633,10 @@ h1, h2, h3, h4 {
   border-radius: 2px;
 }
 
+.poem-text {
+  white-space: pre-line;
+}
+
 .poem-link {
   margin: 12px 0 0;
   font-style: italic;
