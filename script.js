@@ -42,3 +42,28 @@ if (starmap) {
     });
   });
 }
+
+// Living-picture videos: silent loop, hover controls, play only when visible
+const wraps = document.querySelectorAll(".video-wrap");
+if (wraps.length) {
+  const seen = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const w = e.target, v = w.querySelector("video");
+      if (e.isIntersecting && !w.classList.contains("paused")) v.play();
+      else v.pause();
+    });
+  }, { threshold: 0.2 });
+
+  wraps.forEach(w => {
+    const v = w.querySelector("video");
+    seen.observe(w);
+    w.querySelector(".vbtn-play").addEventListener("click", () => {
+      if (v.paused) { w.classList.remove("paused"); v.play(); }
+      else { w.classList.add("paused"); v.pause(); }
+    });
+    w.querySelector(".vbtn-mute").addEventListener("click", () => {
+      v.muted = !v.muted;
+      w.classList.toggle("muted", v.muted);
+    });
+  });
+}

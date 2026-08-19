@@ -646,6 +646,61 @@ h1, h2, h3, h4 {
   border-radius: 2px;
 }
 
+/* living-picture videos: silent loop, controls on hover */
+.video-wrap {
+  position: relative;
+}
+
+.video-controls {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.video-wrap:hover .video-controls,
+.video-wrap.paused .video-controls {
+  opacity: 1;
+}
+
+.vbtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background-color: rgba(231, 221, 197, 0.88);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.vbtn:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
+.vbtn svg {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.ic-play, .ic-muted { display: none; }
+.video-wrap.paused .ic-play { display: block; }
+.video-wrap.paused .ic-pause { display: none; }
+.video-wrap.muted .ic-muted { display: block; }
+.video-wrap.muted .ic-sound { display: none; }
+
 .poem-text {
   white-space: pre-line;
 }
