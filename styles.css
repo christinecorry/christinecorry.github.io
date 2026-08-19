@@ -639,7 +639,8 @@ h1, h2, h3, h4 {
   margin-right: 0;
 }
 
-.plate-item img {
+.plate-item img,
+.plate-item video {
   display: block;
   width: 100%;
   border-radius: 2px;
