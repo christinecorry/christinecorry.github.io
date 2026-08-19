@@ -49,7 +49,7 @@ if (wraps.length) {
   const seen = new IntersectionObserver(entries => {
     entries.forEach(e => {
       const w = e.target, v = w.querySelector("video");
-      if (e.isIntersecting && !w.classList.contains("paused")) v.play();
+      if (e.isIntersecting && !w.classList.contains("paused")) v.play().catch(() => {});
       else v.pause();
     });
   }, { threshold: 0.2 });
@@ -63,7 +63,7 @@ if (wraps.length) {
       if (v.paused) {
         if (v.ended) v.currentTime = 0;
         w.classList.remove("paused");
-        v.play();
+        v.play().catch(() => {});
       } else { w.classList.add("paused"); v.pause(); }
     });
     w.querySelector(".vbtn-mute").addEventListener("click", () => {
