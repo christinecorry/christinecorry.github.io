@@ -57,9 +57,14 @@ if (wraps.length) {
   wraps.forEach(w => {
     const v = w.querySelector("video");
     seen.observe(w);
+    // non-looping clips play once, then hold on their last frame
+    v.addEventListener("ended", () => w.classList.add("paused"));
     w.querySelector(".vbtn-play").addEventListener("click", () => {
-      if (v.paused) { w.classList.remove("paused"); v.play(); }
-      else { w.classList.add("paused"); v.pause(); }
+      if (v.paused) {
+        if (v.ended) v.currentTime = 0;
+        w.classList.remove("paused");
+        v.play();
+      } else { w.classList.add("paused"); v.pause(); }
     });
     w.querySelector(".vbtn-mute").addEventListener("click", () => {
       v.muted = !v.muted;
