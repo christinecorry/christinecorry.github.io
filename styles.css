@@ -1044,6 +1044,40 @@ h2 {
   padding-left: 20px;
 }
 
+/* extra material shown only under the seals, not in the traditional list */
+.entry .entry-more {
+  display: none;
+}
+
+.seal-card .entry-more {
+  display: block;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.more-item + .more-item {
+  margin-top: 16px;
+}
+
+.more-title {
+  margin: 0 0 4px;
+  font-size: 1.08rem;
+}
+
+.more-venue {
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.more-abstract {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
 @media (max-width: 720px) {
   .seals {
     flex-wrap: wrap;

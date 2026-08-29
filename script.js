@@ -87,6 +87,8 @@ if (seals) {
     card.append(entry.querySelector(".entry-header").cloneNode(true),
                 entry.querySelector(".entry-org").cloneNode(true),
                 entry.querySelector("ul").cloneNode(true));
+    const more = entry.querySelector(".entry-more");
+    if (more) card.append(more.cloneNode(true));
     card.classList.add("show");
   }
 
