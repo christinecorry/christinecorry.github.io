@@ -72,3 +72,38 @@ if (wraps.length) {
     });
   });
 }
+
+// CV seals: hover or click an institution's seal to read the matching entry
+const seals = document.getElementById("seals");
+if (seals) {
+  const card = document.getElementById("seal-card");
+  const all = seals.querySelectorAll(".seal");
+  let pinned = null;
+
+  function show(seal) {
+    const entry = document.getElementById(seal.dataset.entry);
+    all.forEach(s => s.classList.toggle("active", s === seal));
+    card.innerHTML = "";
+    card.append(entry.querySelector(".entry-header").cloneNode(true),
+                entry.querySelector(".entry-org").cloneNode(true),
+                entry.querySelector("ul").cloneNode(true));
+    card.classList.add("show");
+  }
+
+  all.forEach(seal => {
+    seal.addEventListener("mouseenter", () => { if (!pinned) show(seal); });
+    seal.addEventListener("focus", () => { if (!pinned) show(seal); });
+    seal.addEventListener("click", () => {
+      if (pinned === seal) {
+        pinned = null;
+        seal.classList.remove("pinned");
+      } else {
+        if (pinned) pinned.classList.remove("pinned");
+        pinned = seal;
+        seal.classList.add("pinned");
+        show(seal);
+      }
+    });
+  });
+  show(all[0]);
+}

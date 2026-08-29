@@ -943,3 +943,118 @@ h2 {
     width: 100%;
   }
 }
+
+/* CV: a row of institutional seals; hover or click one to read the entry */
+
+.seals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 6px 4px;
+  margin: 4px 0 22px;
+}
+
+.seals::before {
+  /* fine rule running behind the seals, like a chart's horizon line */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid var(--line);
+}
+
+.seal {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: border-color 0.25s ease;
+}
+
+.seal::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: border-color 0.25s ease;
+}
+
+.seal img {
+  width: 62%;
+  height: 62%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: grayscale(1) sepia(0.4) contrast(1.05) opacity(0.78);
+  transition: filter 0.3s ease;
+  pointer-events: none;
+}
+
+.seal:hover,
+.seal:focus-visible,
+.seal.active {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.seal:hover::before,
+.seal:focus-visible::before,
+.seal.active::before {
+  border-color: var(--line);
+}
+
+.seal:hover img,
+.seal:focus-visible img,
+.seal.active img {
+  filter: none;
+}
+
+.seal.pinned::before {
+  border-color: var(--accent);
+}
+
+.seal-card {
+  min-height: 150px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.seal-card.show {
+  opacity: 1;
+}
+
+.seal-card .entry-header h3 {
+  font-size: 1.25rem;
+}
+
+.seal-card .entry-org {
+  margin: 2px 0 8px;
+}
+
+.seal-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+@media (max-width: 720px) {
+  .seals {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+  .seals::before {
+    display: none;
+  }
+  .seal {
+    width: 58px;
+    height: 58px;
+  }
+}

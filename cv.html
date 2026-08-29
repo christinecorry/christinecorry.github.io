@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=82bbefa">
+<link rel="stylesheet" href="styles.css?v=1060bc3">
 </head>
 <body>
 
@@ -35,13 +35,25 @@
     <div class="container cv-intro-inner">
       <h2 class="no-border">CV</h2>
     </div>
+    <div class="container">
+      <div class="seals" id="seals">
+        <button class="seal" type="button" data-entry="entry-xlab" aria-label="University of Chicago"><img src="assets/logos/uchicago.png" alt=""></button>
+        <button class="seal" type="button" data-entry="entry-rubin" aria-label="Vera C. Rubin Observatory"><img src="assets/logos/rubin.png" alt=""></button>
+        <button class="seal" type="button" data-entry="entry-nasa" aria-label="NASA"><img src="assets/logos/nasa.png" alt=""></button>
+        <button class="seal" type="button" data-entry="entry-farid" aria-label="UC Berkeley"><img src="assets/logos/berkeley.png" alt=""></button>
+        <button class="seal" type="button" data-entry="entry-apple" aria-label="Apple"><img src="assets/logos/apple.png" alt=""></button>
+        <button class="seal" type="button" data-entry="entry-science-corps" aria-label="Science Corps"><img src="assets/logos/science-corps.png" alt=""></button>
+        <button class="seal" type="button" data-entry="entry-igi" aria-label="Innovative Genomics Institute"><img src="assets/logos/igi.png" alt=""></button>
+      </div>
+      <div class="seal-card" id="seal-card" aria-live="polite"></div>
+    </div>
   </section>
 
   <section id="experience" class="section">
     <div class="container">
       <h2>Work Experience</h2>
 
-      <article class="entry">
+      <article class="entry" id="entry-xlab">
         <div class="entry-header">
           <h3>AI Safety Research Fellow</h3>
           <span class="entry-date">Jun 2026 – Present</span>
@@ -52,7 +64,7 @@
         </ul>
       </article>
 
-      <article class="entry">
+      <article class="entry" id="entry-rubin">
         <div class="entry-header">
           <h3>Rubin Observatory ML and Optical Astrophysics Student Researcher</h3>
           <span class="entry-date">Sep 2025 – Jun 2026</span>
@@ -64,7 +76,7 @@
         </ul>
       </article>
 
-      <article class="entry">
+      <article class="entry" id="entry-nasa">
         <div class="entry-header">
           <h3>Human Systems Integration Research Assistant</h3>
           <span class="entry-date">May 2023 – May 2026</span>
@@ -76,7 +88,7 @@
         </ul>
       </article>
 
-      <article class="entry">
+      <article class="entry" id="entry-farid">
         <div class="entry-header">
           <h3>AI Policy and Computer Vision Student Researcher</h3>
           <span class="entry-date">Jan 2026 – Apr 2026</span>
@@ -87,7 +99,7 @@
         </ul>
       </article>
 
-      <article class="entry">
+      <article class="entry" id="entry-apple">
         <div class="entry-header">
           <h3>Applied ML Software Engineering Intern</h3>
           <span class="entry-date">May 2025 – Aug 2025</span>
@@ -99,7 +111,7 @@
         </ul>
       </article>
 
-      <article class="entry">
+      <article class="entry" id="entry-science-corps">
         <div class="entry-header">
           <h3>Program Manager</h3>
           <span class="entry-date">Jan 2023 – Present</span>
@@ -111,7 +123,7 @@
         </ul>
       </article>
 
-      <article class="entry">
+      <article class="entry" id="entry-igi">
         <div class="entry-header">
           <h3>Machine Learning Research Intern</h3>
           <span class="entry-date">Jan 2024 – May 2025</span>
@@ -217,6 +229,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=82bbefa"></script>
+<script src="script.js?v=1060bc3"></script>
 </body>
 </html>
