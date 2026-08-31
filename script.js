@@ -81,14 +81,15 @@ if (seals) {
   let pinned = null;
 
   function show(seal) {
-    const entry = document.getElementById(seal.dataset.entry);
     all.forEach(s => s.classList.toggle("active", s === seal));
     card.innerHTML = "";
-    card.append(entry.querySelector(".entry-header").cloneNode(true),
-                entry.querySelector(".entry-org").cloneNode(true),
-                entry.querySelector("ul").cloneNode(true));
-    const more = entry.querySelector(".entry-more");
-    if (more) card.append(more.cloneNode(true));
+    seal.dataset.entry.split(" ").forEach(id => {
+      const entry = document.getElementById(id);
+      const wrap = document.createElement("div");
+      wrap.className = "card-entry";
+      [...entry.children].forEach(c => wrap.append(c.cloneNode(true)));
+      card.append(wrap);
+    });
     card.classList.add("show");
   }
 

@@ -1044,6 +1044,12 @@ h2 {
   padding-left: 20px;
 }
 
+.seal-card .card-entry + .card-entry {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
 /* extra material shown only under the seals, not in the traditional list */
 .entry .entry-more {
   display: none;
