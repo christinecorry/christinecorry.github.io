@@ -110,3 +110,16 @@ if (seals) {
   });
   show(all[0]);
 }
+
+// Email links copy the address to the clipboard
+document.querySelectorAll(".copy-email").forEach(a => {
+  a.addEventListener("click", e => {
+    e.preventDefault();
+    const addr = a.dataset.email;
+    navigator.clipboard.writeText(addr).then(() => {
+      const orig = a.textContent;
+      a.textContent = "copied";
+      setTimeout(() => { a.textContent = orig; }, 1200);
+    }).catch(() => { location.href = "mailto:" + addr; });
+  });
+});
