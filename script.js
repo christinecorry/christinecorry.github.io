@@ -20,21 +20,128 @@ if (tabLinks.length) {
   fromHash();
 }
 
-// Celestial map: zoom into a constellation, then open its tab
+// Celestial map: pan and zoom the sky; dive into a constellation to open its tab
 const starmap = document.querySelector(".starmap");
 if (starmap) {
+  const sky = document.getElementById("sky");
+  const C = 500, RSKY = 452;
+  let k = 1, tx = 0, ty = 0, kMin = 0.5, kMax = 9, kHome = 1;
+  let dragged = false;
+
+  const toView = (cx, cy) =>
+    new DOMPoint(cx, cy).matrixTransform(starmap.getScreenCTM().inverse());
+
+  function visibleRect() {
+    const r = starmap.getBoundingClientRect();
+    const p1 = toView(r.left, r.top), p2 = toView(r.right, r.bottom);
+    return { x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y };
+  }
+
+  function apply() {
+    const v = visibleRect();
+    const halfDiag = Math.hypot((v.x2 - v.x1) / 2, (v.y2 - v.y1) / 2);
+    const cxv = (v.x1 + v.x2) / 2, cyv = (v.y1 + v.y2) / 2;
+    // the sky disc may drift only while it still covers the window
+    const slack = Math.max(0, k * RSKY - halfDiag);
+    const dx = (k * C + tx) - cxv, dy = (k * C + ty) - cyv;
+    const d = Math.hypot(dx, dy);
+    if (d > slack) {
+      const f = d ? slack / d : 0;
+      tx = cxv + dx * f - k * C;
+      ty = cyv + dy * f - k * C;
+    }
+    sky.setAttribute("transform", "translate(" + tx + " " + ty + ") scale(" + k + ")");
+    starmap.style.setProperty("--lbl", Math.min(1, Math.sqrt(kHome / k)));
+    starmap.classList.toggle("deep", k > 2.05 * kHome);
+    starmap.classList.toggle("explored", k > 1.12 * kHome);
+  }
+
+  function home() {
+    const v = visibleRect();
+    kHome = Math.hypot((v.x2 - v.x1) / 2, (v.y2 - v.y1) / 2) / RSKY;
+    kMin = Math.min(v.x2 - v.x1, v.y2 - v.y1) / (2 * 478);
+    k = kHome;
+    tx = (v.x1 + v.x2) / 2 - k * C;
+    ty = (v.y1 + v.y2) / 2 - k * C;
+    apply();
+  }
+
+  function zoomAt(px, py, factor) {
+    const k2 = Math.min(kMax, Math.max(kMin, k * factor));
+    const f = k2 / k;
+    tx = px - f * (px - tx);
+    ty = py - f * (py - ty);
+    k = k2;
+    apply();
+  }
+
+  starmap.addEventListener("wheel", e => {
+    e.preventDefault();
+    const p = toView(e.clientX, e.clientY);
+    zoomAt(p.x, p.y, Math.exp(-e.deltaY * 0.0022));
+  }, { passive: false });
+
+  const ptrs = new Map();
+  let lastMid = null, lastDist = 0, moved = 0;
+  starmap.addEventListener("pointerdown", e => {
+    ptrs.set(e.pointerId, toView(e.clientX, e.clientY));
+    moved = 0; dragged = false;
+    if (ptrs.size === 2) {
+      const [a, b] = [...ptrs.values()];
+      lastMid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+      lastDist = Math.hypot(a.x - b.x, a.y - b.y);
+    }
+    starmap.classList.add("dragging");
+  });
+  window.addEventListener("pointermove", e => {
+    if (!ptrs.has(e.pointerId)) return;
+    const p = toView(e.clientX, e.clientY), prev = ptrs.get(e.pointerId);
+    ptrs.set(e.pointerId, p);
+    if (ptrs.size === 1) {
+      tx += p.x - prev.x; ty += p.y - prev.y;
+      moved += Math.hypot(p.x - prev.x, p.y - prev.y);
+      if (moved > 6 / k) dragged = true;
+      apply();
+    } else if (ptrs.size === 2) {
+      const [a, b] = [...ptrs.values()];
+      const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+      const dist = Math.hypot(a.x - b.x, a.y - b.y);
+      tx += mid.x - lastMid.x; ty += mid.y - lastMid.y;
+      if (lastDist) zoomAt(mid.x, mid.y, dist / lastDist);
+      lastMid = mid; lastDist = dist;
+      dragged = true;
+    }
+  });
+  const lift = e => {
+    ptrs.delete(e.pointerId);
+    lastDist = 0;
+    if (!ptrs.size) starmap.classList.remove("dragging");
+  };
+  window.addEventListener("pointerup", lift);
+  window.addEventListener("pointercancel", lift);
+  starmap.addEventListener("dblclick", e => {
+    e.preventDefault();
+    const p = toView(e.clientX, e.clientY);
+    zoomAt(p.x, p.y, 1.9);
+  });
+  window.addEventListener("resize", home);
+  home();
+
   starmap.querySelectorAll(".const").forEach(c => {
     c.addEventListener("click", e => {
       e.preventDefault();
-      const vb = starmap.viewBox.baseVal;
-      starmap.style.transformOrigin =
-        (c.dataset.cx / vb.width * 100) + "% " + (c.dataset.cy / vb.height * 100) + "%";
+      if (dragged) return;
+      const scr = new DOMPoint(k * +c.dataset.cx + tx, k * +c.dataset.cy + ty)
+        .matrixTransform(starmap.getScreenCTM());
+      const r = starmap.getBoundingClientRect();
+      starmap.style.transformOrigin = (scr.x - r.left) + "px " + (scr.y - r.top) + "px";
       starmap.classList.add("zooming");
       setTimeout(() => {
         const href = c.getAttribute("href");
         if (href.startsWith("#")) {
           location.hash = href;
           starmap.classList.remove("zooming");
+          home();
         } else {
           location.href = href;
         }
