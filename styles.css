@@ -1219,3 +1219,13 @@ h2 {
   font-size: calc(13.5px * var(--lbl, 1));
   letter-spacing: calc(3.5px * var(--lbl, 1));
 }
+
+/* constellation lines strengthen with zoom */
+.starmap .clines polyline {
+  transition: stroke 0.45s ease, stroke-width 0.45s ease;
+}
+
+.starmap.deep .clines polyline {
+  stroke: rgba(242, 237, 217, 0.55);
+  stroke-width: 1.1;
+}
