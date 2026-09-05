@@ -28,11 +28,11 @@ out = []
 A = out.append
 
 # ---------- defs ----------
-NAVS = {   # key: (IAU id, href, label, label position)
-    "about":  ("UMa", "#about",  "About Me", "mid"),
-    "writing":("Cyg", "#writing","Writing", "above"),
-    "curios": ("Lyr", "#curios", "Curiosities", "below"),
-    "cv":     ("Cas", "cv.html", "CV", "below"),
+NAVS = {   # key: (IAU id, href, label, label offset from figure center)
+    "about":  ("UMa", "#about",  "About Me", (-115, 65)),
+    "writing":("Cyg", "#writing","Writing", (10, -125)),
+    "curios": ("Lyr", "#curios", "Curiosities", (75, 90)),
+    "cv":     ("Cas", "cv.html", "CV", (-150, -35)),
 }
 NAV_IDS = {v[0] for v in NAVS.values()}
 A('<svg class="starmap" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" aria-label="Map of the northern sky: each invented constellation is a section of this site">')
@@ -156,7 +156,7 @@ with open(os.path.join(HERE,'data/stars_mag5.csv')) as f:
 A('</g>')
 
 # ---------- navigation: four real constellations, clickable ----------
-for key,(cid,href,label,pos) in NAVS.items():
+for key,(cid,href,label,(ldx,ldy)) in NAVS.items():
     segs = []
     for seg in lines[cid]:
         pts = [project(ra%360, dec) for ra,dec in seg]
@@ -166,14 +166,18 @@ for key,(cid,href,label,pos) in NAVS.items():
     cx, cy = (min(xs)+max(xs))/2, (min(ys)+max(ys))/2
     rad = max(math.hypot(x-cx, y-cy) for x,y in allp)
     A(f'<a class="const" href="{href}" data-cx="{cx:.0f}" data-cy="{cy:.0f}">')
-    A(f'<circle class="hit" cx="{cx:.0f}" cy="{cy:.0f}" r="{max(55, min(rad+14, 150)):.0f}"/>')
+    A(f'<circle class="hit" cx="{cx:.0f}" cy="{cy:.0f}" r="{max(60, min(rad+16, 260)):.0f}"/>')
     for seg in segs:
         d = ' '.join(f"{x:.1f},{y:.1f}" for x,y in seg)
         A(f'<polyline class="lines" points="{d}"/>')
-    if pos == "above":   ly = min(ys) - 30
-    elif pos == "mid":   ly = cy + 6
-    else:                ly = max(ys) + 30
-    A(f'<path id="lab-{key}" d="M {cx-95:.0f} {ly+14:.0f} Q {cx:.0f} {ly:.0f} {cx+95:.0f} {ly+14:.0f}" fill="none"/>')
+    lx, ly = cx + ldx, cy + ldy
+    lr = math.hypot(lx - C, ly - C)
+    if lr > 415:   # keep labels well inside the disc
+        lx, ly = C + (lx - C) * 415 / lr, C + (ly - C) * 415 / lr
+    ly = max(240, min(770, ly))   # stay inside the home crop on wide windows
+    lx = max(140, min(860, lx))
+    print(f"  label {label!r} at ({lx:.0f},{ly:.0f})")
+    A(f'<path id="lab-{key}" d="M {lx-95:.0f} {ly+14:.0f} Q {lx:.0f} {ly:.0f} {lx+95:.0f} {ly+14:.0f}" fill="none"/>')
     A(f'<text class="const-label"><textPath href="#lab-{key}" startOffset="50%" text-anchor="middle">{label}</textPath></text>')
     A('</a>')
 A('</g>')  # /sky

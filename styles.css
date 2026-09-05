@@ -11,7 +11,8 @@
   --starlight: #f2edd9;
   --disc-line: rgba(242, 237, 217, 0.4);
   --disc-faint: rgba(242, 237, 217, 0.14);
-  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Sorts Mill Goudy", Georgia, serif;
+  --font-display: "IM Fell DW Pica", "IM Fell English", Georgia, serif;
 }
 
 * {
@@ -272,7 +273,7 @@ h1, h2, h3, h4 {
 }
 
 .starmap text {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
 }
 
 .map-name {
@@ -1244,19 +1245,34 @@ h2 {
 /* title as a corner cartouche, in the manner of the old atlases */
 .map-cartouche {
   position: absolute;
-  left: 36px;
-  bottom: 26px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease, left 1.5s ease-in-out, top 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.hero:has(.starmap.roaming) .map-cartouche {
+  left: 36px;
+  top: calc(100% - 96px);
+  transform: translate(0, 0);
+  text-align: left;
+}
+
+.hero:has(.starmap.roaming) .cart-name {
+  font-size: 1.3rem;
+  letter-spacing: 6px;
 }
 
 .hero:has(.starmap.explored) .map-cartouche { opacity: 0; }
 
 .cart-name {
   margin: 0;
-  font-size: 1.5rem;
+  transition: font-size 1.5s ease-in-out, letter-spacing 1.5s ease-in-out;
+  font-size: 1.9rem;
   text-transform: uppercase;
-  letter-spacing: 7px;
+  letter-spacing: 9px;
   color: var(--starlight);
 }
 
@@ -1273,4 +1289,29 @@ h2 {
 .starmap .const .lines {
   stroke: rgba(242, 237, 217, 0.55);
   stroke-width: 1.1;
+}
+
+/* display face lives only on the cover chart */
+.map-cartouche {
+  font-family: var(--font-display);
+}
+
+/* hovering a page name lights its constellation */
+.starmap .const .lines {
+  transition: stroke 0.25s ease, stroke-width 0.25s ease;
+}
+
+.starmap .const:hover .lines,
+.starmap .const:focus-visible .lines,
+.starmap .const.lit .lines {
+  stroke: #fffef5;
+  stroke-width: 1.6;
+  stroke-dasharray: none;
+  filter: drop-shadow(0 0 3px rgba(242, 237, 217, 0.7));
+}
+
+.starmap .const:hover .const-label,
+.starmap .const:focus-visible .const-label,
+.starmap .const.lit .const-label {
+  opacity: 1;
 }
