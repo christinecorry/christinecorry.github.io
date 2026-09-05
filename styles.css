@@ -1439,3 +1439,38 @@ h2 {
   font-size: 0.8rem;
   margin-bottom: 4px;
 }
+
+/* the CV as an observation log: dates ride the margin */
+#experience .entry,
+#education .entry,
+.seal-card .card-entry {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 0 26px;
+  align-items: start;
+}
+
+.entry .entry-date,
+.seal-card .entry-date {
+  margin: 0;
+  text-align: right;
+  padding-top: 4px;
+  white-space: normal;
+}
+
+.entry-body h3 { margin: 0; font-size: 1.3rem; }
+
+.entry-body .entry-org { margin: 2px 0 8px; }
+
+@media (max-width: 720px) {
+  #experience .entry,
+  #education .entry,
+  .seal-card .card-entry {
+    display: block;
+  }
+  .entry .entry-date,
+  .seal-card .entry-date {
+    text-align: left;
+    padding-top: 0;
+  }
+}
