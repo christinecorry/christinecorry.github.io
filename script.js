@@ -38,6 +38,7 @@ if (starmap) {
   }
 
   function apply() {
+    if (!starmap.getBoundingClientRect().width) return;   // panel hidden
     const v = visibleRect();
     const halfDiag = Math.hypot((v.x2 - v.x1) / 2, (v.y2 - v.y1) / 2);
     const cxv = (v.x1 + v.x2) / 2, cyv = (v.y1 + v.y2) / 2;
@@ -58,6 +59,7 @@ if (starmap) {
   }
 
   function home() {
+    if (!starmap.getBoundingClientRect().width) return;   // panel hidden
     const v = visibleRect();
     kHome = Math.hypot((v.x2 - v.x1) / 2, (v.y2 - v.y1) / 2) / RSKY;
     kMin = Math.min(v.x2 - v.x1, v.y2 - v.y1) / (2 * 478);
@@ -126,6 +128,10 @@ if (starmap) {
     zoomAt(p.x, p.y, 1.9);
   });
   window.addEventListener("resize", home);
+  window.addEventListener("hashchange", () => requestAnimationFrame(() => {
+    const p = document.getElementById("panel-home");
+    if (p && p.classList.contains("active")) home();
+  }));
   home();
 
   starmap.querySelectorAll(".const").forEach(c => {
