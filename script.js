@@ -153,6 +153,22 @@ if (starmap) {
     }
   });
 
+  starmap.querySelectorAll(".constel").forEach(g => {
+    g.addEventListener("mouseenter", () => {
+      if (loreBox && g.dataset.lore) {
+        loreBox.querySelector(".lore-name").textContent = g.dataset.name;
+        loreBox.querySelector(".lore-text").textContent = g.dataset.lore;
+        loreBox.classList.add("show");
+      }
+      const lbl = starmap.querySelector('.cname[data-cid="' + g.dataset.cid + '"]');
+      if (lbl) lbl.classList.add("lit");
+    });
+    g.addEventListener("mouseleave", () => {
+      if (loreBox) loreBox.classList.remove("show");
+      starmap.querySelectorAll(".cname.lit").forEach(l => l.classList.remove("lit"));
+    });
+  });
+
   starmap.querySelectorAll(".const").forEach(c => {
     c.addEventListener("click", e => {
       e.preventDefault();

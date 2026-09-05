@@ -1445,10 +1445,15 @@ h2 {
 #education .entry,
 .seal-card .card-entry {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 1fr 150px;
   gap: 0 26px;
   align-items: start;
 }
+
+.entry .entry-date,
+.seal-card .entry-date { grid-column: 2; grid-row: 1; }
+
+.entry-body { grid-column: 1; grid-row: 1; }
 
 .entry .entry-date,
 .seal-card .entry-date {
@@ -1482,4 +1487,24 @@ h2 {
   letter-spacing: 2px;
   color: var(--ink-soft);
   opacity: 0.75;
+}
+
+/* every constellation is hoverable: fat invisible strokes catch the pointer */
+.starmap .chit {
+  stroke: transparent;
+  stroke-width: 14;
+  fill: none;
+  pointer-events: stroke;
+}
+
+.starmap .constel:hover polyline:not(.chit) {
+  stroke: rgba(242, 237, 217, 0.55);
+}
+
+.starmap .cnames .cname.lit { opacity: 0.95; }
+
+/* writing cards stack as a single column */
+#panel-writing .card-grid {
+  grid-template-columns: 1fr;
+  max-width: 780px;
 }
