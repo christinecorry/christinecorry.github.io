@@ -1304,10 +1304,9 @@ h2 {
 .starmap .const:hover .lines,
 .starmap .const:focus-visible .lines,
 .starmap .const.lit .lines {
-  stroke: #fffef5;
-  stroke-width: 1.6;
+  stroke: rgba(242, 237, 217, 0.75);
+  stroke-width: 1.2;
   stroke-dasharray: none;
-  filter: drop-shadow(0 0 3px rgba(242, 237, 217, 0.7));
 }
 
 .starmap .const:hover .const-label,
