@@ -11,7 +11,8 @@
   --starlight: #f2edd9;
   --disc-line: rgba(242, 237, 217, 0.4);
   --disc-faint: rgba(242, 237, 217, 0.14);
-  --font-serif: "Libre Caslon Text", Georgia, serif;
+  --font-serif: "Crimson Pro", Georgia, serif;
+  --font-head: "Brygada 1918", Georgia, serif;
   --font-display: "IM Fell DW Pica", "IM Fell English", Georgia, serif;
 }
 
@@ -22,7 +23,7 @@
 body {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 1.02rem;
+  font-size: 1.06rem;
   color: var(--text);
   line-height: 1.65;
   background-color: var(--paper);
@@ -52,7 +53,7 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-serif);
+  font-family: var(--font-head);
   color: var(--accent-strong);
   font-weight: 500;
   letter-spacing: 0.03em;
