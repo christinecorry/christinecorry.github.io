@@ -1514,3 +1514,11 @@ h2 {
   display: block;
   margin-top: 2px;
 }
+
+/* writing card descriptions */
+.card-desc {
+  margin: 7px 0 0;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--text);
+}
