@@ -32,7 +32,7 @@ NAVS = {   # key: (IAU id, href, label, label offset from figure center)
     "about":  ("UMa", "#about",  "About Me", (0, 10)),
     "writing":("Cyg", "#writing","Writing", (0, 15)),
     "curios": ("Lyr", "#curios", "Curiosities", (0, 60)),
-    "cv":     ("Cas", "cv.html", "CV", (0, -75)),
+    "cv":     ("Cas", "cv.html", "CV", (0, -35)),
 }
 NAV_IDS = {v[0] for v in NAVS.values()}
 A('<svg class="starmap" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" aria-label="Map of the northern sky: each invented constellation is a section of this site">')
