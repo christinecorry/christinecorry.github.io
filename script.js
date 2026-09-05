@@ -134,6 +134,25 @@ if (starmap) {
   }));
   home();
 
+  const LORE = {
+    "#about":   ["Ursa Major \u00b7 the great bear", "Callisto, turned to a bear by Hera's jealousy and flung into the sky by Zeus beside her son. Its seven brightest stars have pointed travellers north in nearly every culture's memory."],
+    "#writing": ["Cygnus \u00b7 the swan", "The swan gliding down the Milky Way \u2014 Zeus in disguise, or the friend of fallen Phaethon set among the stars for his grief. Deneb, its tail, anchors the Northern Cross."],
+    "#curios":  ["Lyra \u00b7 the lyre", "The lyre Hermes strung from a tortoise shell and Orpheus played to charm stones and half-win Eurydice back from the dead. Vega was the pole star twelve thousand years ago, and will be again."],
+    "cv.html":  ["Cassiopeia \u00b7 the queen", "The queen of Aethiopia, set among the stars for boasting her beauty above the sea-nymphs \u2014 and made to wheel around the pole, half the year hanging upside down."]
+  };
+  const loreBox = document.querySelector(".map-lore-card");
+  starmap.querySelectorAll(".const").forEach(c => {
+    const lore = LORE[c.getAttribute("href")];
+    if (loreBox && lore) {
+      c.addEventListener("mouseenter", () => {
+        loreBox.querySelector(".lore-name").textContent = lore[0];
+        loreBox.querySelector(".lore-text").textContent = lore[1];
+        loreBox.classList.add("show");
+      });
+      c.addEventListener("mouseleave", () => loreBox.classList.remove("show"));
+    }
+  });
+
   starmap.querySelectorAll(".const").forEach(c => {
     c.addEventListener("click", e => {
       e.preventDefault();

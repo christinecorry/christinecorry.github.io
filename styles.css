@@ -1386,3 +1386,56 @@ h2 {
   stroke-width: 1.3;
   stroke-dasharray: none;
 }
+
+/* constellation lore: page heads */
+.page-head { position: relative; }
+
+.page-head .head-sub { cursor: default; }
+
+.page-head .head-sub:hover { color: var(--accent); }
+
+.page-head .lore-card {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  z-index: 6;
+  max-width: 460px;
+  border: 1px solid var(--line);
+  background: #eee6d0;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.page-head:has(.head-sub:hover) .lore-card { opacity: 1; }
+
+/* constellation lore: the chart's corner card */
+.map-lore-card {
+  position: absolute;
+  right: 30px;
+  bottom: 26px;
+  max-width: 340px;
+  border: 1px solid var(--disc-line);
+  background: rgba(30, 46, 80, 0.88);
+  padding: 11px 16px;
+  color: var(--starlight);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.map-lore-card.show { opacity: 1; }
+
+.map-lore-card .lore-name {
+  display: block;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
