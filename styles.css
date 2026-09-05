@@ -1474,3 +1474,12 @@ h2 {
     padding-top: 0;
   }
 }
+
+/* celestial-coordinate ornament: the sun's place on the day of publication */
+.coord {
+  margin: 2px 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  color: var(--ink-soft);
+  opacity: 0.75;
+}
