@@ -28,22 +28,20 @@ out = []
 A = out.append
 
 # ---------- defs ----------
-NAVS = {   # key: (ra_hours, dec, href, label)
-    "about":  (9.6, 41.0, "#about",  "About Me"),
-    "writing":(22.4, 32.0, "#writing","Writing"),
-    "curios": (18.6156, 38.784, "#curios", "Curiosities"),   # Vega
-    "cv":     (2.55, 27.0, "cv.html", "CV"),
+NAVS = {   # key: (IAU id, href, label, label position)
+    "about":  ("UMa", "#about",  "About Me", "mid"),
+    "writing":("Cyg", "#writing","Writing", "above"),
+    "curios": ("Lyr", "#curios", "Curiosities", "below"),
+    "cv":     ("Cas", "cv.html", "CV", "below"),
 }
+NAV_IDS = {v[0] for v in NAVS.values()}
 A('<svg class="starmap" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" aria-label="Map of the northern sky: each invented constellation is a section of this site">')
 A('<defs>')
 A('<g id="st3"><path d="M0 -8 L0 8 M-8 0 L8 0 M-4 -4 L4 4 M-4 4 L4 -4" fill="none"/><circle r="1.7" stroke="none"/></g>')
 A('<g id="st2"><path d="M0 -5 L0 5 M-5 0 L5 0" fill="none"/><circle r="1.4" stroke="none"/></g>')
 A('<g id="st1"><circle r="1.1" stroke="none"/></g>')
 A(f'<clipPath id="discclip"><circle cx="{C:.0f}" cy="{C:.0f}" r="{R_SKY:.0f}"/></clipPath>')
-for key,(rah,dec,href,label) in NAVS.items():
-    x,y = project(rah*15, dec)
-    A(f'<path id="lab-{key}" d="M {x-85:.0f} {y+72:.0f} Q {x:.0f} {y+56:.0f} {x+85:.0f} {y+72:.0f}" fill="none"/>')
-A('</defs>')
+A('</defs>')   # nav label arcs are appended into the sky group later
 
 # ---------- pannable sky ----------
 A('<g id="sky">')
@@ -111,7 +109,7 @@ lines = json.load(open(os.path.join(HERE,'data/constellation_lines.json')))
 names = json.load(open(os.path.join(HERE,'data/constellation_names.json')))
 centroids = {}
 for cid, multiline in lines.items():
-    if cid == "Lyr": continue
+    if cid in NAV_IDS: continue
     keep=[]
     for seg in multiline:
         pts=[(ra%360, dec) for ra,dec in seg]
@@ -130,8 +128,11 @@ for cid, multiline in lines.items():
 A('</g>')
 
 # constellation names, revealed on zoom
+LABEL_NUDGE = {"Dra": (60, -42), "And": (26, 22), "UMi": (-24, 10)}
 A('<g class="cnames" clip-path="url(#discclip)">')
 for cid,(x,y) in sorted(centroids.items()):
+    if cid in NAV_IDS: continue
+    dx,dy = LABEL_NUDGE.get(cid,(0,0)); x+=dx; y+=dy
     nm = names.get(cid, cid)
     A(f'<text class="cname" x="{fmt(x)}" y="{fmt(y)}">{nm}</text>')
 A('</g>')
@@ -143,7 +144,6 @@ with open(os.path.join(HERE,'data/stars_mag5.csv')) as f:
     for row in csv.DictReader(f):
         dec=float(row['dec']); mag=float(row['mag'])
         if dec < DEC_EDGE: continue
-        if row['name']=='Vega': continue   # the lyre's bright star stands for Vega
         x,y = project(float(row['ra_h'])*15, dec)
         op = max(0.35, min(1.0, 1.05 - 0.11*(mag+1.5)))
         cls=''
@@ -155,54 +155,29 @@ with open(os.path.join(HERE,'data/stars_mag5.csv')) as f:
         else:         A(f'<circle class="dot" cx="{fmt(x)}" cy="{fmt(y)}" r="0.7" opacity="{op:.2f}"/>')
 A('</g>')
 
-# ---------- the four invented constellations (site navigation) ----------
-SC = 1.25
-def place(x,y,ax,ay): return ax+SC*x, ay+SC*y
-
-def nebula(ax,ay,dx,dy):
-    dots=[]
-    for _ in range(9):
-        dots.append(f'<circle cx="{ax+dx+random.uniform(-6,6):.1f}" cy="{ay+dy+random.uniform(-5,5):.1f}" r="{random.uniform(0.4,0.8):.2f}" opacity="{random.uniform(0.36,0.7):.2f}"/>')
-    return '<g class="nebula">'+''.join(dots)+'</g>'
-
-FIGS = {
- "about": dict(hit=78, star_extra=[("st2",(42,-17))],
-    planet=True, lines=[], stars=[]),
- "writing": dict(hit=80, planet=False,
-    lines=[[(-35,30),(-9,2),(17,-24),(45,-46)],[(5,-36),(17,-24)],[(-21,-8),(-9,2)]],
-    stars=[("st3",(-35,30)),("st2",(-9,2)),("st3",(17,-24)),("st2",(45,-46)),("st1",(5,-36)),("st1",(-21,-8)),("st1",(-45,46))]),
- "curios": dict(hit=80, planet=False, shift=(2,-48),
-    lines=[[(-2,48),(-18,6),(-26,-38)],[(-2,48),(15,8),(26,-34)],[(-26,-38),(26,-34)],[(-26,-38),(-34,-52)],[(26,-34),(34,-48)]],
-    stars=[("st3",(-2,48)),("st1",(-18,6)),("st2",(-26,-38)),("st1",(15,8)),("st2",(26,-34)),("st1",(-34,-52)),("st1",(34,-48))]),
- "cv": dict(hit=62, planet=False,
-    lines=[[(-28,-4),(0,-10),(28,-2)],[(-28,-4),(-34,10)],[(28,-2),(34,12)]],
-    stars=[("st1",(-28,-4)),("st2",(0,-10)),("st1",(28,-2))]),
-}
-for key,(rah,dec,href,label) in NAVS.items():
-    ax,ay = project(rah*15, dec)
-    fig = FIGS[key]
-    sx,sy = fig.get("shift",(0,0))
-    ax2,ay2 = ax+SC*sx, ay+SC*sy   # figure center after shift (anchor stays on key star)
-    A(f'<a class="const" href="{href}" data-cx="{ax:.0f}" data-cy="{ay:.0f}">')
-    A(f'<circle class="hit" cx="{ax2:.0f}" cy="{ay2:.0f}" r="{fig["hit"]}"/>')
-    A(nebula(ax2,ay2,-46,-40))
-    if fig["planet"]:
-        A(f'<g class="figure"><circle cx="{ax2:.0f}" cy="{ay2:.0f}" r="{24*SC:.0f}"/>'
-          f'<ellipse cx="{ax2:.0f}" cy="{ay2:.0f}" rx="{46*SC:.0f}" ry="{15*SC:.0f}" transform="rotate(-18 {ax2:.0f} {ay2:.0f})"/></g>')
-    for seg in fig["lines"]:
-        d=' '.join(f"{ax2+SC*x:.1f},{ay2+SC*y:.1f}" for x,y in seg)
+# ---------- navigation: four real constellations, clickable ----------
+for key,(cid,href,label,pos) in NAVS.items():
+    segs = []
+    for seg in lines[cid]:
+        pts = [project(ra%360, dec) for ra,dec in seg]
+        segs.append(pts)
+    allp = [p for seg in segs for p in seg]
+    xs = [p[0] for p in allp]; ys = [p[1] for p in allp]
+    cx, cy = (min(xs)+max(xs))/2, (min(ys)+max(ys))/2
+    rad = max(math.hypot(x-cx, y-cy) for x,y in allp)
+    A(f'<a class="const" href="{href}" data-cx="{cx:.0f}" data-cy="{cy:.0f}">')
+    A(f'<circle class="hit" cx="{cx:.0f}" cy="{cy:.0f}" r="{max(55, min(rad+14, 150)):.0f}"/>')
+    for seg in segs:
+        d = ' '.join(f"{x:.1f},{y:.1f}" for x,y in seg)
         A(f'<polyline class="lines" points="{d}"/>')
-    for st,(x,y) in fig["stars"] + fig.get("star_extra",[]):
-        A(f'<use href="#{st}" transform="translate({ax2+SC*x:.1f},{ay2+SC*y:.1f})"/>')
+    if pos == "above":   ly = min(ys) - 30
+    elif pos == "mid":   ly = cy + 6
+    else:                ly = max(ys) + 30
+    A(f'<path id="lab-{key}" d="M {cx-95:.0f} {ly+14:.0f} Q {cx:.0f} {ly:.0f} {cx+95:.0f} {ly+14:.0f}" fill="none"/>')
     A(f'<text class="const-label"><textPath href="#lab-{key}" startOffset="50%" text-anchor="middle">{label}</textPath></text>')
     A('</a>')
 A('</g>')  # /sky
 
-# fixed title overlay
-A('<g class="map-title">')
-A(f'<text class="map-name" x="{C:.0f}" y="486">Christine Corry</text>')
-A(f'<text class="map-tagline" x="{C:.0f}" y="520">a chart of the visible heavens</text>')
-A('</g>')
 A('</svg>')
 
 svg = '\n'.join(out)

@@ -53,7 +53,7 @@ if (starmap) {
     sky.setAttribute("transform", "translate(" + tx + " " + ty + ") scale(" + k + ")");
     starmap.style.setProperty("--lbl", Math.min(1, Math.sqrt(kHome / k)));
     starmap.classList.toggle("deep", k > 2.05 * kHome);
-    starmap.classList.toggle("explored", k > 1.12 * kHome);
+    starmap.classList.toggle("explored", k > 1.12 * kHome || k < 0.95 * kHome);
   }
 
   function home() {

@@ -1229,3 +1229,48 @@ h2 {
   stroke: rgba(242, 237, 217, 0.55);
   stroke-width: 1.1;
 }
+
+/* nav constellations: real figures, a shade brighter than the rest */
+.starmap .const .lines {
+  vector-effect: non-scaling-stroke;
+  transition: stroke 0.45s ease, stroke-width 0.45s ease;
+}
+
+.starmap.deep .const .lines {
+  stroke: rgba(242, 237, 217, 0.7);
+  stroke-width: 1.2;
+}
+
+/* title as a corner cartouche, in the manner of the old atlases */
+.map-cartouche {
+  position: absolute;
+  left: 36px;
+  bottom: 26px;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.hero:has(.starmap.explored) .map-cartouche { opacity: 0; }
+
+.cart-name {
+  margin: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: var(--starlight);
+}
+
+.cart-tag {
+  margin: 2px 0 0;
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--starlight);
+  opacity: 0.75;
+}
+
+/* the four navigation constellations read brighter than the field */
+.starmap .const .lines {
+  stroke: rgba(242, 237, 217, 0.55);
+  stroke-width: 1.1;
+}
