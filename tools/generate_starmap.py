@@ -31,7 +31,7 @@ A = out.append
 NAVS = {   # key: (IAU id, href, label, label offset from figure center)
     "about":  ("UMa", "#about",  "About Me", (0, 10)),
     "writing":("Cyg", "#writing","Writing", (0, 15)),
-    "curios": ("Lyn", "#curios", "Curiosities", (0, 10)),
+    "curios": ("Aur", "#curios", "Curiosities", (-60, 80)),
     "cv":     ("Cas", "cv.html", "CV", (0, -35)),
 }
 NAV_IDS = {v[0] for v in NAVS.values()}
@@ -196,7 +196,7 @@ for cid, multiline in lines.items():
 A('</g>')
 
 # constellation names, revealed on zoom
-LABEL_NUDGE = {"Dra": (60, -42), "And": (26, 22), "UMi": (-24, 10)}
+LABEL_NUDGE = {"Dra": (60, -42), "And": (26, 22), "UMi": (-24, 10), "Gem": (-16, 48)}
 A('<g class="cnames" clip-path="url(#discclip)">')
 for cid,(x,y) in sorted(centroids.items()):
     if cid in NAV_IDS: continue
