@@ -31,7 +31,7 @@ A = out.append
 NAVS = {   # key: (IAU id, href, label, label offset from figure center)
     "about":  ("UMa", "#about",  "About Me", (0, 10)),
     "writing":("Cyg", "#writing","Writing", (0, 15)),
-    "curios": ("Lyr", "#curios", "Curiosities", (0, 60)),
+    "curios": ("Lyn", "#curios", "Curiosities", (0, 10)),
     "cv":     ("Cas", "cv.html", "CV", (0, -35)),
 }
 NAV_IDS = {v[0] for v in NAVS.values()}
@@ -139,6 +139,7 @@ LORE_ALL = {
  "Lep": ("Lepus \u00b7 the hare", "The hare, crouched forever at the hunter's feet."),
  "Lib": ("Libra \u00b7 the scales", "Once the scorpion's claws, later the balance of justice."),
  "Lyn": ("Lynx \u00b7 the lynx", "Named, Hevelius joked, because only the lynx-eyed can trace it."),
+ "Lyr": ("Lyra \u00b7 the lyre", "The lyre Hermes strung from a tortoise shell and Orpheus played to charm stones and half-win Eurydice back from the dead. Vega was the pole star twelve thousand years ago, and will be again."),
  "Mon": ("Monoceros \u00b7 the unicorn", "The unicorn, pacing the winter Milky Way between the two dogs."),
  "Oph": ("Ophiuchus \u00b7 the serpent-bearer", "Asclepius the healer, so skilled he could raise the dead \u2014 and was made a star for it."),
  "Ori": ("Orion \u00b7 the hunter", "The boastful hunter, felled by the scorpion; the two are never in the sky together."),

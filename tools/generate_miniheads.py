@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Regenerate the small constellation figures in the page heads
-(index.html: About/UMa, Writing/Cyg, Curiosities/Lyr; cv.html: Highlights/Cas).
+(index.html: About/UMa, Writing/Cyg, Curiosities/Lyn; cv.html: Highlights/Cas).
 Run: python3 tools/generate_miniheads.py"""
 import json, re, os
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
@@ -33,7 +33,7 @@ def mini(cid, w, h):
     return ''.join(out)
 
 HEADS = {"About": ("UMa",170,88), "Writing": ("Cyg",150,96),
-         "Curiosities": ("Lyr",110,96), "Highlights": ("Cas",150,72)}
+         "Curiosities": ("Lyn",150,96), "Highlights": ("Cas",150,72)}
 for path, titles in [("index.html", ["About","Writing","Curiosities"]), ("cv.html", ["Highlights"])]:
     p = os.path.join(ROOT, path); s = open(p).read()
     for t in titles:
