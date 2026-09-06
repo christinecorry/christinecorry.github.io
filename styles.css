@@ -1562,3 +1562,13 @@ body.previews-on .song-mute .ic-muted { display: none; }
   from { transform: translateX(0); }
   to   { transform: translateX(150px); }
 }
+
+/* while roaming the sky, the page labels recede toward the chart's own
+   lettering — still a shade brighter than the ordinary names */
+.starmap.roaming .const-label {
+  opacity: 0.3;
+}
+
+.starmap.roaming.deep .const-label {
+  opacity: 0.9;
+}
