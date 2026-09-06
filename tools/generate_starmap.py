@@ -31,7 +31,7 @@ A = out.append
 NAVS = {   # key: (IAU id, href, label, label offset from figure center)
     "about":  ("UMa", "#about",  "About Me", (0, 10)),
     "writing":("Cyg", "#writing","Writing", (0, 15)),
-    "curios": ("Aur", "#curios", "Curiosities", (-60, 80)),
+    "curios": ("Aur", "#curios", "Curiosities", (-42, 55)),
     "cv":     ("Cas", "cv.html", "CV", (0, -35)),
 }
 NAV_IDS = {v[0] for v in NAVS.values()}
