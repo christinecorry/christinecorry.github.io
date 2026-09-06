@@ -136,20 +136,30 @@ if (starmap) {
 
   // the four nav constellations tell their lore on their own pages; only the rest speak here
   const loreBox = document.querySelector(".map-lore-card");
+  const showLore = g => {
+    if (loreBox && g.dataset.lore) {
+      loreBox.querySelector(".lore-name").textContent = g.dataset.name;
+      loreBox.querySelector(".lore-text").textContent = g.dataset.lore;
+      loreBox.classList.add("show");
+    }
+    const lbl = starmap.querySelector('.cname[data-cid="' + g.dataset.cid + '"]');
+    if (lbl) lbl.classList.add("lit");
+  };
+  const hideLore = () => {
+    if (loreBox) loreBox.classList.remove("show");
+    starmap.querySelectorAll(".cname.lit").forEach(l => l.classList.remove("lit"));
+    starmap.querySelectorAll(".constel.lit").forEach(g => g.classList.remove("lit"));
+  };
   starmap.querySelectorAll(".constel").forEach(g => {
-    g.addEventListener("mouseenter", () => {
-      if (loreBox && g.dataset.lore) {
-        loreBox.querySelector(".lore-name").textContent = g.dataset.name;
-        loreBox.querySelector(".lore-text").textContent = g.dataset.lore;
-        loreBox.classList.add("show");
-      }
-      const lbl = starmap.querySelector('.cname[data-cid="' + g.dataset.cid + '"]');
-      if (lbl) lbl.classList.add("lit");
-    });
-    g.addEventListener("mouseleave", () => {
-      if (loreBox) loreBox.classList.remove("show");
-      starmap.querySelectorAll(".cname.lit").forEach(l => l.classList.remove("lit"));
-    });
+    g.addEventListener("mouseenter", () => showLore(g));
+    g.addEventListener("mouseleave", hideLore);
+  });
+  // the names are hover targets too, and light their figures
+  starmap.querySelectorAll(".cname").forEach(t => {
+    const g = starmap.querySelector('.constel[data-cid="' + t.dataset.cid + '"]');
+    if (!g) return;
+    t.addEventListener("mouseenter", () => { g.classList.add("lit"); showLore(g); });
+    t.addEventListener("mouseleave", hideLore);
   });
 
   starmap.querySelectorAll(".const").forEach(c => {
