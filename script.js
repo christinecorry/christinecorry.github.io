@@ -134,25 +134,8 @@ if (starmap) {
   }));
   home();
 
-  const LORE = {
-    "#about":   ["Ursa Major \u00b7 the great bear", "Callisto, turned to a bear by Hera's jealousy and flung into the sky by Zeus beside her son. Its seven brightest stars have pointed travellers north in nearly every culture's memory."],
-    "#writing": ["Cygnus \u00b7 the swan", "The swan gliding down the Milky Way \u2014 Zeus in disguise, or the friend of fallen Phaethon set among the stars for his grief. Deneb, its tail, anchors the Northern Cross."],
-    "#curios":  ["Lyra \u00b7 the lyre", "The lyre Hermes strung from a tortoise shell and Orpheus played to charm stones and half-win Eurydice back from the dead. Vega was the pole star twelve thousand years ago, and will be again."],
-    "cv.html":  ["Cassiopeia \u00b7 the queen", "The queen of Aethiopia, set among the stars for boasting her beauty above the sea-nymphs \u2014 and made to wheel around the pole, half the year hanging upside down."]
-  };
+  // the four nav constellations tell their lore on their own pages; only the rest speak here
   const loreBox = document.querySelector(".map-lore-card");
-  starmap.querySelectorAll(".const").forEach(c => {
-    const lore = LORE[c.getAttribute("href")];
-    if (loreBox && lore) {
-      c.addEventListener("mouseenter", () => {
-        loreBox.querySelector(".lore-name").textContent = lore[0];
-        loreBox.querySelector(".lore-text").textContent = lore[1];
-        loreBox.classList.add("show");
-      });
-      c.addEventListener("mouseleave", () => loreBox.classList.remove("show"));
-    }
-  });
-
   starmap.querySelectorAll(".constel").forEach(g => {
     g.addEventListener("mouseenter", () => {
       if (loreBox && g.dataset.lore) {
@@ -272,3 +255,52 @@ document.querySelectorAll(".copy-email").forEach(a => {
     }).catch(() => { location.href = "mailto:" + addr; });
   });
 });
+
+// Song previews: the speaker arms them (a real click, so the browser allows
+// sound); after that, hovering a song card plays a 30-second excerpt.
+const songCards = document.querySelectorAll(".curio-song-card[data-preview]");
+if (songCards.length) {
+  const player = new Audio();
+  player.preload = "none";
+  let armed = false;
+  let fade = null;
+  const fadeTo = (target, then) => {
+    clearInterval(fade);
+    fade = setInterval(() => {
+      const v = player.volume + (target > player.volume ? 0.07 : -0.07);
+      if (Math.abs(v - target) < 0.07) {
+        player.volume = target;
+        clearInterval(fade);
+        if (then) then();
+      } else {
+        player.volume = Math.min(1, Math.max(0, v));
+      }
+    }, 40);
+  };
+  const stop = () => {
+    fadeTo(0, () => player.pause());
+    songCards.forEach(c => c.classList.remove("playing"));
+  };
+  const play = card => {
+    clearInterval(fade);
+    songCards.forEach(c => c.classList.remove("playing"));
+    player.src = card.dataset.preview;
+    player.volume = 0;
+    player.play().then(() => {
+      card.classList.add("playing");
+      fadeTo(0.6);
+    }).catch(() => {});
+  };
+  songCards.forEach(card => {
+    card.querySelector(".song-mute").addEventListener("click", e => {
+      e.preventDefault();
+      e.stopPropagation();
+      armed = !armed;
+      document.body.classList.toggle("previews-on", armed);
+      if (armed) play(card); else stop();
+    });
+    card.addEventListener("mouseenter", () => { if (armed) play(card); });
+    card.addEventListener("mouseleave", () => { if (armed) stop(); });
+  });
+  player.addEventListener("ended", stop);
+}
