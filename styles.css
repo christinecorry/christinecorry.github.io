@@ -1555,7 +1555,7 @@ body.previews-on .song-mute .ic-sound { display: block; }
 body.previews-on .song-mute .ic-muted { display: none; }
 
 .curio-song-card.playing .soundwave path {
-  animation: wavetravel 1.5s linear infinite;
+  animation: wavetravel 4s linear infinite;
 }
 
 @keyframes wavetravel {
