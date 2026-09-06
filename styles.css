@@ -1555,10 +1555,10 @@ body.previews-on .song-mute .ic-sound { display: block; }
 body.previews-on .song-mute .ic-muted { display: none; }
 
 .curio-song-card.playing .soundwave path {
-  animation: wavetravel 4s linear infinite;
+  animation: wavetravel 20s linear infinite;
 }
 
 @keyframes wavetravel {
   from { transform: translateX(0); }
-  to   { transform: translateX(30px); }
+  to   { transform: translateX(150px); }
 }
