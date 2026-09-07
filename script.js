@@ -40,10 +40,10 @@ if (starmap) {
   function apply() {
     if (!starmap.getBoundingClientRect().width) return;   // panel hidden
     const v = visibleRect();
-    const halfDiag = Math.hypot((v.x2 - v.x1) / 2, (v.y2 - v.y1) / 2);
     const cxv = (v.x1 + v.x2) / 2, cyv = (v.y1 + v.y2) / 2;
-    // the sky disc may drift only while it still covers the window
-    const slack = Math.max(0, k * RSKY - halfDiag);
+    // any point of the sky, rim included, may be brought to the window's
+    // center — but the disc can never be pushed wholly off-screen
+    const slack = k * RSKY;
     const dx = (k * C + tx) - cxv, dy = (k * C + ty) - cyv;
     const d = Math.hypot(dx, dy);
     if (d > slack) {

@@ -9,34 +9,36 @@ Each heading is the name shown on the lore card; the paragraph under it is the l
 Shown when hovering the subtitle on each page; these four don't speak on the map.
 
 ### About — Ursa Major, the great bear
-Callisto, turned to a bear by Hera's jealousy and flung into the sky by Zeus beside her son. Its seven brightest stars have pointed travellers north in nearly every culture's memory.
+Callisto was turned to a bear by Hera's jealousy. Years later her son, Arcas, now a hunter, met a bear in the forest that ran toward him with joy. He raised his spear. To prevent the matricide, Zeus threw them both into the stars as the Great and Little Bears. 
 
 ### Writing — Cygnus, the swan
-The swan gliding down the Milky Way — Zeus in disguise, or the friend of fallen Phaethon set among the stars for his grief. Deneb, its tail, anchors the Northern Cross.
+The swan has many possible origins — Zeus in disguise to seduce Leda, queen of Sparta; perhaps Cycnus, devoted friend to the fallen Phaethon, set among the stars for his show of grief, diving again and aign into the river Eridanus to gather the bones of his friend for burial.
 
 ### Curiosities — Auriga, the charioteer
-The charioteer — Erichthonius, who yoked four horses to a chariot for the first time — cradling on his shoulder the she-goat Amaltheia, nurse of the infant Zeus. Bright Capella, the little goat, is her star.
+Erichthonius earned his position in the sky for the invention of the quadriga (four-horse chariot). He cradles Amalthetia, the she-goat who nursed infant Zeus on Crete.
 
 ### Highlights — Cassiopeia, the queen
-The queen of Aethiopia, set among the stars for boasting her beauty above the sea-nymphs — and made to wheel around the pole, half the year hanging upside down.
-
+The queen of Aethiopia. She encured the rath of the Nereids and Poseidon by boasting her beauty above the sea nympths'. Poseidon set her among the stars where she is made to wheel around the pole, half the year hanging upside down.
 
 ## Map lore (hover any other constellation on the home chart)
 
 ### Andromeda · the princess
-The chained princess, offered to the sea-monster for her mother's boast and rescued by Perseus.
+Daughter to King Cepheus and Queen Cassiopeia. Andromeda was chained to a rock as offering to the sea monster, Cetus, then rescued by Perseus with whom later she had nine children. 
 
 ### Aquarius · the water-bearer
-Ganymede, cup-bearer of the gods, pouring an eternal stream.
+Because of it's position in the sky through the rainy winters in Mesopotamia, Aquarius is tied to the destructive floods the Babylonians dreaded. The sky around it became "the Sea". In Greek legend, this Ganymede, cup-bearer of the gods said to be the most beautiful mortal alive.
 
 ### Aquila · the eagle
-The eagle of Zeus, bearer of thunderbolts; Altair is its burning eye.
+The eagle of Zeus, placed right next to Ganymede whom the eagle carried up to Olympius. Also the very early which ate Prometheus' liver each morning. 
+
+### Antinous · the lover
+A constellation which has disappeared from modern star maps, but carries my favorite story! The cause of drowning for Antinous, the lover of Emperor Hadrian, is unknown; perhaps by accident, murder, or as a sacrifice to extend the emperor's life. In his grief, Hadrian founded a city on the spot, declared him a god, put his face on coins and statues across the empire, and announced a new star had appeared from Antinous's soul. Astronomers drew Antinous being carried in Aquila's talons in a recasting of Ganymede. 
 
 ### Aries · the ram
-The ram of the golden fleece, whose hide sent the Argonauts across the world.
+The ram of the golden fleece, later stolen by Jason and the Argonauts. The constellation is said to be dim because it gave away its golden fleece and thus shines with only the light of an ordinary sheet.
 
 ### Auriga · the charioteer  *(nav constellation — its card above is what shows; this map entry is unused)*
-The charioteer cradling a she-goat and her kids; bright Capella rides his shoulder.
+Erichthonius earned his position in the sky for the invention of the quadriga (four-horse chariot). He cradles Amalthetia, the she-goat who nursed infant Zeus on Crete.
 
 ### Boötes · the herdsman
 The herdsman driving the bears around the pole; Arcturus is his ancient amber star.
@@ -180,7 +182,7 @@ Zeus in white-hided disguise, carrying Europa across the sea; the Pleiades ride 
 A simple delta — Sicily to some, the mouth of the Nile to others.
 
 ### Ursa Minor · the lesser bear
-Arcas, son of Callisto; Polaris rides the very tip of its tail.
+Arcas, son of Callisto.
 
 ### Virgo · the maiden
 Astraea, last of the immortals to leave the earth; Spica is the wheat-ear in her hand.
