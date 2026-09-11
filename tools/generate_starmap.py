@@ -7,7 +7,7 @@ Data: tools/data/stars_mag5.csv (HYG v41, mag<=5), constellation_lines.json /
 constellation_names.json (IAU, via d3-celestial). Regenerate with:
     python3 tools/generate_starmap.py
 """
-import csv, json, math, random, re, os
+import csv, html, json, math, random, re, os, unicodedata
 
 random.seed(11)
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -104,70 +104,47 @@ while n<650 and tries<200000:
 A('</g>')
 
 
-# epithet and one-line lore for the chart's constellations
-LORE_ALL = {
- "And": ("Andromeda \u00b7 the princess", "The chained princess, offered to the sea-monster for her mother's boast and rescued by Perseus."),
- "Aqr": ("Aquarius \u00b7 the water-bearer", "Ganymede, cup-bearer of the gods, pouring an eternal stream."),
- "Aql": ("Aquila \u00b7 the eagle", "The eagle of Zeus, bearer of thunderbolts; Altair is its burning eye."),
- "Ari": ("Aries \u00b7 the ram", "The ram of the golden fleece, whose hide sent the Argonauts across the world."),
- "Aur": ("Auriga \u00b7 the charioteer", "The charioteer cradling a she-goat and her kids; bright Capella rides his shoulder."),
- "Boo": ("Bo\u00f6tes \u00b7 the herdsman", "The herdsman driving the bears around the pole; Arcturus is his ancient amber star."),
- "Cam": ("Camelopardalis \u00b7 the giraffe", "A latecomer of 1612, drawn into the dark gap between the bears where few stars shine."),
- "Cnc": ("Cancer \u00b7 the crab", "The crab Hera sent to nip at Heracles, crushed underfoot and pitied into the sky."),
- "CVn": ("Canes Venatici \u00b7 the hunting dogs", "The herdsman's dogs, forever loosed after the great bear."),
- "CMa": ("Canis Major \u00b7 the great dog", "The hunter's great dog; Sirius, brightest of all the fixed stars, burns at its heart."),
- "CMi": ("Canis Minor \u00b7 the lesser dog", "The lesser dog; Procyon rises just before the Dog Star, and is named for it."),
- "Cap": ("Capricornus \u00b7 the sea-goat", "Pan, half fish from diving into the Nile to escape the monster Typhon."),
- "Cep": ("Cepheus \u00b7 the king", "King of Aethiopia, Andromeda's father, standing watch beside his boastful queen."),
- "Cet": ("Cetus \u00b7 the sea-monster", "The monster sent for Andromeda, turned to stone by the Gorgon's severed head."),
- "Com": ("Coma Berenices \u00b7 the queen's hair", "Queen Berenice's locks, offered to the gods for her husband's safe return from war."),
- "CrB": ("Corona Borealis \u00b7 the crown", "Ariadne's wedding crown, flung into the sky by Dionysus."),
- "Crv": ("Corvus \u00b7 the crow", "The crow that dawdled and lied to Apollo, fixed thirsting beside the cup it cannot reach."),
- "Crt": ("Crater \u00b7 the cup", "The cup of Apollo, carried \u2014 and never delivered \u2014 by the crow."),
- "Del": ("Delphinus \u00b7 the dolphin", "The dolphin that carried the singer Arion safely over the sea for the price of one last song."),
- "Col": ("Columba \u00b7 the dove", "The dove sent out from the ark, returning with an olive branch \u2014 or the one the Argonauts loosed to thread the Clashing Rocks."),
- "Dra": ("Draco \u00b7 the dragon", "The dragon Ladon, coiled around the pole, sleepless guardian of the golden apples."),
- "For": ("Fornax \u00b7 the furnace", "Lacaille's little chemist's furnace \u2014 a modern figure with no myth, its faint stars hiding a whole cluster of galaxies."),
- "Equ": ("Equuleus \u00b7 the little horse", "The foal Celeris, a gift to Castor \u2014 the second-smallest figure in the sky."),
- "Eri": ("Eridanus \u00b7 the river", "The river into which Phaethon fell, still burning, from the chariot of the sun."),
- "Gem": ("Gemini \u00b7 the twins", "Castor and Pollux, one mortal and one divine, who refused to be parted."),
- "Her": ("Hercules \u00b7 the hero", "The kneeling hero, club raised, resting between his twelve labours."),
- "Hya": ("Hydra \u00b7 the water-serpent", "The many-headed serpent of Lerna \u2014 the longest constellation in the sky."),
- "Lac": ("Lacerta \u00b7 the lizard", "A small invention of 1687, slipped between the swan and the queen."),
- "Leo": ("Leo \u00b7 the lion", "The Nemean lion of the first labour, whose hide no weapon could pierce."),
- "LMi": ("Leo Minor \u00b7 the lesser lion", "A quiet seventeenth-century filling between the lion and the great bear."),
- "Lep": ("Lepus \u00b7 the hare", "The hare, crouched forever at the hunter's feet."),
- "Lib": ("Libra \u00b7 the scales", "Once the scorpion's claws, later the balance of justice."),
- "Lyn": ("Lynx \u00b7 the lynx", "Named, Hevelius joked, because only the lynx-eyed can trace it."),
- "Lyr": ("Lyra \u00b7 the lyre", "The lyre Hermes strung from a tortoise shell and Orpheus played to charm stones and half-win Eurydice back from the dead. Vega was the pole star twelve thousand years ago, and will be again."),
- "Mon": ("Monoceros \u00b7 the unicorn", "The unicorn, pacing the winter Milky Way between the two dogs."),
- "Oph": ("Ophiuchus \u00b7 the serpent-bearer", "Asclepius the healer, so skilled he could raise the dead \u2014 and was made a star for it."),
- "Ori": ("Orion \u00b7 the hunter", "The boastful hunter, felled by the scorpion; the two are never in the sky together."),
- "Peg": ("Pegasus \u00b7 the winged horse", "Sprung from Medusa's blood; his great square carries the autumn sky."),
- "Per": ("Perseus \u00b7 the hero", "Gorgon's head in hand \u2014 the demon-star Algol still winks within it."),
- "Psc": ("Pisces \u00b7 the fishes", "Aphrodite and Eros, escaped from Typhon as two fishes tied by a ribbon."),
- "PsA": ("Piscis Austrinus \u00b7 the southern fish", "The great fish drinking the stream poured from the water-bearer's urn. Lonely Fomalhaut is its mouth."),
- "Pup": ("Puppis \u00b7 the stern", "The stern of the Argo \u2014 a ship so vast that astronomers broke her into stern, sails, and keel."),
- "Sge": ("Sagitta \u00b7 the arrow", "The arrow \u2014 Eros' dart, or the shaft Heracles loosed at the eagle."),
- "Sgr": ("Sagittarius \u00b7 the archer", "The centaur archer, bow drawn at the scorpion's red heart."),
- "Sco": ("Scorpius \u00b7 the scorpion", "The scorpion that stung Orion; red Antares is its rival heart."),
- "Sct": ("Scutum \u00b7 the shield", "The shield of King Sobieski, raised into the sky in 1684."),
- "Ser": ("Serpens \u00b7 the serpent", "The serpent twined through the healer's hands, emblem of renewal."),
- "Ser1": ("Serpens \u00b7 the serpent's head", "The serpent twined through the healer's hands, emblem of renewal."),
- "Ser2": ("Serpens \u00b7 the serpent's tail", "The serpent twined through the healer's hands, emblem of renewal."),
- "Sex": ("Sextans \u00b7 the sextant", "Hevelius' own instrument, set among the stars he measured with it."),
- "Tau": ("Taurus \u00b7 the bull", "Zeus in white-hided disguise, carrying Europa across the sea; the Pleiades ride its back."),
- "Tri": ("Triangulum \u00b7 the triangle", "A simple delta \u2014 Sicily to some, the mouth of the Nile to others."),
- "UMi": ("Ursa Minor \u00b7 the lesser bear", "Arcas, son of Callisto; Polaris rides the very tip of its tail."),
- "Vir": ("Virgo \u00b7 the maiden", "Astraea, last of the immortals to leave the earth; Spica is the wheat-ear in her hand."),
- "Vul": ("Vulpecula \u00b7 the little fox", "The little fox carrying a goose to the swan \u2014 Hevelius' sly invention."),
- "Aqr2": ("", ""),
-}
+# epithet and lore for every constellation, read from LORE.md (the hand-edited
+# source of truth). Map headings look like "### Name · epithet"; page-head
+# cards look like "### Page — Sub, epithet". Notes in *(...)* are ignored.
+def read_lore():
+    txt = open(os.path.join(ROOT,'LORE.md'), encoding='utf-8').read()
+    heads, cards = {}, {}
+    for m in re.finditer(r'^### (.+?)\s*(?:\*\(.*?\)\*)?\s*\n+(.+?)\s*$', txt, flags=re.M):
+        title, body = m.group(1).strip(), m.group(2).strip()
+        if ' \u2014 ' in title:            # "About — Ursa Major, the great bear"
+            cards[title.split(' \u2014 ',1)[1].strip()] = body
+        else:
+            heads[title] = body
+    return heads, cards
+
+LORE_MD, HEAD_CARDS = read_lore()
+NAMES = json.load(open(os.path.join(HERE,'data/constellation_names.json')))
+plain = lambda t: ''.join(c for c in unicodedata.normalize('NFD', t) if not unicodedata.combining(c)).replace('\u2005',' ')
+def cid_for(title):
+    """chart id for a LORE.md heading: by name, plus the ids the data lacks"""
+    extra = {"Serpens \u00b7 the serpent's head": "Ser1", "Serpens \u00b7 the serpent's tail": "Ser2"}
+    if title in extra: return extra[title]
+    name = plain(title.split(' \u00b7 ')[0]).replace('Major','Maior')   # Boötes -> Bootes
+    if name == 'Antinous': return 'Ant'
+    return next((k for k,v in NAMES.items() if plain(v) == name), None)
+def attr(text): return html.escape(text, quote=False).replace('"', '&quot;')
+LORE_ALL = {cid_for(t): (t, attr(b)) for t,b in LORE_MD.items()}
 
 # real constellation lines (Lyra omitted: the site's lyre stands in its place)
 A('<g class="clines" clip-path="url(#discclip)">')
 lines = json.load(open(os.path.join(HERE,'data/constellation_lines.json')))
 names = json.load(open(os.path.join(HERE,'data/constellation_names.json')))
+# Antinous: the lost constellation the eagle carries, struck from the sky in
+# 1930 — drawn here from its historical stars south of Altair (delta, iota,
+# kappa, theta, lambda Aql), none of whose strokes repeat the modern figure
+lines["Ant"] = [
+    [[291.37, 3.11], [294.18, -1.29], [294.22, -7.03]],   # delta - iota - kappa
+    [[302.83, -0.82], [294.18, -1.29]],                    # theta - iota
+    [[286.56, -4.88], [294.22, -7.03]],                    # lambda - kappa
+]
+names["Ant"] = "Antinous"
+
 centroids = {}
 for cid, multiline in lines.items():
     if cid in NAV_IDS: continue
@@ -196,7 +173,7 @@ for cid, multiline in lines.items():
 A('</g>')
 
 # constellation names, revealed on zoom
-LABEL_NUDGE = {"Dra": (60, -42), "And": (26, 22), "UMi": (-24, 10), "Gem": (-16, 48)}
+LABEL_NUDGE = {"Dra": (60, -42), "And": (26, 22), "UMi": (-24, 10), "Gem": (-16, 48), "Ant": (-14, 42)}
 A('<g class="cnames" clip-path="url(#discclip)">')
 for cid,(x,y) in sorted(centroids.items()):
     if cid in NAV_IDS: continue
@@ -233,7 +210,9 @@ for key,(cid,href,label,(ldx,ldy)) in NAVS.items():
     xs = [p[0] for p in allp]; ys = [p[1] for p in allp]
     cx, cy = (min(xs)+max(xs))/2, (min(ys)+max(ys))/2
     rad = max(math.hypot(x-cx, y-cy) for x,y in allp)
-    A(f'<a class="const" href="{href}" data-cx="{cx:.0f}" data-cy="{cy:.0f}">')
+    sub = next(k for k in HEAD_CARDS if plain(k.split(',')[0]).replace('Major','Maior') == plain(names[cid]))
+    lore = f' data-name="{sub.replace(", ", " \u00b7 ")}" data-lore="{attr(HEAD_CARDS[sub])}"'
+    A(f'<a class="const" href="{href}" data-cx="{cx:.0f}" data-cy="{cy:.0f}"{lore}>')
     A(f'<circle class="hit" cx="{cx:.0f}" cy="{cy:.0f}" r="{max(60, min(rad+16, 260)):.0f}"/>')
     for seg in segs:
         d = ' '.join(f"{x:.1f},{y:.1f}" for x,y in seg)
@@ -259,3 +238,11 @@ s2, nsub = re.subn(r'<svg class="starmap".*?</svg>', svg, s, count=1, flags=re.S
 assert nsub==1
 open(idx,'w').write(s2)
 print(f"injected: {len(svg)//1024} KB of SVG, {svg.count('<use')+svg.count('class=\"dot\"')} stars")
+
+# page-head lore cards (About/Writing/Curiosities/Highlights) from LORE.md
+for page in ('index.html','cv.html'):
+    path = os.path.join(ROOT,page); h = open(path).read()
+    for sub, body in HEAD_CARDS.items():
+        h = re.sub(r'(<p class="head-sub">'+re.escape(sub)+r'</p><div class="lore-card">).*?(</div>)',
+                   lambda m: m.group(1)+body+m.group(2), h, count=1, flags=re.S)
+    open(path,'w').write(h)

@@ -134,12 +134,14 @@ if (starmap) {
   }));
   home();
 
-  // the four nav constellations tell their lore on their own pages; only the rest speak here
+  // every figure speaks on hover; the four nav constellations carry their page-head card
   const loreBox = document.querySelector(".map-lore-card");
   const showLore = g => {
     if (loreBox && g.dataset.lore) {
       loreBox.querySelector(".lore-name").textContent = g.dataset.name;
       loreBox.querySelector(".lore-text").textContent = g.dataset.lore;
+      const door = g.querySelector(".const-label");
+      loreBox.querySelector(".lore-hint").textContent = door ? "\u2726 click to explore " + door.textContent : "";
       loreBox.classList.add("show");
     }
     const lbl = starmap.querySelector('.cname[data-cid="' + g.dataset.cid + '"]');
@@ -150,7 +152,7 @@ if (starmap) {
     starmap.querySelectorAll(".cname.lit").forEach(l => l.classList.remove("lit"));
     starmap.querySelectorAll(".constel.lit").forEach(g => g.classList.remove("lit"));
   };
-  starmap.querySelectorAll(".constel").forEach(g => {
+  starmap.querySelectorAll(".constel, .const").forEach(g => {
     g.addEventListener("mouseenter", () => showLore(g));
     g.addEventListener("mouseleave", hideLore);
   });

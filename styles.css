@@ -1440,6 +1440,20 @@ h2 {
   margin-bottom: 4px;
 }
 
+/* the four nav figures are doors: the card says so */
+.map-lore-card .lore-hint {
+  display: none;
+  margin-top: 8px;
+  padding-top: 7px;
+  border-top: 1px solid var(--disc-line);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.68rem;
+  opacity: 0.85;
+}
+.map-lore-card .lore-hint:not(:empty) { display: block; }
+
 /* the CV as an observation log: dates ride the margin */
 #experience .entry,
 #education .entry,
