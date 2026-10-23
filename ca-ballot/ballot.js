@@ -151,7 +151,7 @@
   // manual pickers
   const senateUp = new Set((B.senate_index && B.senate_index.on_ballot) || Object.keys(B.senate).map(Number));
   function fillSelect(id, n, labelFn) { const s = document.getElementById(id); for (let i = 1; i <= n; i++) { const o = document.createElement('option'); o.value = i; o.textContent = labelFn ? labelFn(i) : i; s.appendChild(o); } }
-  fillSelect('sel-cd', 52); fillSelect('sel-sd', 40, i => senateUp.has(i) ? `${i}` : `${i} (not up)`); fillSelect('sel-ad', 80);
+  fillSelect('sel-cd', 52); fillSelect('sel-sd', 40, i => senateUp.has(i) ? `${i}` : `${i} (no election this year)`); fillSelect('sel-ad', 80);
   const counties = (B.resources && B.resources.counties || []).map(c => c.name);
   counties.forEach(n => { const o = document.createElement('option'); o.value = n; o.textContent = n; document.getElementById('sel-county').appendChild(o); });
   for (const [id, key] of [['sel-cd', 'cd'], ['sel-sd', 'sd'], ['sel-ad', 'ad']]) document.getElementById(id).onchange = e => { state[key] = e.target.value ? +e.target.value : null; state.label = null; save(); render(); };
@@ -162,7 +162,7 @@
   function render() {
     for (const [id, key] of [['sel-cd', 'cd'], ['sel-sd', 'sd'], ['sel-ad', 'ad'], ['sel-county', 'county']]) document.getElementById(id).value = state[key] || '';
     const parts = [];
-    if (state.cd) parts.push(`House district ${state.cd}`); if (state.sd) parts.push(`Senate district ${state.sd}`); if (state.ad) parts.push(`Assembly district ${state.ad}`); if (state.county) parts.push(`${state.county} County`);
+    if (state.cd) parts.push(`House district ${state.cd}`); if (state.sd) parts.push(`Senate district ${state.sd}${senateUp.has(state.sd) ? '' : ' (no election this year)'}`); if (state.ad) parts.push(`Assembly district ${state.ad}`); if (state.county) parts.push(`${state.county} County`);
     setWhere(parts.length ? (state.label ? `${state.label}: ` : '') + parts.join(' · ') : 'Enter an address to see your full ballot. Statewide contests are shown for everyone.');
 
     const secs = [];
@@ -184,7 +184,7 @@
     // senate
     let sen;
     if (!state.sd) sen = '<p class="empty">Enter an address or pick a Senate district above.</p>';
-    else if (!senateUp.has(state.sd)) sen = `<p class="empty">Senate District ${state.sd} is not up for election in 2026 (odd-numbered seats next vote in 2028).</p>`;
+    else if (!senateUp.has(state.sd)) sen = `<p class="empty">You live in Senate District ${state.sd}, but it has no election this year. State senators serve four-year terms; even-numbered districts vote in 2026 and odd-numbered districts in 2028.</p>`;
     else sen = contestHTML(`State Senate District ${state.sd}`, B.senate[state.sd]);
     secs.push(['senate', 'State Senate', sen]);
     // assembly
