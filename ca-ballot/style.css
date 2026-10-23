@@ -130,12 +130,7 @@ table.polls td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:
 .ballot{max-width:1040px;margin:0 auto;padding:18px 20px 40px;width:100%}
 .locate{border:1px solid var(--rule);background:var(--card);border-radius:10px;padding:14px 16px}
 .addr{display:flex;gap:8px;flex-wrap:wrap}
-.ac-wrap{position:relative;flex:1;min-width:220px}
-.addr input{width:100%;font:inherit;padding:7px 10px;border:1px solid var(--rule);border-radius:6px;background:#fff;color:var(--ink)}
-.ac{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:50;margin:0;padding:4px 0;list-style:none;background:#fff;border:1px solid var(--rule);border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,.08);max-height:260px;overflow-y:auto}
-.ac li{padding:7px 10px;cursor:pointer;font-size:13.5px}
-.ac li small{color:var(--ink-3);margin-left:6px}
-.ac li.on,.ac li:hover{background:var(--paper)}
+.addr input{flex:1;min-width:220px;font:inherit;padding:7px 10px;border:1px solid var(--rule);border-radius:6px;background:#fff;color:var(--ink)}
 .pick{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:10px;font-size:12.5px;color:var(--ink-3)}
 .pick label{display:inline-flex;align-items:center;gap:5px;color:var(--ink-2)}
 .pick select{font:inherit;font-size:12.5px;border:1px solid var(--rule);border-radius:6px;background:#fff;padding:3px 6px;color:var(--ink)}

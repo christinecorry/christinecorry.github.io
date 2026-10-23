@@ -126,108 +126,28 @@
   function setWhere(t) { whereEl.textContent = t; }
 
   // address search (Nominatim)
-  // ---------- address search with suggestions (Photon / OpenStreetMap, California only) ----------
-  const CA_BBOX = '-124.6,32.3,-114.0,42.1';
-  const addrEl = document.getElementById('addr'), acEl = document.getElementById('ac'), findBtn = document.querySelector('#addr-form button[type=submit]');
-  let acItems = [], acIndex = -1, acSeq = 0, acTimer = null, acCtl = null;
-  const PLACE_TYPES = new Set(['city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'quarter', 'locality', 'municipality']);
-  function suggestionFrom(f, prefixNumber) {
-    const p = f.properties, [lng, lat] = f.geometry.coordinates;
-    const isAddr = !!p.housenumber, isStreet = p.osm_key === 'highway' && !!p.street === false && !!p.name && p.type === 'street';
-    const isZip = p.type === 'postcode' || p.osm_value === 'postcode' || (p.osm_key === 'boundary' && p.osm_value === 'postal_code') || (!!p.postcode && !p.name && !p.housenumber && !p.street) || /^\d{5}$/.test(p.name || '');
-    const isPlace = (p.osm_key === 'place' && PLACE_TYPES.has(p.osm_value)) || isZip;
-    if (!isAddr && !isStreet && !isPlace) return null;
-    const place = p.city || p.locality || p.district || p.town || p.village || (isPlace && !isZip ? p.name : null) || p.county;
-    let line1 = isAddr ? `${p.housenumber} ${p.street || p.name || ''}`.trim() : isStreet ? (prefixNumber ? `${prefixNumber} ${p.name}` : p.name) : isZip ? p.postcode || p.name : p.name;
-    const label = [line1, place && place !== line1 ? place : null].filter(Boolean).join(', ');
-    const county = (p.county || '').replace(/ County$/, '') || (place && COUNTY_NAMES.some(n => n.toLowerCase() === String(place).toLowerCase()) ? place : null);
-    return { lng, lat, label, county, postcode: p.postcode, rank: isAddr ? 0 : isStreet ? 1 : 2,
-      needsCensus: isStreet && !!prefixNumber, query: isStreet && prefixNumber ? `${prefixNumber} ${p.name}, ${place || ''}, CA` : null, approx: isZip || (isStreet && !prefixNumber) };
-  }
-  async function photon(q, limit, signal) {
-    const u = `https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&limit=${limit}&lang=en&bbox=${CA_BBOX}`;
-    const r = await fetch(u, { headers: { Accept: 'application/json' }, signal }).then(r => r.json());
-    return (r.features || []).filter(f => (f.properties.state || 'California') === 'California');
-  }
-  async function geocode(q, limit, signal) {
-    const m = q.match(/^(\d+[a-z]?)\s+(.+)$/i);
-    let items = (await photon(q, 12, signal)).map(f => suggestionFrom(f, null)).filter(Boolean);
-    if (m && !items.some(it => it.rank === 0)) {
-      // the exact house isn't in OpenStreetMap: offer the street, and let the Census geocoder pin the number
-      const streets = (await photon(m[2], 12, signal)).map(f => suggestionFrom(f, m[1])).filter(it => it && it.rank === 1);
-      items = streets.concat(items.filter(it => it.rank !== 1));
-    }
-    const seen = new Set();
-    const order = m ? { 0: 0, 1: 1, 2: 2 } : { 2: 0, 1: 1, 0: 2 }; // with a house number, addresses first; otherwise places first
-    return items.sort((a, b) => order[a.rank] - order[b.rank]).filter(it => { const k = it.label.toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; }).slice(0, limit);
-  }
-  // U.S. Census Bureau geocoder (JSONP; no key). Returns {lng, lat, label} or null.
-  function census(q) {
-    return new Promise(resolve => {
-      const cb = 'censusCb' + Date.now(); const s = document.createElement('script'); const done = v => { delete window[cb]; s.remove(); resolve(v); };
-      window[cb] = r => { const hit = r && r.result && r.result.addressMatches && r.result.addressMatches[0]; done(hit ? { lng: hit.coordinates.x, lat: hit.coordinates.y, label: hit.matchedAddress.replace(/, CA, \d+$/, '').replace(/\b([A-Z])([A-Z]+)\b/g, (w, a, b) => a + b.toLowerCase()) } : null); };
-      s.onerror = () => done(null); setTimeout(() => done(null), 8000);
-      s.src = `https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=${encodeURIComponent(q)}&benchmark=Public_AR_Current&format=jsonp&callback=${cb}`;
-      document.head.appendChild(s);
-    });
-  }
-  async function resolveAndLocate(it, typed) {
-    setWhere('Finding your districts…');
-    let { lng, lat, label } = it;
-    if (it.needsCensus || (it.rank === 2 && /^\d+\s/.test(typed))) {
-      const hit = await census(it.query || `${typed}, CA`);
-      if (hit) ({ lng, lat, label } = hit); else if (it.approx) label += ' (approximate)';
-    } else if (it.approx) label += ' (approximate)';
-    await locate(lng, lat, label, it.county);
-  }
-  function renderAc() {
-    if (!acItems.length) { acEl.hidden = true; acEl.innerHTML = ''; addrEl.setAttribute('aria-expanded', 'false'); return; }
-    acEl.innerHTML = acItems.map((it, i) => `<li role="option" id="ac-${i}" ${i === acIndex ? 'aria-selected="true" class="on"' : ''}>${esc(it.label)}${it.postcode && it.rank !== 2 ? `<small> ${esc(it.postcode)}</small>` : ''}</li>`).join('');
-    acEl.hidden = false; addrEl.setAttribute('aria-expanded', 'true');
-    acEl.querySelectorAll('li').forEach((li, i) => { li.onmousedown = e => { e.preventDefault(); choose(i); }; });
-  }
-  function closeAc() { acItems = []; acIndex = -1; renderAc(); }
-  async function choose(i) {
-    const it = acItems[i]; if (!it) return;
-    const typed = addrEl.value.trim(); addrEl.value = it.label; closeAc();
-    await resolveAndLocate(it, typed);
-  }
-  addrEl.addEventListener('input', () => {
-    const q = addrEl.value.trim(); clearTimeout(acTimer);
-    if (q.length < 3) { closeAc(); return; }
-    acTimer = setTimeout(async () => {
-      const seq = ++acSeq; if (acCtl) acCtl.abort(); acCtl = new AbortController();
-      loadGeo();
-      try { const items = await geocode(q, 6, acCtl.signal); if (seq !== acSeq) return; acItems = items; acIndex = -1; renderAc(); }
-      catch (err) { if (err.name !== 'AbortError') closeAc(); }
-    }, 250);
-  });
-  addrEl.addEventListener('keydown', e => {
-    if (acEl.hidden) return;
-    if (e.key === 'ArrowDown') { e.preventDefault(); acIndex = (acIndex + 1) % acItems.length; renderAc(); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); acIndex = (acIndex - 1 + acItems.length) % acItems.length; renderAc(); }
-    else if (e.key === 'Enter' && acIndex >= 0) { e.preventDefault(); choose(acIndex); }
-    else if (e.key === 'Escape') closeAc();
-  });
-  addrEl.addEventListener('blur', () => setTimeout(closeAc, 150));
-
   let lookupSeq = 0;
+  const findBtn = document.querySelector('#addr-form button[type=submit]');
   document.getElementById('addr-form').onsubmit = async e => {
     e.preventDefault();
-    if (!acEl.hidden && acItems.length) { choose(acIndex >= 0 ? acIndex : 0); return; }
-    const q = addrEl.value.trim(); if (!q) return;
+    const q = document.getElementById('addr').value.trim(); if (!q) return;
     const seq = ++lookupSeq; setWhere('Looking up address…'); findBtn.disabled = true;
     const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 10000);
     loadGeo();
     try {
-      const items = await geocode(q, 1, ctl.signal);
+      const u = `https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=us&limit=1&addressdetails=1&viewbox=-124.6,42.1,-114.0,32.3&bounded=1&q=${encodeURIComponent(q)}`;
+      const res = await fetch(u, { headers: { Accept: 'application/json' }, signal: ctl.signal }).then(r => r.json());
       if (seq !== lookupSeq) return;
-      if (!items.length) { setWhere('No match in California. Try a street address with city, or a ZIP code, or pick your districts below.'); return; }
-      await resolveAndLocate(items[0], q);
+      if (!res.length) { setWhere('No match in California. Try a street address with city, or a ZIP code, or pick your districts below.'); return; }
+      const hit = res[0], a = hit.address || {};
+      if (a.state && a.state !== 'California') { setWhere('That address is outside California.'); return; }
+      let county = (a.county || '').replace(/ County$/, '');
+      if (!county && a.city && COUNTY_NAMES.some(n => n.toLowerCase() === a.city.toLowerCase())) county = a.city;
+      const label = [[a.house_number, a.road].filter(Boolean).join(' '), a.city || a.town || a.village || a.hamlet || a.county].filter(Boolean).join(', ') || hit.display_name.split(',').slice(0, 2).join(',');
+      await locate(+hit.lon, +hit.lat, label + (hit.type === 'postcode' ? ' (ZIP code center, approximate)' : ''), county);
     } catch (err) { if (seq === lookupSeq) setWhere(err.name === 'AbortError' ? 'Address lookup timed out. Try again or pick your districts below.' : 'Address lookup failed. Pick your districts below instead.'); }
     finally { clearTimeout(timer); if (seq === lookupSeq) findBtn.disabled = false; }
   };
-
   // manual pickers
   const senateUp = new Set((B.senate_index && B.senate_index.on_ballot) || Object.keys(B.senate).map(Number));
   function fillSelect(id, n, labelFn) { const s = document.getElementById(id); for (let i = 1; i <= n; i++) { const o = document.createElement('option'); o.value = i; o.textContent = labelFn ? labelFn(i) : i; s.appendChild(o); } }
