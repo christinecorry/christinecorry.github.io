@@ -6,7 +6,7 @@ One GitHub Pages repo, several small sites under one domain.
 | --- | --- |
 | `/` | The plain site: `index.html`, `cv.html`, `styles.css`. No JavaScript. |
 | `/sky/` | The star-chart site. Self-contained: its own `styles.css`, `script.js`, `LORE.md`, `tools/`, and `assets/` (logos, pictures, videos). |
-| `/assets/` | Shared files both sites use: `headshot-web.jpg`, `favicon.svg`, `documents/*.pdf`. |
+| `/assets/` | Shared files both sites use: `headshot-web.jpg` and `documents/*.pdf`, plus the root site's `favicon.svg` (the CC monogram; the sky keeps its star in `sky/assets/`). |
 
 Adding something new (a blog, a project page) means adding a folder beside `sky/`, linking it from wherever it belongs on the root `index.html`, and adding it to `sitemap.xml`. The root page does not currently link to `/sky/`; it is reachable by URL only.
 
