@@ -126,28 +126,71 @@
   function setWhere(t) { whereEl.textContent = t; }
 
   // address search (Nominatim)
+  // ---------- address search with suggestions (Photon / OpenStreetMap, California only) ----------
+  const CA_BBOX = '-124.6,32.3,-114.0,42.1';
+  const addrEl = document.getElementById('addr'), acEl = document.getElementById('ac'), findBtn = document.querySelector('#addr-form button[type=submit]');
+  let acItems = [], acIndex = -1, acSeq = 0, acTimer = null, acCtl = null;
+  async function geocode(q, limit, signal) {
+    const u = `https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&limit=${limit}&lang=en&bbox=${CA_BBOX}`;
+    const r = await fetch(u, { headers: { Accept: 'application/json' }, signal }).then(r => r.json());
+    return (r.features || []).filter(f => (f.properties.state || 'California') === 'California').map(f => {
+      const p = f.properties, [lng, lat] = f.geometry.coordinates;
+      const line1 = [p.housenumber, p.street || (p.type !== 'city' && p.type !== 'county' ? p.name : null)].filter(Boolean).join(' ');
+      const place = p.city || p.locality || p.district || p.town || p.village || (p.type === 'city' ? p.name : null) || p.county;
+      const label = [line1, place].filter(Boolean).join(', ') || p.name || '';
+      const county = (p.county || '').replace(/ County$/, '') || (place && COUNTY_NAMES.some(n => n.toLowerCase() === String(place).toLowerCase()) ? place : null);
+      return { lng, lat, label: label + (p.type === 'postcode' ? ' (ZIP code center, approximate)' : ''), county, postcode: p.postcode, type: p.type };
+    });
+  }
+  function renderAc() {
+    if (!acItems.length) { acEl.hidden = true; acEl.innerHTML = ''; addrEl.setAttribute('aria-expanded', 'false'); return; }
+    acEl.innerHTML = acItems.map((it, i) => `<li role="option" id="ac-${i}" ${i === acIndex ? 'aria-selected="true" class="on"' : ''}>${esc(it.label)}${it.postcode ? `<small> ${esc(it.postcode)}</small>` : ''}</li>`).join('');
+    acEl.hidden = false; addrEl.setAttribute('aria-expanded', 'true');
+    acEl.querySelectorAll('li').forEach((li, i) => { li.onmousedown = e => { e.preventDefault(); choose(i); }; });
+  }
+  function closeAc() { acItems = []; acIndex = -1; renderAc(); }
+  async function choose(i) {
+    const it = acItems[i]; if (!it) return;
+    addrEl.value = it.label.replace(/ \(ZIP code center, approximate\)$/, ''); closeAc();
+    setWhere('Finding your districts…');
+    await locate(it.lng, it.lat, it.label, it.county);
+  }
+  addrEl.addEventListener('input', () => {
+    const q = addrEl.value.trim(); clearTimeout(acTimer);
+    if (q.length < 3) { closeAc(); return; }
+    acTimer = setTimeout(async () => {
+      const seq = ++acSeq; if (acCtl) acCtl.abort(); acCtl = new AbortController();
+      loadGeo();
+      try { const items = await geocode(q, 6, acCtl.signal); if (seq !== acSeq) return; acItems = items; acIndex = -1; renderAc(); }
+      catch (err) { if (err.name !== 'AbortError') closeAc(); }
+    }, 250);
+  });
+  addrEl.addEventListener('keydown', e => {
+    if (acEl.hidden) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); acIndex = (acIndex + 1) % acItems.length; renderAc(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); acIndex = (acIndex - 1 + acItems.length) % acItems.length; renderAc(); }
+    else if (e.key === 'Enter' && acIndex >= 0) { e.preventDefault(); choose(acIndex); }
+    else if (e.key === 'Escape') closeAc();
+  });
+  addrEl.addEventListener('blur', () => setTimeout(closeAc, 150));
+
   let lookupSeq = 0;
-  const findBtn = document.querySelector('#addr-form button[type=submit]');
   document.getElementById('addr-form').onsubmit = async e => {
     e.preventDefault();
-    const q = document.getElementById('addr').value.trim(); if (!q) return;
+    if (!acEl.hidden && acItems.length) { choose(acIndex >= 0 ? acIndex : 0); return; }
+    const q = addrEl.value.trim(); if (!q) return;
     const seq = ++lookupSeq; setWhere('Looking up address…'); findBtn.disabled = true;
     const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 10000);
     loadGeo();
     try {
-      const u = `https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=us&limit=1&addressdetails=1&viewbox=-124.6,42.1,-114.0,32.3&bounded=1&q=${encodeURIComponent(q)}`;
-      const res = await fetch(u, { headers: { Accept: 'application/json' }, signal: ctl.signal }).then(r => r.json());
+      const items = await geocode(q, 1, ctl.signal);
       if (seq !== lookupSeq) return;
-      if (!res.length) { setWhere('No match in California. Try a street address with city, or a ZIP code, or pick your districts below.'); return; }
-      const hit = res[0], a = hit.address || {};
-      if (a.state && a.state !== 'California') { setWhere('That address is outside California.'); return; }
-      let county = (a.county || '').replace(/ County$/, '');
-      if (!county && a.city && COUNTY_NAMES.some(n => n.toLowerCase() === a.city.toLowerCase())) county = a.city;
-      const label = [[a.house_number, a.road].filter(Boolean).join(' '), a.city || a.town || a.village || a.hamlet || a.county].filter(Boolean).join(', ') || hit.display_name.split(',').slice(0, 2).join(',');
-      await locate(+hit.lon, +hit.lat, label + (hit.type === 'postcode' ? ' (ZIP code center, approximate)' : ''), county);
+      if (!items.length) { setWhere('No match in California. Try a street address with city, or a ZIP code, or pick your districts below.'); return; }
+      await locate(items[0].lng, items[0].lat, items[0].label, items[0].county);
     } catch (err) { if (seq === lookupSeq) setWhere(err.name === 'AbortError' ? 'Address lookup timed out. Try again or pick your districts below.' : 'Address lookup failed. Pick your districts below instead.'); }
     finally { clearTimeout(timer); if (seq === lookupSeq) findBtn.disabled = false; }
   };
+
   // manual pickers
   const senateUp = new Set((B.senate_index && B.senate_index.on_ballot) || Object.keys(B.senate).map(Number));
   function fillSelect(id, n, labelFn) { const s = document.getElementById(id); for (let i = 1; i <= n; i++) { const o = document.createElement('option'); o.value = i; o.textContent = labelFn ? labelFn(i) : i; s.appendChild(o); } }
