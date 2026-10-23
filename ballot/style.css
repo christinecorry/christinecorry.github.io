@@ -6,7 +6,7 @@
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
-body{font:14.5px/1.45 var(--sans);color:var(--ink);background:var(--paper);display:flex;flex-direction:column;min-height:100vh}
+body{font:14.5px/1.45 var(--sans);color:var(--ink);background:var(--paper);display:flex;flex-direction:column;min-height:100vh;height:auto}
 a{color:inherit;text-underline-offset:2px}
 
 /* header */
@@ -25,7 +25,7 @@ a{color:inherit;text-underline-offset:2px}
 
 /* stage */
 .stage{position:relative;flex:1;min-height:0;display:flex}
-#map{flex:1;min-height:420px;background:#eef0f0}
+#map{flex:1;min-height:420px;background:#eef0f0;position:relative}
 .maplibregl-map{font:inherit}
 .tip{position:absolute;z-index:600;pointer-events:none;background:var(--ink);color:#fff;border-radius:6px;padding:6px 9px;font-size:12.5px;line-height:1.35;box-shadow:0 2px 10px rgba(0,0,0,.2);white-space:nowrap}
 .tip b{font-weight:600}.tip .muted{opacity:.7}
@@ -83,7 +83,7 @@ a{color:inherit;text-underline-offset:2px}
 
 table.polls{width:100%;border-collapse:collapse;font-size:13px}
 table.polls th{text-align:left;font-weight:500;color:var(--ink-3);font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:0 0 4px;border-bottom:1px solid var(--rule)}
-table.polls td{padding:6px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+table.polls td{padding:6px 8px 6px 0;border-bottom:1px solid var(--rule);vertical-align:top}
 table.polls td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .poll-bar{display:flex;height:6px;border-radius:3px;overflow:hidden;background:var(--none);margin-top:4px;gap:2px}
 .poll-bar span{display:block;height:100%}
@@ -111,11 +111,11 @@ table.polls td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:
 @media (max-width: 860px){
   .top{grid-template-columns:1fr;grid-template-areas:"brand" "controls" "strip";padding:12px 16px 10px}
   .brand h1{font-size:19px}
-  .stage{flex-direction:column}
-  #map{min-height:52vh}
-  .panel{width:auto;border-left:0;border-top:1px solid var(--rule);max-height:48vh}
+  .stage{flex-direction:column;flex:none;min-height:auto}
+  #map{min-height:60vh;height:60vh;flex:none}
+  .panel{width:auto;border-left:0;border-top:1px solid var(--rule);max-height:none;overflow:visible}
+  .strip{display:none}
   .legend{left:8px;bottom:22px;padding:6px 8px;font-size:11px;gap:1px;max-width:150px}
-  .legend .row:last-child{display:none}
   .foot{padding:8px 16px}
 }
 

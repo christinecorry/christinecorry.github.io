@@ -1,9 +1,9 @@
 /* California ballot browser · November 2026 */
 (async function () {
-  const [B, R] = await Promise.all([
-    fetch('data/ballot.json', { cache: 'no-cache' }).then(r => r.json()),
-    fetch('data/races.json', { cache: 'no-cache' }).then(r => r.json()),
-  ]);
+  const getJSON = u => fetch(u, { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); });
+  let B, R;
+  try { [B, R] = await Promise.all([getJSON('data/ballot.json'), getJSON('data/races.json')]); }
+  catch (err) { document.getElementById('contests').innerHTML = '<p class="empty">Couldn\'t load the election data. Please reload the page.</p>'; return; }
   document.getElementById('updated').textContent = 'updated ' + B.updated;
 
   // ---------- shared helpers ----------
@@ -13,6 +13,7 @@
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const SUFFIX = new Set(['ii', 'iii', 'iv', 'jr', 'jr.', 'sr', 'sr.']), PARTICLE = new Set(['von', 'van', 'de', 'da', 'del', 'della', 'di', 'la', 'le', 'du']);
   function last(n) {
+    if (/^(undecided|other|generic|someone|none|refused|don)/i.test(n)) return n;
     const t = n.replace(/\(.*?\)/g, '').trim().split(/\s+/);
     while (t.length > 1 && SUFFIX.has(t[t.length - 1].toLowerCase())) t.pop();
     let i = t.length - 1; while (i > 0 && PARTICLE.has(t[i - 1].toLowerCase())) i--;
@@ -25,7 +26,7 @@
   function candHTML(c, lw) {
     const isLW = lw && c.name === lw;
     return `<div class="cand ${isLW ? 'likely' : ''}">
-      <div class="cand-head">${c.party ? pd(c.party) : ''}<span class="name">${esc(c.name)}</span>${c.party ? `<span class="tag" title="${PARTY_NAME[c.party] || ''}">${esc(c.party)}</span>` : ''}${c.incumbent ? '<span class="tag">Incumbent</span>' : ''}${isLW ? '<span class="tag lw">Likely winner</span>' : ''}${c.primary_pct != null ? `<span class="pct">${pct(c.primary_pct)}% in June primary</span>` : ''}</div>
+      <div class="cand-head">${c.party ? pd(c.party) : ''}<span class="name">${esc(c.name)}</span>${c.party ? `<span class="tag" title="${PARTY_NAME[c.party] || ''}">${esc(c.party)}</span>` : ''}${c.incumbent ? '<span class="tag">Incumbent</span>' : ''}${isLW ? '<span class="tag lw">Favored</span>' : ''}${c.primary_pct != null ? `<span class="pct">${pct(c.primary_pct)}% in June primary</span>` : ''}</div>
       ${c.bio ? `<p class="bio">${esc(c.bio)}</p>` : ''}
       ${(c.platform || c.website || c.ballotpedia) ? `<details><summary>Platform and links</summary>
         ${c.platform ? `<p class="platform">${esc(c.platform)}</p>` : ''}
@@ -53,7 +54,7 @@
   function contestHTML(title, r, opts = {}) {
     if (!r) return `<article class="contest"><h3>${title}</h3><p class="empty">${opts.missing || 'Details for this contest are still being compiled.'}</p></article>`;
     const cands = r.candidates || [];
-    return `<article class="contest" id="${opts.id || ''}">
+    return `<article class="contest"${opts.id ? ` id="${opts.id}"` : ''}>
       <h3>${title}${opts.sub ? ` <span class="sub">${opts.sub}</span>` : ''}</h3>
       ${r.summary ? `<p class="summary">${esc(r.summary)}</p>` : ''}
       ${r.incumbent ? `<p class="summary small">Incumbent: ${r.incumbent.party ? pd(r.incumbent.party) : ''}${esc(r.incumbent.name)}${r.incumbent.note ? ` · ${esc(r.incumbent.note)}` : ''}</p>` : ''}
@@ -86,8 +87,15 @@
   const state = { cd: null, sd: null, ad: null, boe: null, county: null, label: null };
   try { Object.assign(state, JSON.parse(localStorage.getItem('ballot-loc') || '{}')); } catch (e) { /* ignore */ }
   const hp = new URLSearchParams(location.hash.slice(1));
-  if ([...hp.keys()].some(k => ['cd', 'sd', 'ad', 'boe', 'county'].includes(k))) { state.label = null; for (const k of ['cd', 'sd', 'ad', 'boe']) state[k] = hp.get(k) ? +hp.get(k) : null; state.county = hp.get('county') || null; }
-  function save() { try { const { label, ...keep } = state; localStorage.setItem('ballot-loc', JSON.stringify(keep)); } catch (e) { /* ignore */ } const q = new URLSearchParams(); for (const k of ['cd', 'sd', 'ad', 'boe', 'county']) if (state[k]) q.set(k, state[k]); history.replaceState(null, '', q.toString() ? '#' + q : ' '); }
+  const MAXD = { cd: 52, sd: 40, ad: 80, boe: 4 };
+  if ([...hp.keys()].some(k => ['cd', 'sd', 'ad', 'boe', 'county'].includes(k))) {
+    state.label = null;
+    for (const k of ['cd', 'sd', 'ad', 'boe']) if (hp.has(k)) { const v = +hp.get(k); state[k] = v >= 1 && v <= MAXD[k] ? v : null; }
+    if (hp.has('county')) state.county = hp.get('county') || null;
+  }
+  for (const k of ['cd', 'sd', 'ad', 'boe']) if (state[k] != null && !(state[k] >= 1 && state[k] <= MAXD[k])) state[k] = null;
+  state.label = null;
+  function save() { try { const { label, ...keep } = state; localStorage.setItem('ballot-loc', JSON.stringify(keep)); } catch (e) { /* ignore */ } const q = new URLSearchParams(); for (const k of ['cd', 'sd', 'ad', 'boe', 'county']) if (state[k]) q.set(k, state[k]); history.replaceState(null, '', location.pathname + location.search + (q.toString() ? '#' + q : '')); }
 
   // district geometry, loaded on first lookup
   let geo = null;
@@ -100,29 +108,45 @@
   function pointInFeature(lng, lat, f) { const g = f.geometry, polys = g.type === 'Polygon' ? [g.coordinates] : g.coordinates; for (const poly of polys) { if (pointInRing(lng, lat, poly[0])) { let hole = false; for (let k = 1; k < poly.length; k++) if (pointInRing(lng, lat, poly[k])) { hole = true; break; } if (!hole) return true; } } return false; }
   const districtAt = (gj, lng, lat) => { const f = gj.features.find(f => pointInFeature(lng, lat, f)); return f ? f.properties.DISTRICT : null; };
 
+  const COUNTY_NAMES = (B.resources && B.resources.counties || []).map(c => c.name);
+  function boeForCounty(county) {
+    if (!county || !B.statewide || !B.statewide.boe_districts) return null;
+    const hit = B.statewide.boe_districts.find(b => b.counties.some(c => c.toLowerCase() === county.toLowerCase()));
+    return hit ? hit.district : null;
+  }
   async function locate(lng, lat, label, county) {
     const g = await loadGeo();
-    state.cd = districtAt(g.cd, lng, lat); state.sd = districtAt(g.sd, lng, lat); state.ad = districtAt(g.ad, lng, lat); state.boe = districtAt(g.boe, lng, lat);
-    if (!state.cd) { setWhere('That point is outside California.'); return; }
-    state.county = county || state.county; state.label = label || null;
+    const cd = districtAt(g.cd, lng, lat);
+    if (!cd) { setWhere('That point is outside California. Try a street address or ZIP code, or pick your districts below.'); return; }
+    state.cd = cd; state.sd = districtAt(g.sd, lng, lat); state.ad = districtAt(g.ad, lng, lat); state.boe = districtAt(g.boe, lng, lat);
+    state.county = county || null; state.label = label || null;
     save(); render();
   }
   const whereEl = document.getElementById('where');
   function setWhere(t) { whereEl.textContent = t; }
 
   // address search (Nominatim)
+  let lookupSeq = 0;
+  const findBtn = document.querySelector('#addr-form button[type=submit]');
   document.getElementById('addr-form').onsubmit = async e => {
     e.preventDefault();
     const q = document.getElementById('addr').value.trim(); if (!q) return;
-    setWhere('Looking up address…');
+    const seq = ++lookupSeq; setWhere('Looking up address…'); findBtn.disabled = true;
+    const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 10000);
+    loadGeo();
     try {
-      const u = `https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=us&limit=1&addressdetails=1&q=${encodeURIComponent(q + (/california|,\s*ca\b/i.test(q) ? '' : ', California'))}`;
-      const res = await fetch(u, { headers: { Accept: 'application/json' } }).then(r => r.json());
-      if (!res.length) { setWhere('Address not found. Try adding the city or ZIP code.'); return; }
-      const a = res[0].address || {};
+      const u = `https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=us&limit=1&addressdetails=1&viewbox=-124.6,42.1,-114.0,32.3&bounded=1&q=${encodeURIComponent(q)}`;
+      const res = await fetch(u, { headers: { Accept: 'application/json' }, signal: ctl.signal }).then(r => r.json());
+      if (seq !== lookupSeq) return;
+      if (!res.length) { setWhere('No match in California. Try a street address with city, or a ZIP code, or pick your districts below.'); return; }
+      const hit = res[0], a = hit.address || {};
       if (a.state && a.state !== 'California') { setWhere('That address is outside California.'); return; }
-      await locate(+res[0].lon, +res[0].lat, res[0].display_name.split(',').slice(0, 3).join(','), (a.county || '').replace(/ County$/, ''));
-    } catch (err) { setWhere('Address lookup failed. Pick your districts below instead.'); }
+      let county = (a.county || '').replace(/ County$/, '');
+      if (!county && a.city && COUNTY_NAMES.some(n => n.toLowerCase() === a.city.toLowerCase())) county = a.city;
+      const label = [[a.house_number, a.road].filter(Boolean).join(' '), a.city || a.town || a.village || a.hamlet || a.county].filter(Boolean).join(', ') || hit.display_name.split(',').slice(0, 2).join(',');
+      await locate(+hit.lon, +hit.lat, label + (hit.type === 'postcode' ? ' (ZIP code center, approximate)' : ''), county);
+    } catch (err) { if (seq === lookupSeq) setWhere(err.name === 'AbortError' ? 'Address lookup timed out. Try again or pick your districts below.' : 'Address lookup failed. Pick your districts below instead.'); }
+    finally { clearTimeout(timer); if (seq === lookupSeq) findBtn.disabled = false; }
   };
   // manual pickers
   const senateUp = new Set((B.senate_index && B.senate_index.on_ballot) || Object.keys(B.senate).map(Number));
@@ -130,8 +154,8 @@
   fillSelect('sel-cd', 52); fillSelect('sel-sd', 40, i => senateUp.has(i) ? `${i}` : `${i} (not up)`); fillSelect('sel-ad', 80);
   const counties = (B.resources && B.resources.counties || []).map(c => c.name);
   counties.forEach(n => { const o = document.createElement('option'); o.value = n; o.textContent = n; document.getElementById('sel-county').appendChild(o); });
-  for (const [id, key] of [['sel-cd', 'cd'], ['sel-sd', 'sd'], ['sel-ad', 'ad']]) document.getElementById(id).onchange = e => { state[key] = e.target.value ? +e.target.value : null; state.label = null; if (key === 'cd') state.boe = null; save(); render(); };
-  document.getElementById('sel-county').onchange = e => { state.county = e.target.value || null; state.label = null; save(); render(); };
+  for (const [id, key] of [['sel-cd', 'cd'], ['sel-sd', 'sd'], ['sel-ad', 'ad']]) document.getElementById(id).onchange = e => { state[key] = e.target.value ? +e.target.value : null; state.label = null; save(); render(); };
+  document.getElementById('sel-county').onchange = e => { state.county = e.target.value || null; state.boe = boeForCounty(state.county); state.label = null; save(); render(); };
 
   // ---------- render ----------
   const toc = document.getElementById('toc'), out = document.getElementById('contests');
@@ -146,8 +170,9 @@
     const sw = B.statewide;
     let swHTML = '';
     if (sw) {
-      const offices = sw.offices.filter(o => !o.district || !state.boe || o.district === state.boe);
-      swHTML = offices.map(o => contestHTML(o.office + (o.district ? ` · District ${o.district}` : ''), o, { id: 'office-' + o.id, sub: o.nonpartisan ? 'nonpartisan' : '' })).join('');
+      const boe = state.boe || boeForCounty(state.county);
+      const offices = sw.offices.filter(o => !o.district || !boe || o.district === boe);
+      swHTML = offices.map(o => contestHTML(o.office + (o.district ? ` · District ${o.district}` : ''), o, { id: 'office-' + o.id, sub: o.nonpartisan ? 'nonpartisan' : o.district && !boe ? 'you vote in one of the four districts, depending on your county' : '' })).join('');
       if (sw.us_senate && sw.us_senate.note) swHTML += `<p class="empty">${esc(sw.us_senate.note)}</p>`;
     } else swHTML = '<p class="empty">Statewide contests are still being compiled.</p>';
     secs.push(['statewide', 'Statewide offices', swHTML]);
@@ -169,7 +194,7 @@
     let loc = '<p class="summary">County, city, school and special-district contests vary block by block and are not compiled here. Your county elections office publishes the exact sample ballot for your address.</p>';
     if (cty) loc += `<p class="links">${link(cty.url, esc(cty.office || cty.name + ' County elections'))}${link(cty.sample_ballot_url, 'Sample ballot lookup')}${cty.phone ? `<span>${esc(cty.phone)}</span>` : ''}</p>`;
     if (res) {
-      const today = new Date().toISOString().slice(0, 10);
+      const now = new Date(), today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
       const dates = (res.key_dates || []).filter(d => d.date >= today);
       loc += (dates.length ? `<ul class="dates">${dates.map(d => `<li><b>${esc(d.date)}</b> ${esc(d.label)}</li>`).join('')}</ul>` : '') +
         `<p class="links">${res.statewide_links.map(l => link(l.url, esc(l.label))).join('')}</p>` +

@@ -1,12 +1,12 @@
 {
-"updated": "2026-10-22",
+"updated": "2026-10-23",
 "statewide": {
 "updated": "2026-10-22",
 "election_date": "2026-11-03",
 "primary_date": "2026-06-02",
 "us_senate": {
 "on_ballot": false,
-"note": "No U.S. Senate seat is up in California in 2026. Alex Padilla's term runs through January 2029 (Class 3, next election 2028) and Adam Schiff's through January 2031 (Class 1, next election 2030). The 2026 California elections page lists only U.S. House contests under Congress."
+"note": "No U.S. Senate seat is up in California in 2026. Alex Padilla's term runs through January 2029 (Class 3, next election 2028) and Adam Schiff's through January 2031 (Class 1, next election 2030)."
 },
 "offices": [
 {
@@ -87,22 +87,20 @@
 "dates": "Sep 24 - Oct 1, 2026",
 "sample": "1,000 LV",
 "results": {
-"Xavier Becerra": 57,
-"Steve Hilton": 39,
-"Other": 1,
-"Undecided": 3
+"Xavier Becerra": 55,
+"Steve Hilton": 38,
+"Undecided": 7
 },
 "url": "https://manhattan.institute/article/californias-contradictions-survey-analysis-of-2026-voter-preferences-statewide-and-in-los-angeles"
 },
 {
 "pollster": "Independent Voter Project",
-"dates": "Sep 23-28, 2026",
+"dates": "Sep 23 - Oct 2, 2026",
 "sample": "2,906 LV",
 "results": {
 "Xavier Becerra": 48,
 "Steve Hilton": 38,
-"Other": 3,
-"Undecided": 11
+"Undecided": 14
 },
 "url": "https://ivn.us/new-ca-poll-voter-id-measure-leads-today-its-undecided-voters-point-the-other-way/"
 },
@@ -261,22 +259,9 @@
 "inside_elections": null,
 "as_of": "2026-10-11"
 },
-"polls": [
-{
-"pollster": "Independent Voter Project",
-"dates": "Sep 23 - Oct 2, 2026",
-"sample": "2,906 LV",
-"results": {
-"Fiona Ma": 41,
-"Gloria Romero": 31,
-"Other": 2,
-"Undecided": 26
-},
-"url": "https://ivn.us/new-ca-poll-voter-id-measure-leads-today-its-undecided-voters-point-the-other-way/"
-}
-],
+"polls": [],
 "likely_winner": "Fiona Ma",
-"likely_winner_basis": "Ma led the only public poll by 10 points with a heavily Democratic undecided pool (IVP projects a 57% two-way share), in a state where Democrats won every statewide office in 2022.",
+"likely_winner_basis": "Ma by 10 points with a heavily Democratic undecided pool (IVP projects a 57% two-way share), in a state where Democrats won every statewide office in 2022.",
 "summary": "State Treasurer Fiona Ma (D) and former state Senate Democratic majority leader Gloria Romero, now a Republican, advanced from a crowded 18-candidate primary in which Ma took 19.12% and Romero 17.83%; Democrats Josh Fryday (14.73%) and Michael Tubbs (13.27%) were eliminated. Incumbent Eleni Kounalakis is term-limited and is running for Treasurer. The race has drawn little polling; the California Democratic Party endorsed Ma after the primary.",
 "sources": [
 "https://voterguide.sos.ca.gov/candidates/lt-governor-candidate-statements.htm",
@@ -368,7 +353,7 @@
 "website": "https://wagnerforcalifornia.com/",
 "ballotpedia": "https://ballotpedia.org/Don_Wagner",
 "bio": "Orange County Supervisor for District 3 since 2019 (board chairman 2023-2025), former Mayor of Irvine (2016-2019), former State Assemblymember (2010-2016) and business attorney.",
-"platform": "Wagner says he is running to make elections 'secure, efficient, accurate, and accessible' and to ensure only eligible voters cast ballots, pledging to speed up vote counting, clean up voter rolls and support the Proposition 39 voter-ID initiative. He describes the Secretary of State as a nonpartisan 'umpire for fair elections' and also calls for making the office's business-filings division more small-business friendly. News coverage notes that several of his proposals would require legislative action."
+"platform": "Wagner says he is running to make elections 'secure, efficient, accurate, and accessible' and to ensure only eligible voters cast ballots, pledging to speed up vote counting, clean up voter rolls and support the Proposition 39 voter-ID initiative. He describes the Secretary of State as a nonpartisan 'umpire for fair elections' and also calls for making the office's business-filings division more small-business friendly."
 }
 ],
 "ratings": {
@@ -377,23 +362,9 @@
 "inside_elections": null,
 "as_of": "2025-08-07"
 },
-"polls": [
-{
-"pollster": "Independent Voter Project",
-"dates": "Sep 23 - Oct 2, 2026",
-"sample": "2,906 LV",
-"results": {
-"Shirley Weber": 41,
-"Donald P. Wagner": 31,
-"Other": 2,
-"Undecided": 26
-},
-"url": "https://ivn.us/new-ca-poll-voter-id-measure-leads-today-its-undecided-voters-point-the-other-way/",
-"note": "Toplines as transcribed on Wikipedia; identical to the Lt. Governor row and not independently verifiable from the IVP release, which reports only a projected 59% two-way share for Weber and 'about one in four' undecided."
-}
-],
+"polls": [],
 "likely_winner": "Shirley Weber",
-"likely_winner_basis": "Weber won 58.70% outright in the June primary, led the only public poll, and Sabato's Crystal Ball rates the office Safe Democratic.",
+"likely_winner_basis": "Weber won 58.70% outright in the June primary, and Sabato's Crystal Ball rates the office Safe Democratic.",
 "summary": "Incumbent Democrat Shirley Weber, first elected in 2022 with 60.1%, faces Republican Orange County Supervisor and former Assemblymember Don Wagner. Weber took 58.70% in the primary to Wagner's 36.74%; two Green Party candidates were eliminated. Weber has campaigned on defending voting access and election administration, while Wagner has emphasized voter-roll maintenance and election integrity.",
 "sources": [
 "https://voterguide.sos.ca.gov/candidates/sos-candidate-statements.htm",
@@ -424,7 +395,7 @@
 "website": "https://eleniforca.com/",
 "ballotpedia": "https://ballotpedia.org/Eleni_Kounalakis",
 "bio": "Lieutenant Governor since 2019, former U.S. Ambassador to Hungary (2010-2013) and former president of the Sacramento housing developer AKT Development; she left the 2026 governor's race in August 2025 to run for Treasurer.",
-"platform": "Kounalakis says she will 'responsibly manage California's finances, strengthen our economy, and make smart investments,' with stated goals of using public finance to build more affordable housing, investing in children and families, defending health care and immigrant communities, and protecting pensions. She cites her background as a builder and her Lieutenant Governor record on the State Lands Commission, UC Regents and CSU Trustees; her site emphasizes fiscal stewardship and 'investments that reflect California's values' more than detailed proposals."
+"platform": "Kounalakis says she will 'responsibly manage California's finances, strengthen our economy, and make smart investments,' with stated goals of using public finance to build more affordable housing, investing in children and families, defending health care and immigrant communities, and protecting pensions. She cites her background as a builder and her Lieutenant Governor record on the State Lands Commission, UC Regents and CSU Trustees."
 },
 {
 "name": "Jennifer Hawks",
@@ -433,7 +404,7 @@
 "primary_pct": 24.0,
 "website": "https://hawksforus.com/",
 "ballotpedia": "https://ballotpedia.org/Jennifer_Hawks",
-"bio": "Retired Palo Alto businesswoman who began her career in banking and spent about 20 years as office manager and executive assistant at Sacred Heart Schools in Atherton until 2021; president of Palo Alto Republican Women and a first-time candidate for office.",
+"bio": "Retired Palo Alto businesswoman and former school administrator.",
 "platform": "Hawks presents herself as 'not a career politician' and pledges to bring transparency and accountability to the Treasurer's office, exposing waste, fraud and mismanagement and publishing where state money goes. Her site lists day-one initiatives including publishing office findings, reviewing state investment holdings, creating a unified public debt dashboard and scrutinizing housing-finance spending. She also cites bringing bond debt under control and protecting retirement security through the Treasurer's seats on the CalPERS and CalSTRS boards."
 }
 ],
@@ -573,7 +544,7 @@
 ],
 "likely_winner": null,
 "likely_winner_basis": "Two Democrats; Kim led the primary and both public polls narrowly, but 57-64% of voters were undecided and Allen holds the state party endorsement and heavier outside spending, so no clear favorite.",
-"summary": "The first-ever Democrat-vs-Democrat general election for Insurance Commissioner pits former San Francisco Supervisor Jane Kim, a progressive endorsed by Bernie Sanders, the California Teachers Association and the Working Families Party, against state Sen. Ben Allen, endorsed by the California Democratic Party. Kim led the 11-candidate primary with 27.40% to Allen's 19.41%; the top Republican, Stacy Korsgaden, was eliminated at 15.54%. Kim proposes a state-run nonprofit natural-disaster insurance program, while Allen emphasizes using and strengthening the commissioner's existing regulatory powers (including his SB 1209, signed in September 2026).",
+"summary": "The first-ever Democrat-vs-Democrat general election for Insurance Commissioner pits former San Francisco Supervisor Jane Kim, endorsed by Bernie Sanders, the California Teachers Association and the Working Families Party, against state Sen. Ben Allen, endorsed by the California Democratic Party. Kim led the 11-candidate primary with 27.40% to Allen's 19.41%; the top Republican, Stacy Korsgaden, was eliminated at 15.54%. Kim proposes a state-run nonprofit natural-disaster insurance program, while Allen emphasizes using and strengthening the commissioner's existing regulatory powers (including his SB 1209, signed in September 2026).",
 "sources": [
 "https://voterguide.sos.ca.gov/candidates/insurance-commissioner-candidate-statements.htm",
 "https://en.wikipedia.org/wiki/2026_California_Insurance_Commissioner_election",
@@ -602,7 +573,7 @@
 "candidates": [
 {
 "name": "Sonja Shaw",
-"party": "NPP",
+"party": null,
 "incumbent": false,
 "primary_pct": 22.64,
 "website": "https://shawforca.com/",
@@ -612,7 +583,7 @@
 },
 {
 "name": "Richard Barrera",
-"party": "NPP",
+"party": null,
 "incumbent": false,
 "primary_pct": 20.3,
 "website": "https://www.barreraforedu.com/",
@@ -646,7 +617,7 @@
 ],
 "likely_winner": "Richard Barrera",
 "likely_winner_basis": "Barrera led the only public poll 26-20 with a majority undecided, holds the California Democratic Party and major education-labor endorsements, and the combined primary vote for Democratic-aligned candidates far exceeded Shaw's; a Republican-aligned candidate has not won this office since 1994.",
-"summary": "Chino Valley school board president Sonja Shaw, a Republican known for parental-notification and culture-war policies, finished first in the 10-candidate nonpartisan primary (22.64%) and faces San Diego Unified board member Richard Barrera, a Democrat (20.30%), in a runoff. Democrats Nichelle Henderson, Al Muratsuchi, Anthony Rendon and Josh Newman split much of the remaining vote. Barrera has the state Democratic Party, CSEA and Equality California endorsements; the office is formally nonpartisan and party labels do not appear on the ballot.",
+"summary": "Chino Valley school board president Sonja Shaw, a Republican known for the district's parental-notification policy on student gender identity, finished first in the 10-candidate nonpartisan primary (22.64%) and faces San Diego Unified board member Richard Barrera, a Democrat (20.30%), in a runoff. Democrats Nichelle Henderson, Al Muratsuchi, Anthony Rendon and Josh Newman split much of the remaining vote. Barrera has the state Democratic Party, CSEA and Equality California endorsements; the office is formally nonpartisan and party labels do not appear on the ballot.",
 "sources": [
 "https://voterguide.sos.ca.gov/candidates/superintendent-candidate-statements.htm",
 "https://en.wikipedia.org/wiki/2026_California_Superintendent_of_Public_Instruction_election",
@@ -2431,523 +2402,407 @@
 "name": "Alameda",
 "office": "Alameda County Registrar of Voters",
 "url": "https://acvote.alamedacountyca.gov/",
-"url_verified": true,
 "sample_ballot_url": "https://alamedacountyca.gov/rovmvp_app/mvp.do",
-"phone": "(510) 272-6933",
-"notes": "Sample ballot: My Voter Profile lookup (registration and sample ballot)"
+"phone": "(510) 272-6933"
 },
 {
 "name": "Alpine",
 "office": "Alpine County Clerk / Elections",
 "url": "https://www.alpinecountyca.gov/index.aspx?NID=388",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(530) 694-2281",
-"notes": "Sample ballot: No sample ballot or VIG page found"
+"phone": "(530) 694-2281"
 },
 {
 "name": "Amador",
 "office": "Amador County Clerk / Elections",
 "url": "https://www.amadorcounty.gov/government/elections",
-"url_verified": true,
 "sample_ballot_url": "https://www.amadorcounty.gov/government/elections/current-and-upcoming-elections/2026-general-election",
-"phone": "(209) 223-6465",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: 2026 General Election page with County Voter Information Guide PDF; verified in browser (site blocks automated requests)"
+"phone": "(209) 223-6465"
 },
 {
 "name": "Butte",
 "office": "Butte County Clerk-Recorder / Registrar of Voters",
 "url": "https://www.buttevotes.ca.gov/35/Elections",
-"url_verified": true,
 "sample_ballot_url": "https://www.buttevotes.ca.gov/340/November-3-2026-Statewide-General-Electi",
-"phone": "(530) 552-3400",
-"notes": "Sample ballot: Nov 3, 2026 election page with Local Voter Information Guide PDF"
+"phone": "(530) 552-3400"
 },
 {
 "name": "Calaveras",
 "office": "Calaveras County Clerk-Recorder, Elections Department",
 "url": "https://elections.calaverasgov.us/",
-"url_verified": true,
 "sample_ballot_url": "https://ca.omniballot.us/sites/06009/default/app/home",
-"phone": "(209) 754-6376",
-"notes": "Sample ballot: OmniBallot interactive County Voter Information Pamphlet"
+"phone": "(209) 754-6376"
 },
 {
 "name": "Colusa",
 "office": "Colusa County Clerk-Recorder / Registrar of Voters",
 "url": "https://www.countyofcolusaca.gov/197/Elections",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(530) 458-0500",
-"notes": "Sample ballot: No sample ballot viewer or county VIG for Nov 3, 2026 found"
+"phone": "(530) 458-0500"
 },
 {
 "name": "Contra Costa",
 "office": "Contra Costa County Clerk-Recorder-Elections",
 "url": "https://www.contracostavote.gov/",
-"url_verified": true,
 "sample_ballot_url": "https://www.contracostavote.gov/elections/voter-registration/my-voting-information/",
-"phone": "(925) 335-7800",
-"notes": "Sample ballot: My Voting Information: Voter Lookup and Sample Ballot Search"
+"phone": "(925) 335-7800"
 },
 {
 "name": "Del Norte",
 "office": "Del Norte County Clerk-Recorder / Elections",
 "url": "https://www.co.del-norte.ca.us/departments/Elections",
-"url_verified": true,
 "sample_ballot_url": "https://www.delnorte.yourvoter.guide/",
-"phone": "(707) 464-7216",
-"notes": "Sample ballot: Online Voter Guide (address lookup)"
+"phone": "(707) 464-7216"
 },
 {
 "name": "El Dorado",
 "office": "El Dorado County Registrar of Voters",
 "url": "https://www.eldoradocounty.ca.gov/County-Government/Elections",
-"url_verified": true,
 "sample_ballot_url": "https://www.eldoradocounty.ca.gov/County-Government/Elections/El-Dorado-County-Voter-Information-Pamphlet",
-"phone": "(530) 621-7480",
-"notes": "Sample ballot: Voter Information Pamphlet page with Nov 3, 2026 booklet PDF"
+"phone": "(530) 621-7480"
 },
 {
 "name": "Fresno",
 "office": "Fresno County Clerk / Registrar of Voters",
 "url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections",
-"url_verified": true,
 "sample_ballot_url": "https://sites.omniballot.us/06019/app/home",
-"phone": "(559) 600-8683",
-"notes": "Sample ballot: OmniBallot online Voter Guide"
+"phone": "(559) 600-8683"
 },
 {
 "name": "Glenn",
 "office": "Glenn County Elections (Assessor/Clerk-Recorder)",
 "url": "https://www.countyofglenn.net/dept/elections/welcome",
-"url_verified": false,
 "sample_ballot_url": null,
-"phone": "(530) 934-6414",
-"notes": "SOS-listed URL; site sits behind a Cloudflare challenge that blocked curl, WebFetch and the browser check; Sample ballot: Site behind Cloudflare challenge; could not inspect"
+"phone": "(530) 934-6414"
 },
 {
 "name": "Humboldt",
 "office": "Humboldt County Clerk, Recorder and Registrar of Voters",
 "url": "https://humboldtgov.org/890/Elections-Voter-Registration",
-"url_verified": true,
 "sample_ballot_url": "https://sites.omniballot.us/06023/app/home",
-"phone": "(707) 445-7481",
-"notes": "Sample ballot: OmniBallot online Voter Information Guide"
+"phone": "(707) 445-7481"
 },
 {
 "name": "Imperial",
 "office": "Imperial County Registrar of Voters",
 "url": "https://elections.imperialcounty.org/",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(442) 265-1060",
-"notes": "Sample ballot: Only an accessible vote-by-mail portal found; no sample ballot page"
+"phone": "(442) 265-1060"
 },
 {
 "name": "Inyo",
 "office": "Inyo County Clerk-Recorder / Registrar of Voters",
 "url": "https://elections.inyocounty.us/",
-"url_verified": true,
 "sample_ballot_url": "https://elections.inyocounty.us/voting/voter-information-guides-sample-ballots/",
-"phone": "(760) 878-0224",
-"notes": "Sample ballot: Voter Information Guides & Sample Ballots page (2026 General sample ballot PDFs)"
+"phone": "(760) 878-0224"
 },
 {
 "name": "Kern",
 "office": "Kern County Elections Office (Auditor-Controller-County Clerk)",
 "url": "https://www.kernvote.com/",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(661) 868-3590",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: No sample ballot lookup found (site has poll-site and ballot-tracking lookups only)"
+"phone": "(661) 868-3590"
 },
 {
 "name": "Kings",
 "office": "Kings County Registrar of Voters",
 "url": "https://www.countyofkingsca.gov/departments/administration/elections",
-"url_verified": true,
 "sample_ballot_url": "https://www.countyofkingsca.gov/departments/administration/elections/voter-information-guides",
-"phone": "(559) 852-4401",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: Voter Information Guides page; verified in browser (site blocks automated requests)"
+"phone": "(559) 852-4401"
 },
 {
 "name": "Lake",
 "office": "Lake County Registrar of Voters",
 "url": "https://www.lakecountyca.gov/818/Registrar-of-Voters",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(707) 263-2372",
-"notes": "Sample ballot: No sample ballot or county VIG found"
+"phone": "(707) 263-2372"
 },
 {
 "name": "Lassen",
 "office": "Lassen County Clerk-Recorder / Elections",
 "url": "https://www.lassencounty.org/dept/county-clerk-recorder/elections/",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(530) 251-8217",
-"notes": "Sample ballot: Elections pages not reachable (SOS link redirects to county homepage)"
+"phone": "(530) 251-8217"
 },
 {
 "name": "Los Angeles",
 "office": "Los Angeles County Registrar-Recorder/County Clerk",
 "url": "https://www.lavote.gov/home/voting-elections",
-"url_verified": true,
 "sample_ballot_url": "https://www.lavote.gov/home/voting-elections/voter-education/what-to-do-before-an-election/get-your-sample-ballot",
-"phone": "(800) 815-2666",
-"notes": "Sample ballot: Get Your Sample Ballot lookup"
+"phone": "(800) 815-2666"
 },
 {
 "name": "Madera",
 "office": "Madera County Clerk-Recorder, Elections Division",
 "url": "https://votemadera.com/",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(559) 675-7720",
-"notes": "Sample ballot: No sample ballot or VIG lookup found"
+"phone": "(559) 675-7720"
 },
 {
 "name": "Marin",
 "office": "Marin County Registrar of Voters",
 "url": "https://www.marincounty.gov/departments/elections",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(415) 473-6456",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: No sample ballot lookup found; verified in browser"
+"phone": "(415) 473-6456"
 },
 {
 "name": "Mariposa",
 "office": "Mariposa County Registrar of Voters",
 "url": "https://www.mariposacounty.org/87/Elections",
-"url_verified": true,
 "sample_ballot_url": "https://www.mariposa.yourvoter.guide/#/search",
-"phone": "(209) 966-2007",
-"notes": "Sample ballot: Online Voter Guide lookup"
+"phone": "(209) 966-2007"
 },
 {
 "name": "Mendocino",
 "office": "Mendocino County Assessor-County Clerk-Recorder, Elections Department",
 "url": "https://www.mendocinocounty.gov/All-Departments/Assessor-County-Clerk-Recorder-Elections/Elections",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(707) 234-6819",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; SOS-listed URL (/government/assessor-county-clerk-recorder-elections/elections) is dead; this is the live Elections page; Sample ballot: No sample ballot or VIG link on Elections page; verified in browser"
+"phone": "(707) 234-6819"
 },
 {
 "name": "Merced",
 "office": "Merced County Registrar of Voters",
 "url": "https://www.countyofmerced.com/3878/Elections",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(209) 385-7541",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: No sample ballot or VIG link found on Elections page; verified in browser"
+"phone": "(209) 385-7541"
 },
 {
 "name": "Modoc",
 "office": "Modoc County Clerk / Elections",
 "url": "https://www.countyofmodoc.gov/554/Elections",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(530) 233-6200",
-"notes": "Sample ballot: No sample ballot or VIG found"
+"phone": "(530) 233-6200"
 },
 {
 "name": "Mono",
 "office": "Mono County Clerk-Recorder-Registrar",
 "url": "https://monocounty.ca.gov/elections",
-"url_verified": true,
 "sample_ballot_url": "https://monocounty.ca.gov/2547/Voter-Information-Guides",
-"phone": "(760) 932-5537",
-"notes": "Sample ballot: Nov 3, 2026 County Voter Information Guide and Sample Ballot PDFs by precinct"
+"phone": "(760) 932-5537"
 },
 {
 "name": "Monterey",
 "office": "Monterey County Registrar of Voters",
 "url": "https://www.countyofmonterey.gov/government/departments-a-h/elections/home",
-"url_verified": true,
 "sample_ballot_url": "https://www.countyofmonterey.gov/government/departments-a-h/elections/elections/voter-guide-and-polling-place-locator",
-"phone": "(831) 796-1499",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: Voter Guide and Polling Place Locator; verified in browser (site blocks automated requests)"
+"phone": "(831) 796-1499"
 },
 {
 "name": "Napa",
 "office": "Napa County Registrar of Voters",
 "url": "https://www.napacounty.gov/396/Elections",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(707) 253-4321",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: Current Election page has ballot-status lookup only; verified in browser"
+"phone": "(707) 253-4321"
 },
 {
 "name": "Nevada",
 "office": "Nevada County Clerk-Recorder / Registrar of Voters",
 "url": "https://www.nevadacountyca.gov/3446/Elections",
-"url_verified": true,
 "sample_ballot_url": "https://www.nevadacountyca.gov/817/Voter-Information-Guide-and-Sample-Ballo",
-"phone": "(530) 265-1298",
-"notes": "Sample ballot: Voter Information Guide and Sample Ballot Online (links OmniBallot lookup)"
+"phone": "(530) 265-1298"
 },
 {
 "name": "Orange",
 "office": "Orange County Registrar of Voters",
 "url": "https://ocvote.gov/",
-"url_verified": true,
 "sample_ballot_url": "https://ocvote.gov/vlt/",
-"phone": "(714) 567-7600",
-"notes": "Sample ballot: Your Voter Information lookup (sample ballot and VIG download)"
+"phone": "(714) 567-7600"
 },
 {
 "name": "Placer",
 "office": "Placer County Clerk-Recorder-Registrar (Placer County Elections)",
 "url": "https://www.placercountyelections.gov/",
-"url_verified": true,
 "sample_ballot_url": "https://placer.maps.arcgis.com/apps/webappviewer/index.html?id=3ff5b4b1d0c54d609d547ff0bb7de064",
-"phone": "(530) 886-5650",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: Voter Information Guide Search (ArcGIS lookup); accessible VIG also at placercountyelections.gov/voter-guide/"
+"phone": "(530) 886-5650"
 },
 {
 "name": "Plumas",
 "office": "Plumas County Clerk-Recorder / Registrar of Voters, Elections Division",
 "url": "https://www.plumascounty.us/142/Elections-Division-Home",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(530) 283-6256",
-"notes": "Sample ballot: No sample ballot or VIG link found"
+"phone": "(530) 283-6256"
 },
 {
 "name": "Riverside",
 "office": "Riverside County Registrar of Voters",
 "url": "https://www.voteinfo.net/",
-"url_verified": true,
 "sample_ballot_url": "https://docs.voteinfo.net/VoterInformation/root1103/pollplac.htm",
-"phone": "(951) 486-7200",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: County Voter Information Guide lookup by ZIP (linked from Nov 3, 2026 election page); verified in browser"
+"phone": "(951) 486-7200"
 },
 {
 "name": "Sacramento",
 "office": "Sacramento County Registrar of Voters",
 "url": "https://elections.saccounty.gov/",
-"url_verified": true,
 "sample_ballot_url": "https://myvoterportal.saccounty.gov/CountyVoterInfoGuide",
-"phone": "(916) 875-6451",
-"notes": "Sample ballot: My Voter Portal: County Voter Information Guide lookup"
+"phone": "(916) 875-6451"
 },
 {
 "name": "San Benito",
 "office": "San Benito County Clerk-Auditor-Recorder / Registrar of Voters",
 "url": "https://www.sanbenitocounty-ca-cre.gov/elections",
-"url_verified": true,
 "sample_ballot_url": "https://cosb.maps.arcgis.com/apps/instant/lookup/index.html?appid=c14295d552594d0984bfd6885cf9a731",
-"phone": "(831) 636-4016",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: Online Sample Ballot and Voter Information Guide address lookup (ArcGIS), linked from Nov 3, 2026 page"
+"phone": "(831) 636-4016"
 },
 {
 "name": "San Bernardino",
 "office": "San Bernardino County Registrar of Voters",
 "url": "https://elections.sbcounty.gov/",
-"url_verified": true,
 "sample_ballot_url": "https://elections.sbcounty.gov/voting/vig/",
-"phone": "(909) 387-8300",
-"notes": "Sample ballot: Voter Information Guide page with precinct lookup and full VIG PDF"
+"phone": "(909) 387-8300"
 },
 {
 "name": "San Diego",
 "office": "San Diego County Registrar of Voters",
 "url": "https://www.sdvote.com/",
-"url_verified": true,
 "sample_ballot_url": "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html",
-"phone": "(858) 565-5800",
-"notes": "Sample ballot: Sample Ballot Information Lookup"
+"phone": "(858) 565-5800"
 },
 {
 "name": "San Francisco",
 "office": "San Francisco Department of Elections",
 "url": "https://sf.gov/departments/department-elections",
-"url_verified": true,
 "sample_ballot_url": "https://sfelections.org/tools/portal/",
-"phone": "(415) 558-6100",
-"notes": "Sample ballot: Voter Portal (Voter Information Pamphlet and sample ballot)"
+"phone": "(415) 558-6100"
 },
 {
 "name": "San Joaquin",
 "office": "San Joaquin County Registrar of Voters",
 "url": "https://www.sjgov.org/department/rov/",
-"url_verified": true,
 "sample_ballot_url": "https://www.sjgov.org/department/rov/voting/registration-info/voter-guide",
-"phone": "(209) 468-8683",
-"notes": "Sample ballot: County Voter Information Guide/Sample Ballot page with OmniBallot lookup"
+"phone": "(209) 468-8683"
 },
 {
 "name": "San Luis Obispo",
 "office": "San Luis Obispo County Clerk-Recorder / Registrar",
 "url": "https://www.slocounty.ca.gov/Departments/Clerk-Recorder",
-"url_verified": true,
 "sample_ballot_url": "https://www.slocounty.ca.gov/departments/clerk-recorder/forms-documents/elections-and-voting/current-elections/2026-11-03/voter-information-guides",
-"phone": "(805) 781-5228",
-"notes": "Sample ballot: Nov 3, 2026 Voter Information Guides by ballot type"
+"phone": "(805) 781-5228"
 },
 {
 "name": "San Mateo",
 "office": "San Mateo County Registration & Elections Division",
 "url": "https://smcacre.gov/elections",
-"url_verified": true,
 "sample_ballot_url": "https://smcacre.gov/elections/my-election-info",
-"phone": "(650) 312-5222",
-"notes": "Sample ballot: My Election Info voter lookup"
+"phone": "(650) 312-5222"
 },
 {
 "name": "Santa Barbara",
 "office": "Santa Barbara County Clerk-Recorder-Assessor / Registrar of Voters",
 "url": "https://www.countyofsb.org/164/Elections",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(805) 568-2200",
-"notes": "Sample ballot: JS-rendered site; no sample ballot link located"
+"phone": "(805) 568-2200"
 },
 {
 "name": "Santa Clara",
 "office": "Santa Clara County Registrar of Voters",
 "url": "https://vote.santaclaracounty.gov/home",
-"url_verified": true,
 "sample_ballot_url": "https://vote.santaclaracounty.gov/see-whats-your-ballot",
-"phone": "(408) 299-8683",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: See What's on Your Ballot (County Voter Information Guide); verified in browser (site blocks automated requests)"
+"phone": "(408) 299-8683"
 },
 {
 "name": "Santa Cruz",
 "office": "Santa Cruz County Clerk / Elections",
 "url": "https://votescount.santacruzcountyca.gov/",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(831) 454-2060",
-"notes": "Sample ballot: Only an electronic VIG opt-in form found"
+"phone": "(831) 454-2060"
 },
 {
 "name": "Shasta",
 "office": "Shasta County Clerk / Registrar of Voters",
 "url": "https://elections.shastacounty.gov/",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(530) 225-5730",
-"notes": "Sample ballot: No sample ballot lookup or VIG listing found"
+"phone": "(530) 225-5730"
 },
 {
 "name": "Sierra",
 "office": "Sierra County Clerk-Recorder / Registrar of Voters",
 "url": "https://www.sierracounty.ca.gov/214/Elections",
-"url_verified": true,
 "sample_ballot_url": "https://ca.omniballot.us/sites/06091/default/app/home",
-"phone": "(530) 289-3295",
-"notes": "Sample ballot: OmniBallot portal (county labels it accessible vote-by-mail)"
+"phone": "(530) 289-3295"
 },
 {
 "name": "Siskiyou",
 "office": "Siskiyou County Clerk / Elections",
 "url": "https://www.siskiyoucounty.gov/elections",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(530) 842-8084",
-"notes": "Sample ballot: No sample ballot or VIG lookup found"
+"phone": "(530) 842-8084"
 },
 {
 "name": "Solano",
 "office": "Solano County Registrar of Voters",
 "url": "https://www.solanocounty.gov/government/registrar-voters",
-"url_verified": true,
 "sample_ballot_url": "https://www.solanocounty.gov/government/registrar-voters/sample-ballotpolling-place-lookup",
-"phone": "(707) 784-6675",
-"notes": "Sample ballot: Sample Ballot / Polling Place Lookup"
+"phone": "(707) 784-6675"
 },
 {
 "name": "Sonoma",
 "office": "Sonoma County Registrar of Voters",
 "url": "https://sonomacounty.ca.gov/administrative-support-and-fiscal-services/clerk-recorder-assessor-registrar-of-voters/registrar-of-voters",
-"url_verified": true,
 "sample_ballot_url": "https://ca.omniballot.us/sites/06097/default/app/home",
-"phone": "(707) 565-6800",
-"notes": "Sample ballot: Online County Voter Information Guide (OmniBallot)"
+"phone": "(707) 565-6800"
 },
 {
 "name": "Stanislaus",
 "office": "Stanislaus County Clerk-Recorder / Registrar of Voters",
 "url": "https://stanvote.gov/",
-"url_verified": true,
 "sample_ballot_url": "https://ca.omniballot.us/sites/06099/default/app/home",
-"phone": "(209) 525-5200",
-"notes": "Sample ballot: Sample Ballot Lookup Tool (OmniBallot)"
+"phone": "(209) 525-5200"
 },
 {
 "name": "Sutter",
 "office": "Sutter County Clerk-Recorder / Elections",
 "url": "https://www.sutter.gov/government/county-departments/clerk-recorder/elections",
-"url_verified": true,
 "sample_ballot_url": "https://www.sutter.gov/government/county-departments/clerk-recorder/elections/sample-ballot-and-pamphlet",
-"phone": "(530) 822-7122",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: Sample Ballot and Pamphlet page; verified in browser (site blocks automated requests)"
+"phone": "(530) 822-7122"
 },
 {
 "name": "Tehama",
 "office": "Tehama County Registrar of Voters",
 "url": "https://www.tehama.gov/government/departments/elections/",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(530) 527-8190",
-"notes": "Sample ballot: No Nov 2026 sample ballot or VIG found"
+"phone": "(530) 527-8190"
 },
 {
 "name": "Trinity",
 "office": "Trinity County Registrar of Voters",
 "url": "https://www.trinitycounty.org/214/Elections",
-"url_verified": true,
 "sample_ballot_url": "https://www.trinitycounty.org/217/Current-Election",
-"phone": "(530) 623-1220",
-"notes": "Sample ballot: Current Election page with consolidated County Voter Information Guide PDF"
+"phone": "(530) 623-1220"
 },
 {
 "name": "Tulare",
 "office": "Tulare County Registrar of Voters",
 "url": "https://tularecounty.ca.gov/elections",
-"url_verified": true,
 "sample_ballot_url": "https://electionsapp.tularecoelections.org/",
-"phone": "(559) 839-2100",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: Sample Ballot, Voter Information Guide & Polling Location Lookup (ArcGIS app linked from Nov 3, 2026 page); verified in browser"
+"phone": "(559) 839-2100"
 },
 {
 "name": "Tuolumne",
 "office": "Tuolumne County Clerk / Elections Department",
 "url": "https://www.tuolumnecounty.ca.gov/194/Election-Information",
-"url_verified": true,
 "sample_ballot_url": "https://www.tuolumnecounty.ca.gov/DocumentCenter/View/31666",
-"phone": "(209) 533-5570",
-"notes": "County site blocks automated requests; URL verified by loading it in a browser; Sample ballot: Local Voter Information Guide PDF (all ballot types); verified in browser (site blocks automated requests)"
+"phone": "(209) 533-5570"
 },
 {
 "name": "Ventura",
 "office": "Ventura County Clerk-Recorder / Registrar of Voters",
 "url": "https://clerkrecorder.venturacounty.gov/elections/",
-"url_verified": true,
 "sample_ballot_url": null,
-"phone": "(805) 654-2664",
-"notes": "Sample ballot: No county sample ballot lookup found"
+"phone": "(805) 654-2664"
 },
 {
 "name": "Yolo",
 "office": "Yolo County Assessor/Clerk-Recorder / Registrar of Voters (Yolo Elections)",
 "url": "https://elections.yolocounty.gov/",
-"url_verified": true,
 "sample_ballot_url": "https://ca.omniballot.us/sites/06113/default/app/home",
-"phone": "(530) 666-8133",
-"notes": "Sample ballot: County Voter Information Guide / accessible vote-by-mail (OmniBallot)"
+"phone": "(530) 666-8133"
 },
 {
 "name": "Yuba",
 "office": "Yuba County Clerk-Recorder / Registrar of Voters",
 "url": "https://www.yuba.gov/departments/elections/",
-"url_verified": true,
 "sample_ballot_url": "https://ca.omniballot.us/sites/06115/site/app/home",
-"phone": "(530) 749-7855",
-"notes": "SOS-listed current_election.php returns 404; using the elections department index; Sample ballot: Online Accessible Voter Information Guide (OmniBallot)"
+"phone": "(530) 749-7855"
 }
 ]
 },
@@ -3041,7 +2896,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+16.1 (Wikipedia summary table); Republicans combined for 61.5% of the June primary vote",
+"partisan_lean": "2024 presidential: Trump +16.1; Republicans combined for 61.5% of the June primary vote",
 "likely_winner": "Heather Hadwick",
 "likely_winner_basis": "Incumbent in an R+16 district who won 59.8% in 2024; she and the other Republican took 61.5% of the primary vote.",
 "summary": "Incumbent Republican Heather Hadwick faces Democrat Dianna James in a heavily Republican far-northern district; not considered competitive.",
@@ -3086,7 +2941,7 @@
 "platform": "Campaign messaging centers on affordability and government accountability, education reform and parental rights, and streamlining business regulation, forestry and wildfire policy."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+34.8 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +34.8",
 "likely_winner": "Chris Rogers",
 "likely_winner_basis": "Incumbent took 69.7% of the primary in a D+35 North Coast district and won 65.9% against the same opponent in 2024.",
 "summary": "Rematch of 2024 between Democratic incumbent Chris Rogers and Republican Michael Greer in a safely Democratic North Coast district.",
@@ -3132,7 +2987,7 @@
 "platform": "Campaign site emphasizes lowering the cost of living (suspending the gas tax, protecting Prop 13), making fire insurance accessible and improving forest management, and protecting farms, water and jobs; endorsed by Rep. Tom McClintock."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+19.2 (Wikipedia summary table); all three primary candidates were Republicans",
+"partisan_lean": "2024 presidential: Trump +19.2; all three primary candidates were Republicans",
 "likely_winner": "Dom Belza",
 "likely_winner_basis": "Led the all-Republican primary 45.2% to 29.3% and has the outgoing incumbent's endorsement, though a same-party runoff with third-place Coolidge's 25.5% up for grabs makes this less certain.",
 "summary": "Open seat after Republican James Gallagher resigned for Congress; two Republicans, Dom Belza and Jamie Johansson, advanced from an all-GOP primary, so the seat stays Republican regardless.",
@@ -3168,7 +3023,7 @@
 "platform": "Campaign site priorities include rural health care access and broadband, wildfire resources and public safety, public education and childcare funding, and climate action."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+30.0 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +30.0",
 "likely_winner": "Cecilia Aguiar-Curry",
 "likely_winner_basis": "Only candidate on the ballot; she was unopposed in the primary as well.",
 "summary": "Democratic Majority Leader Cecilia Aguiar-Curry is running unopposed for her sixth and final term.",
@@ -3212,7 +3067,7 @@
 "platform": "Campaign site emphasizes defending constitutional rights and state programs against federal actions, fully funding Proposition 36 treatment programs, and supporting small businesses and local jobs."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+10.7 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Trump +10.7",
 "likely_winner": "Joe Patterson",
 "likely_winner_basis": "Incumbent won the two-candidate primary 60.1% to 39.9% in an R+11 Placer/El Dorado district and won 62.0% in 2024.",
 "summary": "Rematch between Republican incumbent Joe Patterson and Democrat Neva Parker in a Republican-leaning Sierra foothills district.",
@@ -3258,7 +3113,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+34.0 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +34.0",
 "likely_winner": "Maggy Krell",
 "likely_winner_basis": "Incumbent took 85.9% of the primary against the same Democratic opponent.",
 "summary": "Two Democrats advanced; incumbent Maggy Krell faces fellow Democrat Jagtar Singh in a Sacramento district she carried with 85.9% in the primary.",
@@ -3303,10 +3158,10 @@
 "platform": "Campaign site lists affordability (food, gas, housing), access to affordable health care, and quality public education as core priorities, with accountability for state spending."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+4.5 (Wikipedia summary table); Republican incumbent won 53.6% in 2024",
+"partisan_lean": "2024 presidential: Harris +4.5; Republican incumbent won 53.6% in 2024",
 "likely_winner": "Josh Hoover",
-"likely_winner_basis": "Incumbent led the primary 50.9% to 47.2% and won 53.6% in 2024, but the district voted for Harris by 4.5 points, making this the most competitive race among AD 1-20.",
-"summary": "The most competitive race in this set: Republican incumbent Josh Hoover, who holds a Harris-won Sacramento suburban district, faces Democratic educator Amy Slavensky after a 50.9-47.2 primary.",
+"likely_winner_basis": "Incumbent led the primary 50.9% to 47.2% and won 53.6% in 2024, but the district voted for Harris by 4.5 points, making this one of the most competitive Assembly races in the state.",
+"summary": "One of the most competitive Assembly races in the state: Republican incumbent Josh Hoover, who holds a Harris-won Sacramento suburban district, faces Democratic educator Amy Slavensky after a 50.9-47.2 primary.",
 "sources": [
 "https://ballotpedia.org/California_State_Assembly_elections,_2026",
 "https://ballotpedia.org/California_State_Assembly_District_7",
@@ -3339,7 +3194,7 @@
 "platform": "Campaign site emphasizes supporting law enforcement and anti-crime legislation, opposing higher taxes and regulation, and advocating for Valley, foothill and mountain communities."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+18.3 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Trump +18.3",
 "likely_winner": "David Tangipa",
 "likely_winner_basis": "Only candidate on the ballot; unopposed in the primary.",
 "summary": "Republican incumbent David Tangipa is running unopposed for a second term.",
@@ -3383,7 +3238,7 @@
 "platform": "Campaign centers on reducing the influence of big money in politics (campaign finance reform), with stated interests in education, housing, health care, water and agriculture, civil rights and conservation."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+23.3 (Wikipedia summary table); Republican candidates combined for about 65% of the primary vote",
+"partisan_lean": "2024 presidential: Trump +23.3; Republican candidates combined for about 65% of the primary vote",
 "likely_winner": "Heath Flora",
 "likely_winner_basis": "Longtime incumbent in an R+23 district where Republicans combined for roughly 65% of a six-way primary; he won 70.1% in 2024.",
 "summary": "Republican incumbent Heath Flora, seeking his final term, faces Democrat Matthew Adams after a crowded six-candidate primary in a strongly Republican San Joaquin Valley district.",
@@ -3429,7 +3284,7 @@
 "platform": "Campaign site calls for repealing AB 109 and Props 47 and 57, reducing special-interest influence, and addressing homelessness, crime, inflation and education with what he describes as common-sense approaches."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+27.9 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +27.9",
 "likely_winner": "Stephanie Nguyen",
 "likely_winner_basis": "Incumbent took 71.7% in the two-candidate primary and beat the same opponent with 67.6% in 2024.",
 "summary": "Rematch of 2024 between Democratic incumbent Stephanie Nguyen and Republican Vinaya Singh in a safely Democratic Sacramento-Elk Grove district.",
@@ -3472,10 +3327,10 @@
 "website": "https://callison2026.com/",
 "ballotpedia": "https://ballotpedia.org/Jenny_Callison",
 "bio": "U.S. Army veteran (2002-2006) and legislative consultant for the Assembly Military and Veterans Affairs Committee; Sacramento State MPPA; 2022 runner-up in this district.",
-"platform": "Candidate Connection survey lists military and veterans, affordable energy, clean water, homelessness, and physical, mental and maternal health as priorities; site also cites gun rights with safety measures and housing regulatory reform."
+"platform": "Ballotpedia questionnaire lists military and veterans, affordable energy, clean water, homelessness, and physical, mental and maternal health as priorities; site also cites gun rights with safety measures and housing regulatory reform."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+19.6 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +19.6",
 "likely_winner": "Lori Wilson",
 "likely_winner_basis": "Incumbent took 65.3% of the primary against two no-party-preference challengers in a D+20 district.",
 "summary": "Democratic incumbent Lori Wilson faces no-party-preference challenger Jenny Callison, a rematch of 2022, in a Democratic-leaning Solano County district.",
@@ -3508,7 +3363,7 @@
 "website": "https://www.ericlucan.com/",
 "ballotpedia": "https://ballotpedia.org/Eric_Lucan",
 "bio": "Marin County Supervisor since 2022 and former Novato city councilmember and three-time mayor; holds an MBA.",
-"platform": "Candidate Connection survey and campaign site emphasize affordable, healthy, safe communities: reducing costs of groceries, health care, childcare and utilities, livable wages, and support for young families and seniors."
+"platform": "Ballotpedia questionnaire and campaign site emphasize affordable, healthy, safe communities: reducing costs of groceries, health care, childcare and utilities, livable wages, and support for young families and seniors."
 },
 {
 "name": "Jackie Elward",
@@ -3521,7 +3376,7 @@
 "platform": "Campaign site priorities include fighting back against the Trump administration, protecting health care and reproductive rights, housing affordability, climate action, labor rights and the 'North Bay way of life'."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+55.6 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +55.6",
 "likely_winner": "Eric Lucan",
 "likely_winner_basis": "Led the six-way primary 28.3% to 22.6%, but this is an open same-party runoff in which the Republican's 19.4% and other Democrats' votes are up for grabs, so the outcome is uncertain.",
 "summary": "Open seat (Damon Connolly is running for State Senate) in a deeply Democratic Marin-Sonoma district; two Democrats, Marin Supervisor Eric Lucan and Rohnert Park councilmember Jackie Elward, advanced from a six-candidate primary.",
@@ -3554,7 +3409,7 @@
 "website": "https://voteransom.com/",
 "ballotpedia": "https://ballotpedia.org/Rhodesia_Ransom",
 "bio": "First-term Democratic assemblymember (elected 2024), former Tracy city councilmember and nonprofit leader.",
-"platform": "Campaign messaging emphasizes delivering for working-class families in San Joaquin County; detailed issue pages were not available."
+"platform": "Campaign messaging emphasizes delivering for working-class families in San Joaquin County."
 },
 {
 "name": "Tom Patti",
@@ -3567,7 +3422,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+13.4 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +13.4",
 "likely_winner": "Rhodesia Ransom",
 "likely_winner_basis": "Incumbent took 58.3% of the primary in a D+13 district and won 56.9% in 2024.",
 "summary": "Democratic incumbent Rhodesia Ransom faces Republican former county supervisor Tom Patti in a Democratic-leaning but not overwhelming San Joaquin County district.",
@@ -3613,9 +3468,9 @@
 "platform": "Platform calls for a vacancy tax and statewide rent control, social housing, universal single-payer health care (CalCare), fully funded public education and environmental protection."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+71.5 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +71.5",
 "likely_winner": "Buffy Wicks",
-"likely_winner_basis": "Incumbent took 81.2% of the primary in the most Democratic district in this group.",
+"likely_winner_basis": "Incumbent took 81.2% of the primary in one of the most Democratic districts in the state.",
 "summary": "Democratic incumbent Buffy Wicks faces Green Party teacher Mark Rendon, who edged the Republican for second place, in an overwhelmingly Democratic East Bay district.",
 "sources": [
 "https://ballotpedia.org/California_State_Assembly_elections,_2026",
@@ -3645,7 +3500,7 @@
 "website": "https://anamarieforassembly.com/",
 "ballotpedia": "https://ballotpedia.org/Anamarie_Avila_Farias",
 "bio": "First-term Democratic assemblymember (elected 2024); former Martinez city councilmember, Contra Costa County Board of Education member and California Housing Finance Agency board member.",
-"platform": "Campaign site stresses a results-oriented approach to housing and affordability for Contra Costa families; detailed issue pages were not available."
+"platform": "Campaign site stresses a results-oriented approach to housing and affordability for Contra Costa families."
 },
 {
 "name": "Arthur Webb",
@@ -3655,10 +3510,10 @@
 "website": "https://arthurwebbassembly.com/",
 "ballotpedia": "https://ballotpedia.org/Arthur_Webb",
 "bio": "Retired technology manager with a UC Berkeley graduate degree; running as a self-described moderate independent.",
-"platform": "Candidate Connection survey emphasizes lowering taxes and fuel costs (repealing SB 1 gas-tax increases), shrinking state government, private-sector housing construction, homelessness, and curbing fraud in state payments."
+"platform": "Ballotpedia questionnaire emphasizes lowering taxes and fuel costs (repealing SB 1 gas-tax increases), shrinking state government, private-sector housing construction, homelessness, and curbing fraud in state payments."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+31.8 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +31.8",
 "likely_winner": "Anamarie Avila Farias",
 "likely_winner_basis": "Incumbent took 69.6% of the two-candidate primary in a D+32 district.",
 "summary": "Democratic incumbent Anamarie Avila Farias faces no-party-preference challenger Arthur Webb in a safely Democratic Contra Costa district.",
@@ -3704,7 +3559,7 @@
 "platform": "Campaign site emphasizes public safety and restoring law-enforcement funding, fiscal responsibility and affordability, and criticism of the incumbent's eight-year tenure."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+36.4 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +36.4",
 "likely_winner": "Rebecca Bauer-Kahan",
 "likely_winner_basis": "Four-term incumbent took 65.6% of the primary in a D+36 district and won 64.1% in 2024.",
 "summary": "Democratic incumbent Rebecca Bauer-Kahan faces Republican businessman Joseph Rubay in a safely Democratic Tri-Valley district.",
@@ -3749,7 +3604,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+67.3 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +67.3",
 "likely_winner": "Matt Haney",
 "likely_winner_basis": "Incumbent was the only name on the primary ballot and took 99.4%; his opponent advanced as a write-in with 0.4%.",
 "summary": "Democratic incumbent Matt Haney faces Republican write-in Manuel Noris-Barrera, who qualified with 468 votes, in a deep-blue San Francisco district.",
@@ -3794,10 +3649,10 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+72.1 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +72.1",
 "likely_winner": "Mia Bonta",
 "likely_winner_basis": "Incumbent took 76.9% of the primary against the same opponent, who received 10.9%.",
-"summary": "Two Democrats advanced; incumbent Mia Bonta faces Andre Sandford, her 2024 opponent, in the most Democratic district in this group.",
+"summary": "Two Democrats advanced; incumbent Mia Bonta faces Andre Sandford, her 2024 opponent, in one of the most Democratic districts in the state.",
 "sources": [
 "https://ballotpedia.org/California_State_Assembly_elections,_2026",
 "https://ballotpedia.org/California_State_Assembly_District_18",
@@ -3826,7 +3681,7 @@
 "website": "https://www.votecatherinestefani.com/",
 "ballotpedia": "https://ballotpedia.org/Catherine_Stefani",
 "bio": "First-term Democratic assemblymember (elected 2024), attorney and former San Francisco supervisor for District 2 (2018-2024); affiliated with Moms Demand Action.",
-"platform": "Campaign messaging centers on making California 'safer and more affordable'; detailed issue pages were not available."
+"platform": "Campaign messaging centers on making California 'safer and more affordable'."
 },
 {
 "name": "Philip Wing",
@@ -3839,7 +3694,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+57.4 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +57.4",
 "likely_winner": "Catherine Stefani",
 "likely_winner_basis": "Incumbent took 83.0% of the two-candidate primary in a D+57 district.",
 "summary": "Democratic incumbent Catherine Stefani faces Republican Philip Wing in a deep-blue western San Francisco district.",
@@ -3885,7 +3740,7 @@
 "platform": "Campaign site emphasizes public safety: opposing reduced penalties for violent or repeat offenders, fully funding local law enforcement, restoring prosecutorial tools, and mental health and addiction services."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+40.3 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +40.3",
 "likely_winner": "Liz Ortega",
 "likely_winner_basis": "Incumbent took 75.1% of the two-candidate primary in a D+40 district and won 72.9% in 2024.",
 "summary": "Democratic incumbent Liz Ortega faces Republican Patricia Muga in a safely Democratic Hayward-San Leandro district.",
@@ -3931,7 +3786,7 @@
 "platform": "Says he wants government accountable to taxpayers and focused on results, and more opportunity for working families, homeowners and small businesses."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+50.6 (Wikipedia summary table); registration Feb 2023: 55.8% D, 14.2% R, 24.6% NPP",
+"partisan_lean": "2024 presidential: Harris +50.6; registration Feb 2023: 55.8% D, 14.2% R, 24.6% NPP",
 "likely_winner": "Diane Papan",
 "likely_winner_basis": "Incumbent took 78.7% in a two-candidate primary in a D+50 district.",
 "summary": "Incumbent Democrat Diane Papan seeks a third term against Republican businessman Jabra Muhawieh in a safely Democratic San Mateo County seat.",
@@ -3964,7 +3819,7 @@
 "platform": "Emphasizes public safety and school security legislation, bipartisan problem-solving (co-chair of the Legislative Problem Solvers Caucus), and Valley agriculture and water issues."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+7.5 (Wikipedia summary table); registration Feb 2023: 49.5% D, 15.6% R, 31.0% NPP",
+"partisan_lean": "2024 presidential: Trump +7.5; registration Feb 2023: 49.5% D, 15.6% R, 31.0% NPP",
 "likely_winner": "Juan Alanis",
 "likely_winner_basis": "Only candidate on the ballot; unopposed in the primary and general.",
 "summary": "Incumbent Republican Juan Alanis is unopposed for a third term; he was the only candidate to file.",
@@ -4006,7 +3861,7 @@
 "platform": "Opposes new taxes and regulations and supports parental rights and school choice."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+54.5 (Wikipedia summary table); registration Feb 2023: 54.3% D, 14.5% R, 26.9% NPP",
+"partisan_lean": "2024 presidential: Harris +54.5; registration Feb 2023: 54.3% D, 14.5% R, 26.9% NPP",
 "likely_winner": "Marc Berman",
 "likely_winner_basis": "Incumbent won 77.3% in the primary in one of the most Democratic districts in the state.",
 "summary": "Incumbent Democrat Marc Berman faces Santa Clara County GOP chair David G. Johnson, who edged out a second Republican in the primary; the seat is safely Democratic.",
@@ -4049,7 +3904,7 @@
 "platform": "Calls for reducing construction regulation to lower housing costs, expanding license-plate-reader technology and a low-level-crime task force, and merit-based teacher pay."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+30.6 (Wikipedia summary table); registration Feb 2023: 49.7% D, 15.9% R, 30.1% NPP",
+"partisan_lean": "2024 presidential: Harris +30.6; registration Feb 2023: 49.7% D, 15.9% R, 30.1% NPP",
 "likely_winner": "Alex Lee",
 "likely_winner_basis": "Incumbent took 65.4% in a three-way primary in a D+30 district.",
 "summary": "Incumbent Democrat Alex Lee faces Republican Max Hsia after an NPP Fremont councilmember was eliminated in the primary; the district is strongly Democratic.",
@@ -4093,7 +3948,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+32.4 (Wikipedia summary table); registration Feb 2023: 52.5% D, 16.4% R, 25.8% NPP",
+"partisan_lean": "2024 presidential: Harris +32.4; registration Feb 2023: 52.5% D, 16.4% R, 25.8% NPP",
 "likely_winner": "Ash Kalra",
 "likely_winner_basis": "Incumbent won 72.2% in a two-candidate primary in a D+32 district.",
 "summary": "Incumbent Democrat Ash Kalra faces Republican attorney Himat Singh Bainiwal in a safely Democratic San Jose seat.",
@@ -4135,7 +3990,7 @@
 "platform": "Has said he wants to change state law to give law enforcement and prosecutors more ability to charge offenders."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+45.3 (Wikipedia summary table); registration Feb 2023: 51.5% D, 14.2% R, 30.4% NPP",
+"partisan_lean": "2024 presidential: Harris +45.3; registration Feb 2023: 51.5% D, 14.2% R, 30.4% NPP",
 "likely_winner": "Patrick Ahrens",
 "likely_winner_basis": "Incumbent took 75.4% in the primary in a D+45 district.",
 "summary": "First-term Democrat Patrick Ahrens seeks re-election against Republican small-business owner Tim Gorsulowsky in a safely Democratic Silicon Valley seat.",
@@ -4177,10 +4032,10 @@
 "platform": "Pitches a bipartisan, cross-aisle approach to representing the Valley district in Sacramento."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+2.6 (Wikipedia summary table); registration per CalMatters: 40% D, 29% R, 24% NPP; CalMatters rates the race Leans Democratic",
-"likely_winner": "Brian Pacheco",
+"partisan_lean": "2024 presidential: Trump +2.6; registration: 40% D, 29% R, 24% NPP; CalMatters rates the race Leans Democratic",
+"likely_winner": null,
 "likely_winner_basis": "Slight lean only: Murphy led the primary 43.4-40.3, but Democrats combined for 56.6%, Pacheco holds a large cash advantage, and CalMatters rates it Leans Democratic; the district voted for Trump in 2024, so this is close to a toss-up.",
-"summary": "Open seat after Democrat Esmeralda Soria ran for State Senate. Republican former Merced mayor Mike Murphy topped the primary over Fresno County Supervisor Brian Pacheco (D) in a Latino-majority Valley district that has trended right; one of the most competitive Assembly races in the state.",
+"summary": "Open seat after Democrat Esmeralda Soria ran for State Senate. Republican former Merced mayor Mike Murphy topped the primary over Fresno County Supervisor Brian Pacheco (D) in a Latino-majority Valley district that voted for Trump in 2024; one of the most competitive Assembly races in the state.",
 "sources": [
 "https://ballotpedia.org/California_State_Assembly_District_27",
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
@@ -4223,7 +4078,7 @@
 "platform": "Focuses on reducing the cost of living and business regulation and opposing state-mandated housing upzoning in local communities."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+40.3 (Wikipedia summary table); registration Feb 2023: 43.8% D, 19.4% R, 33.5% NPP",
+"partisan_lean": "2024 presidential: Harris +40.3; registration Feb 2023: 43.8% D, 19.4% R, 33.5% NPP",
 "likely_winner": "Gail Pellerin",
 "likely_winner_basis": "Incumbent won 72.0% in a two-candidate primary in a D+40 district.",
 "summary": "Incumbent Democrat Gail Pellerin seeks a third term against Republican realtor Carol Pefley in a safely Democratic Santa Cruz/Santa Clara seat.",
@@ -4265,7 +4120,7 @@
 "platform": "Names public safety, affordability, housing and accountable government as priorities, with few detailed proposals published."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+44.0 (Wikipedia summary table); registration Feb 2023: 50.8% D, 21.5% R, 21.2% NPP",
+"partisan_lean": "2024 presidential: Harris +44.0; registration Feb 2023: 50.8% D, 21.5% R, 21.2% NPP",
 "likely_winner": "Robert Rivas",
 "likely_winner_basis": "The Speaker took 66.5% in a three-way primary in a D+44 district.",
 "summary": "Assembly Speaker Robert Rivas seeks a fifth term against Republican small-business owner Dennis Sanchez, who narrowly beat 2024 runner-up J.W. Paine for the second spot; the seat is safely Democratic.",
@@ -4307,7 +4162,7 @@
 "platform": "Campaigns on public safety, housing affordability, government accountability and parental rights, including opposition to transgender athletes in girls' sports."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+27.2 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +27.2",
 "likely_winner": "Dawn Addis",
 "likely_winner_basis": "Incumbent led the primary 54.8-35.9 and combined Democratic vote was 64% in a D+27 district.",
 "summary": "Incumbent Democrat Dawn Addis faces Republican Shannon Kessler, who has made girls' sports and parental rights central, in a Democratic-leaning Central Coast seat.",
@@ -4351,10 +4206,10 @@
 "platform": "Calls for tougher criminal laws, reducing state debt and lowering taxes, and protecting constitutional rights."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+13.1 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +13.1",
 "likely_winner": "Annalisa Perea",
 "likely_winner_basis": "Democrats combined for 65.6% of the primary vote in a D+13 Fresno district; Perea led with 44.6% and has a large fundraising edge.",
-"summary": "Open seat after Democrat Joaquin Arambula left to run for Fresno City Council. Fresno Councilmember Annalisa Perea (D) beat a progressive rival in the primary and is favored over Republican retired engineer Jim Polsgrove.",
+"summary": "Open seat after Democrat Joaquin Arambula left to run for Fresno City Council. Fresno Councilmember Annalisa Perea (D) beat a rival in the primary and is favored over Republican retired engineer Jim Polsgrove.",
 "sources": [
 "https://ballotpedia.org/California_State_Assembly_District_31",
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
@@ -4385,7 +4240,7 @@
 "platform": "Lists affordability, crime and homelessness, water and energy policy, and support for oil, agriculture and small business as priorities."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+33.2 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Trump +33.2",
 "likely_winner": "David Couch",
 "likely_winner_basis": "Only candidate on the ballot.",
 "summary": "Open seat: Republican Stan Ellis, who won a 2025 special election, is not running, and Kern County Supervisor David Couch (R) is unopposed.",
@@ -4429,7 +4284,7 @@
 "platform": "Emphasizes public safety and water infrastructure funding, and parks and street improvements."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+18.5 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Trump +18.5",
 "likely_winner": "Alexandra Macedo",
 "likely_winner_basis": "Incumbent and Assembly GOP leader won 61.2% in a two-candidate primary in an R+18 district.",
 "summary": "Republican Alexandra Macedo, now Assembly Republican Leader, faces a rematch-style challenge from Democrat Hipolito Cerros in a safely Republican Valley seat.",
@@ -4473,7 +4328,7 @@
 "platform": "Emphasizes expanding rural health-care access in San Bernardino County, affordable housing and public education funding."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+19.8 (Wikipedia summary table); registration Feb 2023: 27.7% D, 44.5% R, 22.6% NPP",
+"partisan_lean": "2024 presidential: Trump +19.8; registration Feb 2023: 27.7% D, 44.5% R, 22.6% NPP",
 "likely_winner": "Charles Hughes",
 "likely_winner_basis": "Putz led the primary as the lone Democrat, but Republicans combined for 60.8% in an R+20 district with a 17-point GOP registration edge.",
 "summary": "Open seat with Republican Tom Lackey termed out. Democrat Randall Putz topped a split primary, but Republican Charles Hughes is favored in November in this heavily Republican high-desert district.",
@@ -4517,7 +4372,7 @@
 "platform": "Campaigns on public safety, affordable living and clean water."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+0.4 (Wikipedia summary table)",
+"partisan_lean": "2024 presidential: Harris +0.4",
 "likely_winner": null,
 "likely_winner_basis": "Toss-up: Gonzales and Ayon finished 39 votes apart (18,338 to 18,299) in the primary; Democrats combined for 63% but the district split evenly in the 2024 presidential race.",
 "summary": "Open seat after Democrat Jasmeet Bains ran for Congress. Bakersfield Vice Mayor Andrae Gonzales (D) and McFarland Mayor Saul Ayon (R) were effectively tied in the primary in a Kern County district Harris carried by less than half a point.",
@@ -4561,7 +4416,7 @@
 "platform": "Campaign centers on affordable health care, stronger schools, infrastructure and economic opportunity, and public safety through prevention and mental-health services."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: R+1.2 (Wikipedia summary table); registration per CalMatters: 41% D, 29% R, 23% NPP; CalMatters rates the race Leans Democratic",
+"partisan_lean": "2024 presidential: Trump +1.2; registration: 41% D, 29% R, 23% NPP; CalMatters rates the race Leans Democratic",
 "likely_winner": null,
 "likely_winner_basis": "Toss-up: the Republican incumbent took 44.6% against three Democrats who combined for 55.4%, holds a large cash advantage, and the district narrowly voted for Trump in 2024, while CalMatters rates it Leans Democratic.",
 "summary": "Republican Jeff Gonzalez, who flipped this Coachella Valley/Imperial County seat in a 2024 upset, faces Imperial Mayor Ida Obeso-Martinez (D) in one of the state's marquee Assembly contests.",
@@ -4606,7 +4461,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+24.0 (Wikipedia summary table); registration Feb 2023: 45.8% D, 25.3% R, 23.7% NPP",
+"partisan_lean": "2024 presidential: Harris +24.0; registration Feb 2023: 45.8% D, 25.3% R, 23.7% NPP",
 "likely_winner": "Gregg Hart",
 "likely_winner_basis": "Incumbent led the two-candidate primary 62.5-37.5 in a D+24 district and won the same matchup 60.7-39.3 in 2024.",
 "summary": "Rematch of 2024: incumbent Democrat Gregg Hart against Republican Sari Domingues in a Democratic-leaning Santa Barbara County seat.",
@@ -4649,7 +4504,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+23.9 (Wikipedia summary table); registration Feb 2023: 34.3% D, 33.4% R, 26.8% NPP",
+"partisan_lean": "2024 presidential: Harris +23.9; registration Feb 2023: 34.3% D, 33.4% R, 26.8% NPP",
 "likely_winner": "Steve Bennett",
 "likely_winner_basis": "Incumbent beat his fellow Democrat 69.4-30.6 in a two-candidate primary with no Republican on the ballot.",
 "summary": "Democrat-vs-Democrat general: incumbent Steve Bennett faces Ventura City Clerk Michael MacDonald after no Republican filed; Bennett is heavily favored.",
@@ -4692,7 +4547,7 @@
 "platform": "Emphasizes government accountability and responsible spending in Sacramento and financial relief for working families and small businesses."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+9.2 (Wikipedia summary table); registration Feb 2023: 52.9% D, 15.1% R, 27.0% NPP",
+"partisan_lean": "2024 presidential: Harris +9.2; registration Feb 2023: 52.9% D, 15.1% R, 27.0% NPP",
 "likely_winner": "Juan Carrillo",
 "likely_winner_basis": "Incumbent led the two-candidate primary 62.3-37.7 and the district has a large Democratic registration edge.",
 "summary": "Incumbent Democrat Juan Carrillo seeks a third term against Republican Paul Marsh in a Democratic-leaning Antelope Valley/Victorville district.",
@@ -4734,7 +4589,7 @@
 "platform": "Campaigns on public safety, rebuilding and modernizing the state's energy grid, and lowering the cost of living."
 }
 ],
-"partisan_lean": "2024 presidential margin in district: D+8.4 (Wikipedia summary table); registration Feb 2023: 42.3% D, 28.7% R, 22.2% NPP",
+"partisan_lean": "2024 presidential: Harris +8.4; registration Feb 2023: 42.3% D, 28.7% R, 22.2% NPP",
 "likely_winner": "Pilar Schiavo",
 "likely_winner_basis": "Incumbent took 55.6% against three Republicans who combined for 44.4% in a D+8 district she won 52.8-47.2 in 2024.",
 "summary": "Incumbent Democrat Pilar Schiavo faces Republican Rickey Hayes II, who emerged from a three-way GOP primary; the Santa Clarita-area seat leans Democratic but was competitive in 2024.",
@@ -4774,11 +4629,11 @@
 "primary_pct": 36.7,
 "website": null,
 "ballotpedia": "https://ballotpedia.org/Adam_Vena",
-"bio": "Republican sanitation employee and father from Monrovia with no campaign website (he directs supporters to an Instagram account).",
+"bio": "Monrovia sanitation worker and father; campaigns via social media.",
 "platform": "He says he entered the race over concerns about state overreach into family matters and overtaxation; he supports lowering taxes and gasoline costs, reducing regulation, faster wildfire recovery and brush clearance, and parental rights."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +21.4 (Dave's Redistricting, via Wikipedia); Harabedian won 58.5% in 2024",
+"partisan_lean": "2024 presidential: Harris +21.4; Harabedian won 58.5% in 2024",
 "likely_winner": "John Harabedian",
 "likely_winner_basis": "First-term Democratic incumbent took 63.3% in the June primary in a district Harris carried by about 21 points; State Navigate rates it Solid D.",
 "summary": "Freshman Democrat John Harabedian (Pasadena/San Gabriel Valley foothills) faces Republican Adam Vena in a rematch of the two-candidate primary; not considered competitive.",
@@ -4825,10 +4680,10 @@
 "platform": "His site's key issues are restoring affordability (cutting the gas tax, defending Prop 13, curbing spending), safe neighborhoods (more resources for law enforcement, tackling the fentanyl crisis), and protecting communities from wildfire threats and rising insurance costs."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +14.2 (Dave's Redistricting, via Wikipedia); Irwin (D) won 54.3% in 2024",
+"partisan_lean": "2024 presidential: Harris +14.2; Irwin (D) won 54.3% in 2024",
 "likely_winner": "Deborah Klein Lopez",
 "likely_winner_basis": "Lopez took 52.7% in the primary against two Republicans who split 47.3%; the district leans Democratic by double digits and State Navigate rates it Solid D (99.5%).",
-"summary": "Open seat (Ventura County / Conejo Valley) vacated by term-limited Democrat Jacqui Irwin. Agoura Hills councilmember Deborah Klein Lopez (D) faces repeat Republican nominee Ted Nordblum; the combined GOP primary vote (47.3%) makes this the closest-looking Democratic-held seat in the range, but it still leans D.",
+"summary": "Open seat (Ventura County / Conejo Valley) vacated by term-limited Democrat Jacqui Irwin. Agoura Hills councilmember Deborah Klein Lopez (D) faces repeat Republican nominee Ted Nordblum; the combined GOP primary vote (47.3%) makes this a Democratic-held seat that drew a serious challenge, but it still leans D.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
 "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
@@ -4868,14 +4723,14 @@
 "primary_pct": 25.1,
 "website": null,
 "ballotpedia": "https://ballotpedia.org/Ricardo_Benitez",
-"bio": "Republican plumber and electrical contractor and repeat candidate with no campaign website and little public background information.",
+"bio": "Republican plumber and electrical contractor and repeat candidate; no campaign website found.",
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +29.7 (Dave's Redistricting, via Wikipedia); Rodriguez won 66.6% in 2024",
+"partisan_lean": "2024 presidential: Harris +29.7; Rodriguez won 66.6% in 2024",
 "likely_winner": "Celeste Rodriguez",
-"likely_winner_basis": "Incumbent took 74.9% in the two-candidate primary in a heavily Democratic San Fernando Valley district; Solid D.",
-"summary": "First-term Democrat Celeste Rodriguez (San Fernando / northeast Valley) faces perennial Republican candidate Ricardo Benitez; not competitive.",
+"likely_winner_basis": "Incumbent took 74.9% in the two-candidate primary in a heavily Democratic San Fernando Valley district; State Navigate rates it Solid D.",
+"summary": "First-term Democrat Celeste Rodriguez (San Fernando / northeast Valley) faces repeat Republican candidate Ricardo Benitez; not competitive.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
 "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
@@ -4918,9 +4773,9 @@
 "platform": "Her campaign argues Sacramento's supermajority has made California unaffordable and that 'housing first' has failed; she supports Prop 36 enforcement, backing police and crime victims, prioritizing mental health treatment, enforcing anti-camping laws, and lowering housing, gas and insurance costs."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +32.9 (Dave's Redistricting, via Wikipedia); Schultz won 65.9% in 2024",
+"partisan_lean": "2024 presidential: Harris +32.9; Schultz won 65.9% in 2024",
 "likely_winner": "Nicholas \"Nick\" Schultz",
-"likely_winner_basis": "Incumbent won 71.2% in the primary against two Republicans combined at 28.8%; Solid D.",
+"likely_winner_basis": "Incumbent won 71.2% in the primary against two Republicans combined at 28.8%; State Navigate rates it Solid D.",
 "summary": "First-term Democrat Nick Schultz (Burbank/Glendale area) faces Republican Carolyn Daniels, who edged out a second Republican for the runoff spot; not competitive.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
@@ -4965,7 +4820,7 @@
 "platform": "His campaign runs on 'Restoring Common Sense,' pledging to lower costs for housing, gas and everyday essentials through lower taxes and less regulation, restore public safety with stronger support for law enforcement (he backs Prop 36), and improve education."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +12.2 (Dave's Redistricting, via Wikipedia); Ramos won 63.8% in 2024",
+"partisan_lean": "2024 presidential: Harris +12.2; Ramos won 63.8% in 2024",
 "likely_winner": "James C. Ramos",
 "likely_winner_basis": "Four-term incumbent took 65.6% in the two-candidate primary; State Navigate rates the San Bernardino-area seat Solid D.",
 "summary": "Democrat James Ramos, seeking a fifth term, faces Republican small-business owner Greg Abdouch in a rematch of the primary; not competitive.",
@@ -5010,9 +4865,9 @@
 "platform": "Her site calls for lowering costs (reducing gas taxes, regulations and small-business taxes), auditing state spending, funding Prop 36 and fighting fentanyl and human trafficking, smaller classes and trades training, reducing homelessness through rehabilitation and mental health facilities, and protecting parental rights."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +25.9 (Dave's Redistricting, via Wikipedia); Gabriel won 62.9% in 2024",
+"partisan_lean": "2024 presidential: Harris +25.9; Gabriel won 62.9% in 2024",
 "likely_winner": "Jesse Gabriel",
-"likely_winner_basis": "Incumbent (Assembly Budget chair) took 66.2% in the primary; Solid D.",
+"likely_winner_basis": "Incumbent (Assembly Budget chair) took 66.2% in the primary; State Navigate rates it Solid D.",
 "summary": "Democrat Jesse Gabriel (west San Fernando Valley) faces a rematch with 2024 Republican opponent Tracey Schroeder; not competitive.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
@@ -5056,10 +4911,10 @@
 "platform": "Her campaign says she will fight for working families by taking on corporate greed, advocating for affordable housing, pushing for good-paying jobs, and expanding access to education and quality healthcare."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +4.1 per Dave's Redistricting (via Wikipedia); another compilation (Akashic) shows Trump +1.3 -- essentially even. Wallis (R) won 51.2% in 2024.",
-"likely_winner": "Leila Namvar",
+"partisan_lean": "2024 presidential: Harris +4.1 (another compilation shows Trump +1.3)",
+"likely_winner": null,
 "likely_winner_basis": "Lean/uncertain: the two Democrats combined for 51.8% of the primary vote to Wallis's 48.1%, and State Navigate's model rates the seat Likely D (90.7%); but Wallis is a two-term incumbent in a near-even district and could hold on.",
-"summary": "The most competitive race in this range: Republican incumbent Greg Wallis (Palm Springs / Coachella Valley / Yucca Valley), who won by narrow margins in 2022 and 2024, faces Democrat Leila Namvar, a union organizer and state civil servant. Wallis fell short of a majority in the June primary.",
+"summary": "One of the more competitive Assembly races in Southern California: Republican incumbent Greg Wallis (Palm Springs / Coachella Valley / Yucca Valley), who won by narrow margins in 2022 and 2024, faces Democrat Leila Namvar, a union organizer and state civil servant. Wallis fell short of a majority in the June primary.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
 "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
@@ -5102,9 +4957,9 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +16.6 (Dave's Redistricting, via Wikipedia); Rubio won 61.8% in 2024",
+"partisan_lean": "2024 presidential: Harris +16.6; Rubio won 61.8% in 2024",
 "likely_winner": "Blanca Rubio",
-"likely_winner_basis": "Incumbent took 65.3% in the two-candidate primary; Solid D.",
+"likely_winner_basis": "Incumbent took 65.3% in the two-candidate primary; State Navigate rates it Solid D.",
 "summary": "Democrat Blanca Rubio (San Gabriel Valley: Baldwin Park, West Covina, Azusa) faces a rematch with 2024 Republican opponent Dan Tran; not competitive.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
@@ -5147,9 +5002,9 @@
 "platform": "His campaign centers on backing police and holding offenders accountable, 'humane but effective' homelessness solutions, opposing tax increases and regulatory burdens on businesses, and a merit-based school system with greater parental involvement."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +23.7 (Dave's Redistricting, via Wikipedia); Fong won 62.0% in 2024",
+"partisan_lean": "2024 presidential: Harris +23.7; Fong won 62.0% in 2024",
 "likely_winner": "Mike Fong",
-"likely_winner_basis": "Incumbent took 68.2% in the two-candidate primary; Solid D.",
+"likely_winner_basis": "Incumbent took 68.2% in the two-candidate primary; State Navigate rates it Solid D.",
 "summary": "Democrat Mike Fong (Alhambra/Monterey Park/San Gabriel) faces Republican attorney Long David Liu; not competitive.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
@@ -5193,7 +5048,7 @@
 "platform": "Her campaign site calls for stopping tax hikes and wasteful spending, fully funding Proposition 36 and supporting law enforcement, requiring voter ID, improving education and workforce opportunities, and addressing homelessness by confronting mental illness and addiction."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +9.7 (Dave's Redistricting, via Wikipedia); Garcia won 56.4% in 2024",
+"partisan_lean": "2024 presidential: Harris +9.7; Garcia won 56.4% in 2024",
 "likely_winner": "Robert Garcia",
 "likely_winner_basis": "Incumbent took 58.2% in a three-way primary (Republican 38.7%, NPP 3.1%); State Navigate rates it Solid D (99.4%).",
 "summary": "First-term Democrat Robert Garcia (Rancho Cucamonga / Fontana area) faces Republican school board trustee Victoria Viveros Mageno; a single-digit-lean seat on paper but the incumbent is favored.",
@@ -5239,7 +5094,7 @@
 "platform": "He campaigns on 'CalCare for All' single-payer healthcare, 'Housing for All,' universal childcare, and taxing the top 1% and large corporations, and says he refuses corporate and super PAC money."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +52.0 (Dave's Redistricting, via Wikipedia); Zbur won 75.0% in 2024",
+"partisan_lean": "2024 presidential: Harris +52.0; Zbur won 75.0% in 2024",
 "likely_winner": "Rick Chavez Zbur",
 "likely_winner_basis": "Incumbent took 54.1% in a five-way primary versus 22.1% for Hernandez; Zbur has the party endorsement and a large funding and name-recognition edge.",
 "summary": "Democrat-vs-Democrat general in a deep-blue Westside/Hollywood district: incumbent Rick Chavez Zbur faces digital strategist Colin D. Hernandez, who edged out two Republicans for the second runoff spot. Not competitive.",
@@ -5281,13 +5136,13 @@
 "primary_pct": 14.2,
 "website": "https://andrealeeanderson.com/",
 "ballotpedia": "https://ballotpedia.org/Andrea_Lee_Anderson_(California)",
-"bio": "Republican challenger from a public-service family (her father was a mayor, her mother a Girl Scouts executive); her site does not state a current profession.",
+"bio": "Republican challenger from a public-service family (her father was a mayor, her mother a Girl Scouts executive).",
 "platform": "Her stated priorities include balancing the state budget, lowering taxes and reducing regulation, expanding school choice, stricter enforcement of existing criminal and sidewalk laws, supporting federal immigration enforcement, and maintaining in-state oil production alongside nuclear power."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +53.6 (Dave's Redistricting, via Wikipedia); Caloza won 66.9% in 2024",
+"partisan_lean": "2024 presidential: Harris +53.6; Caloza won 66.9% in 2024",
 "likely_winner": "Jessica Caloza",
-"likely_winner_basis": "Incumbent took 85.8% in the two-candidate primary; Solid D.",
+"likely_winner_basis": "Incumbent took 85.8% in the two-candidate primary; State Navigate rates it Solid D.",
 "summary": "First-term Democrat Jessica Caloza (Echo Park / Eagle Rock / Glendale-adjacent northeast LA) faces Republican Andrea Lee Anderson; not competitive.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
@@ -5318,7 +5173,7 @@
 "website": null,
 "ballotpedia": "https://ballotpedia.org/Michelle_Rodriguez",
 "bio": "Democratic Assemblymember for the 53rd District since 2024 and Assistant Majority Whip, a lifelong Ontario/Pomona-area resident with a background in local public schools and healthcare administration.",
-"platform": "Her 2024 campaign priorities included universal healthcare, homelessness, and education; no 2026 campaign platform was found."
+"platform": "Her 2024 campaign priorities included universal healthcare, homelessness, and education."
 },
 {
 "name": "Rafaela Romero",
@@ -5331,7 +5186,7 @@
 "platform": "Her site emphasizes lowering everyday costs (housing, gas, groceries, utilities), public safety policies that 'hold criminals accountable,' support for parents and access to quality education, and infrastructure investment to improve traffic flow."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +12.0 (Dave's Redistricting, via Wikipedia); Rodriguez won 57.6% in 2024",
+"partisan_lean": "2024 presidential: Harris +12.0; Rodriguez won 57.6% in 2024",
 "likely_winner": "Michelle Rodriguez",
 "likely_winner_basis": "Incumbent took 62.3% in the two-candidate primary; State Navigate rates it Solid D (99.7%).",
 "summary": "First-term Democrat Michelle Rodriguez (Pomona / Ontario / Chino) faces Republican special-education aide Rafaela Romero; not competitive.",
@@ -5376,7 +5231,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +43.9 (Dave's Redistricting, via Wikipedia); Gonzalez won 56.3% in 2024 (vs. a fellow Democrat)",
+"partisan_lean": "2024 presidential: Harris +43.9; Gonzalez won 56.3% in 2024 (vs. a fellow Democrat)",
 "likely_winner": "Mark Gonzalez",
 "likely_winner_basis": "Gonzalez was the only candidate on the primary ballot (99.7%); his opponent qualified as a write-in with 137 votes. Solid D.",
 "summary": "Democrat Mark Gonzalez (downtown / East Los Angeles) is effectively unopposed: Republican Alexandra Briseno reached the November ballot as a primary write-in with 137 votes and appears on the SoS certified list without a ballot designation.",
@@ -5417,10 +5272,10 @@
 "website": "https://www.ashleybrownforassembly.com/",
 "ballotpedia": "https://ballotpedia.org/Ashley_Brown_(California)",
 "bio": "LAUSD psychiatric/school social worker and lifelong Los Angeles resident making her first run for office.",
-"platform": "She names community safety through prevention, women's and mental health access, and education and economic stability as her top issues, framing her approach as investing in prevention over crisis response; she reported no campaign funds raised as of April 2026."
+"platform": "She names community safety through prevention, women's and mental health access, and education and economic stability as her top issues, framing her approach as investing in prevention over crisis response."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +62.2 (Dave's Redistricting, via Wikipedia); Bryan won 80.7% in 2024",
+"partisan_lean": "2024 presidential: Harris +62.2; Bryan won 80.7% in 2024",
 "likely_winner": "Isaac G. Bryan",
 "likely_winner_basis": "Incumbent took 64.6% in a four-way primary versus 18.9% for Brown; party-endorsed with a large resource advantage.",
 "summary": "Democrat-vs-Democrat general in a deep-blue Culver City / Baldwin Hills / Mid-City district: incumbent Isaac Bryan faces school social worker Ashley M. Brown. Not competitive.",
@@ -5453,7 +5308,7 @@
 "website": "https://lisacalderon4assembly.com/",
 "ballotpedia": "https://ballotpedia.org/Lisa_Calderon_(California)",
 "bio": "Democratic Assemblymember for the 56th District since 2020 who chairs the Assembly Insurance Committee and previously worked in government affairs for Edison International.",
-"platform": "She frames her agenda as helping constituents get ahead, naming food assistance, health care access and K-12 funding as budget priorities and citing minimum-wage increases and lower utility and gas costs; her official site highlights wildfire reform and utility accountability. (Campaign domain currently shows a 'coming soon' placeholder.)"
+"platform": "She frames her agenda as helping constituents get ahead, naming food assistance, health care access and K-12 funding as budget priorities and citing minimum-wage increases and lower utility and gas costs; her official site highlights wildfire reform and utility accountability."
 },
 {
 "name": "Jessica Martinez",
@@ -5466,7 +5321,7 @@
 "platform": "Her campaign runs on 'Education. Economy. Safety.': supporting charter schools, vouchers and homeschooling options, lower taxes and reduced regulation, and law-and-order policies including support for law enforcement, border security and Second Amendment rights."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +17.8 (Dave's Redistricting, via Wikipedia); Calderon won 56.7% in 2024",
+"partisan_lean": "2024 presidential: Harris +17.8; Calderon won 56.7% in 2024",
 "likely_winner": "Lisa Calderon",
 "likely_winner_basis": "Incumbent took 64.1% in the two-candidate primary; State Navigate rates it Solid D (99.8%).",
 "summary": "Democrat Lisa Calderon (Whittier / Montebello / Hacienda Heights) faces former Whittier councilmember Jessica Martinez (R); not competitive.",
@@ -5508,13 +5363,13 @@
 "primary_pct": 14.3,
 "website": "https://constancemenziesforassembly.com/",
 "ballotpedia": "https://ballotpedia.org/Constance_Menzies",
-"bio": "Republican in-home care provider from Los Angeles with little public biographical information; she reported no campaign funds raised as of April 2026.",
+"bio": "Republican in-home care provider from Los Angeles.",
 "platform": "Her campaign site lists safer neighborhoods, stronger schools, economic opportunity and support for working families and seniors as priorities, without further policy detail."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +52.6 (Dave's Redistricting, via Wikipedia); Elhawary won 61.1% in 2024 (vs. a fellow Democrat)",
+"partisan_lean": "2024 presidential: Harris +52.6; Elhawary won 61.1% in 2024 (vs. a fellow Democrat)",
 "likely_winner": "Sade Elhawary",
-"likely_winner_basis": "Incumbent took 85.7% in the two-candidate primary; Solid D.",
+"likely_winner_basis": "Incumbent took 85.7% in the two-candidate primary; State Navigate rates it Solid D.",
 "summary": "First-term Democrat Sade Elhawary (South Los Angeles) faces Republican Constance Jewel Menzies; not competitive.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
@@ -5558,10 +5413,10 @@
 "platform": "Her priorities page lists expanding affordable housing and childcare, opposing utility and water-rate increases and warehouse overdevelopment, strengthening wages and local job creation, reducing healthcare costs, and adequate staffing for firefighters and police."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +4.0 (Dave's Redistricting, via Wikipedia); Castillo (R) won 50.2% in a 2024 upset",
+"partisan_lean": "2024 presidential: Harris +4.0; Castillo (R) won 50.2% in a 2024 upset",
 "likely_winner": "Clarissa Cervantes",
 "likely_winner_basis": "Cervantes led the incumbent 54.5%-45.5% in the June two-candidate primary and State Navigate rates the seat Very Likely D (94%); still a genuine contest given Castillo's 2024 upset.",
-"summary": "Rematch of the 2024 upset: freshman Republican Leticia Castillo (Riverside / Corona / Eastvale) faces Riverside councilmember Clarissa Cervantes (D), who lost by 596 votes in 2024 but outpolled Castillo 54.5-45.5 in the primary. The top Democratic flip target in the region: Cervantes had raised about $2.6M to Castillo's roughly $0.9M as of early October (Press-Enterprise), with the state Democratic Party and unions behind Cervantes and the Southern California News Group editorial boards endorsing Castillo.",
+"summary": "Rematch of the 2024 upset: freshman Republican Leticia Castillo (Riverside / Corona / Eastvale) faces Riverside councilmember Clarissa Cervantes (D), who lost by 596 votes in 2024 but outpolled Castillo 54.5-45.5 in the primary. The top Democratic flip target in the region: Cervantes had raised about $2.6M to Castillo's roughly $0.9M as of early October, according to the Press-Enterprise, with the state Democratic Party and unions behind Cervantes and the Southern California News Group editorial boards endorsing Castillo.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
 "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
@@ -5608,9 +5463,9 @@
 "platform": "Running on 'People Over Corporations' and refusing corporate or PAC money, his site lists affordable housing, healthcare for all, defending communities and protecting natural resources; in a newspaper questionnaire he backed expanding rent control to single-family rentals and raising the renter's tax credit."
 }
 ],
-"partisan_lean": "2024 presidential margin Trump +6.4 (Dave's Redistricting, via Wikipedia); Chen won 60.5% in 2024",
+"partisan_lean": "2024 presidential: Trump +6.4; Chen won 60.5% in 2024",
 "likely_winner": "Phillip Chen",
-"likely_winner_basis": "Incumbent took 66.3% in the primary against a Green Party candidate with no Democrat on the ballot; the only Republican-leaning seat in the range. State Navigate: Solid R (93%).",
+"likely_winner_basis": "Incumbent took 66.3% in the primary against a Green Party candidate with no Democrat on the ballot. State Navigate: Solid R (93%).",
 "summary": "Republican Phillip Chen (Yorba Linda / Chino Hills / Diamond Bar) faces Green Party candidate Victor Hernandez; no Democrat filed. Not competitive.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
@@ -5642,7 +5497,7 @@
 "website": "https://coreyajackson.net/",
 "ballotpedia": "https://ballotpedia.org/Corey_Jackson",
 "bio": "Democratic Assemblymember for the 60th District since 2022, a social worker with a doctorate from California Baptist University who previously served on the Riverside County Board of Education.",
-"platform": "His stated campaign message is breaking cycles of poverty and violence through community investment; his campaign site currently points to a dead page, so no current platform could be verified directly."
+"platform": "His stated campaign message is breaking cycles of poverty and violence through community investment. Campaign site was offline when checked."
 },
 {
 "name": "Ed Delgado",
@@ -5655,7 +5510,7 @@
 "platform": "His campaign lists public safety, affordability and making California a 'two-party state' as priorities under the slogan 'Common Sense. Safer Streets. Stronger Families,' and he is endorsed by the Riverside, San Bernardino and Orange County sheriffs."
 }
 ],
-"partisan_lean": "2024 presidential margin Harris +8.4 (Dave's Redistricting, via Wikipedia); Jackson won 55.4% in 2024",
+"partisan_lean": "2024 presidential: Harris +8.4; Jackson won 55.4% in 2024",
 "likely_winner": "Corey A. Jackson",
 "likely_winner_basis": "Incumbent took 59.8% in a three-way primary (Republicans combined 40.2%); State Navigate rates it Solid D (99.1%).",
 "summary": "Democrat Corey Jackson (Moreno Valley / Perris) faces Moreno Valley councilmember Ed Delgado (R); a single-digit-lean seat where the incumbent is favored.",
@@ -5687,7 +5542,7 @@
 "website": null,
 "ballotpedia": "https://ballotpedia.org/Tina_McKinnor",
 "bio": "Incumbent assemblymember (since a 2022 special election) and former California Democratic Party operations director and Assembly chief of staff; chairs the Public Employment and Retirement Committee.",
-"platform": "No current campaign website was located; her official Assembly materials emphasize public-employee retirement policy and her committee leadership."
+"platform": "Her official Assembly materials emphasize public-employee retirement policy and her committee leadership."
 },
 {
 "name": "Brian Lockwood",
@@ -5697,10 +5552,10 @@
 "website": "https://www.electbrianlockwood.com/",
 "ballotpedia": "https://ballotpedia.org/Brian_Lockwood",
 "bio": "Property-management professional who qualified for the November ballot as a write-in candidate in the June primary.",
-"platform": "Campaign site carries a 'Los Angeles deserves better' message focused on rebuilding the district; no detailed policy positions located."
+"platform": "Campaign site carries a 'Los Angeles deserves better' message focused on rebuilding the district."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +56.9 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +56.9",
 "likely_winner": "Tina McKinnor",
 "likely_winner_basis": "Incumbent took 98.6% of the primary in a Harris +57 district against a write-in opponent.",
 "summary": "Safe Democratic seat; McKinnor faces only Republican write-in Brian Lockwood, who advanced with 1.4% of the primary vote.",
@@ -5744,7 +5599,7 @@
 "platform": "Campaign lists education reform, housing and government integrity, and health-care reform as top priorities."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +28.8 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +28.8",
 "likely_winner": "Jose Solache",
 "likely_winner_basis": "Incumbent won 73.1% of the primary in a Harris +29 district; rematch of the 2024 general, which he won 66-34.",
 "summary": "Safe Democratic seat; a rematch of 2024 between first-term incumbent Solache and Republican Paul Irving Jones.",
@@ -5789,7 +5644,7 @@
 "platform": "Campaign calls for expanded access to affordable housing, child care and transportation, free public education from preschool through university, universal medical care, and representation of working people."
 }
 ],
-"partisan_lean": "2024 presidential: Trump +12.8 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Trump +12.8",
 "likely_winner": "Natasha Johnson",
 "likely_winner_basis": "Incumbent took 99.3% of the primary in a Trump +13 district; only opponent is a write-in minor-party candidate with 0.7%.",
 "summary": "Safe Republican seat; Johnson seeks her first full term against Peace and Freedom write-in Kevin Akin, with no Democrat on the ballot.",
@@ -5834,7 +5689,7 @@
 "platform": "Campaign emphasizes public-education quality, small-business advocacy, public safety and parental authority."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +16.2 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +16.2",
 "likely_winner": "Blanca Pacheco",
 "likely_winner_basis": "Incumbent won 66.5% of the primary in a Harris +16 district; she beat Ortiz 62.5-37.5 in 2024.",
 "summary": "Safe Democratic seat; a rematch of 2024 between Rules Committee chair Pacheco and Republican Raul Ortiz Jr.",
@@ -5875,11 +5730,11 @@
 "primary_pct": 19.2,
 "website": "https://www.lydia4education.com/",
 "ballotpedia": "https://ballotpedia.org/Lydia_Gutiérrez",
-"bio": "Veteran public-school teacher (Long Beach Unified and Hawthorne districts), former aerospace administrator and former Coastal San Pedro Neighborhood Council member; perennial candidate for state and LAUSD offices.",
+"bio": "Veteran public-school teacher (Long Beach Unified and Hawthorne districts), former aerospace administrator and former Coastal San Pedro Neighborhood Council member; has run several times for state and LAUSD offices.",
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential: Harris +43.5 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +43.5",
 "likely_winner": "Ayanna Davis",
 "likely_winner_basis": "Led a six-way primary with 46.3% in a Harris +44 district; Democrats combined for about 81% of the primary vote.",
 "summary": "Open seat (Gipson termed out) in a heavily Democratic South LA County district; Davis is heavily favored over Republican Lydia Gutiérrez.",
@@ -5924,7 +5779,7 @@
 "platform": "Campaign priorities include cracking down on corruption in Sacramento, lowering the cost of living, and public safety including funding for police, sheriff's deputies and the CHP."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +23.3 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +23.3",
 "likely_winner": null,
 "likely_winner_basis": "Democrat-vs-Democrat race; Seo led the primary 26.6-24.6 and has the incumbent's endorsement, but roughly 38% of primary votes went to Republicans whose November preference is uncertain.",
 "summary": "Open seat (Muratsuchi termed out) with two Democrats, Rancho Palos Verdes Mayor Paul Seo and school board president Sara Deen, after a close six-way primary; the general is competitive.",
@@ -5969,7 +5824,7 @@
 "platform": "Campaign calls for lower taxes and fees and reduced state spending, high-quality education with parental involvement, and policies to reduce crime and keep neighborhoods safe."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +10.4 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +10.4",
 "likely_winner": "Mark Pulido",
 "likely_winner_basis": "Morales topped the primary with 31.6%, but Democratic candidates combined for about 62% of the vote in a Harris +10 district.",
 "summary": "Open seat (Quirk-Silva termed out) in a north Orange County/southeast LA County district; Republican Paulo Morales led a split primary but Democrat Mark Pulido is favored on combined partisan vote. Competitive.",
@@ -6014,10 +5869,10 @@
 "platform": "Campaign priorities listed as controlling costs for residents, public safety and economic development."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +22.3 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +22.3",
 "likely_winner": null,
 "likely_winner_basis": "Democrat-vs-Democrat race decided by a 32.5-31.4 primary; the 29% who backed Republican Mayra Ruiz are the swing vote, which may favor the more law-enforcement-aligned Penaloza.",
-"summary": "Open seat (Valencia running for Senate) pitting two Santa Ana councilmembers: labor- and progressive-backed Jessie Lopez against party-establishment-backed David Penaloza. Toss-up.",
+"summary": "Open seat (Valencia running for Senate) pitting two Santa Ana councilmembers: labor-backed Jessie Lopez against David Penaloza, who is endorsed by the state Democratic Party. Toss-up.",
 "sources": [
 "https://ballotpedia.org/California_State_Assembly_District_68",
 "https://en.wikipedia.org/wiki/2026_California_State_Assembly_election",
@@ -6059,7 +5914,7 @@
 "platform": "Campaign priorities listed as reducing street homelessness, improving public safety in neighborhoods and schools, and addressing neglected infrastructure."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +38.2 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +38.2",
 "likely_winner": "Josh Lowenthal",
 "likely_winner_basis": "Incumbent and Speaker pro tem took 68.6% of the primary to Essex's 28.5%.",
 "summary": "Safe seat for the Democratic incumbent in a Democrat-vs-Democrat general in Long Beach; Lowenthal is heavily favored for a third term.",
@@ -6104,7 +5959,7 @@
 "platform": "Campaign priorities include lowering the cost of living in Orange County, public safety and thriving communities, and strong public schools."
 }
 ],
-"partisan_lean": "2024 presidential: Trump +3.1 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Trump +3.1",
 "likely_winner": "Tri Ta",
 "likely_winner_basis": "Incumbent led a two-way primary 53.8-46.2 in a Trump +3 district he won with 54.7% in 2024.",
 "summary": "Republican incumbent Tri Ta faces Democrat Paula Swift in a Little Saigon-area district; Ta is favored but the seat is one of the more competitive Republican-held Assembly seats.",
@@ -6136,7 +5991,7 @@
 "website": "https://www.sanchezforassembly.com/",
 "ballotpedia": "https://ballotpedia.org/Kate_Sanchez",
 "bio": "Incumbent assemblymember since 2022 and former businesswoman; vice chair of the Health and Revenue and Taxation committees.",
-"platform": "Campaign materials emphasize her committee work on health policy and taxation; detailed 2026 platform not located."
+"platform": "Campaign materials emphasize her committee work on health policy and taxation."
 },
 {
 "name": "JJ Galvez",
@@ -6149,7 +6004,7 @@
 "platform": "Campaign priorities include addressing the high cost of housing and living, preparing the economy for technological change, and improving wildfire and flood resilience."
 }
 ],
-"partisan_lean": "2024 presidential: Trump +11.0 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Trump +11.0",
 "likely_winner": "Kate Sanchez",
 "likely_winner_basis": "Incumbent led a two-way primary 58.2-41.8 in a Trump +11 district.",
 "summary": "Safe Republican seat spanning south Orange County and southwest Riverside County; Sanchez seeks a third term against Democrat JJ Galvez.",
@@ -6194,8 +6049,8 @@
 "platform": "Campaign priorities listed as fiscal responsibility, parental rights and public safety."
 }
 ],
-"partisan_lean": "2024 presidential: Trump +2.7 (Dave's Redistricting, via Wikipedia)",
-"likely_winner": "Gracey Van Der Mark",
+"partisan_lean": "2024 presidential: Trump +2.7",
+"likely_winner": null,
 "likely_winner_basis": "Kluwe led the primary with 43.8%, but the two Republicans combined for 54.1% in a Trump +2.7 district that Dixon won with 59.5% in 2024; lean Republican but competitive.",
 "summary": "Open seat (Dixon running for county supervisor) along the Orange County coast; Democrat Chris Kluwe topped the primary but faces a consolidated Republican vote behind Gracey Van Der Mark. Competitive.",
 "sources": [
@@ -6239,7 +6094,7 @@
 "platform": "Campaign priorities listed as election administration and government efficiency, parental rights and institutional accountability, and immigration reform."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +16.6 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +16.6",
 "likely_winner": "Cottie Petrie-Norris",
 "likely_winner_basis": "Incumbent led a two-way primary 60.9-39.1 in a Harris +17 district.",
 "summary": "Democratic incumbent Petrie-Norris is favored for a fifth term over Republican businessman Urson Russell in an Irvine-centered district.",
@@ -6284,8 +6139,8 @@
 "platform": "Campaign priorities include public safety and infrastructure, reducing homelessness and expanding housing affordability, and fiscal responsibility and government transparency."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +1.8 (Dave's Redistricting, via Wikipedia)",
-"likely_winner": "Laurie Davies",
+"partisan_lean": "2024 presidential: Harris +1.8",
+"likely_winner": null,
 "likely_winner_basis": "Incumbent led the primary 52.3-47.7 and won 50.8% in 2024, but the district voted Harris +1.8; lean Republican, highly competitive.",
 "summary": "One of the most competitive Assembly seats in the state: Republican incumbent Davies defends a coastal south Orange County/north San Diego County district that narrowly voted for Harris against Democrat Sergio Farias.",
 "sources": [
@@ -6330,7 +6185,7 @@
 "platform": "Campaign priorities include expanding affordable housing, reducing the cost of living and addressing insurance availability."
 }
 ],
-"partisan_lean": "2024 presidential: Trump +13.9 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Trump +13.9",
 "likely_winner": "Carl DeMaio",
 "likely_winner_basis": "Incumbent led the primary 59.7-40.3 in a Trump +14 district.",
 "summary": "Safe Republican seat in inland north and east San Diego County; DeMaio seeks a second term against Democrat Gerald Boursiquot.",
@@ -6376,7 +6231,7 @@
 "platform": "Campaign calls for cutting taxes and regulations to reduce the cost of living, addressing homelessness and addiction, aligning education with job needs and protecting retirees' savings from taxation."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +12.6 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +12.6",
 "likely_winner": "Darshana Patel",
 "likely_winner_basis": "Incumbent led the primary 55.8-44.2 in a Harris +13 district she won with 54% in 2024.",
 "summary": "Democratic incumbent Patel is favored for a second term over Republican Carrie Espinoza Villanueva in a north San Diego County district that was competitive in 2024.",
@@ -6422,7 +6277,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential: Harris +29.3 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +29.3",
 "likely_winner": "Tasha Boerner",
 "likely_winner_basis": "Incumbent led the primary 61.8-38.2 in a Harris +29 coastal district.",
 "summary": "Safe Democratic coastal San Diego County seat; Boerner seeks a fifth term against Republican Trinity Hannaway, who has no public campaign website.",
@@ -6467,7 +6322,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential: Harris +36.3 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +36.3",
 "likely_winner": "Chris Ward",
 "likely_winner_basis": "Incumbent took 68.5% of the primary in a Harris +36 district.",
 "summary": "Safe Democratic seat in central San Diego; Ward seeks a fourth term against Republican Payton Galvez.",
@@ -6512,7 +6367,7 @@
 "platform": "Campaign priorities listed as housing affordability, public safety, and government accountability and transparency."
 }
 ],
-"partisan_lean": "2024 presidential: Harris +22.5 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +22.5",
 "likely_winner": "LaShae Sharp-Collins",
 "likely_winner_basis": "Incumbent led the primary 64.7-35.3 in a Harris +23 district.",
 "summary": "Democratic incumbent Sharp-Collins is favored for a second term over Republican Andrew Lawson in a southeastern San Diego/La Mesa/Lemon Grove district.",
@@ -6558,7 +6413,7 @@
 "platform": null
 }
 ],
-"partisan_lean": "2024 presidential: Harris +17.1 (Dave's Redistricting, via Wikipedia)",
+"partisan_lean": "2024 presidential: Harris +17.1",
 "likely_winner": "David Alvarez",
 "likely_winner_basis": "Incumbent took 59.1% of the primary in a Harris +17 district; Republican Galicia had 34.2%.",
 "summary": "Safe Democratic South Bay seat (Chula Vista, National City); Alvarez seeks a third full term against Republican Alejandro Galicia, who has no public campaign website.",
@@ -6606,7 +6461,7 @@
 "platform": "Her campaign site lists limited government, fiscal responsibility and lower taxes, tough-on-crime public safety, parental rights in education, immigration enforcement, religious freedom, pro-life policies, Second Amendment rights, water storage and dam repair, expanded oil drilling, road repair and wildfire prevention."
 }
 ],
-"partisan_lean": "2024 president: Harris 69.9%, Trump 26.7% (D+43.2)",
+"partisan_lean": "2024 presidential: Harris +43.2 (69.9%-26.7%)",
 "likely_winner": "Damon Connolly",
 "likely_winner_basis": "Won 73.4% of the primary vote in a district Harris carried 69.9-26.7.",
 "summary": "Open North Coast seat vacated by Senate leader Mike McGuire; Assemblymember Damon Connolly is heavily favored over Republican Tief Gibbs.",
@@ -6649,12 +6504,12 @@
 "primary_pct": 32.1,
 "website": "https://www.alexandraforsenate.com/",
 "ballotpedia": "https://ballotpedia.org/Alexandra_Duarte",
-"bio": "Almond farmer from Hilmar and wife of former U.S. Rep. John Duarte, running under a 'Mom. Farmer.' ballot identity.",
+"bio": "Almond farmer from Hilmar and wife of former U.S. Rep. John Duarte, running under a 'Mom. Farmer.' ballot designation.",
 "platform": "Her campaign centers on affordability: cutting gas taxes and regulations, lowering grocery costs by easing costs on farmers, insurance reform and more Cal Fire funding, forest fuel reduction, new highway lanes and job training, stricter sentencing and more law-enforcement funding, building dams and canals, and cutting taxes."
 }
 ],
-"partisan_lean": "2024 president: Trump 55.0%, Harris 42.4% (R+12.6)",
-"likely_winner": "Alexandra Duarte",
+"partisan_lean": "2024 presidential: Trump +12.6 (55.0%-42.4%)",
+"likely_winner": null,
 "likely_winner_basis": "Brandon led the primary, but the two Republicans combined for 58.7% and Trump carried the district 55.0-42.4; the general is competitive.",
 "summary": "Incumbent Marie Alvarado-Gil became the first California senator since at least 2010 to lose a primary, leaving a Sierra/Central Valley contest between Tuolumne County Supervisor Jaron Brandon (D) and almond farmer Alexandra Duarte (R). Republicans have the partisan edge but Brandon's primary plurality makes it one of the more competitive Senate races.",
 "sources": [
@@ -6701,7 +6556,7 @@
 "platform": "His campaign site prioritizes cost of living (opposing new taxes, CEQA reform, lower building fees), education (merit pay, charter schools, career prep, campus safety), health care (licensing reform, medical tort caps, health savings accounts, opposition to single-payer) and addressing homelessness through conservatorship reform and mental-health and substance-abuse treatment."
 }
 ],
-"partisan_lean": "2024 president: Trump 49.0%, Harris 47.8% (R+1.2)",
+"partisan_lean": "2024 presidential: Trump +1.2 (49.0%-47.8%)",
 "likely_winner": "Roger Niello",
 "likely_winner_basis": "Incumbent took 56.2% in the primary against two Democrats combined at 43.8%; district is near-even (Trump 49.0-47.8).",
 "summary": "Republican incumbent Roger Niello seeks a second term in the Sacramento/Placer suburbs against Democrat Sean Frame; the district is marginal on presidential numbers but Niello won the primary comfortably.",
@@ -6744,11 +6599,11 @@
 "primary_pct": 27.2,
 "website": null,
 "ballotpedia": "https://ballotpedia.org/Susan_Mason",
-"bio": "Retired nurse from Elk Grove (official ballot designation 'Retired Nurse'); no campaign website or committee could be located and no further verified background is available.",
+"bio": "Retired nurse from Elk Grove (ballot designation: Retired Nurse). No campaign website found.",
 "platform": null
 }
 ],
-"partisan_lean": "2024 president: Harris 64.4%, Trump 31.9% (D+32.5)",
+"partisan_lean": "2024 presidential: Harris +32.5 (64.4%-31.9%)",
 "likely_winner": "Angelique Ashby",
 "likely_winner_basis": "Incumbent won 68.1% in the primary in a district Harris carried 64.4-31.9.",
 "summary": "Democratic incumbent Angelique Ashby is heavily favored for a second term over Republican retired nurse Susan Mason in the Sacramento-based district.",
@@ -6796,7 +6651,7 @@
 "platform": "Her campaign site lists safe communities, affordable living through reduced regulation and responsible budgeting, education including the trades, small-business support, government accountability and transparency, transportation and infrastructure, housing that respects neighborhood character, and practical environmental stewardship."
 }
 ],
-"partisan_lean": "2024 president: Harris 66.5%, Trump 29.2% (D+37.3)",
+"partisan_lean": "2024 presidential: Harris +37.3 (66.5%-29.2%)",
 "likely_winner": "Scott Sakakihara",
 "likely_winner_basis": "Democrats combined for 76.8% of the six-way primary and Harris carried the district 66.5-29.2.",
 "summary": "Open East Bay/Silicon Valley seat; Union City Councilmember Scott Sakakihara emerged from a crowded Democratic field and is favored over Republican Linda Price, who advanced as the only Republican.",
@@ -6844,7 +6699,7 @@
 "platform": "His campaign emphasizes lower taxes, fewer regulations and individual choice, citing opposition to AB 5's independent-contractor rules, support for more in-state oil production and criticism of state insurance rate caps."
 }
 ],
-"partisan_lean": "2024 president: Trump 61.7%, Harris 35.9% (R+25.8)",
+"partisan_lean": "2024 presidential: Trump +25.8 (61.7%-35.9%)",
 "likely_winner": "Nathan Magsig",
 "likely_winner_basis": "Won 59.5% of the primary; no Democrat filed, and Trump carried the district 61.7-35.9.",
 "summary": "Open Kern/Tulare/eastern Fresno seat with no Democrat on the ballot; Fresno County Supervisor Nathan Magsig (R) faces Libertarian social worker William Brown Jr. and is the clear favorite.",
@@ -6891,7 +6746,7 @@
 "platform": "His campaign centers on the affordability crisis for Central Valley families, calling for cutting gas taxes, opposing tax increases and unfunded mandates and stopping refinery shutdowns; he also lists water security (expanding storage), holding the High-Speed Rail Authority accountable and ending one-party control in Sacramento."
 }
 ],
-"partisan_lean": "2024 president: Harris 50.7%, Trump 46.7% (D+4.0)",
+"partisan_lean": "2024 presidential: Harris +4.0 (50.7%-46.7%)",
 "likely_winner": "Esmeralda Soria",
 "likely_winner_basis": "Democrats combined for 59.6% of the primary and Harris narrowly carried the district 50.7-46.7, but DuPont's 40.4% keeps it competitive.",
 "summary": "Open western Central Valley seat; Assemblymember Esmeralda Soria (D) is favored over Merced Councilmember Darin DuPont (R) in a swing-leaning district with low primary turnout.",
@@ -6925,7 +6780,7 @@
 "website": "https://www.melissahurtado.com/",
 "ballotpedia": "https://ballotpedia.org/Melissa_Hurtado",
 "bio": "Incumbent state senator since 2018 and the daughter of Central Valley farmworkers; previously a Sanger city councilmember.",
-"platform": "Her campaign highlights lowering costs of gas, groceries and utilities by combating corporate price-fixing, cutting red tape to build affordable housing, investing in water infrastructure for farms, fully funding local law enforcement and addiction treatment, expanding health-care access and funding public schools."
+"platform": "Her campaign highlights lowering costs of gas, groceries and utilities by combating what she describes as corporate price-fixing, cutting red tape to build affordable housing, investing in water infrastructure for farms, fully funding local law enforcement and addiction treatment, expanding health-care access and funding public schools."
 },
 {
 "name": "Guillermo Gonzalez",
@@ -6938,7 +6793,7 @@
 "platform": "His 'Valley Promise' plan proposes ending the state gasoline tax, eliminating state income tax on the first $150,000 of income and a $500 state grocery tax credit, along with cutting red tape for small business and agriculture, building affordable homes, improving public safety and local access to doctors."
 }
 ],
-"partisan_lean": "2024 president: Trump 53.2%, Harris 44.3% (R+8.9)",
+"partisan_lean": "2024 presidential: Trump +8.9 (53.2%-44.3%)",
 "likely_winner": null,
 "likely_winner_basis": "Toss-up: Republican Gonzalez led the primary 45.2-35.6 and Trump carried the district 53.2-44.3, but the two Democrats combined for 54.8% and Hurtado has twice won here.",
 "summary": "Two-term Democratic incumbent Melissa Hurtado, who won re-election in 2022 by 20 votes, trails Republican Guillermo Gonzalez after the primary in a Trump-won Central Valley district; this is the likeliest Republican pickup.",
@@ -6984,7 +6839,7 @@
 "platform": "Under the slogan 'Faith, Family, Freedom, Future,' his priorities are affordability (housing, gas and utility costs, taxes and insurance), border-related issues including Tijuana River sewage pollution, restricting transgender participation in girls' sports, parental rights in school curriculum and health decisions, and reducing government fraud and waste."
 }
 ],
-"partisan_lean": "2024 president: Harris 55.3%, Trump 42.2% (D+13.1)",
+"partisan_lean": "2024 presidential: Harris +13.1 (55.3%-42.2%)",
 "likely_winner": "Steve Padilla",
 "likely_winner_basis": "Incumbent won 63.8% in the two-candidate primary; Harris carried the district 55.3-42.2.",
 "summary": "Democratic incumbent Steve Padilla is favored for a second term over Republican pastor Art Hodges in the South Bay San Diego/Imperial Valley district.",
@@ -7019,7 +6874,7 @@
 "website": "https://www.carolinemenjivar.com/",
 "ballotpedia": "https://ballotpedia.org/Caroline_Menjivar",
 "bio": "Incumbent state senator for District 20 since 2022, Marine Corps veteran, former EMT and social worker.",
-"platform": "Her campaign site says she is fighting for working families, housing solutions and public services, drawing on her own experience with housing instability; the site has no published issues page."
+"platform": "Her campaign site says she is fighting for working families, housing solutions and public services, drawing on her own experience with housing instability."
 },
 {
 "name": "Tony Rodriguez",
@@ -7028,11 +6883,11 @@
 "primary_pct": 27.9,
 "website": null,
 "ballotpedia": "https://ballotpedia.org/Tony_Rodriguez",
-"bio": "Republican candidate who filed with no ballot designation; no verifiable background could be found and his listed campaign site (tony4senate.com) redirects to an empty page.",
+"bio": "Republican candidate; filed with no ballot designation and no active campaign website.",
 "platform": null
 }
 ],
-"partisan_lean": "2024 president: Harris 62.4%, Trump 34.4% (D+28.0)",
+"partisan_lean": "2024 presidential: Harris +28.0 (62.4%-34.4%)",
 "likely_winner": "Caroline Menjivar",
 "likely_winner_basis": "Incumbent won 62.1% in the primary in a district Harris carried 62.4-34.4.",
 "summary": "Democratic incumbent Caroline Menjivar is heavily favored over Republican Tony Rodriguez in the San Fernando Valley district.",
@@ -7078,7 +6933,7 @@
 "platform": "His stated priorities are lowering energy and electricity costs and opposing state electrification mandates, reducing taxes, improving public safety and addressing crime and homelessness, and lowering the cost of living."
 }
 ],
-"partisan_lean": "2024 president: Harris 55.6%, Trump 41.5% (D+14.1)",
+"partisan_lean": "2024 presidential: Harris +14.1 (55.6%-41.5%)",
 "likely_winner": "Susan Rubio",
 "likely_winner_basis": "Incumbent won 62.3% in the primary; Harris carried the district 55.6-41.5.",
 "summary": "Two-term Democratic incumbent Susan Rubio is favored over Republican small-business owner Mike Netter in the San Gabriel/Pomona Valley district.",
@@ -7126,7 +6981,7 @@
 "platform": "Runs on 'Safety. Affordability. Results.': permitting and regulatory reform to make it cheaper to live and do business, more workforce housing and clean-energy transmission, taking on crime and homelessness (he supported Prop 36), school and insurance reform, and combating antisemitism and hate; relative to Erickson he emphasizes public safety and is endorsed by the LA Police Protective League and DA Nathan Hochman."
 }
 ],
-"partisan_lean": "2024 president: Harris 67.3%, Trump 29.5% (D+37.8)",
+"partisan_lean": "2024 presidential: Harris +37.8 (67.3%-29.5%)",
 "likely_winner": null,
 "likely_winner_basis": "Democrat-vs-Democrat general after a 10-candidate primary in which Erickson led Goldsmith by only 2.2 points; outcome depends on how the 31.6% who backed the two eliminated Republicans break.",
 "summary": "Open Westside/South Bay LA seat; West Hollywood Councilmember John Erickson and business owner Brian Goldsmith, both Democrats, advanced from a crowded primary in which the two Republicans were squeezed out. The seat stays Democratic regardless.",
@@ -7172,7 +7027,7 @@
 "platform": "Her listed priorities are environmental and social justice, housing access and affordability, workforce development, children and family welfare, small businesses and the entertainment industry, health care, immigration, corporate accountability and gun safety; she is endorsed by outgoing Sen. María Elena Durazo."
 }
 ],
-"partisan_lean": "2024 president: Harris 74.8%, Trump 20.8% (D+54.0)",
+"partisan_lean": "2024 presidential: Harris +54.0 (74.8%-20.8%)",
 "likely_winner": "Sara Hernandez",
 "likely_winner_basis": "Led the eight-candidate primary by nearly 12 points (31.2% to 19.4%).",
 "summary": "Open central/east LA seat with a Democrat-vs-Democrat general between LA Community College District trustee Sara Hernandez and former Bass administration official Sarah Rascón; former Assemblymember Wendy Carrillo finished third. The seat stays Democratic.",
@@ -7219,7 +7074,7 @@
 "platform": "His priorities are ending 'waste, fraud and abuse,' increasing public-safety funding, addressing homelessness, cutting business taxes and regulation, education reform including alternative schools, veterans' services, infrastructure repair and a gas-tax holiday."
 }
 ],
-"partisan_lean": "2024 president: Harris 78.4%, Trump 18.4% (D+60.0)",
+"partisan_lean": "2024 presidential: Harris +60.0 (78.4%-18.4%)",
 "likely_winner": "Lola Smallwood-Cuevas",
 "likely_winner_basis": "Incumbent won 77.5% in the primary in the most Democratic district on the ballot (Harris 78.4-18.4).",
 "summary": "Democratic incumbent Lola Smallwood-Cuevas is a near-certain winner over Republican restaurant owner Joe Lisuzzo in the downtown/South LA district.",
@@ -7267,7 +7122,7 @@
 "platform": "Her stated priorities are affordability through lower taxes and less regulation, cutting red tape for small businesses, parental rights, and public safety including supporting law enforcement and holding repeat offenders accountable."
 }
 ],
-"partisan_lean": "2024 president: Harris 57.1%, Trump 39.8% (D+17.3)",
+"partisan_lean": "2024 presidential: Harris +17.3 (57.1%-39.8%)",
 "likely_winner": "Bob Archuleta",
 "likely_winner_basis": "Incumbent won 65.1% in the two-candidate primary; Harris carried the district 57.1-39.8.",
 "summary": "Two-term Democratic incumbent Bob Archuleta is favored over Republican small-business owner Araceli Martinez in the Gateway Cities district.",
@@ -7314,7 +7169,7 @@
 "platform": "His campaign emphasizes public safety (he authored bills creating the state Fentanyl Task Force and real-time overdose tracking), support for veterans and military families, and government accountability, saying he wants to 'make California the Golden State once again.'"
 }
 ],
-"partisan_lean": "2024 president: Trump 56.1%, Harris 41.0% (R+15.1)",
+"partisan_lean": "2024 presidential: Trump +15.1 (56.1%-41.0%)",
 "likely_winner": "Kelly Seyarto",
 "likely_winner_basis": "Incumbent won 58.2% in the two-candidate primary; Trump carried the district 56.1-41.0.",
 "summary": "Republican incumbent Kelly Seyarto is favored for a second term over Democratic physician Tiffanie Tate in the southwest Riverside County-based district.",
@@ -7363,7 +7218,7 @@
 "platform": "Runs on a '10-point business plan': lower taxes, infrastructure public-private partnerships, cutting state waste and regulation, school choice, streamlined licensing, lower health-care costs and PAGA lawsuit reform."
 }
 ],
-"partisan_lean": "2024 president: Harris 56.6%, Trump 40.3% (D+16.3)",
+"partisan_lean": "2024 presidential: Harris +16.3 (56.6%-40.3%)",
 "likely_winner": "Avelino Valencia",
 "likely_winner_basis": "Won 65.2% of the two-candidate primary; Harris carried the district 56.6-40.3.",
 "summary": "Open north Orange County seat; Assemblymember Avelino Valencia (D) is favored over former Placentia Mayor Rhonda Shader (R), the 2022 runner-up here.",
@@ -7410,7 +7265,7 @@
 "platform": "Campaigns on making California more affordable: letting taxpayers keep more of their money, cutting waste and lowering costs, keeping communities safe and election integrity; cites a lifetime 'A' rating from the Howard Jarvis Taxpayers Association."
 }
 ],
-"partisan_lean": "2024 president: Trump 50.6%, Harris 46.6% (R+4.0)",
+"partisan_lean": "2024 presidential: Trump +4.0 (50.6%-46.6%)",
 "likely_winner": "Tony Strickland",
 "likely_winner_basis": "Incumbent led the two-candidate primary 53.4-46.6 and Trump carried the district 50.6-46.6, but the margin makes this competitive.",
 "summary": "Republican incumbent Tony Strickland, elected in a 2025 special election, faces former San Clemente Mayor Chris Duncan (D) in coastal Orange County; one of the few genuinely competitive Senate races and a Democratic target.",
@@ -7457,7 +7312,7 @@
 "platform": "Campaign themes are 'Safe. Strong. Affordable.': reining in state spending and new taxes, removing barriers to housing construction, restoring North County beaches and a balanced approach to public safety."
 }
 ],
-"partisan_lean": "2024 president: Harris 54.9%, Trump 42.1% (D+12.8)",
+"partisan_lean": "2024 presidential: Harris +12.8 (54.9%-42.1%)",
 "likely_winner": "Catherine Blakespear",
 "likely_winner_basis": "Incumbent led the two-candidate primary 54.7-45.3; Harris carried the district 54.9-42.1.",
 "summary": "Democratic incumbent Catherine Blakespear is favored for a second term over Republican fiduciary Laura Bassett in the coastal North County San Diego/south Orange County district, though the margin is moderate.",
@@ -7503,7 +7358,7 @@
 "platform": "Says she will reduce the cost of living and cut taxes, address homelessness, keep communities safe, restore excellence in education, confront the fentanyl crisis and work for a clean environment."
 }
 ],
-"partisan_lean": "2024 president: Harris 50.4%, Trump 46.7% (D+3.7)",
+"partisan_lean": "2024 presidential: Harris +3.7 (50.4%-46.7%)",
 "likely_winner": null,
 "likely_winner_basis": "Toss-up: Elliott won 48.0% of the primary but the two Republicans combined for 52.1%; Harris carried the district 50.4-46.7.",
 "summary": "Open inland San Diego County seat vacated by termed-out Republican leader Brian Jones; former San Diego City Attorney Mara Elliott (D) faces businesswoman Kristie Bruce-Lane (R). Combined primary votes favor Republicans, presidential numbers favor Democrats, making it a top pickup opportunity for Democrats.",

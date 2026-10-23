@@ -7,10 +7,8 @@
 <title>California Ballot · November 2026</title>
 <meta name="description" content="What's on your California ballot on November 3, 2026: statewide offices, propositions, U.S. House, State Senate and Assembly, by address or district.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preload" href="data/ballot.json" as="fetch" crossorigin>
-<link rel="preload" href="data/races.json" as="fetch" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=9">
 </head>
 <body class="page-ballot">
 <header class="top top-simple">
@@ -34,7 +32,7 @@
       <label>Assembly <select id="sel-ad"><option value="">—</option></select></label>
       <label>County <select id="sel-county"><option value="">—</option></select></label>
     </div>
-    <p class="where" id="where"></p>
+    <p class="where" id="where" aria-live="polite"></p>
   </section>
 
   <div class="ballot-body">
@@ -44,10 +42,10 @@
 </main>
 
 <footer class="foot">
-  <span>Compiled by Christine Corry from public sources. "Likely winner" summarizes the Cook, Sabato and Inside Elections ratings and primary results, not an endorsement.</span>
+  <span>Compiled by Christine Corry from public sources. "Favored" summarizes June primary results, 2024 presidential results in the district and, where available, Cook, Sabato, Inside Elections, State Navigate or CalMatters ratings; it is a summary of public data, not a prediction or endorsement. Candidate descriptions paraphrase each campaign's own website or voter-guide statement. District presidential results from Dave's Redistricting.</span>
   <span>Boundaries: <a href="https://aelc.assembly.ca.gov/proposed-congressional-map">AB 604 (Prop 50)</a> and the <a href="https://wedrawthelines.ca.gov/final-maps/">2021 Citizens Redistricting Commission</a>. Address lookup by <a href="https://nominatim.org/">Nominatim</a> / OpenStreetMap.</span>
   <span>Compiled from the Secretary of State, LAO, Ballotpedia, Wikipedia, campaign sites and public polls; <span id="updated"></span>.</span>
 </footer>
-<script src="ballot.js?v=12"></script>
+<script src="ballot.js?v=13"></script>
 </body>
 </html>

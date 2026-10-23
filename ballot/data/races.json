@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-22",
+"updated": "2026-10-23",
 "old_members": {
 "1": {
 "name": "James Gallagher",
@@ -11,7 +11,7 @@
 },
 "3": {
 "name": "Kevin Kiley",
-"party": "R"
+"party": "NPP"
 },
 "4": {
 "name": "Mike Thompson",
@@ -227,7 +227,7 @@
 "primary_pct": 42.15,
 "website": "https://electjamesgallagher.com/",
 "ballotpedia": "https://ballotpedia.org/James_Gallagher_(California)",
-"bio": "U.S. representative since June 2026; former California Assembly Republican leader (2022-2025) from Sutter County, attorney and partner in his family's farming operation.",
+"bio": "U.S. Representative since June 2026; former California Assembly Republican leader (2022-2025) from Sutter County, attorney and partner in his family's farming operation.",
 "platform": "Says he wants to make life more affordable for North State families through lower taxes, fees and regulation. Calls for tougher laws against crime and for protecting farms and small businesses from what he describes as excessive government regulation."
 },
 {
@@ -238,7 +238,7 @@
 "website": "https://www.votemikemcguire.com/",
 "ballotpedia": "https://ballotpedia.org/Mike_McGuire",
 "bio": "State senator from the North Coast's 2nd district since 2014 and former president pro tempore of the California State Senate (2024-2025).",
-"platform": "Campaigns on affordability and job growth for working families, wildfire recovery and expanded state firefighting capacity, and protecting rural hospitals, health care access and reproductive rights. Frames the race as standing up to the Trump administration's cuts to health care and wildfire budgets."
+"platform": "Campaigns on affordability and job growth for working families, wildfire recovery and expanded state firefighting capacity, and protecting rural hospitals, health care access and reproductive rights. Frames the race as standing up to what he calls the Trump administration's cuts to health care and wildfire budgets."
 }
 ],
 "ratings": {
@@ -270,7 +270,7 @@
 "district": 3,
 "share": 0.198,
 "rep": "Kevin Kiley",
-"party": "R"
+"party": "NPP"
 },
 {
 "district": 2,
@@ -310,7 +310,7 @@
 "incumbent": {
 "name": "Jared Huffman",
 "party": "D",
-"note": "Running here"
+"note": "running here"
 },
 "candidates": [
 {
@@ -320,8 +320,8 @@
 "primary_pct": 56.48,
 "website": "https://www.jaredhuffman.com",
 "ballotpedia": "https://ballotpedia.org/Jared_Huffman",
-"bio": "U.S. representative since 2013 and ranking Democrat on the House Natural Resources Committee; former state assemblymember and environmental attorney from San Rafael.",
-"platform": "Prioritizes lowering everyday costs (groceries, energy, health care, housing) and blames tariffs and tax cuts for the rich for the affordability crisis. Pledges aggressive oversight of the Trump administration, a ban on congressional stock trading and Supreme Court ethics rules, and defense of voting rights, church-state separation and the rule of law; a longtime advocate for climate action."
+"bio": "U.S. Representative since 2013 and ranking Democrat on the House Natural Resources Committee; former state assemblymember and environmental attorney from San Rafael.",
+"platform": "Prioritizes lowering everyday costs (groceries, energy, health care, housing) and blames tariffs and what he calls tax cuts for the rich for the affordability crisis. Pledges aggressive oversight of the Trump administration, a ban on congressional stock trading and Supreme Court ethics rules, and defense of voting rights, church-state separation and the rule of law; a longtime advocate for climate action."
 },
 {
 "name": "Robin Littau",
@@ -401,7 +401,7 @@
 "primary_pct": 34.26,
 "website": "https://beraforcongress.com",
 "ballotpedia": "https://ballotpedia.org/Ami_Bera",
-"bio": "Physician and U.S. representative from the Sacramento area since 2013, currently representing the 6th district.",
+"bio": "Physician and U.S. Representative from the Sacramento area since 2013, currently representing the 6th district.",
 "platform": "Campaigns on affordable health care and preventive care, drawing on his career as a doctor. Supports an economy built on competition, job training and clean-energy jobs, and a transition toward sustainable energy and environmental policy."
 },
 {
@@ -438,7 +438,7 @@
 "district": 3,
 "share": 0.966,
 "rep": "Kevin Kiley",
-"party": "R"
+"party": "NPP"
 },
 {
 "district": 6,
@@ -478,7 +478,7 @@
 "incumbent": {
 "name": "Mike Thompson",
 "party": "D",
-"note": "Running here"
+"note": "running here"
 },
 "candidates": [
 {
@@ -488,7 +488,7 @@
 "primary_pct": 40.97,
 "website": "https://www.mikethompsonforcongress.com",
 "ballotpedia": "https://ballotpedia.org/Mike_Thompson_(California)",
-"bio": "U.S. representative since 1999, former state senator, Vietnam-era Army veteran and Napa Valley vineyard owner.",
+"bio": "U.S. Representative since 1999, former state senator, Vietnam-era Army veteran and Napa Valley vineyard owner.",
 "platform": "Says he is running because costs are skyrocketing and democracy is on the line. Runs on his record on job creation, health care and veterans' issues and on a reputation for bipartisan problem-solving."
 },
 {
@@ -537,7 +537,7 @@
 "district": 3,
 "share": 0.13,
 "rep": "Kevin Kiley",
-"party": "R"
+"party": "NPP"
 },
 {
 "district": 2,
@@ -577,7 +577,7 @@
 "incumbent": {
 "name": "Tom McClintock",
 "party": "R",
-"note": "Running here"
+"note": "running here"
 },
 "candidates": [
 {
@@ -587,7 +587,7 @@
 "primary_pct": 61.29,
 "website": "https://www.tommcclintock.com",
 "ballotpedia": "https://ballotpedia.org/Tom_McClintock",
-"bio": "U.S. representative since 2009 and former 22-year state legislator; chairs the House Natural Resources Subcommittee on Federal Lands and sits on the Budget Committee.",
+"bio": "U.S. Representative since 2009 and former 22-year state legislator; chairs the House Natural Resources Subcommittee on Federal Lands and sits on the Budget Committee.",
 "platform": "Runs as a fiscal conservative, proposing to curb unauthorized appropriations, control mandatory spending and balance the budget, and opposing new state bonds and spending programs. Advocates building new reservoirs and changing federal land management to promote forest health, public access and fire prevention."
 },
 {
@@ -623,7 +623,7 @@
 "district": 3,
 "share": 0.58,
 "rep": "Kevin Kiley",
-"party": "R"
+"party": "NPP"
 },
 {
 "district": 5,
@@ -674,7 +674,7 @@
 "status": "contested",
 "incumbent": {
 "name": "Kevin Kiley",
-"party": "I",
+"party": "NPP",
 "note": "Represents the current 3rd district; elected as a Republican in 2024, now independent (No Party Preference) and running in the redrawn 6th"
 },
 "candidates": [
@@ -685,7 +685,7 @@
 "primary_pct": 24.28,
 "website": "https://electkevinkiley.com",
 "ballotpedia": "https://ballotpedia.org/Kevin_Kiley",
-"bio": "U.S. representative since 2023 and former state assemblymember from Roseville; a former teacher and deputy attorney general who left the Republican Party and is on the ballot with no party preference.",
+"bio": "U.S. Representative since 2023 and former state assemblymember from Roseville; a former teacher and deputy attorney general who left the Republican Party and is on the ballot with no party preference.",
 "platform": "Runs as an independent emphasizing bipartisan work on affordability, citing bills on gas taxes, Social Security fairness, Medicare protection and AI safety, plus federal grants for Highway 65/I-80 and Lake Tahoe restoration. Stresses accessibility through town-hall 'conversations' across the district."
 },
 {
@@ -696,7 +696,7 @@
 "website": "https://drpanforcongress.com/",
 "ballotpedia": "https://ballotpedia.org/Richard_Pan",
 "bio": "Pediatrician and former state senator (2014-2022) from Sacramento, known for authoring California's school vaccine laws; ran for Sacramento mayor in 2024.",
-"platform": "Campaigns on protecting the Affordable Care Act and Medicare, lowering prescription drug and insulin costs, and defending science-based public health against Robert F. Kennedy Jr. Pledges to hold the Trump administration accountable and to follow evidence in federal health and environmental policy."
+"platform": "Campaigns on protecting the Affordable Care Act and Medicare, lowering prescription drug and insulin costs, and defending what he calls science-based public health policy against HHS Secretary Robert F. Kennedy Jr. Pledges to hold the Trump administration accountable and to follow evidence in federal health and environmental policy."
 }
 ],
 "ratings": {
@@ -730,7 +730,7 @@
 "likely_winner": "Richard Pan",
 "likely_winner_basis": "Forecasters favor the Democrat (Cook Solid D, Sabato Likely D, Inside Elections Lean D) in a Harris+8 seat, though the two public polls show a tie and a 4-point Pan lead with about a quarter undecided.",
 "partisan_lean": "D+5 (Cook PVI, new district; was D+8 under the 2023-2026 map); 2024 presidential: Harris 52.6%, Trump 44.2%",
-"summary": "Incumbent Kevin Kiley, whose Placer County base was carved up by Prop 50, left the GOP and is running as an independent in the redrawn Sacramento-area 6th, which absorbed Republican-leaning suburbs from his old district (PVI D+8 to D+5). He faces Democrat Richard Pan, a former state senator, after a crowded primary in which Kiley edged Pan 24.3% to 23.2% and a Republican took 20%. Polls are close and this is the most competitive seat among districts 1-13.",
+"summary": "Incumbent Kevin Kiley, whose Placer County base was carved up by Prop 50, left the GOP and is running as an independent in the redrawn Sacramento-area 6th, which absorbed Republican-leaning suburbs from his old district (PVI D+8 to D+5). He faces Democrat Richard Pan, a former state senator, after a crowded primary in which Kiley edged Pan 24.3% to 23.2% and a Republican took 20%. Polls are close and this is one of the most competitive House seats in Northern California.",
 "sources": [
 "https://ballotpedia.org/California%27s_6th_Congressional_District_election,_2026",
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_1%E2%80%9326)",
@@ -749,7 +749,7 @@
 "district": 3,
 "share": 0.366,
 "rep": "Kevin Kiley",
-"party": "R"
+"party": "NPP"
 },
 {
 "district": 7,
@@ -783,7 +783,7 @@
 "incumbent": {
 "name": "Doris Matsui",
 "party": "D",
-"note": "Running here"
+"note": "running here"
 },
 "candidates": [
 {
@@ -793,7 +793,7 @@
 "primary_pct": 29.09,
 "website": "https://www.matsuiforcongress.com",
 "ballotpedia": "https://ballotpedia.org/Doris_Matsui",
-"bio": "U.S. representative for Sacramento since 2005; former Clinton White House staffer, born in a Japanese American internment camp.",
+"bio": "U.S. Representative for Sacramento since 2005; former Clinton White House staffer, born in a Japanese American internment camp.",
 "platform": "Runs on experience and relationships in Washington, citing more than $3 billion secured for Sacramento flood protection, work on the Affordable Care Act and transit funding. Frames the defense of democracy through her family's internment history and pledges a government that works for everyone, not the powerful."
 },
 {
@@ -828,7 +828,7 @@
 "likely_winner": null,
 "likely_winner_basis": "Genuinely uncertain: challenger Vang led the primary 31.2% to 29.1% and the only public (Vang-aligned) poll 32-28 with 40% undecided, but the incumbent may consolidate the roughly 37% of primary voters who backed eliminated Republicans.",
 "partisan_lean": "D+7 (Cook PVI, new district; was D+16 under the 2023-2026 map); 2024 presidential: Harris 54.8%, Trump 42.0%",
-"summary": "Two Democrats face off in Sacramento: 11-term incumbent Doris Matsui and progressive councilmember Mai Vang, who narrowly topped the primary with backing from Justice Democrats. Prop 50 made the district considerably less Democratic (D+16 to D+7) by redistributing Sacramento-area Democratic voters to shore up the neighboring 3rd and 6th, so the eliminated Republican electorate is unusually large for an intraparty contest.",
+"summary": "Two Democrats face off in Sacramento: 11-term incumbent Doris Matsui and Sacramento councilmember Mai Vang, who narrowly topped the primary with backing from Justice Democrats. Prop 50 made the district considerably less Democratic (D+16 to D+7) by redistributing Sacramento-area Democratic voters to shore up the neighboring 3rd and 6th, so the eliminated Republican electorate is unusually large for an intraparty contest.",
 "sources": [
 "https://ballotpedia.org/California%27s_7th_Congressional_District_election,_2026",
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_1%E2%80%9326)",
@@ -859,7 +859,7 @@
 "district": 3,
 "share": 0.121,
 "rep": "Kevin Kiley",
-"party": "R"
+"party": "NPP"
 },
 {
 "district": 6,
@@ -893,7 +893,7 @@
 "incumbent": {
 "name": "John Garamendi",
 "party": "D",
-"note": "Running here"
+"note": "running here"
 },
 "candidates": [
 {
@@ -903,7 +903,7 @@
 "primary_pct": 54.41,
 "website": "https://www.garamendi.org",
 "ballotpedia": "https://ballotpedia.org/John_Garamendi",
-"bio": "U.S. representative since 2009; former California lieutenant governor, insurance commissioner, state legislator and deputy interior secretary.",
+"bio": "U.S. Representative since 2009; former California lieutenant governor, insurance commissioner, state legislator and deputy interior secretary.",
 "platform": "Champions 'Make It In America' policies to rebuild domestic manufacturing and Buy America rules, opposes the Delta tunnels and backs water-infrastructure investment. Emphasizes health care access in underserved communities, veterans' benefits and protecting the missions at Travis and Beale Air Force bases."
 },
 {
@@ -985,7 +985,7 @@
 "incumbent": {
 "name": "Josh Harder",
 "party": "D",
-"note": "Running here"
+"note": "running here"
 },
 "candidates": [
 {
@@ -995,7 +995,7 @@
 "primary_pct": 60.78,
 "website": "https://harderforcongress.com",
 "ballotpedia": "https://ballotpedia.org/Josh_Harder",
-"bio": "U.S. representative since 2019 (for the 9th since 2023), a former venture capitalist and business school instructor from Tracy.",
+"bio": "U.S. Representative since 2019 (for the 9th since 2023), a former venture capitalist and business school instructor from Tracy.",
 "platform": "Focuses on lowering the cost of gas, housing and health care and bringing more doctors to the Valley, along with fighting homelessness and keeping neighborhoods safe. Presents himself as a pragmatic new-generation leader working with farmers, unions and law enforcement."
 },
 {
@@ -1078,7 +1078,7 @@
 "incumbent": {
 "name": "Mark DeSaulnier",
 "party": "D",
-"note": "Running here"
+"note": "running here"
 },
 "candidates": [
 {
@@ -1088,7 +1088,7 @@
 "primary_pct": 59.68,
 "website": "https://desaulnierforcongress.com",
 "ballotpedia": "https://ballotpedia.org/Mark_DeSaulnier",
-"bio": "U.S. representative since 2015 from Concord; former state senator, assemblymember and Contra Costa County supervisor.",
+"bio": "U.S. Representative since 2015 from Concord; former state senator, assemblymember and Contra Costa County supervisor.",
 "platform": "Progressive platform centered on transportation and shorter commutes, workers' rights, education access, lowering inflation and health care costs, expanding affordable housing and protecting democracy. Highlights protecting workers as AI and automation reshape the economy."
 },
 {
@@ -1214,7 +1214,7 @@
 {
 "pollster": "Lake Research Partners (for Chan campaign)",
 "dates": "Jul 14-19, 2026",
-"sample": "LV (size not reported)",
+"sample": "LV (n not reported)",
 "results": {
 "Scott Wiener": 45,
 "Connie Chan": 40
@@ -1225,7 +1225,7 @@
 "likely_winner": "Scott Wiener",
 "likely_winner_basis": "Wiener led the primary 40.7% to 29.7% and leads both general-election polls (by 11 in a pro-Wiener poll and by 5 in a Chan-campaign poll).",
 "partisan_lean": "D+36 (Cook PVI, new district; unchanged from the 2023-2026 map); 2024 presidential: Harris 81.8%, Trump 14.1%",
-"summary": "With Nancy Pelosi retiring after nearly four decades, two Democrats compete for the San Francisco seat: state Sen. Scott Wiener, backed by former Mayor London Breed, and Supervisor Connie Chan, endorsed by Pelosi. Prop 50 left this overwhelmingly Democratic city district essentially unchanged (D+36); the contest is between Wiener's housing-focused, establishment-aligned coalition and Chan's progressive one.",
+"summary": "With Nancy Pelosi retiring after nearly four decades, two Democrats compete for the San Francisco seat: state Sen. Scott Wiener, backed by former Mayor London Breed, and Supervisor Connie Chan, endorsed by Pelosi. Prop 50 left this overwhelmingly Democratic city district essentially unchanged (D+36); the contest is between Wiener's housing-focused, party-endorsed coalition and Chan's rival coalition.",
 "sources": [
 "https://ballotpedia.org/California%27s_11th_Congressional_District_election,_2026",
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_1%E2%80%9326)",
@@ -1267,7 +1267,7 @@
 "incumbent": {
 "name": "Lateefah Simon",
 "party": "D",
-"note": "Running here"
+"note": "running here"
 },
 "candidates": [
 {
@@ -1277,7 +1277,7 @@
 "primary_pct": 84.24,
 "website": "https://www.lateefahsimon.com",
 "ballotpedia": "https://ballotpedia.org/Lateefah_Simon",
-"bio": "U.S. representative since 2025, former BART board president and civil rights advocate; vice chair of the Congressional Progressive Caucus and the first blind member of Congress.",
+"bio": "U.S. Representative since 2025, former BART board president and civil rights advocate; vice chair of the Congressional Progressive Caucus and the first blind member of Congress.",
 "platform": "Progressive platform centered on civil rights and social justice; cites three bipartisan small-business bills passed in the House and more than $11 million secured for public safety and transit in the East Bay. Serves on the Oversight and Small Business committees."
 },
 {
@@ -1341,7 +1341,7 @@
 "incumbent": {
 "name": "Adam Gray",
 "party": "D",
-"note": "Running here"
+"note": "running here"
 },
 "candidates": [
 {
@@ -1351,11 +1351,11 @@
 "primary_pct": 41.97,
 "website": "https://www.adamgrayforcongress.com/",
 "ballotpedia": "https://ballotpedia.org/Adam_Gray",
-"bio": "U.S. representative since 2025 after winning by 187 votes in 2024; former 10-year state assemblymember from Merced, professor and small business owner.",
+"bio": "U.S. Representative since 2025 after winning by 187 votes in 2024; former 10-year state assemblymember from Merced, professor and small business owner.",
 "platform": "Emphasizes a bipartisan record and Valley-first independence from party orthodoxy, pointing to telehealth and geothermal work with Republicans. Agenda: lower food, housing and utility costs, more water for families and farms, less red tape for infrastructure, and affordable health care."
 },
 {
-"name": "Kevin Lincoln II",
+"name": "Kevin Lincoln",
 "party": "R",
 "incumbent": false,
 "primary_pct": 27.74,
@@ -1375,7 +1375,7 @@
 "likely_winner": "Adam Gray",
 "likely_winner_basis": "Forecasters rate the seat Lean D (Cook), Likely D (Sabato, moved from Lean on Oct. 20) and Tilt D (Inside Elections), and Democrats combined for about 57% of the primary vote, though the GOP's Congressional Leadership Fund had spent $4.34 million here by Oct. 11.",
 "partisan_lean": "D+2 (Cook PVI, new district; was R+1 under the 2023-2026 map); 2024 presidential: Harris 48.8%, Trump 48.4%",
-"summary": "Democrat Adam Gray, who won the nation's closest 2024 House race, faces former Stockton mayor Kevin Lincoln in a Central Valley seat that Prop 50 bolstered by adding Stockton, moving it from R+1 to D+2 (Inside Elections' baseline from even to D+6). Forecasters shifted the race from Toss-up to Lean/Tilt Democratic after the new map (Sabato's Crystal Ball moved it to Likely Democratic on Oct. 20), but heavy Republican outside spending and rightward drift among Latino voters keep it the most competitive district in this group alongside the 6th.",
+"summary": "Democrat Adam Gray, who won the nation's closest 2024 House race, faces former Stockton mayor Kevin Lincoln in a Central Valley seat that Prop 50 bolstered by adding Stockton, moving it from R+1 to D+2 (Inside Elections' baseline from even to D+6). Forecasters shifted the race from Toss-up to Lean/Tilt Democratic after the new map (Sabato's Crystal Ball moved it to Likely Democratic on Oct. 20), but heavy Republican outside spending keeps it one of the state's most competitive districts.",
 "sources": [
 "https://ballotpedia.org/California%27s_13th_Congressional_District_election,_2026",
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_1%E2%80%9326)",
@@ -1436,7 +1436,7 @@
 "website": "https://www.aishawahab.com/",
 "ballotpedia": "https://ballotpedia.org/Aisha_Wahab",
 "bio": "U.S. Representative since September 2026 after winning the special election; previously a California state senator (2022-2026) and Hayward city councilmember, and the first Afghan American in Congress.",
-"platform": "Emphasizes lowering the cost of housing, health care, child care and utilities, and expanding affordable housing and renter protections. Pledges to defend democracy, women's and civil rights and immigrant families while backing 'victim-first' public safety, and to take on billionaires, corporate price-gougers and Wall Street landlords."
+"platform": "Emphasizes lowering the cost of housing, health care, child care and utilities, and expanding affordable housing and renter protections. Pledges to defend democracy, women's and civil rights and immigrant families while backing 'victim-first' public safety, and to take on billionaires, 'corporate price-gougers' and Wall Street landlords."
 },
 {
 "name": "Melissa Hernandez",
@@ -1451,7 +1451,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -1538,7 +1538,7 @@
 "website": "https://www.kevinmullinforcongress.com/",
 "ballotpedia": "https://ballotpedia.org/Kevin_Mullin_(California)",
 "bio": "U.S. Representative since 2023, serving on the Energy and Commerce Committee; previously Speaker pro tempore of the California State Assembly for nearly a decade.",
-"platform": "Prioritizes protecting democracy and voting rights (cosponsor of the Freedom to Vote Act), climate action including the Green New Deal and rail electrification, and lowering housing costs via his Empty Lots to Housing Act. Opposes Republican budget cuts to safety-net programs and the Trump administration's immigration enforcement tactics."
+"platform": "Prioritizes protecting democracy and voting rights (cosponsor of the Freedom to Vote Act), climate action including the Green New Deal and rail electrification, and lowering housing costs via his Empty Lots to Housing Act. Opposes the 2025 Republican budget's cuts to safety-net programs and the Trump administration's immigration enforcement tactics."
 },
 {
 "name": "Charles Hoelter",
@@ -1553,7 +1553,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -1629,7 +1629,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -1637,7 +1637,7 @@
 "likely_winner": "Sam Liccardo",
 "likely_winner_basis": "Unanimous Solid/Safe Democratic ratings, D+25 PVI, and a 75.6%-10.8% primary.",
 "partisan_lean": "D+25 (Cook PVI, new lines); 2024 presidential in new district: Harris 72.3%, Trump 24.2%",
-"summary": "Freshman Democrat Sam Liccardo, who won a Democrat-vs-Democrat contest in 2024, faces Republican investor Peter Soule in the Peninsula/West Valley seat that is the wealthiest district in the nation. Liccardo cleared 75% in the primary. Proposition 50 did not target this district; its lines were adjusted as part of the statewide redraw and its partisan character did not change materially (Cook PVI D+25 under the new lines).",
+"summary": "Freshman Democrat Sam Liccardo, who won a Democrat-vs-Democrat contest in 2024, faces Republican investor Peter Soule in the Peninsula/West Valley seat that is one of the wealthiest districts in the nation. Liccardo cleared 75% in the primary. Proposition 50 did not target this district; its lines were adjusted as part of the statewide redraw and its partisan character did not change materially (Cook PVI D+25 under the new lines).",
 "sources": [
 "https://ballotpedia.org/California%27s_16th_Congressional_District_election,_2026",
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_1%E2%80%9326)",
@@ -1705,7 +1705,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -1787,7 +1787,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -1875,7 +1875,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -1951,7 +1951,7 @@
 ],
 "ratings": {
 "cook": "Solid R",
-"sabato": "Solid R",
+"sabato": "Safe R",
 "inside_elections": "Solid R",
 "as_of": "2026-10-20"
 },
@@ -2172,7 +2172,7 @@
 "likely_winner": null,
 "likely_winner_basis": "Genuine toss-up: Cook and Inside Elections rate it Toss-up (Inside moved from Tilt R in September), Sabato Lean D and DDHQ Likely D; the only public head-to-head poll is a June campaign-sponsored survey showing Villegas +4, while Valadao led the primary 40.7%-32.4% and holds a large fundraising edge.",
 "partisan_lean": "D+1 (Cook PVI, new lines); 2024 presidential in new district: Trump 49.6%, Harris 47.7%",
-"summary": "The marquee race in this range: Republican David Valadao, who has repeatedly survived in a Democratic-leaning Latino-majority Valley seat, faces progressive Democrat Randy Villegas, who upset the DCCC-backed Assemblymember Jasmeet Bains in the primary. Proposition 50 explicitly targeted this seat, adding Democratic-leaning parts of Fresno and removing Republican-leaning areas of Hanford, Tulare and Porterville, shrinking Trump's 2024 margin from about 6 points to under 2.",
+"summary": "One of the most closely watched House races in the state: Republican David Valadao, who has repeatedly survived in a Democratic-leaning Latino-majority Valley seat, faces Democrat Randy Villegas, who upset the DCCC-backed Assemblymember Jasmeet Bains in the primary. Proposition 50 explicitly targeted this seat, adding Democratic-leaning parts of Fresno and removing Republican-leaning areas of Hanford, Tulare and Porterville, shrinking Trump's 2024 margin from about 6 points to under 2.",
 "sources": [
 "https://ballotpedia.org/California%27s_22nd_Congressional_District_election,_2026",
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_1%E2%80%9326)",
@@ -2257,7 +2257,7 @@
 ],
 "ratings": {
 "cook": "Solid R",
-"sabato": "Solid R",
+"sabato": "Safe R",
 "inside_elections": "Solid R",
 "as_of": "2026-10-20"
 },
@@ -2346,7 +2346,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -2354,7 +2354,7 @@
 "likely_winner": "Salud Carbajal",
 "likely_winner_basis": "Unanimous Solid/Safe Democratic ratings and a D+13 district; Carbajal won the primary 54%-36%.",
 "partisan_lean": "D+13 (Cook PVI, new lines); 2024 presidential in new district: Harris 60.9%, Trump 36.0%",
-"summary": "Democrat Salud Carbajal faces Republican Navy veteran Bob Smith (listed as Republican by Ballotpedia and the state, though Wikipedia's candidate list labels him Independent) in the Santa Barbara/San Luis Obispo/Ventura coastal seat. Proposition 50 did not target this district; its lines were adjusted as part of the statewide redraw and its partisan character did not change materially (Cook PVI D+13 under the new lines).",
+"summary": "Democrat Salud Carbajal faces Republican Navy veteran Bob Smith in the Santa Barbara/San Luis Obispo/Ventura coastal seat. Proposition 50 did not target this district; its lines were adjusted as part of the statewide redraw and its partisan character did not change materially (Cook PVI D+13 under the new lines).",
 "sources": [
 "https://ballotpedia.org/California%27s_24th_Congressional_District_election,_2026",
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_1%E2%80%9326)",
@@ -2422,7 +2422,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -2511,12 +2511,12 @@
 "website": "https://samgallucci.com/",
 "ballotpedia": "https://ballotpedia.org/Samuel_Gallucci",
 "bio": "Senior pastor of Embrace Church in Oxnard and former business and technology executive, including at IBM; ran in the 2021 gubernatorial recall.",
-"platform": "Supports lower taxes and deregulation to spur jobs, stricter immigration enforcement and opposition to sanctuary policies, and protecting life from conception. Opposes California's aggressive climate mandates such as the 2035 electric-vehicle requirement."
+"platform": "Supports lower taxes and deregulation to spur jobs, stricter immigration enforcement and opposition to sanctuary policies, and protecting life from conception. Opposes what he calls California's aggressive climate mandates such as the 2035 electric-vehicle requirement."
 }
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -2595,7 +2595,7 @@
 "primary_pct": 40.6,
 "website": "https://www.georgewhitesides.com",
 "ballotpedia": "https://ballotpedia.org/George_Whitesides",
-"bio": "First-term U.S. representative (since Jan. 2025) who flipped the seat in 2024; former NASA chief of staff and CEO of Virgin Galactic.",
+"bio": "First-term U.S. Representative (since Jan. 2025) who flipped the seat in 2024; former NASA chief of staff and CEO of Virgin Galactic.",
 "platform": "Emphasizes lowering everyday costs and housing prices, defending Social Security, Medicare and Medicaid, and addressing the wildfire crisis. Also stresses local job creation, public safety funding and anti-corruption measures, and says he works across the aisle."
 },
 {
@@ -2690,7 +2690,7 @@
 "primary_pct": 62.2,
 "website": "https://www.judychu.org",
 "ballotpedia": "https://ballotpedia.org/Judy_Chu",
-"bio": "U.S. representative since 2009; member of the House Ways and Means Committee and chair emerita of the Congressional Asian Pacific American Caucus.",
+"bio": "U.S. Representative since 2009; member of the House Ways and Means Committee and chair emerita of the Congressional Asian Pacific American Caucus.",
 "platform": "Focuses on health care, Social Security and Medicare and family safety-net programs through her Ways and Means role. Advocates for Asian American and Pacific Islander communities and for copyright protections supporting the creative industries."
 },
 {
@@ -2785,7 +2785,7 @@
 "primary_pct": 51.0,
 "website": "https://www.luzforcongress.com",
 "ballotpedia": "https://ballotpedia.org/Luz_Maria_Rivas",
-"bio": "First-term U.S. representative (since Jan. 2025) and former California Assemblymember from the San Fernando Valley.",
+"bio": "First-term U.S. Representative (since Jan. 2025) and former California Assemblymember from the San Fernando Valley.",
 "platform": "Campaign highlights opposition to Trump administration health care cuts, oversight of ICE detention and a call to abolish ICE, and securing federal funds for higher education, infrastructure and public housing in the Valley. Also stresses environmental protection and her backing from labor unions and teachers."
 },
 {
@@ -2809,7 +2809,7 @@
 "likely_winner": "Luz Maria Rivas",
 "likely_winner_basis": "Rivas took 51.0% in the primary, more than double Dueñas's 24.9%, in a Democrat-vs-Democrat general where the Republican vote (24%) is now up for grabs.",
 "partisan_lean": "D+19 (Cook PVI); 2024 presidential: Harris 65.3%, Trump 31.6% in the new district",
-"summary": "This San Fernando Valley seat features an all-Democratic general election between incumbent Luz Rivas and repeat progressive challenger Angélica María Dueñas after the lone Republican finished a close third in the primary. Proposition 50 adjusted the district's lines but left it one of the most Democratic seats in the region; the outcome is a question of which Democrat wins rather than party control.",
+"summary": "This San Fernando Valley seat features an all-Democratic general election between incumbent Luz Rivas and repeat challenger Angélica María Dueñas after the lone Republican finished a close third in the primary. Proposition 50 adjusted the district's lines but left it one of the most Democratic seats in the region; the outcome is a question of which Democrat wins rather than party control.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_27%E2%80%9352)",
 "https://ballotpedia.org/California%27s_29th_Congressional_District_election,_2026",
@@ -2874,7 +2874,7 @@
 "primary_pct": 52.7,
 "website": "https://www.lauraforcongress.org",
 "ballotpedia": "https://ballotpedia.org/Laura_Friedman",
-"bio": "First-term U.S. representative (since Jan. 2025); former California Assemblymember and Glendale city councilmember and mayor.",
+"bio": "First-term U.S. Representative (since Jan. 2025); former California Assemblymember and Glendale city councilmember and mayor.",
 "platform": "Priorities are affordable housing production and homelessness, fighting climate change with 100% clean energy and transit investment, and protecting civil rights including abortion access and voting rights. Cites a record of passing environmental and housing legislation in Sacramento."
 },
 {
@@ -2963,7 +2963,7 @@
 "primary_pct": 61.1,
 "website": "https://www.gilonthehill.com",
 "ballotpedia": "https://ballotpedia.org/Gil_Cisneros",
-"bio": "U.S. representative since Jan. 2025 (also served 2019-2021); Navy veteran and former Under Secretary of Defense for Personnel and Readiness.",
+"bio": "U.S. Representative since Jan. 2025 (also served 2019-2021); Navy veteran and former Under Secretary of Defense for Personnel and Readiness.",
 "platform": "Platform stresses anti-corruption and campaign-finance reform, refusing donations from pharmaceutical, oil, tobacco, gun and private-prison interests. Also prioritizes raising wages, lowering prescription drug and housing costs, reproductive rights, and services for veterans and students."
 },
 {
@@ -3058,7 +3058,7 @@
 "primary_pct": 36.8,
 "website": "https://www.bradsherman.com/",
 "ballotpedia": "https://ballotpedia.org/Brad_Sherman_(California)",
-"bio": "U.S. representative since 1997; senior member of the House Foreign Affairs and Financial Services committees.",
+"bio": "U.S. Representative since 1997; senior member of the House Foreign Affairs and Financial Services committees.",
 "platform": "Runs on consumer protection (he helped create the Consumer Financial Protection Bureau), transit and freeway funding including Sepulveda Pass rail, and preservation of the Santa Monica Mountains. Highlights Palisades fire recovery and his early opposition to Donald Trump, including introducing impeachment articles in 2017."
 },
 {
@@ -3147,7 +3147,7 @@
 "primary_pct": 53.5,
 "website": "https://peteaguilar.com",
 "ballotpedia": "https://ballotpedia.org/Pete_Aguilar",
-"bio": "U.S. representative since 2015 and chair of the House Democratic Caucus; former mayor of Redlands.",
+"bio": "U.S. Representative since 2015 and chair of the House Democratic Caucus; former mayor of Redlands.",
 "platform": "Emphasizes lowering prescription drug and housing costs, expanding American manufacturing and protecting health care, Social Security and veterans' programs from cuts. Says he works across the aisle on veterans' issues, small-business tax relief and immigration reform."
 },
 {
@@ -3248,7 +3248,7 @@
 "primary_pct": 46.0,
 "website": "https://jimmygomezforcongress.com",
 "ballotpedia": "https://ballotpedia.org/Jimmy_Gomez",
-"bio": "U.S. representative since 2017; former California Assemblymember and political director for the United Nurses Associations of California.",
+"bio": "U.S. Representative since 2017; former California Assemblymember and political director for the United Nurses Associations of California.",
 "platform": "Cosponsor of Medicare for All and the Green New Deal and a member of the Progressive Caucus; emphasizes affordable housing, senior housing, protecting Medicare, Social Security, Medicaid and SNAP, and addressing grocery and childcare costs. Highlights immigration oversight of ICE facilities and a lawsuit over access, and criminal-justice reform."
 },
 {
@@ -3293,9 +3293,9 @@
 }
 ],
 "likely_winner": null,
-"likely_winner_basis": "Gomez led the primary 46.0% to 30.7%, but the only two public polls (both sponsored by Gonzales-Torres or allied groups) show the challenger ahead by 3 and 10 points amid an ongoing House Ethics inquiry into Gomez, so the outcome is genuinely uncertain.",
+"likely_winner_basis": "Gomez led the primary 46.0% to 30.7%, but the only two public polls (both sponsored by Gonzales-Torres or allied groups) show the challenger ahead by 3 and 10 points, so the outcome is genuinely uncertain.",
 "partisan_lean": "D+28 (Cook PVI); 2024 presidential: Harris 73.1%, Trump 22.4%",
-"summary": "This downtown and eastside Los Angeles seat is an all-Democratic contest between incumbent Jimmy Gomez and progressive challenger Angela Gonzales-Torres, who has consolidated support from Justice Democrats, DSA and the Working Families Party. The race was upended in August 2026 when the House Ethics Committee opened an inquiry into sexual-misconduct allegations against Gomez, which he denies. The district's boundaries are unchanged under Proposition 50, so the seat stays safely Democratic regardless of which candidate wins.",
+"summary": "This downtown and eastside Los Angeles seat is an all-Democratic contest between incumbent Jimmy Gomez and challenger Angela Gonzales-Torres, who has consolidated support from Justice Democrats, DSA and the Working Families Party. In August 2026 the House Ethics Committee opened an inquiry into allegations against Gomez, which he denies (Semafor, Sept. 10, 2026). The district's boundaries are unchanged under Proposition 50, so the seat stays safely Democratic regardless of which candidate wins.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_27%E2%80%9352)",
 "https://ballotpedia.org/California%27s_34th_Congressional_District_election,_2026",
@@ -3349,7 +3349,7 @@
 "primary_pct": 59.5,
 "website": "https://www.normatorres.com",
 "ballotpedia": "https://ballotpedia.org/Norma_Torres",
-"bio": "U.S. representative since 2015; former Pomona mayor, state legislator and 911 emergency dispatcher.",
+"bio": "U.S. Representative since 2015; former Pomona mayor, state legislator and 911 emergency dispatcher.",
 "platform": "Campaign emphasizes safer communities, lowering costs, stronger schools and good jobs for Inland Empire working families. Pledges to defend constituents from the Trump administration's immigration enforcement and from cuts to health care and education."
 },
 {
@@ -3450,7 +3450,7 @@
 "primary_pct": 60.9,
 "website": "https://www.lieuforcongress.com/",
 "ballotpedia": "https://ballotpedia.org/Ted_Lieu",
-"bio": "U.S. representative since 2015 and vice chair of the House Democratic Caucus; Air Force veteran serving on the Foreign Affairs and Judiciary committees.",
+"bio": "U.S. Representative since 2015 and vice chair of the House Democratic Caucus; Air Force veteran serving on the Foreign Affairs and Judiciary committees.",
 "platform": "Frames his campaign around defending democracy and the rule of law against extremism and corruption, with a focus on oversight of the Trump administration. Highlights veterans' issues including $35 million for the West LA VA and housing for homeless veterans."
 },
 {
@@ -3527,7 +3527,7 @@
 "primary_pct": 55.2,
 "website": "https://sydneykamlager.com/",
 "ballotpedia": "https://ballotpedia.org/Sydney_Kamlager-Dove",
-"bio": "U.S. representative since 2023; former state senator and Assemblymember and former Los Angeles Community College District trustee.",
+"bio": "U.S. Representative since 2023; former state senator and Assemblymember and former Los Angeles Community College District trustee.",
 "platform": "Campaign emphasizes job creation and economic opportunity in underserved communities, affordable higher education and career training, and access to quality childcare and early education. Draws on a background in arts-based community rebuilding and advocacy for working families."
 },
 {
@@ -3551,7 +3551,7 @@
 "likely_winner": "Sydney Kamlager-Dove",
 "likely_winner_basis": "Kamlager-Dove took 55.2% in a nine-candidate primary versus 11.7% for Mota, who edged out the top Republican for second place.",
 "partisan_lean": "D+33 (Cook PVI); 2024 presidential: Harris 78.7%, Trump 18.3%",
-"summary": "Incumbent Democrat Sydney Kamlager-Dove faces fellow Democrat Samantha Mota in this South and Central Los Angeles seat after Mota narrowly beat Republican Baltazar Fedalizo for the second general-election slot. The district's boundaries are unchanged under Proposition 50 and it is the most Democratic district in this group; the incumbent is a prohibitive favorite.",
+"summary": "Incumbent Democrat Sydney Kamlager-Dove faces fellow Democrat Samantha Mota in this South and Central Los Angeles seat after Mota narrowly beat Republican Baltazar Fedalizo for the second general-election slot. The district's boundaries are unchanged under Proposition 50 and it is one of the most Democratic districts in the state; the incumbent is a prohibitive favorite.",
 "sources": [
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_27%E2%80%9352)",
 "https://ballotpedia.org/California%27s_37th_Congressional_District_election,_2026",
@@ -3604,7 +3604,7 @@
 "primary_pct": 47.6,
 "website": "https://www.hildasolis.com/",
 "ballotpedia": "https://ballotpedia.org/Hilda_Solis",
-"bio": "Los Angeles County Supervisor (2014-present), former U.S. Secretary of Labor (2009-2013) and former U.S. representative (2001-2009).",
+"bio": "Los Angeles County Supervisor (2014-present), former U.S. Secretary of Labor (2009-2013) and former U.S. Representative (2001-2009).",
 "platform": "Says she is running to make government work for people rather than the powerful, with priorities of affordable housing, accessible health care and mental health services, and transparency in government. Supports bold climate action including clean-energy and electric-vehicle incentives and programs to build trust between communities and law enforcement."
 },
 {
@@ -3706,7 +3706,7 @@
 "primary_pct": 61.0,
 "website": "https://www.marktakano.com/",
 "ballotpedia": "https://ballotpedia.org/Mark_Takano",
-"bio": "U.S. representative since 2013 and ranking member of the House Veterans' Affairs Committee; former public school teacher and Riverside Community College trustee.",
+"bio": "U.S. Representative since 2013 and ranking member of the House Veterans' Affairs Committee; former public school teacher and Riverside Community College trustee.",
 "platform": "Focuses on veterans' services, public and higher education and workforce training. Emphasizes his record on the Veterans' Affairs and Education and Workforce committees and his roots in Riverside."
 },
 {
@@ -3789,7 +3789,7 @@
 "primary_pct": 34.9,
 "website": "https://calvertforcongress.com/",
 "ballotpedia": "https://ballotpedia.org/Ken_Calvert",
-"bio": "U.S. representative since 1993 (currently for the old CA-41, Riverside County), a former restaurant and real-estate small-business owner and senior House appropriator.",
+"bio": "U.S. Representative since 1993 (currently for the old CA-41, Riverside County), a former restaurant and real-estate small-business owner and senior House appropriator.",
 "platform": "Runs on his record and seniority, citing authorship of the E-Verify law and more than a billion dollars in federal funding secured for Riverside County transportation, water and clean-air projects. Pledges to back President Trump's agenda of lower taxes, border security, lower housing costs and safer streets, and argues he already represents the majority of the new district."
 },
 {
@@ -3799,13 +3799,13 @@
 "primary_pct": 20.6,
 "website": "https://youngkimforcongress.com/",
 "ballotpedia": "https://ballotpedia.org/Young_Kim",
-"bio": "U.S. representative since 2021 (CA-40, previously CA-39), a former state assemblymember, business owner, financial analyst and longtime aide to Rep. Ed Royce.",
+"bio": "U.S. Representative since 2021 (CA-40, previously CA-39), a former state assemblymember, business owner, financial analyst and longtime aide to Rep. Ed Royce.",
 "platform": "Campaigns on lowering the cost of gas, groceries, utilities, health care and prescription drugs, and on fighting waste and fraud (citing her No More Scams Act). Supports congressional term limits and a ban on members trading individual stocks, and describes herself as an 'America First' ally of President Trump on border security, crime and spending."
 }
 ],
 "ratings": {
 "cook": "Solid R",
-"sabato": "Solid R",
+"sabato": "Safe R",
 "inside_elections": "Solid R",
 "as_of": "2026-10-20"
 },
@@ -3844,7 +3844,7 @@
 "likely_winner": null,
 "likely_winner_basis": "Republican hold is certain, but the member-vs-member outcome is unclear: Calvert won the primary 35%-21% and represents 51% of the new district, while the only public general-election polls (all Kim-aligned) show a tie or a Kim lead, with Democratic voters (43% of the primary vote) deciding.",
 "partisan_lean": "R+6 (Cook PVI); 2024 presidential: Trump 54.6%, Harris 42.4%",
-"summary": "Prop 50 shed much of the old 40th's Orange County territory and added heavily Republican parts of Riverside County from the old 41st and 48th, making the seat about 10 points more Republican and packing two GOP incumbents, Ken Calvert and Young Kim, into one district. Both advanced from the top-two primary, so the November race is an intra-party contest marked by negative advertising over loyalty to President Trump; it is the only member-vs-member House general election in California.",
+"summary": "Prop 50 shed much of the old 40th's Orange County territory and added heavily Republican parts of Riverside County from the old 41st and 48th, making the seat about 10 points more Republican and packing two GOP incumbents, Ken Calvert and Young Kim, into one district. Both advanced from the top-two primary, so the November race is an intra-party contest in which both candidates have emphasized their support for President Trump; it is the only member-vs-member House general election in California.",
 "sources": [
 "https://ballotpedia.org/California%27s_40th_Congressional_District_election,_2026",
 "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California_(districts_27%E2%80%9352)",
@@ -3905,7 +3905,7 @@
 "incumbent": {
 "name": "Linda Sánchez",
 "party": "D",
-"note": "running here (previously represented the old CA-38; the old CA-41's Ken Calvert (R) is running in CA-40)"
+"note": "running here; previously represented the old CA-38"
 },
 "candidates": [
 {
@@ -3915,7 +3915,7 @@
 "primary_pct": 37.5,
 "website": "https://voteforlinda.com",
 "ballotpedia": "https://ballotpedia.org/Linda_S%C3%A1nchez",
-"bio": "U.S. representative since 2003, a UC Berkeley and UCLA Law graduate who worked as a labor and employment attorney and led the Orange County Central Labor Council.",
+"bio": "U.S. Representative since 2003, a UC Berkeley and UCLA Law graduate who worked as a labor and employment attorney and led the Orange County Central Labor Council.",
 "platform": "Campaigns on lowering prices for groceries, utilities and child care and on protecting working families, citing legislation she passed on insurance pricing equity. Opposes the Trump administration's immigration enforcement, saying she pushed to remove DHS Secretary Kristi Noem and to stop funding ICE raids."
 },
 {
@@ -3931,7 +3931,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -4014,7 +4014,7 @@
 "primary_pct": 56.5,
 "website": "https://robertgarcia.com",
 "ballotpedia": "https://ballotpedia.org/Robert_Garcia_(California)",
-"bio": "U.S. representative since 2023 and ranking member of the House Oversight Committee, a Peruvian-born former mayor of Long Beach (2014-2022) and university lecturer.",
+"bio": "U.S. Representative since 2023 and ranking member of the House Oversight Committee, a Peruvian-born former mayor of Long Beach (2014-2022) and university lecturer.",
 "platform": "Frames the race around defending democracy from the 'extreme far-right' and holding the Trump administration accountable. Supports Medicare for All, clean-energy jobs, higher wages, affordable housing, union protections, gun-violence prevention and student-debt cancellation."
 },
 {
@@ -4030,7 +4030,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -4102,7 +4102,7 @@
 "primary_pct": 63.8,
 "website": "https://waters.house.gov",
 "ballotpedia": "https://ballotpedia.org/Maxine_Waters",
-"bio": "U.S. representative since 1991 and senior Democrat on the House Financial Services Committee, a former Head Start teacher who served in the California Assembly from 1977 to 1991.",
+"bio": "U.S. Representative since 1991 and senior Democrat on the House Financial Services Committee, a former Head Start teacher who served in the California Assembly from 1977 to 1991.",
 "platform": "Her official issue priorities center on housing and homelessness, consumer and financial protection, health care, education, criminal-justice reform, immigration and diversity and inclusion. She is a prominent critic of the Trump administration and runs on her long record of delivering federal resources to South Los Angeles communities."
 },
 {
@@ -4118,7 +4118,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -4178,7 +4178,7 @@
 "primary_pct": 77.0,
 "website": "https://barraganforcongress.com/",
 "ballotpedia": "https://ballotpedia.org/Nanette_Barrag%C3%A1n",
-"bio": "U.S. representative since 2017 and a member of the Energy and Commerce Committee, a UCLA and USC Law graduate who previously served on the Hermosa Beach City Council.",
+"bio": "U.S. Representative since 2017 and a member of the Energy and Commerce Committee, a UCLA and USC Law graduate who previously served on the Hermosa Beach City Council.",
 "platform": "Campaigns on protecting and expanding Medicare and Social Security, raising the minimum wage and bringing good-paying jobs to the harbor-area district. Emphasizes affordable college and early-childhood education, immigrant rights, environmental justice and clean-energy transition for communities affected by port and refinery pollution."
 },
 {
@@ -4194,7 +4194,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -4260,7 +4260,7 @@
 "primary_pct": 53.8,
 "website": "https://www.derektranforcongress.com",
 "ballotpedia": "https://ballotpedia.org/Derek_Tran",
-"bio": "First-term U.S. representative elected in 2024 by flipping the seat, a consumer-rights attorney, policy analyst and eight-year U.S. Army Reserve veteran.",
+"bio": "First-term U.S. Representative elected in 2024 by flipping the seat, a consumer-rights attorney, policy analyst and eight-year U.S. Army Reserve veteran.",
 "platform": "Campaigns on lowering prescription-drug and health-care costs, protecting abortion rights and holding corporations accountable for rising prices. Stresses a bipartisan, 'people over politics' approach drawn from his military service and pledges to protect democracy and civil liberties."
 },
 {
@@ -4360,7 +4360,7 @@
 "primary_pct": 51.9,
 "website": "https://www.loucorrea.com",
 "ballotpedia": "https://ballotpedia.org/Lou_Correa",
-"bio": "U.S. representative since 2017, a former state assemblymember, state senator and Orange County supervisor with an MBA and law degree from UCLA.",
+"bio": "U.S. Representative since 2017, a former state assemblymember, state senator and Orange County supervisor with an MBA and law degree from UCLA.",
 "platform": "Presents himself as a pragmatic, bipartisan problem-solver focused on helping working-class Orange County families reach the middle class. Highlights support for veterans, Dreamers and immigrant communities in Anaheim, Santa Ana, Orange and Garden Grove, and on delivering federal resources locally."
 },
 {
@@ -4376,7 +4376,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -4448,7 +4448,7 @@
 "primary_pct": 45.4,
 "website": "https://davemin.com/",
 "ballotpedia": "https://ballotpedia.org/Dave_Min",
-"bio": "First-term U.S. representative elected in 2024, a former state senator, UC Irvine law professor and SEC enforcement attorney with degrees from Wharton and Harvard Law.",
+"bio": "First-term U.S. Representative elected in 2024, a former state senator, UC Irvine law professor and SEC enforcement attorney with degrees from Wharton and Harvard Law.",
 "platform": "Campaigns on holding the Trump administration accountable, including calls to impeach cabinet officials and his Oversight Committee work on the Epstein files, and on opposing ICE enforcement tactics. Also runs on anti-corruption measures, workforce housing, reproductive rights, gun safety and economic policies for working families."
 },
 {
@@ -4464,7 +4464,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -4553,7 +4553,7 @@
 ],
 "ratings": {
 "cook": "Lean D",
-"sabato": "Lean D",
+"sabato": "Likely D",
 "inside_elections": "Tilt D",
 "as_of": "2026-10-20"
 },
@@ -4600,7 +4600,8 @@
 "https://ballotpedia.org/Marni_von_Wilpert",
 "https://ballotpedia.org/Jim_Desmond",
 "https://www.270towin.com/2026-house-polls/california/district-48",
-"https://www.kpbs.org/news/politics/2026/07/29/new-poll-reveals-neck-and-neck-race-for-californias-48th-congressional-seat"
+"https://www.kpbs.org/news/politics/2026/07/29/new-poll-reveals-neck-and-neck-race-for-californias-48th-congressional-seat",
+"https://centerforpolitics.org/crystalball/the-house-28-rating-changes/"
 ],
 "old": [
 {
@@ -4669,7 +4670,7 @@
 "primary_pct": 55.9,
 "website": "https://www.mikelevin.org",
 "ballotpedia": "https://ballotpedia.org/Mike_Levin",
-"bio": "U.S. representative since 2019, a Stanford and Duke Law graduate who worked as an environmental and energy regulatory attorney.",
+"bio": "U.S. Representative since 2019, a Stanford and Duke Law graduate who worked as an environmental and energy regulatory attorney.",
 "platform": "Runs on a record of bipartisan lawmaking and more than $1.1 billion in federal funding secured for the district, with emphasis on veterans (named VFW Legislator of the Year), clean water, infrastructure and coastal and environmental protection. Pitches himself as putting 'people ahead of politics.'"
 },
 {
@@ -4685,7 +4686,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -4763,7 +4764,7 @@
 "primary_pct": 48.1,
 "website": "https://scottpeters.com",
 "ballotpedia": "https://ballotpedia.org/Scott_Peters_(California)",
-"bio": "U.S. representative since 2013 (CA-50 since 2023, previously CA-52), an environmental attorney who was San Diego's first City Council president and chaired the Port of San Diego.",
+"bio": "U.S. Representative since 2013 (CA-50 since 2023, previously CA-52), an environmental attorney who was San Diego's first City Council president and chaired the Port of San Diego.",
 "platform": "Campaigns on making San Diego affordable through lower housing costs and utility bills, protecting Medicare and lowering health-care costs, and investing in clean energy and infrastructure. Highlights more than $650 million he secured to fix the South Bay sewage plant and a record of bipartisan legislation."
 },
 {
@@ -4779,7 +4780,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -4851,7 +4852,7 @@
 "primary_pct": 57.7,
 "website": "https://sarajacobsforca.com",
 "ballotpedia": "https://ballotpedia.org/Sara_Jacobs",
-"bio": "U.S. representative since 2021, a third-generation San Diegan and Columbia graduate who worked at the State Department, UNICEF and the UN and founded San Diego for Every Child.",
+"bio": "U.S. Representative since 2021, a third-generation San Diegan and Columbia graduate who worked at the State Department, UNICEF and the UN and founded San Diego for Every Child.",
 "platform": "Campaigns on treating health care as a human right, affordable housing, bold action on climate change and ending gun violence. Emphasizes defending access to reproductive care and equal opportunity for every child."
 },
 {
@@ -4867,7 +4868,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },
@@ -4945,7 +4946,7 @@
 "primary_pct": 56.5,
 "website": "https://www.votevargas.com",
 "ballotpedia": "https://ballotpedia.org/Juan_Vargas",
-"bio": "U.S. representative since 2013 and a member of the Financial Services Committee, a National City native and Harvard Law graduate who served in the state Assembly and Senate.",
+"bio": "U.S. Representative since 2013 and a member of the Financial Services Committee, a National City native and Harvard Law graduate who served in the state Assembly and Senate.",
 "platform": "Runs on his legislative record, including bills on medical-supply production, anti-trafficking and corporate ESG disclosure, and on preserving landmarks such as Chicano Park. Emphasizes opportunity for immigrant and border communities and ensuring 'no one is left behind' in the South Bay."
 },
 {
@@ -4961,7 +4962,7 @@
 ],
 "ratings": {
 "cook": "Solid D",
-"sabato": "Solid D",
+"sabato": "Safe D",
 "inside_elections": "Solid D",
 "as_of": "2026-10-20"
 },

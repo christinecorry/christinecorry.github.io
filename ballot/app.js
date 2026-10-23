@@ -1,10 +1,11 @@
 /* California congressional map · 2026 */
 (async function () {
-  const [races, newGJ, oldGJ] = await Promise.all([
-    fetch('data/races.json', { cache: 'no-cache' }).then(r => r.json()),
-    fetch('data/new_districts.geojson').then(r => r.json()),
-    fetch('data/old_districts.geojson').then(r => r.json()),
-  ]);
+  const getJSON = (u, opts) => fetch(u, opts).then(r => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); });
+  let races, newGJ;
+  try { [races, newGJ] = await Promise.all([getJSON('data/races.json', { cache: 'no-cache' }), getJSON('data/new_districts.geojson')]); }
+  catch (err) { document.getElementById('panel-inner').innerHTML = '<p class="empty">Couldn\'t load the election data. Please reload the page.</p>'; return; }
+  let oldGJ = null, oldLoading = null;
+  function loadOld() { return oldLoading || (oldLoading = getJSON('data/old_districts.geojson').then(g => { oldGJ = g; map.getSource('old').setData(g); return g; })); }
   const D = races.districts;
   document.getElementById('updated').textContent = 'updated ' + races.updated;
 
@@ -48,7 +49,7 @@
     return 'gain-' + lp.toLowerCase();
   }
   const FLIP_COLOR = { 'gain-d': COLOR['solid-d'], 'gain-r': COLOR['solid-r'], 'hold-d': COLOR['lean-d'], 'hold-r': COLOR['lean-r'], unknown: COLOR.none };
-  const FLIP_LABEL = { 'gain-d': 'Likely D pickup', 'gain-r': 'Likely R pickup', 'hold-d': 'D hold', 'hold-r': 'R hold', unknown: 'Unclear' };
+  const FLIP_LABEL = { 'gain-d': 'Favored D pickup', 'gain-r': 'Favored R pickup', 'hold-d': 'D hold', 'hold-r': 'R hold', unknown: 'Unclear' };
 
   let mode = 'rating';
   function fillFor(d) {
@@ -63,7 +64,7 @@
   const map = new maplibregl.Map({
     container: 'map', style: 'https://tiles.openfreemap.org/styles/positron',
     bounds: CA_BOUNDS, fitBoundsOptions: { padding: 10 }, minZoom: 4.5, maxZoom: 14,
-    attributionControl: { compact: false }, dragRotate: false, pitchWithRotate: false,
+    attributionControl: {}, dragRotate: false, pitchWithRotate: false,
   });
   window.caMap = map;
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
@@ -80,7 +81,7 @@
     const walk = c => { if (typeof c[0] === 'number') { if (c[0] < w) w = c[0]; if (c[0] > e) e = c[0]; if (c[1] < s) s = c[1]; if (c[1] > n) n = c[1]; } else c.forEach(walk); };
     walk(geom.coordinates); return [[w, s], [e, n]];
   }
-  const oldBBox = {}; oldGJ.features.forEach(f => { oldBBox[f.properties.DISTRICT] = bboxOf(f.geometry); });
+  const oldBBox = {};
 
   // district-number label points; each carries the zoom at which the district is ~48px wide
   const numsGJ = { type: 'FeatureCollection', features: Object.keys(D).map(d => {
@@ -92,7 +93,7 @@
   map.on('load', () => {
     const before = map.getStyle().layers.find(l => l.type === 'symbol').id; // keep basemap place names above our fills
     map.addSource('new', { type: 'geojson', data: newGJ, promoteId: 'DISTRICT' });
-    map.addSource('old', { type: 'geojson', data: oldGJ, promoteId: 'DISTRICT' });
+    map.addSource('old', { type: 'geojson', data: { type: 'FeatureCollection', features: [] }, promoteId: 'DISTRICT' });
     map.addSource('nums', { type: 'geojson', data: numsGJ });
     map.addLayer({ id: 'new-fill', type: 'fill', source: 'new', paint: { 'fill-color': colorExpr(), 'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.78, 0.62] } }, before);
     map.addLayer({ id: 'new-line', type: 'line', source: 'new', paint: { 'line-color': '#ffffff', 'line-width': 1.2, 'line-opacity': 0.9 } }, before);
@@ -135,6 +136,7 @@
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const SUFFIX = new Set(['ii', 'iii', 'iv', 'jr', 'jr.', 'sr', 'sr.']), PARTICLE = new Set(['von', 'van', 'de', 'da', 'del', 'della', 'di', 'la', 'le', 'du']);
   function last(n) {
+    if (/^(undecided|other|generic|someone|none|refused|don)/i.test(n)) return n;
     const t = n.replace(/\(.*?\)/g, '').trim().split(/\s+/);
     while (t.length > 1 && SUFFIX.has(t[t.length - 1].toLowerCase())) t.pop();
     let i = t.length - 1; while (i > 0 && PARTICLE.has(t[i - 1].toLowerCase())) i--;
@@ -163,10 +165,10 @@
     for (const d in D) { const k = mode === 'flip' ? flipStatus(D[d]) : mode === 'margin' ? (likelyParty(D[d]) || 'none') : category(D[d]); counts[k] = (counts[k] || 0) + 1; }
     let rows;
     if (mode === 'flip') rows = ['gain-d', 'hold-d', 'hold-r', 'gain-r', 'unknown'].map(k => [FLIP_COLOR[k], FLIP_LABEL[k], counts[k] || 0]);
-    else if (mode === 'margin') rows = ['D', 'R', 'none'].map(k => [k === 'none' ? COLOR.none : PARTY_COLOR[k], k === 'none' ? 'Unclear' : 'Likely ' + PARTY_NAME[k], counts[k] || 0]);
+    else if (mode === 'margin') rows = ['D', 'R', 'none'].map(k => [k === 'none' ? COLOR.none : PARTY_COLOR[k], k === 'none' ? 'Unclear' : 'Favored: ' + PARTY_NAME[k], counts[k] || 0]);
     else rows = [...CATS, 'none'].map(k => [COLOR[k], CAT_LABEL[k], counts[k] || 0]).filter(r => r[2] || r[1] !== 'No data');
     legend.innerHTML = rows.map(([c, l, n]) => `<div class="row">${sw(c)}<span>${l}</span><span class="cnt">${n}</span></div>`).join('') +
-      `<div class="row">${overlayOn ? '<span class="sw line"></span><span>2021 district boundaries</span>' : ''}</div>`;
+      (overlayOn ? '<div class="row"><span class="sw line"></span><span>2021 district boundaries</span></div>' : '');
   }
 
   // ---------- strip ----------
@@ -193,7 +195,7 @@
     const names = (r.candidates || []).map(c => c.name);
     return `<table class="polls"><thead><tr><th>Poll</th><th>Dates</th><th style="text-align:right">Result</th></tr></thead><tbody>` +
       r.polls.map(p => {
-        const res = Object.entries(p.results || {});
+        const res = Object.entries(p.results || {}).filter(([, v]) => v != null);
         const bar = res.map(([n, v]) => { const c = (r.candidates || []).find(c => c.name === n || last(c.name) === last(n)); return `<span style="width:${v}%;background:${c ? PARTY_COLOR[c.party] : '#bbb'}"></span>`; }).join('');
         return `<tr><td>${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.pollster)}</a>` : esc(p.pollster)}${p.sample ? `<br><small style="color:var(--ink-3)">${esc(p.sample)}</small>` : ''}</td><td>${esc(p.dates || '')}</td><td class="n">${res.map(([n, v]) => `${esc(last(n))} ${v}`).join('<br>')}<div class="poll-bar">${bar}</div></td></tr>`;
       }).join('') + '</tbody></table>';
@@ -201,7 +203,7 @@
   function candHTML(c, r) {
     const lw = r.likely_winner && c.name === r.likely_winner;
     return `<div class="cand ${lw ? 'likely' : ''}">
-      <div class="cand-head">${pd(c.party)}<span class="name">${esc(c.name)}</span><span class="tag" title="${PARTY_NAME[c.party] || ''}">${esc(c.party)}</span>${c.incumbent ? '<span class="tag">Incumbent</span>' : ''}${lw ? '<span class="tag lw">Likely winner</span>' : ''}${c.primary_pct != null ? `<span class="pct">${Math.round(c.primary_pct * 10) / 10}% in June primary</span>` : ''}</div>
+      <div class="cand-head">${c.party ? pd(c.party) : ''}<span class="name">${esc(c.name)}</span>${c.party ? `<span class="tag" title="${PARTY_NAME[c.party] || ''}">${esc(c.party)}</span>` : ''}${c.incumbent ? '<span class="tag">Incumbent</span>' : ''}${lw ? '<span class="tag lw">Favored</span>' : ''}${c.primary_pct != null ? `<span class="pct">${Math.round(c.primary_pct * 10) / 10}% in June primary</span>` : ''}</div>
       ${c.bio ? `<p class="bio">${esc(c.bio)}</p>` : ''}
       <details><summary>Platform and links</summary>
         ${c.platform ? `<p class="platform">${esc(c.platform)}</p>` : '<p class="empty">No platform summary available.</p>'}
@@ -260,23 +262,28 @@
     if (d) {
       if (zoom) mapReady.then(() => map.fitBounds(bboxOfNew(d), { padding: 30, maxZoom: 11, duration: 800 }));
       renderPanel(d); history.replaceState(null, '', '#d' + d); jump.value = d;
-    } else { renderOverview(); history.replaceState(null, '', ' '); jump.value = ''; }
+      if (zoom && matchMedia('(max-width: 860px)').matches) document.getElementById('panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else { renderOverview(); history.replaceState(null, '', location.pathname + location.search); jump.value = ''; }
     strip.querySelectorAll('button').forEach((b, i) => b.classList.toggle('sel', i + 1 === d));
   }
   let flashTimer = null;
   function flashOld(o) {
     if (!overlayOn) { document.getElementById('overlay').checked = true; setOverlay(true); }
-    map.setFilter('old-flash', only(o)); map.setFilter('old-flash-line', only(o));
-    const [[w1, s1], [e1, n1]] = oldBBox[o], [[w2, s2], [e2, n2]] = bboxOfNew(selected);
-    map.fitBounds([[Math.min(w1, w2), Math.min(s1, s2)], [Math.max(e1, e2), Math.max(n1, n2)]], { padding: 30, maxZoom: 11, duration: 800 });
-    clearTimeout(flashTimer);
-    flashTimer = setTimeout(() => { map.setFilter('old-flash', NONE); map.setFilter('old-flash-line', NONE); }, 2600);
+    const sel = selected;
+    mapReady.then(loadOld).then(g => {
+      if (!oldBBox[o]) g.features.forEach(f => { oldBBox[f.properties.DISTRICT] = bboxOf(f.geometry); });
+      map.setFilter('old-flash', only(o)); map.setFilter('old-flash-line', only(o));
+      const [[w1, s1], [e1, n1]] = oldBBox[o], [[w2, s2], [e2, n2]] = bboxOfNew(sel || selected);
+      map.fitBounds([[Math.min(w1, w2), Math.min(s1, s2)], [Math.max(e1, e2), Math.max(n1, n2)]], { padding: 30, maxZoom: 11, duration: 800 });
+      clearTimeout(flashTimer);
+      flashTimer = setTimeout(() => { map.setFilter('old-flash', NONE); map.setFilter('old-flash-line', NONE); }, 2600);
+    });
   }
 
   // ---------- controls ----------
   function setOverlay(on) {
     overlayOn = on;
-    mapReady.then(() => ['old-line', 'old-fill'].forEach(id => map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none')));
+    mapReady.then(() => { if (on) loadOld(); ['old-line', 'old-fill'].forEach(id => map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none')); });
     renderLegend();
   }
   document.getElementById('overlay').onchange = e => setOverlay(e.target.checked);
