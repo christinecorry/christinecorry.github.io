@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>California's New Congressional Map · 2026</title>
+<meta name="description" content="Interactive map of California's 52 congressional districts under Proposition 50, color-coded by the 2026 House races, with candidates, ratings, polls and the 2021 boundaries for comparison.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://tiles.openfreemap.org" crossorigin>
+<link rel="preload" href="data/races.json" as="fetch" crossorigin>
+<link rel="preload" href="data/new_districts.geojson" as="fetch" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <nav class="tabs"><a href="index.html" class="on">Map</a><a href="ballot.html">Ballot</a></nav>
+    <h1>California's new congressional map</h1>
+    <p class="sub">52 districts under Proposition 50 · House elections, November 3, 2026</p>
+  </div>
+  <div class="strip" id="strip" aria-label="All 52 districts by race rating"></div>
+  <div class="controls">
+    <label class="ctl"><span>Color by</span>
+      <select id="mode">
+        <option value="rating">race rating</option>
+        <option value="flip">change from 2021 map</option>
+        <option value="margin">likely winner's party</option>
+      </select>
+    </label>
+    <label class="ctl check"><input type="checkbox" id="overlay"> <span>2021 boundaries</span></label>
+    <label class="ctl"><span>Go to</span>
+      <select id="jump"><option value="">district…</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="stage">
+  <div id="map" role="application" aria-label="Map of California congressional districts"></div>
+
+  <div class="tip" id="tip" hidden></div>
+  <div class="legend" id="legend"></div>
+
+  <aside class="panel" id="panel" aria-live="polite">
+    <div class="panel-inner" id="panel-inner"></div>
+  </aside>
+</main>
+
+<footer class="foot">
+  <span>Compiled by Christine Corry from public sources. "Likely winner" summarizes the Cook, Sabato and Inside Elections ratings and primary results, not an endorsement.</span>
+  <span>Boundaries: <a href="https://aelc.assembly.ca.gov/proposed-congressional-map">AB 604 (Prop 50)</a> and the <a href="https://wedrawthelines.ca.gov/final-maps/">2021 Citizens Redistricting Commission</a>.</span>
+  <span>Race data compiled from Ballotpedia, Wikipedia, Cook Political Report, Sabato's Crystal Ball and Inside Elections; <span id="updated"></span>.</span>
+</footer>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="app.js?v=11"></script>
+</body>
+</html>
