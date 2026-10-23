@@ -1,0 +1,1593 @@
+:root {
+  --paper: #e7ddc5;
+  --paper-deep: #dbd0b2;
+  --panel: #f0e9d6a8;
+  --text: #37332a;
+  --ink-soft: #6f6650;
+  --line: #8d7f5f59;
+  --accent: #35486e;
+  --accent-strong: #22345a;
+  --disc: #23355a;
+  --starlight: #f2edd9;
+  --disc-line: rgba(242, 237, 217, 0.4);
+  --disc-faint: rgba(242, 237, 217, 0.14);
+  --font-serif: "Crimson Pro", Georgia, serif;
+  --font-head: "Brygada 1918", Georgia, serif;
+  --font-display: "IM Fell DW Pica", "IM Fell English", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.06rem;
+  color: var(--text);
+  line-height: 1.65;
+  background-color: var(--paper);
+  /* aged paper: soft stains + fine speckle */
+  background-image:
+    radial-gradient(ellipse 40% 30% at 12% 8%,  rgba(141, 127, 95, 0.10), transparent 70%),
+    radial-gradient(ellipse 35% 28% at 88% 90%, rgba(141, 127, 95, 0.09), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 50% 45%, rgba(255, 252, 240, 0.25), transparent 75%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cg fill='%236f6650'%3E%3Ccircle cx='17' cy='33' r='.7' opacity='.10'/%3E%3Ccircle cx='84' cy='12' r='.9' opacity='.07'/%3E%3Ccircle cx='150' cy='47' r='.6' opacity='.09'/%3E%3Ccircle cx='214' cy='25' r='.8' opacity='.06'/%3E%3Ccircle cx='45' cy='92' r='.7' opacity='.08'/%3E%3Ccircle cx='121' cy='109' r='1' opacity='.06'/%3E%3Ccircle cx='196' cy='88' r='.6' opacity='.10'/%3E%3Ccircle cx='28' cy='158' r='.9' opacity='.07'/%3E%3Ccircle cx='96' cy='173' r='.6' opacity='.09'/%3E%3Ccircle cx='167' cy='150' r='.8' opacity='.07'/%3E%3Ccircle cx='228' cy='176' r='.7' opacity='.08'/%3E%3Ccircle cx='60' cy='215' r='.8' opacity='.06'/%3E%3Ccircle cx='139' cy='228' r='.7' opacity='.09'/%3E%3Ccircle cx='205' cy='218' r='.9' opacity='.06'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+a:hover {
+  color: var(--accent-strong);
+  border-bottom-color: var(--accent);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  color: var(--accent-strong);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Engraved linework defaults for inline SVG decorations */
+
+.deco, .sprig, .emblem, .soundwave {
+  stroke: var(--ink-soft);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.sprig circle { fill: var(--ink-soft); stroke: none; }
+.emblem .faint { stroke: var(--line); }
+
+/* Engraved plate border */
+
+.sketch-box {
+  background-color: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  outline: 1px solid var(--line);
+  outline-offset: -6px;
+}
+
+/* Header */
+
+.site-header {
+  background-color: rgba(231, 221, 197, 0.94);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 14px 24px;
+  gap: 12px;
+}
+
+.site-name {
+  font-size: 1.45rem;
+  letter-spacing: 0.04em;
+  color: var(--accent-strong);
+  border-bottom: none;
+}
+
+.site-name:hover {
+  color: var(--accent);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  padding: 2px 2px;
+  transition: color 0.15s ease;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.site-nav a.active {
+  color: var(--accent-strong);
+  border-bottom-color: var(--accent);
+}
+
+.nav-star {
+  color: var(--line);
+  font-size: 0.6rem;
+  user-select: none;
+}
+
+/* Tab panels */
+
+.tab-panel {
+  display: none;
+  padding: 48px 0 72px;
+  animation: fade-in 0.3s ease;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.panel-title {
+  font-size: 2.4rem;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.sprig {
+  width: 220px;
+  height: 34px;
+  display: block;
+  margin: 4px auto 8px;
+}
+
+.sprig-left {
+  margin: 2px 0 10px;
+}
+
+.panel-intro {
+  color: var(--ink-soft);
+  max-width: 560px;
+  margin: 0 0 32px;
+}
+
+.subheading {
+  font-size: 1.45rem;
+  margin: 40px 0 14px;
+}
+
+/* Hero (Home): the planisphere */
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 4px 0 8px;
+}
+
+.starmap {
+  display: block;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+.starmap.zooming {
+  transform: scale(7);
+  opacity: 0;
+}
+
+/* the blue sky disc */
+.starmap .disc {
+  fill: var(--disc);
+}
+
+.starmap .disc-edge {
+  fill: none;
+  stroke: var(--ink-soft);
+  stroke-width: 0.8;
+}
+
+.starmap .rim {
+  fill: none;
+  stroke: var(--disc-line);
+  stroke-width: 0.6;
+}
+
+.starmap .grid {
+  stroke: var(--disc-faint);
+  stroke-width: 0.5;
+  fill: none;
+}
+
+.starmap .milkyway circle {
+  fill: var(--starlight);
+}
+
+.starmap use {
+  stroke: var(--starlight);
+  fill: var(--starlight);
+  stroke-width: 0.7;
+  transition: stroke 0.2s ease, fill 0.2s ease;
+}
+
+.starmap .pulse {
+  animation: star-pulse 3.4s ease-in-out infinite;
+}
+
+@keyframes star-pulse {
+  0%, 100% { opacity: 0.3; }
+  50%      { opacity: 1; }
+}
+
+.starmap .lines {
+  stroke: var(--disc-line);
+  stroke-width: 0.8;
+  fill: none;
+}
+
+.starmap .figure {
+  stroke: var(--disc-line);
+  stroke-width: 0.9;
+  fill: none;
+}
+
+.starmap .nebula circle {
+  fill: var(--starlight);
+}
+
+.starmap text {
+  font-family: var(--font-display);
+}
+
+.map-name {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  fill: var(--starlight);
+  text-anchor: middle;
+}
+
+.map-tagline {
+  font-size: 16px;
+  font-style: italic;
+  fill: var(--starlight);
+  opacity: 0.75;
+  text-anchor: middle;
+  letter-spacing: 1px;
+}
+
+/* curved text on the paper rim */
+.rim-text {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  fill: var(--text);
+  opacity: 0.85;
+}
+
+/* constellation labels: pale, curved, engraved caps */
+.const-label {
+  font-size: 13.5px;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  fill: var(--starlight);
+  opacity: 0.92;
+  transition: opacity 0.2s ease;
+}
+
+.starmap .const {
+  cursor: pointer;
+}
+
+.starmap .hit {
+  fill: transparent;
+  stroke: none;
+}
+
+/* dotted constellation lines, planisphere style */
+.starmap .const .lines {
+  stroke: var(--starlight);
+  stroke-width: 1;
+  stroke-dasharray: 0.2 4.5;
+  stroke-linecap: round;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.starmap .const:hover .const-label {
+  opacity: 1;
+  fill: #ffffff;
+}
+
+.starmap .const:hover .lines {
+  opacity: 1;
+}
+
+.starmap .const:hover use {
+  stroke: #ffffff;
+  fill: #ffffff;
+}
+
+.starmap .const:hover .figure {
+  stroke: var(--starlight);
+}
+
+.starmap .const:hover .nebula circle {
+  opacity: 0.9;
+}
+
+/* ink medallions + legend on the paper margin */
+.starmap .medallion {
+  stroke: var(--ink-soft);
+  stroke-width: 0.8;
+  fill: none;
+}
+
+.medallion-label, .legend-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  fill: var(--ink-soft);
+  text-anchor: middle;
+}
+
+.legend-title {
+  font-size: 13px;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 1.5px;
+}
+
+.starmap .legend use {
+  stroke: var(--ink-soft);
+  fill: var(--ink-soft);
+}
+
+.legend-num {
+  font-size: 11px;
+  fill: var(--ink-soft);
+  text-anchor: middle;
+}
+
+.emblem {
+  width: 190px;
+  height: 190px;
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.hero-links a {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 6px 18px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.hero-links a:hover {
+  border-color: var(--accent);
+}
+
+.about-portrait {
+  width: 230px;
+  margin: 36px auto 0;
+  padding: 12px;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.narrative {
+  max-width: 640px;
+  margin: 30px auto 0;
+  padding: 30px 36px;
+}
+
+.narrative p {
+  margin: 0 0 18px;
+}
+
+.narrative p:last-child {
+  margin-bottom: 0;
+}
+
+/* Cards (Writing, Songs) */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  display: block;
+  padding: 20px 24px;
+  color: var(--text);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.card h3 {
+  margin: 0 0 2px;
+  font-size: 1.35rem;
+}
+
+.card p {
+  margin: 6px 0 0;
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+.card-date {
+  font-style: italic;
+  font-size: 0.95rem !important;
+  color: var(--accent) !important;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px !important;
+}
+
+.tag {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent-strong);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 2px 10px;
+}
+
+/* Songs */
+
+.song-embed {
+  padding: 14px;
+}
+
+.song-embed iframe {
+  display: block;
+  border: 0;
+  border-radius: 10px;
+}
+
+.soundwave {
+  width: 130px;
+  height: 32px;
+  display: block;
+  margin-bottom: 10px;
+  stroke: var(--accent);
+}
+
+/* Pictures: naturalist's plates */
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.plate {
+  width: 250px;
+  margin: 0;
+  padding: 14px 14px 8px;
+  transition: border-color 0.2s ease;
+}
+
+.plate:hover {
+  border-color: var(--accent);
+}
+
+.plate img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--line);
+  border-radius: 2px;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.plate-caption {
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 8px 0 4px;
+}
+
+/* Curiosities */
+
+.mag {
+  width: 15px;
+  height: 15px;
+  stroke: var(--ink-soft);
+  fill: var(--ink-soft);
+  stroke-width: 1;
+  flex-shrink: 0;
+}
+
+.curio-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+
+.curio-legend {
+  margin: 0 0 28px;
+}
+
+.legend-caption {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+}
+
+.legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  margin: 0;
+}
+
+.legend-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+}
+
+.curio-player {
+  display: block;
+  border: 0;
+  border-radius: 10px;
+}
+
+.curio-song-card {
+  display: block;
+  color: var(--text);
+  transition: border-color 0.15s ease;
+}
+
+.curio-song-card:hover {
+  border-color: var(--accent);
+}
+
+.curio-song-card .item-attr {
+  margin-bottom: 0;
+}
+
+.curio-song-card .soundwave {
+  margin-bottom: 6px;
+}
+
+.plate-item {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.plate-item img,
+.plate-item video {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+}
+
+/* living-picture videos: silent loop, controls on hover */
+.video-wrap {
+  position: relative;
+}
+
+.video-controls {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.video-wrap:hover .video-controls,
+.video-wrap.paused .video-controls {
+  opacity: 1;
+}
+
+.vbtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background-color: rgba(231, 221, 197, 0.88);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.vbtn:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
+.vbtn svg {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.ic-play, .ic-muted { display: none; }
+.video-wrap.paused .ic-play { display: block; }
+.video-wrap.paused .ic-pause { display: none; }
+.video-wrap.muted .ic-muted { display: block; }
+.video-wrap.muted .ic-sound { display: none; }
+
+.poem-text {
+  white-space: pre-line;
+}
+
+.poem-link {
+  margin: 12px 0 0;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* Things I Like */
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+}
+
+.pill {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 5px 16px;
+  transition: border-color 0.15s ease;
+}
+
+.pill:hover {
+  border-color: var(--accent);
+}
+
+.masonry {
+  columns: 3 270px;
+  column-gap: 22px;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 22px;
+  padding: 20px 24px;
+}
+
+.item-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.item-attr {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin: 2px 0 10px;
+}
+
+.item-body {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+/* CV / contact pages (multi-page leftovers) */
+
+.section {
+  padding: 48px 0;
+}
+
+h2 {
+  font-size: 1.9rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+  margin: 0 0 24px;
+}
+
+.no-border {
+  border-bottom: none;
+}
+
+.cv-intro-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cv-intro-inner h2 {
+  margin-bottom: 0;
+}
+
+.pdf-button {
+  display: inline-block;
+  padding: 6px 20px;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.pdf-button:hover {
+  background-color: var(--paper-deep);
+}
+
+.entry {
+  margin-bottom: 28px;
+}
+
+.entry-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.entry-header h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.entry-date {
+  color: var(--accent);
+  font-style: italic;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.entry-org {
+  margin: 4px 0 8px;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.entry ul {
+  margin: 8px 0 0;
+  padding-left: 22px;
+}
+
+.entry li {
+  margin-bottom: 6px;
+}
+
+.coursework {
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.plain-list, .pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plain-list li, .pub-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.plain-list li:last-child, .pub-list li:last-child {
+  border-bottom: none;
+}
+
+.pub-list li {
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.skill-block h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.skill-block p {
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+/* Footer */
+
+.site-footer {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.hills {
+  display: block;
+  width: 100%;
+  height: 54px;
+  fill: var(--paper-deep);
+  stroke: var(--line);
+  stroke-width: 0.7;
+}
+
+.site-footer .container {
+  background-color: var(--paper-deep);
+  max-width: none;
+  margin: 0;
+  padding: 4px 24px 20px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-star {
+  color: var(--accent);
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-star {
+    display: none;
+  }
+  .panel-title {
+    font-size: 1.9rem;
+  }
+  .plate {
+    width: 100%;
+  }
+}
+
+/* CV: a row of institutional seals; hover or click one to read the entry */
+
+.seals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 6px 4px;
+  margin: 4px 0 22px;
+}
+
+.seals::before {
+  /* fine rule running behind the seals, like a chart's horizon line */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid var(--line);
+}
+
+.seal {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: border-color 0.25s ease;
+}
+
+.seal::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: border-color 0.25s ease;
+}
+
+.seal img {
+  width: 62%;
+  height: 62%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: grayscale(1) sepia(0.4) contrast(1.05) opacity(0.78);
+  transition: filter 0.3s ease;
+  pointer-events: none;
+}
+
+.seal:hover,
+.seal:focus-visible,
+.seal.active {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.seal:hover::before,
+.seal:focus-visible::before,
+.seal.active::before {
+  border-color: var(--line);
+}
+
+.seal:hover img,
+.seal:focus-visible img,
+.seal.active img {
+  filter: none;
+}
+
+.seal.pinned::before {
+  border-color: var(--accent);
+}
+
+.seal-card {
+  min-height: 150px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.seal-card.show {
+  opacity: 1;
+}
+
+.seal-card .entry-header h3 {
+  font-size: 1.25rem;
+}
+
+.seal-card .entry-org {
+  margin: 2px 0 8px;
+}
+
+.seal-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.seal-card .card-entry + .card-entry {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+/* extra material shown only under the seals, not in the traditional list */
+.entry .entry-more {
+  display: none;
+}
+
+.seal-card .entry-more {
+  display: block;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.more-item + .more-item {
+  margin-top: 16px;
+}
+
+.more-title {
+  margin: 0 0 4px;
+  font-size: 1.08rem;
+}
+
+.more-venue {
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.more-abstract + .more-abstract {
+  margin-top: 8px;
+}
+
+.more-abstract {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+@media (max-width: 720px) {
+  .seals {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+  .seals::before {
+    display: none;
+  }
+  .seal {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+/* Full-bleed interactive planisphere (home) */
+
+#panel-home {
+  padding: 0;
+  max-width: none;
+}
+
+.hero {
+  position: relative;
+  height: calc(100vh - 70px);
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.starmap {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  display: block;
+  touch-action: none;
+  cursor: grab;
+}
+
+.starmap.dragging { cursor: grabbing; }
+
+.starmap .clines polyline {
+  stroke: var(--disc-faint);
+  stroke-width: 0.6;
+  fill: none;
+}
+
+.starmap .ecliptic {
+  stroke: var(--disc-line);
+  stroke-width: 0.5;
+  stroke-dasharray: 2 5;
+  fill: none;
+  opacity: 0.5;
+}
+
+.cname {
+  font-family: var(--font-serif);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  fill: var(--starlight);
+  opacity: 0.2;
+  text-anchor: middle;
+  transition: opacity 0.45s ease;
+}
+
+.starmap.deep .cname { opacity: 0.8; }
+
+.rim-num {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  fill: var(--disc-line);
+  text-anchor: middle;
+}
+
+.starmap .dot { fill: var(--starlight); stroke: none; }
+
+.map-title {
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.starmap.explored .map-title { opacity: 0; }
+
+.hero .hero-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  margin: 0;
+}
+
+.hero .hero-links a {
+  color: var(--starlight);
+  border-color: rgba(242, 237, 217, 0.4);
+  background: rgba(34, 52, 90, 0.3);
+}
+
+.hero .hero-links a:hover {
+  color: var(--starlight);
+  border-color: var(--starlight);
+}
+
+/* planisphere refinements */
+#panel-home {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.starmap {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.starmap .clines polyline,
+.starmap .grid line,
+.starmap .grid circle,
+.starmap .ecliptic {
+  vector-effect: non-scaling-stroke;
+}
+
+.cname {
+  opacity: 0.12;
+  font-size: calc(10px * var(--lbl, 1));
+  letter-spacing: calc(2.5px * var(--lbl, 1));
+}
+
+.starmap .const-label {
+  font-size: calc(13.5px * var(--lbl, 1));
+  letter-spacing: calc(3.5px * var(--lbl, 1));
+}
+
+/* constellation lines strengthen with zoom */
+.starmap .clines polyline {
+  transition: stroke 0.45s ease, stroke-width 0.45s ease;
+}
+
+.starmap.deep .clines polyline {
+  stroke: rgba(242, 237, 217, 0.55);
+  stroke-width: 1.1;
+}
+
+/* nav constellations: real figures, a shade brighter than the rest */
+.starmap .const .lines {
+  vector-effect: non-scaling-stroke;
+  transition: stroke 0.45s ease, stroke-width 0.45s ease;
+}
+
+.starmap.deep .const .lines {
+  stroke: rgba(242, 237, 217, 0.7);
+  stroke-width: 1.2;
+}
+
+/* title as a corner cartouche, in the manner of the old atlases */
+.map-cartouche {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 0.5s ease, left 1.5s ease-in-out, top 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.hero:has(.starmap.roaming) .map-cartouche {
+  left: 36px;
+  top: calc(100% - 96px);
+  transform: translate(0, 0);
+  text-align: left;
+}
+
+.hero:has(.starmap.roaming) .cart-name {
+  font-size: 1.3rem;
+  letter-spacing: 6px;
+}
+
+.hero:has(.starmap.explored) .map-cartouche { opacity: 0; }
+
+.cart-name {
+  margin: 0;
+  transition: font-size 1.5s ease-in-out, letter-spacing 1.5s ease-in-out;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  color: var(--starlight);
+}
+
+.cart-tag {
+  margin: 2px 0 0;
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--starlight);
+  opacity: 0.75;
+}
+
+/* the four navigation constellations read brighter than the field */
+.starmap .const .lines {
+  stroke: rgba(242, 237, 217, 0.55);
+  stroke-width: 1.1;
+}
+
+/* display face lives only on the cover chart */
+.map-cartouche {
+  font-family: var(--font-display);
+}
+
+/* hovering a page name lights its constellation */
+.starmap .const .lines {
+  transition: stroke 0.25s ease, stroke-width 0.25s ease;
+}
+
+.starmap .const:hover .lines,
+.starmap .const:focus-visible .lines,
+.starmap .const.lit .lines {
+  stroke: rgba(242, 237, 217, 0.75);
+  stroke-width: 1.2;
+  stroke-dasharray: none;
+}
+
+.starmap .const:hover .const-label,
+.starmap .const:focus-visible .const-label,
+.starmap .const.lit .const-label {
+  opacity: 1;
+}
+
+/* night-band header: the chart's sky on every page */
+.site-header {
+  background-color: rgba(35, 53, 90, 0.97);
+  border-bottom: 1px solid rgba(242, 237, 217, 0.35);
+}
+
+.site-name {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.05rem;
+  color: var(--starlight);
+}
+
+.site-name:hover { color: #ffffff; }
+
+.site-nav a { color: rgba(242, 237, 217, 0.66); }
+.site-nav a:hover { color: var(--starlight); }
+.site-nav a.active { color: var(--starlight); border-bottom-color: var(--starlight); }
+.nav-star { color: var(--disc-line); }
+
+/* page heads: each page under its own constellation */
+.page-head {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+  margin: 0 0 30px;
+}
+
+.page-head h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2.1rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.head-sub {
+  margin: 2px 0 0;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  width: max-content;
+}
+
+.mini-const { width: 150px; flex-shrink: 0; }
+
+.mini-const polyline {
+  stroke: var(--accent);
+  stroke-width: 1;
+  fill: none;
+  stroke-dasharray: 0.2 4.2;
+  stroke-linecap: round;
+  transition: stroke 0.25s ease, stroke-width 0.25s ease;
+}
+
+.mini-const circle { fill: var(--accent); opacity: 0.85; }
+
+.page-head:has(.head-sub:hover) .mini-const polyline,
+.page-head.lit .mini-const polyline {
+  stroke: var(--accent-strong);
+  stroke-width: 1.3;
+  stroke-dasharray: none;
+}
+
+/* constellation lore: page heads */
+.page-head { position: relative; }
+
+.page-head .head-sub { cursor: default; }
+
+.page-head .head-sub:hover { color: var(--accent); }
+
+.page-head .lore-card {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  z-index: 6;
+  max-width: 460px;
+  border: 1px solid var(--line);
+  background: #eee6d0;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.page-head:has(.head-sub:hover) .lore-card { opacity: 1; }
+
+/* constellation lore: the chart's corner card */
+.map-lore-card {
+  position: absolute;
+  right: 30px;
+  bottom: 26px;
+  max-width: 340px;
+  border: 1px solid var(--disc-line);
+  background: rgba(30, 46, 80, 0.88);
+  padding: 11px 16px;
+  color: var(--starlight);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.map-lore-card.show { opacity: 1; }
+
+.map-lore-card .lore-name {
+  display: block;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+/* the four nav figures are doors: the card says so */
+.map-lore-card .lore-hint {
+  display: none;
+  margin-top: 8px;
+  padding-top: 7px;
+  border-top: 1px solid var(--disc-line);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.68rem;
+  opacity: 0.85;
+}
+.map-lore-card .lore-hint:not(:empty) { display: block; }
+
+/* the CV as an observation log: dates ride the margin */
+#experience .entry,
+#education .entry,
+.seal-card .card-entry {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  gap: 0 26px;
+  align-items: start;
+}
+
+.entry .entry-date,
+.seal-card .entry-date { grid-column: 2; grid-row: 1; }
+
+.entry-body { grid-column: 1; grid-row: 1; }
+
+.entry .entry-date,
+.seal-card .entry-date {
+  margin: 0;
+  text-align: right;
+  padding-top: 4px;
+  white-space: normal;
+}
+
+.entry-body h3 { margin: 0; font-size: 1.3rem; }
+
+.entry-body .entry-org { margin: 2px 0 8px; }
+
+@media (max-width: 720px) {
+  #experience .entry,
+  #education .entry,
+  .seal-card .card-entry {
+    display: block;
+  }
+  .entry .entry-date,
+  .seal-card .entry-date {
+    text-align: left;
+    padding-top: 0;
+  }
+}
+
+/* celestial-coordinate ornament: the sun's place on the day of publication */
+.coord {
+  margin: 2px 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  color: var(--ink-soft);
+  opacity: 0.75;
+}
+
+/* every constellation is hoverable: fat invisible strokes catch the pointer */
+.starmap .chit {
+  stroke: transparent;
+  stroke-width: 14;
+  fill: none;
+  pointer-events: stroke;
+}
+
+.starmap .constel:hover polyline:not(.chit),
+.starmap .constel.lit polyline:not(.chit) {
+  stroke: rgba(242, 237, 217, 0.75);
+  stroke-width: 1.2;
+}
+
+/* stars and stipple are scenery: they must never steal the pointer from the figures */
+.starmap .stars,
+.starmap .milkyway {
+  pointer-events: none;
+}
+
+.starmap .cnames .cname.lit { opacity: 0.95; }
+
+/* writing cards stack as a single column */
+#panel-writing .card-grid {
+  grid-template-columns: 1fr;
+  max-width: 780px;
+}
+
+/* highlights: the venue line sits under its title */
+.more-venue {
+  display: block;
+  margin-top: 2px;
+}
+
+/* writing card descriptions */
+.card-desc {
+  margin: 7px 0 0;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* song previews: a small speaker arms them; hover then plays an excerpt */
+.curio-song-card {
+  position: relative;
+}
+
+.curio-song-card .song-mute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.curio-song-card:hover .song-mute,
+body.previews-on .curio-song-card .song-mute {
+  opacity: 1;
+}
+
+.song-mute .ic-sound { display: none; }
+.song-mute .ic-muted { display: block; }
+body.previews-on .song-mute .ic-sound { display: block; }
+body.previews-on .song-mute .ic-muted { display: none; }
+
+.curio-song-card.playing .soundwave path {
+  animation: wavetravel 20s linear infinite;
+}
+
+@keyframes wavetravel {
+  from { transform: translateX(0); }
+  to   { transform: translateX(150px); }
+}
+
+/* while roaming the sky, the page labels recede toward the chart's own
+   lettering — still a shade brighter than the ordinary names */
+.starmap.roaming .const-label {
+  opacity: 0.3;
+}
+
+.starmap.roaming.deep .const-label {
+  opacity: 0.9;
+}
+
+.footer-home {
+  margin-left: 6px;
+  font-size: 0.95em;
+}
