@@ -248,7 +248,13 @@
     const groups = {};
     for (const d in D) (groups[category(D[d])] ||= []).push(+d);
     const order = ['tossup', 'lean-d', 'lean-r', 'likely-d', 'likely-r', 'solid-d', 'solid-r', 'none'];
-    panel.innerHTML = `<div class="ov"><h2>Where the 52 races stand</h2><p class="lede">Click a district on the map, or pick one below. Toggle the 2021 boundaries to see how the lines moved.</p>` +
+    const about = `<details class="about"><summary>About Proposition 50</summary>
+      <p>Proposition 50 passed on November 4, 2025, 64.4% to 35.6% (7,453,339 votes to 4,116,998) in a special election in which about half of registered voters took part. Its ballot title was "Authorizes Temporary Changes to Congressional District Maps in Response to Texas' Partisan Redistricting," and the act names itself the Election Rigging Response Act.</p>
+      <p>It sets aside the independent Citizens Redistricting Commission's 2021 congressional map for the 2026, 2028 and 2030 elections in favor of a map drawn by the Legislature. The Commission draws the lines again after the 2030 census.</p>
+      <p>The measure was Governor Newsom's response to Texas, where Republican legislators began redrawing their congressional map in June 2025 to gain seats mid-decade. Newsom wrote to President Trump on August 11 offering to stand down if other states did; on August 21 the Legislature passed the map and put it to voters. Drawn by Democratic redistricting consultant Paul Mitchell, it targets five Republican-held seats (the old 1st, 3rd, 22nd, 41st and 48th) and leaves 23 of the 52 districts within two points of their previous partisan registration. Republican court challenges ended when the U.S. Supreme Court declined to hear the appeal.</p>
+      <p class="links"><a href="https://lao.ca.gov/BallotAnalysis/Proposition?number=50&year=2025" target="_blank" rel="noopener">LAO analysis</a><a href="https://aelc.assembly.ca.gov/proposed-congressional-map" target="_blank" rel="noopener">The map (AB 604)</a><a href="https://en.wikipedia.org/wiki/2025_California_Proposition_50" target="_blank" rel="noopener">Background</a></p>
+    </details>`;
+    panel.innerHTML = `<div class="ov"><h2>Where the 52 races stand</h2><p class="lede">Click a district on the map, or pick one below. Toggle the 2021 boundaries to see how the lines moved.</p>${about}` +
       order.filter(k => groups[k]).map(k => `<div class="grp"><h3>${CAT_LABEL[k]} · ${groups[k].length}</h3>` +
         groups[k].sort((a, b) => a - b).map(d => { const r = D[d], fs = flipStatus(r); return `<button class="d" data-d="${d}">${sw(COLOR[k])}<span class="num">CA-${d}</span><span class="who">${matchup(r)}</span>${fs.startsWith('gain') ? `<span class="flip">${FLIP_LABEL[fs]}</span>` : ''}</button>`; }).join('') + '</div>').join('') + '</div>';
     panel.querySelectorAll('[data-d]').forEach(b => b.onclick = () => select(+b.dataset.d, true));

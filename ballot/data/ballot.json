@@ -1384,31 +1384,37 @@
 "number": 38,
 "title": "Authorizes Bonds for Immunology Medical Research",
 "type": "bond",
-"summary": "Authorizes $8.4 billion in state general obligation bonds for immunology and immunotherapy research, with at least $4.2 billion for research on cancer, heart disease and Alzheimer's disease. Half the money goes to a single UC-affiliated nonprofit research institute selected by the Department of Public Health under criteria in the measure; the other half is distributed as competitive grants to public and nonprofit universities and institutes. Funding recipients must sell resulting drugs and technology in California at 20% below the national average price, and the General Fund receives 10% of licensing royalties until the bonds are repaid.",
+"summary": "Authorizes $8.4 billion in state general obligation bonds for immunology and immunotherapy research, with at least $4.2 billion for research on cancer, heart disease and Alzheimer's disease. Half the money goes to a single UC-affiliated nonprofit research institute chosen by the Department of Public Health under criteria written into the measure (a nonprofit founded before 2025, affiliated with a UC campus whose medical center serves a minimum number of patients, with minimum square footage and minimum donations); the other half is distributed as competitive grants. CalMatters reported, and UCLA confirmed, that only one institute currently meets those criteria: the California Institute for Immunology and Immunotherapy, a nonprofit at a UCLA-owned research park in West Los Angeles that had three employees as of September 2026. The measure was written and principally funded by Gary Michelson, the institute's co-founder and board chair. Funding recipients must sell resulting drugs and technology in California at 20% below the national average price, and the General Fund receives 10% of licensing royalties until the bonds are repaid.",
 "yes_means": "The state could borrow $8.4 billion to support medical research in immunology and immunotherapy conducted by California research institutes and universities.",
 "no_means": "The state could not borrow $8.4 billion to support medical research in immunology and immunotherapy conducted by California research institutes and universities.",
 "fiscal_impact": "Increased state cost of $500 million to $600 million annually for about 20 years to repay the bonds (roughly one-quarter of 1 percent of the General Fund budget). The state could recover part or all of this cost in later decades if the funded research generates revenue, but the amount and timing are uncertain.",
 "supporters": [
 "Gary K. Michelson / Michelson Center for Public Policy (sponsor and principal funder)",
+"Gov. Gavin Newsom",
+"California Democratic Party",
+"California Republican Party",
+"Alzheimer's Association",
 "Alzheimer's Los Angeles",
 "ALS Association",
-"Kidney Cancer Association",
 "The Michael J. Fox Foundation for Parkinson's Research",
-"American Nurses Association\\California",
 "American Association of Immunologists",
-"City of Hope",
-"California Democratic Party"
+"American Nurses Association of California",
+"Kidney Cancer Association",
+"City of Hope"
 ],
 "opponents": [
-"Robert M. Kaplan, Ph.D., Stanford University School of Medicine (signed official argument against)",
-"No on Proposition 38 (California Health Policy Strategies)",
+"Robert M. Kaplan (Stanford; signed the official argument against)",
 "League of Women Voters of California",
-"Orange County Register, San Diego Union-Tribune, Sacramento Bee and San Francisco Chronicle editorial boards"
+"California Common Cause",
+"Howard Jarvis Taxpayers Association",
+"Courage California",
+"Editorial boards of the San Francisco Chronicle, Orange County Register, San Diego Union-Tribune and the McClatchy California papers"
 ],
 "money": {
-"for": "$64.2M",
-"against": "$3,782",
-"as_of": "2026-10-06"
+"for": "$71.2M",
+"against": "$10,000",
+"as_of": "2026-10-22",
+"note": "Michelson and his nonprofit gave at least $39M in contributions per Ballotpedia; CalMatters counts about $61M including loans."
 },
 "polls": [
 {
@@ -1425,14 +1431,17 @@
 ],
 "lao_url": "https://lao.ca.gov/BallotAnalysis/Proposition?number=38&year=2026",
 "sos_url": "https://voterguide.sos.ca.gov/propositions/38/",
-"ballotpedia": null,
+"ballotpedia": "https://ballotpedia.org/California_Proposition_38,_Immunology_and_Immunotherapy_Research_Funding_Initiative_(2026)",
 "sources": [
 "https://voterguide.sos.ca.gov/propositions/38/",
 "https://voterguide.sos.ca.gov/propositions/38/title-summary.htm",
 "https://voterguide.sos.ca.gov/propositions/38/arguments-rebuttals.htm",
 "https://lao.ca.gov/BallotAnalysis/Proposition?number=38&year=2026",
 "https://www.sos.ca.gov/campaign-lobbying/helpful-resources/measure-contributions/2026-ballot-measure-contribution-totals/proposition-38-authorizes-bonds-immunology-research-initiative-statut",
-"https://calmatters.org/california-voter-guide-2026/proposition-38-research-bond/"
+"https://calmatters.org/california-voter-guide-2026/proposition-38-research-bond/",
+"https://calmatters.org/politics/elections/2026/07/proposition-38-california/",
+"https://calmatters.org/politics/elections/2026/10/prop-38-california/",
+"https://ballotpedia.org/California_Proposition_38,_Immunology_and_Immunotherapy_Research_Funding_Initiative_(2026)"
 ]
 },
 {

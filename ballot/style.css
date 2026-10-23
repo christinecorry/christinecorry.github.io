@@ -170,3 +170,10 @@ table.polls td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:
 .more-polls>summary::-webkit-details-marker{display:none}
 .more-polls>summary::before{content:"+";width:12px;color:var(--ink-3)}
 .more-polls[open]>summary::before{content:"–"}
+.about{margin:-4px 0 16px;border:1px solid var(--rule);border-radius:8px;padding:8px 12px;background:#fff}
+.about>summary{cursor:pointer;font:500 14px/1.3 var(--serif);list-style:none;display:flex;align-items:center;gap:6px}
+.about>summary::-webkit-details-marker{display:none}
+.about>summary::before{content:"+";width:12px;color:var(--ink-3);font-family:var(--sans)}
+.about[open]>summary::before{content:"–"}
+.about p{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.about .links a{margin-right:12px}
