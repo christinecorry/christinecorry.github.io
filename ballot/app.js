@@ -129,7 +129,7 @@
       if (hovered != null) map.setFeatureState({ source: 'new', id: hovered }, { hover: false });
       hovered = null; map.setFilter('hover-line', NONE); tip.hidden = true; map.getCanvas().style.cursor = '';
     });
-    map.on('click', 'new-fill', e => select(e.features[0].id, false));
+    map.on('click', 'new-fill', e => select(e.features[0].id, true));
   });
 
   // ---------- helpers ----------
@@ -260,9 +260,8 @@
     selected = d;
     mapReady.then(() => { map.setFilter('sel-line', d ? only(d) : NONE); if (hovered === d) map.setFilter('hover-line', NONE); });
     if (d) {
-      if (zoom) mapReady.then(() => map.fitBounds(bboxOfNew(d), { padding: 30, maxZoom: 11, duration: 800 }));
+      if (zoom) mapReady.then(() => map.fitBounds(bboxOfNew(d), { padding: 40, maxZoom: 10.5, duration: 700 }));
       renderPanel(d); history.replaceState(null, '', '#d' + d); jump.value = d;
-      if (zoom && matchMedia('(max-width: 860px)').matches) document.getElementById('panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else { renderOverview(); history.replaceState(null, '', location.pathname + location.search); jump.value = ''; }
     strip.querySelectorAll('button').forEach((b, i) => b.classList.toggle('sel', i + 1 === d));
   }
