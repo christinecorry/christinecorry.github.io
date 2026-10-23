@@ -259,7 +259,7 @@ if (seals) {
 document.querySelectorAll(".copy-email").forEach(a => {
   a.addEventListener("click", e => {
     e.preventDefault();
-    const addr = a.dataset.email;
+    const addr = a.dataset.email || (a.dataset.u + "@" + a.dataset.d);
     navigator.clipboard.writeText(addr).then(() => {
       const orig = a.textContent;
       a.textContent = "copied";
