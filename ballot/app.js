@@ -100,8 +100,8 @@
     map.addLayer({ id: 'old-flash', type: 'fill', source: 'old', filter: NONE, paint: { 'fill-color': '#1b1b1f', 'fill-opacity': 0.12 } }, before);
     map.addLayer({ id: 'old-line', type: 'line', source: 'old', layout: { visibility: 'none' }, paint: { 'line-color': '#1b1b1f', 'line-width': 1.6, 'line-dasharray': [3, 2.5], 'line-opacity': 0.9 } }, before);
     map.addLayer({ id: 'old-flash-line', type: 'line', source: 'old', filter: NONE, paint: { 'line-color': '#1b1b1f', 'line-width': 3 } }, before);
-    map.addLayer({ id: 'hover-line', type: 'line', source: 'new', filter: NONE, paint: { 'line-color': '#1b1b1f', 'line-width': 2.5 } }, before);
-    map.addLayer({ id: 'sel-line', type: 'line', source: 'new', filter: NONE, paint: { 'line-color': '#1b1b1f', 'line-width': 3.5 } }, before);
+    map.addLayer({ id: 'hover-line', type: 'line', source: 'new', filter: NONE, paint: { 'line-color': '#1b1b1f', 'line-width': 1.5 } }, before);
+    map.addLayer({ id: 'sel-line', type: 'line', source: 'new', filter: NONE, paint: { 'line-color': '#1b1b1f', 'line-width': 2 } }, before);
     map.addLayer({ id: 'nums', type: 'symbol', source: 'nums', filter: ['<=', ['get', 'minzoom'], map.getZoom()],
       layout: { 'text-field': ['to-string', ['get', 'd']], 'text-font': ['Noto Sans Bold'], 'text-size': 11, 'text-allow-overlap': false, 'text-padding': 4 },
       paint: { 'text-color': '#1b1b1f', 'text-halo-color': '#ffffff', 'text-halo-width': 1.5 } });
