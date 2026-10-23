@@ -6,7 +6,8 @@
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
-body{font:14.5px/1.45 var(--sans);color:var(--ink);background:var(--paper);display:flex;flex-direction:column;min-height:100vh;height:auto}
+body{font:14.5px/1.45 var(--sans);color:var(--ink);background:var(--paper);display:flex;flex-direction:column;min-height:100vh;height:100%}
+body.page-ballot{height:auto}
 a{color:inherit;text-underline-offset:2px}
 
 /* header */
@@ -111,6 +112,7 @@ table.polls td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:
 @media (max-width: 860px){
   .top{grid-template-columns:1fr;grid-template-areas:"brand" "controls" "strip";padding:12px 16px 10px}
   .brand h1{font-size:19px}
+  body{height:auto}
   .stage{flex-direction:column;flex:none;min-height:auto}
   #map{min-height:60vh;height:60vh;flex:none}
   .panel{width:auto;border-left:0;border-top:1px solid var(--rule);max-height:none;overflow:visible}
