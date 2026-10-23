@@ -162,7 +162,7 @@
   function render() {
     for (const [id, key] of [['sel-cd', 'cd'], ['sel-sd', 'sd'], ['sel-ad', 'ad'], ['sel-county', 'county']]) document.getElementById(id).value = state[key] || '';
     const parts = [];
-    if (state.cd) parts.push(`House district ${state.cd}`); if (state.sd) parts.push(`Senate district ${state.sd}${senateUp.has(state.sd) ? '' : ' (no election this year)'}`); if (state.ad) parts.push(`Assembly district ${state.ad}`); if (state.county) parts.push(`${state.county} County`);
+    if (state.cd) parts.push(`House district ${state.cd}`); if (state.sd) parts.push(`State Senate district ${state.sd}${senateUp.has(state.sd) ? '' : ' (no election this year)'}`); if (state.ad) parts.push(`Assembly district ${state.ad}`); if (state.county) parts.push(`${state.county} County`);
     setWhere(parts.length ? (state.label ? `${state.label}: ` : '') + parts.join(' · ') : 'Enter an address to see your full ballot. Statewide contests are shown for everyone.');
 
     const secs = [];
@@ -183,7 +183,7 @@
     secs.push(['house', 'U.S. House', state.cd ? contestHTML(`Congressional District ${state.cd}`, house, { extra: `<p class="links"><a href="index.html#d${state.cd}">See this district on the map</a></p>` }) : '<p class="empty">Enter an address or pick a House district above.</p>']);
     // senate
     let sen;
-    if (!state.sd) sen = '<p class="empty">Enter an address or pick a Senate district above.</p>';
+    if (!state.sd) sen = '<p class="empty">Enter an address or pick a State Senate district above.</p>';
     else if (!senateUp.has(state.sd)) sen = `<p class="empty">You live in Senate District ${state.sd}, but it has no election this year. State senators serve four-year terms; even-numbered districts vote in 2026 and odd-numbered districts in 2028.</p>`;
     else sen = contestHTML(`State Senate District ${state.sd}`, B.senate[state.sd]);
     secs.push(['senate', 'State Senate', sen]);
