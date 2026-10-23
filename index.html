@@ -66,7 +66,7 @@
   <h1>Christine Corry</h1>
   <p class="lede">Hoping to help AI go well.</p>
   <p class="links">
-    <a href="#contact" class="em" data-u="christinecorry1405" data-d="gmail.com">Email</a>
+    <a href="#" class="em" data-u="christinecorry1405" data-d="gmail.com" title="Copy email address">Email</a>
     <a href="https://www.linkedin.com/in/christinecorry/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://proofbyvibes.substack.com" target="_blank" rel="noopener">Reductions</a>
     <a href="assets/documents/cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
@@ -115,7 +115,7 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p><a href="#contact" class="em" data-u="christinecorry1405" data-d="gmail.com">christinecorry1405 [at] gmail [dot] com</a><br>
+    <p><a href="#" class="em" data-u="christinecorry1405" data-d="gmail.com" title="Copy email address">christinecorry1405[at]gmail[dot]com</a><br>
     <a href="https://www.linkedin.com/in/christinecorry/" target="_blank" rel="noopener">linkedin.com/in/christinecorry</a></p>
   </section>
 
@@ -125,7 +125,15 @@
 
 </div>
 <script>
-document.querySelectorAll("a.em").forEach(function (a) { var m = a.dataset.u + "@" + a.dataset.d; a.href = "mailto:" + m; if (a.textContent.indexOf("[at]") !== -1) a.textContent = m; });
+document.querySelectorAll("a.em").forEach(function (a) {
+  a.addEventListener("click", function (e) {
+    e.preventDefault();
+    var m = a.dataset.u + "@" + a.dataset.d, orig = a.textContent;
+    var done = function () { a.textContent = "copied"; setTimeout(function () { a.textContent = orig; }, 1200); };
+    if (navigator.clipboard) navigator.clipboard.writeText(m).then(done, function () { location.href = "mailto:" + m; });
+    else location.href = "mailto:" + m;
+  });
+});
 document.getElementById("theme-toggle").addEventListener("click", function () {
   var h = document.documentElement;
   var dark = h.dataset.theme ? h.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
