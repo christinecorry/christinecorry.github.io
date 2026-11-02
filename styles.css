@@ -201,3 +201,7 @@ footer {
   h2 { margin-top: 44px; }
   header { padding: 60px 0 8px; }
 }
+
+/* the footer star: a quiet door to /scrapbook/ */
+.secret { color: var(--line); margin-left: 6px; }
+.secret:hover { color: var(--muted); text-decoration: none; }
