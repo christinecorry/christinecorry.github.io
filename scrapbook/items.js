@@ -12,7 +12,7 @@ const ITEMS = [
     "kind": "film",
     "title": "Magnolia",
     "by": "Paul Thomas Anderson, 1999",
-    "quote": "“I really do have love to give, I just don’t know where to put it.”"
+    "quote": "I really do have love to give, I just don’t know where to put it."
   },
   {
     "kind": "photo",
@@ -22,7 +22,8 @@ const ITEMS = [
   {
     "kind": "book",
     "title": "The Dispossessed",
-    "by": "Ursula K. Le Guin, 1974"
+    "by": "Ursula K. Le Guin, 1974",
+    "quote": "If you can see a thing whole, it seems that it’s always beautiful. Planets, lives… But close up, a world’s all dirt and rocks. And day to day, life’s a hard job, you get tired, you lose the pattern. You need distance, interval. The way to see how beautiful the earth is, is to see it as the moon. The way to see how beautiful life is, is from the vantage point of death."
   },
   {
     "kind": "video",
@@ -43,7 +44,7 @@ const ITEMS = [
     "kind": "film",
     "title": "Howl’s Moving Castle",
     "by": "Hayao Miyazaki, 2004",
-    "quote": "“A heart’s a heavy burden.”"
+    "quote": "A heart’s a heavy burden."
   },
   {
     "kind": "photo",
@@ -91,8 +92,20 @@ const ITEMS = [
     "kind": "book",
     "title": "Black Oaks",
     "by": "Mary Oliver, 1997",
-    "quote": "“Today is a day like any other: twenty-four hours, a\nlittle sunshine, a little rain.\n\nListen, says ambition, nervously shifting her weight from\none boot to another — why don’t you get going?\n\nFor there I am, in the mossy shadows, under the trees.\n\nAnd to tell the truth I don’t want to let go of the wrists\nof idleness, I don’t want to sell my life for money,\n\nI don’t even want to come in out of the rain.”",
+    "quote": "Today is a day like any other: twenty-four hours, a\nlittle sunshine, a little rain.\n\nListen, says ambition, nervously shifting her weight from\none boot to another — why don’t you get going?\n\nFor there I am, in the mossy shadows, under the trees.\n\nAnd to tell the truth I don’t want to let go of the wrists\nof idleness, I don’t want to sell my life for money,\n\nI don’t even want to come in out of the rain.",
     "link": "https://www.poetseers.org/contemporary-poets/mary-oliver/mary-oliver-poems/black-oaks/"
+  },
+  {
+    "kind": "book",
+    "title": "Occupation",
+    "by": "Rachel Sherwood",
+    "quote": "The man who told me about war\nsaid, it’s the only thing\nthat keeps us busy.\nI thought of your fingers\non my back\ncounting the vertebrae\none by one.\n\nThe only thing?"
+  },
+  {
+    "kind": "book",
+    "title": "since feeling is first",
+    "by": "E. E. Cummings, 1926",
+    "quote": "since feeling is first\nwho pays any attention\nto the syntax of things\nwill never wholly kiss you;\n\nwholly to be a fool\nwhile Spring is in the world\n\nmy blood approves,\nand kisses are a better fate\nthan wisdom\nlady i swear by all flowers. Don’t cry\n—the best gesture of my brain is less than\nyour eyelids’ flutter which says\n\nwe are for each other: then\nlaugh, leaning back in my arms\nfor life’s not a paragraph\n\nAnd death i think is no parenthesis"
   },
   {
     "kind": "song",
@@ -110,7 +123,7 @@ const ITEMS = [
     "kind": "film",
     "title": "In the Mood for Love",
     "by": "Wong Kar-wai, 2000",
-    "quote": "“Those vanished years of the past,\nas if obstructed by an ashen glass window,\nable to peer, yet unable to grasp.”"
+    "quote": "Those vanished years of the past,\nas if obstructed by an ashen glass window,\nable to peer, yet unable to grasp."
   },
   {
     "kind": "photo",
@@ -121,7 +134,7 @@ const ITEMS = [
     "kind": "film",
     "title": "Good Will Hunting",
     "by": "Gus Van Sant, 1997",
-    "quote": "“Sean: Do you think you’re alone?\n\nWill: What?\n\nSean: Do you have a soul-mate?\n\nWill: Define that.\n\nSean: Someone who challenges you in every way. Who takes you places, opens things up for you. A soul-mate.\n\nWill: Yeah. Shakespeare, Nietzsche, Frost, O’Connor, Chaucer, Pope, Kant…\n\nSean: They’re all dead.\n\nWill: Not to me, they’re not.\n\nSean: But you can’t give back to them, Will.\n\nWill: Not without a heater and some serious smelling salts, no…\n\nSean: That’s what I’m saying, Will. You’ll never have that kind of relationship in a world where you’re afraid to take the first step because all you’re seeing are the negative things that might happen ten miles down the road.”"
+    "quote": "Do you think you’re alone?\n\nWhat?\n\nDo you have a soul-mate?\n\nDefine that.\n\nSomeone who challenges you in every way. Who takes you places, opens things up for you. A soul-mate.\n\nYeah. Shakespeare, Nietzsche, Frost, O’Connor, Chaucer, Pope, Kant…\n\nThey’re all dead.\n\nNot to me, they’re not.\n\nBut you can’t give back to them, Will.\n\nNot without a heater and some serious smelling salts, no…\n\nThat’s what I’m saying, Will. You’ll never have that kind of relationship in a world where you’re afraid to take the first step because all you’re seeing are the negative things that might happen ten miles down the road."
   },
   {
     "kind": "photo",
@@ -257,5 +270,14 @@ const ITEMS = [
   {"kind": "pin", "src": "pins/pin-87.gif", "w": 800, "h": 509, "alt": ""},
   {"kind": "pin", "src": "pins/pin-88.jpg", "w": 571, "h": 800, "alt": ""},
   {"kind": "pin", "src": "pins/pin-89.jpg", "w": 599, "h": 800, "alt": ""},
-  {"kind": "pin", "src": "pins/pin-90.jpg", "w": 619, "h": 800, "alt": ""}
+  {"kind": "pin", "src": "pins/pin-90.jpg", "w": 619, "h": 800, "alt": ""},
+  {"kind": "photo", "src": "photos/photo-01.jpg", "w": 1050, "h": 1400, "alt": "A stop sign with a sticker underneath reading 'believing politicians'"},
+  {"kind": "photo", "src": "photos/photo-02.jpg", "w": 1050, "h": 1400, "alt": "A sand tiger shark seen from below in an aquarium tunnel"},
+  {"kind": "photo", "src": "photos/photo-03.jpg", "w": 1050, "h": 1400, "alt": "A wooden footbridge under a tall tree in late afternoon light"},
+  {"kind": "photo", "src": "photos/photo-04.jpg", "w": 1050, "h": 1400, "alt": "Playing pinball in a dim bar under a neon sign"},
+  {"kind": "photo", "src": "photos/photo-05.jpg", "w": 1050, "h": 1400, "alt": "Tiny clay charms (a goose, an egg in a pan, a bow, an 8-ball) on a newspaper crossword"},
+  {"kind": "photo", "src": "photos/photo-06.jpg", "w": 1400, "h": 1050, "alt": "Faneuil Hall and the Custom House Tower at dusk, the moon rising between them"},
+  {"kind": "photo", "src": "photos/photo-07.jpg", "w": 1050, "h": 1400, "alt": "An infinity pool's edge above black rocks, the sea and a green headland"},
+  {"kind": "photo", "src": "photos/photo-08.jpg", "w": 1050, "h": 1400, "alt": "Looking up into the U.S. Capitol rotunda dome"},
+  {"kind": "photo", "src": "photos/photo-09.jpg", "w": 1050, "h": 1400, "alt": "Two friends spinning, blurred, under string lights at night"}
 ];
