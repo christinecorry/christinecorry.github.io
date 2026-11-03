@@ -175,7 +175,8 @@ const ITEMS = [
   {
     "kind": "book",
     "title": "The Carrier Bag Theory of Fiction",
-    "by": "Ursula K. Le Guin, 1986"
+    "by": "Ursula K. Le Guin, 1986",
+    "quote": "Science fiction properly conceived, like all serious fiction, however funny, is a way of trying to describe what is in fact going on, what people actually do and feel, how people relate to everything else in this vast sack, this belly of the universe, this womb of things to be and tomb of things that were, this unending story. In it, as in all fiction, there is room enough to keep even Man where he belongs, in his place in the scheme of things; there is time enough to gather plenty of wild oats and sow them too, and sing to little Oom, and listen to Ool’s joke, and watch newts, and still the story isn’t over. Still there are seeds to be gathered, and room in the bag of stars."
   },
   {
     "kind": "photo",
