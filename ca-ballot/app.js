@@ -45,7 +45,7 @@
   }
   function oldParty(r) { return r.old && r.old.length ? r.old[0].party : null; }
   const partyOf = (r, name) => { const c = (r.candidates || []).find(c => c.name === name); return c ? c.party : null; };
-  // Party that holds the seat on current results: the projected winner's, or the only party on the ballot.
+  // Party that holds the seat on current results: the winner's, or the only party on the ballot.
   function resultParty(r) {
     const x = RH[r.district]; if (!x) return likelyParty(r);
     if (x.winner) return partyOf(r, x.winner);
@@ -57,7 +57,7 @@
     const p = partyOf(D[d], x.winner || x.leader), k = p === 'D' ? 'd' : p === 'R' ? 'r' : 'o';
     return (x.winner ? 'won-' : 'lead-') + k;
   }
-  const RES_LABEL = { 'won-d': 'Democrat projected', 'won-r': 'Republican projected', 'won-o': 'Other projected', 'lead-d': 'Not called: Democrat ahead', 'lead-r': 'Not called: Republican ahead', 'lead-o': 'Not called', none: 'No data' };
+  const RES_LABEL = { 'won-d': 'Democrat won', 'won-r': 'Republican won', 'won-o': 'Other party won', 'lead-d': 'Not called: Democrat ahead', 'lead-r': 'Not called: Republican ahead', 'lead-o': 'Not called', none: 'No data' };
   const resColor = k => ({ 'won-d': COLOR['solid-d'], 'won-r': COLOR['solid-r'], 'won-o': '#6b6b6b', 'lead-d': COLOR['lean-d'], 'lead-r': COLOR['lean-r'], 'lead-o': '#bbb', none: COLOR.none }[k]);
   function flipStatus(r) {
     const lp = resultParty(r), op = oldParty(r);
@@ -172,7 +172,7 @@
   function tooltipHTML(d, oldD) {
     const r = D[d];
     const x = RH[d];
-    let s = x ? `<b>District ${d}</b> · ${x.winner ? 'Projected' : 'Not called'}<br>${x.candidates.map(c => `${esc(last(c.name))} ${c.pct}%`).join(' · ')}${x.pct_in != null ? `<br><span class="muted">${x.pct_in}% of expected vote counted</span>` : ''}` : `<b>District ${d}</b> · ${CAT_LABEL[category(r)]}<br>${matchup(r)}`;
+    let s = x ? `<b>District ${d}</b> · ${x.winner ? `${esc(last(x.winner))} won` : 'Not called'}<br>${x.candidates.map(c => `${esc(last(c.name))} ${c.pct}%`).join(' · ')}${x.pct_in != null ? `<br><span class="muted">${x.pct_in}% of expected vote counted</span>` : ''}` : `<b>District ${d}</b> · ${CAT_LABEL[category(r)]}<br>${matchup(r)}`;
     if (mode === 'flip') s += `<br><span class="muted">${FLIP_LABEL[flipStatus(r)]}</span>`;
     if (oldD) { const m = races.old_members[oldD]; s += `<br><span class="muted">2021 map: District ${oldD} · ${esc(m.name)} (${m.party})</span>`; }
     return s;
@@ -224,7 +224,7 @@
   function candHTML(c, r) {
     const x = RH[r.district], v = x && x.candidates.find(y => y.name === c.name);
     const lw = x ? x.winner === c.name : r.likely_winner && c.name === r.likely_winner;
-    const tag = x ? (x.winner === c.name ? '<span class="tag lw">Projected winner</span>' : !x.winner && x.leader === c.name ? '<span class="tag lead">Leading</span>' : '') : lw ? '<span class="tag lw">Favored</span>' : '';
+    const tag = x ? (x.winner === c.name ? '<span class="tag lw">Won</span>' : !x.winner && x.leader === c.name ? '<span class="tag lead">Leading</span>' : '') : lw ? '<span class="tag lw">Favored</span>' : '';
     return `<div class="cand ${lw ? 'likely' : ''}">
       <div class="cand-head">${c.party ? pd(c.party) : ''}<span class="name">${esc(c.name)}</span>${c.party ? `<span class="tag" title="${PARTY_NAME[c.party] || ''}">${esc(c.party)}</span>` : ''}${c.incumbent ? '<span class="tag">Incumbent</span>' : ''}${tag}${v ? `<span class="pct res">${v.pct}% · ${v.votes.toLocaleString('en-US')}</span>` : c.primary_pct != null ? `<span class="pct">${Math.round(c.primary_pct * 10) / 10}% in June primary</span>` : ''}</div>
       ${v ? `<div class="res-bar"><span style="width:${v.pct}%;background:${PARTY_COLOR[c.party] || '#6b6b6b'}"></span></div>${c.primary_pct != null ? `<p class="lean-note">${Math.round(c.primary_pct * 10) / 10}% in June primary</p>` : ''}` : ''}

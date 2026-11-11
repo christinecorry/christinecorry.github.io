@@ -8,7 +8,7 @@
   const Res = await getJSON('data/results.json').catch(() => null);
   if (Res) for (const k of ['statewide', 'props', 'house', 'senate', 'assembly']) Res[k] ||= {};
   document.getElementById('updated').textContent = Res ? 'results as of ' + Res.as_of_label : 'updated ' + B.updated;
-  if (Res) document.getElementById('res-banner').innerHTML = `<b>Partial results as of ${esc0(Res.as_of_label)}.</b> About ${Res.pct_counted}% of the expected vote is counted, with ${esc0(Res.est_remaining)} votes estimated to remain in the governor's race (NBC News estimates). Dates show when each race's count was reported, in Pacific time. "Projected" means a news organization has called the race. "Leading" only describes the count so far, and the order can change. The Secretary of State certifies results on December 11.`;
+  if (Res) document.getElementById('res-banner').innerHTML = `<b>Partial results as of ${esc0(Res.as_of_label)}.</b> About ${Res.pct_counted}% of the expected vote is counted, with ${esc0(Res.est_remaining)} votes estimated to remain in the governor's race (NBC News estimates). Dates show when each race's count was reported, in Pacific time. A race shows as won, passed or failed once a news organization has called it. "Leading" only describes the count so far, and the order can change. The Secretary of State certifies results on December 11.`;
 
   // ---------- shared helpers ----------
   const css = getComputedStyle(document.documentElement);
@@ -29,7 +29,7 @@
 
   const fmt = n => n.toLocaleString('en-US');
   function resultTag(c, res) {
-    if (res.winner === c.name) return res.status === 'unopposed' ? '<span class="tag lw">Unopposed</span>' : '<span class="tag lw">Projected winner</span>';
+    if (res.winner === c.name) return res.status === 'unopposed' ? '<span class="tag lw">Unopposed</span>' : '<span class="tag lw">Won</span>';
     return res.status === 'leading' && res.leader === c.name ? '<span class="tag lead">Leading</span>' : '';
   }
   function candHTML(c, lw, res) {
@@ -75,7 +75,7 @@
     if (res.status === 'projected' && !res.total) bits.push('vote totals not compiled here');
     if (res.status === 'leading') bits.push('not yet called');
     if (res.total) bits.push(countSrc(res));
-    return `<p class="res-line"><span class="res-status ${res.status === 'projected' ? 'done' : ''}">${res.status === 'projected' ? 'Projected' : 'Counting'}</span> ${bits.join(' · ')}${sos ? ` · ${sos}` : ''}</p>${res.note ? `<p class="res-line">${esc(res.note)}</p>` : ''}`;
+    return `<p class="res-line"><span class="res-status ${res.status === 'projected' ? 'done' : ''}">${res.status === 'projected' ? 'Called' : 'Counting'}</span> ${bits.join(' · ')}${sos ? ` · ${sos}` : ''}</p>${res.note ? `<p class="res-line">${esc(res.note)}</p>` : ''}`;
   }
   const countSrc = x => x.as_of ? `count from ${esc(x.source)}, ${esc(x.as_of)}` : `earlier count from ${esc(x.source)}, date not stated`;
   function preHTML(inner) { return inner.trim() ? `<details class="pre"><summary>Before the election: outlook, ratings and polls</summary>${inner}</details>` : ''; }
@@ -97,7 +97,7 @@
     </article>`;
   }
   function propStatus(x) {
-    if (x.status === 'projected') return x.outcome === 'passed' ? 'Passed (projected)' : 'Failed (projected)';
+    if (x.status === 'projected') return x.outcome === 'passed' ? 'Passed' : 'Failed';
     return `${x.yes_pct > x.no_pct ? 'Yes' : 'No'} leading, not called`;
   }
   function propResult(x) {
