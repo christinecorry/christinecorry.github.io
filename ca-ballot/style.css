@@ -177,3 +177,22 @@ table.polls td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:
 .about[open]>summary::before{content:"–"}
 .about p{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
 .about .links a{margin-right:12px}
+
+/* ---------- election results ---------- */
+.res-banner{margin:0 0 14px;padding:10px 12px;border:1px solid var(--rule);border-left:3px solid var(--ink-2);border-radius:6px;font-size:14px;line-height:1.45}
+.res-banner:empty{display:none}
+.res-line{margin:4px 0 8px;font-size:13px;color:var(--ink-3)}
+.res-status{display:inline-block;margin-right:6px;padding:0 6px;border:1px solid var(--rule);border-radius:4px;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2)}
+.res-status.done{color:#fff;background:var(--ink);border-color:var(--ink)}
+.cand-head .tag.lead{color:var(--ink);border-color:var(--ink-2)}
+.cand-head .pct.res{color:var(--ink);font-weight:600}
+.res-bar{height:6px;margin:6px 0 4px;background:var(--rule);border-radius:3px;overflow:hidden}
+.res-bar span{display:block;height:100%}
+.yn-bar{display:flex;height:10px;border-radius:3px;overflow:hidden}
+.yn-bar .y{background:#3b7d3b}.yn-bar .n{background:#8e1c1c}
+.yn-num{display:flex;justify-content:space-between;gap:12px;margin:4px 0 10px;font-size:13px;font-variant-numeric:tabular-nums}
+.prop-sum{margin:0 0 14px}
+.prop-sum th:first-child,.prop-sum td:first-child{width:44px;white-space:nowrap}
+details.pre{margin-top:10px}
+details.pre>summary{cursor:pointer;font-size:13px;color:var(--ink-3)}
+.prop-sum td.n{white-space:normal}

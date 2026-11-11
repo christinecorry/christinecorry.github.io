@@ -7,7 +7,9 @@
   let oldGJ = null, oldLoading = null;
   function loadOld() { return oldLoading || (oldLoading = getJSON('data/old_districts.geojson').then(g => { oldGJ = g; map.getSource('old').setData(g); return g; })); }
   const D = races.districts;
-  document.getElementById('updated').textContent = 'updated ' + races.updated;
+  const Res = await getJSON('data/results.json', { cache: 'no-cache' }).then(r => r, () => null);
+  const RH = (Res && Res.house) || {};
+  document.getElementById('updated').textContent = Res ? 'results as of ' + Res.as_of_label : 'updated ' + races.updated;
 
   // ---------- rating → category ----------
   const CATS = ['solid-d', 'likely-d', 'lean-d', 'tossup', 'lean-r', 'likely-r', 'solid-r'];
@@ -42,18 +44,35 @@
     return cat.endsWith('-d') ? 'D' : cat.endsWith('-r') ? 'R' : null;
   }
   function oldParty(r) { return r.old && r.old.length ? r.old[0].party : null; }
+  const partyOf = (r, name) => { const c = (r.candidates || []).find(c => c.name === name); return c ? c.party : null; };
+  // Party that holds the seat on current results: the projected winner's, or the only party on the ballot.
+  function resultParty(r) {
+    const x = RH[r.district]; if (!x) return likelyParty(r);
+    if (x.winner) return partyOf(r, x.winner);
+    const ps = new Set((r.candidates || []).map(c => c.party));
+    return ps.size === 1 ? [...ps][0] : null;
+  }
+  function resultKey(d) {
+    const x = RH[d]; if (!x) return 'none';
+    const p = partyOf(D[d], x.winner || x.leader), k = p === 'D' ? 'd' : p === 'R' ? 'r' : 'o';
+    return (x.winner ? 'won-' : 'lead-') + k;
+  }
+  const RES_LABEL = { 'won-d': 'Democrat projected', 'won-r': 'Republican projected', 'won-o': 'Other projected', 'lead-d': 'Not called: Democrat ahead', 'lead-r': 'Not called: Republican ahead', 'lead-o': 'Not called', none: 'No data' };
+  const resColor = k => ({ 'won-d': COLOR['solid-d'], 'won-r': COLOR['solid-r'], 'won-o': '#6b6b6b', 'lead-d': COLOR['lean-d'], 'lead-r': COLOR['lean-r'], 'lead-o': '#bbb', none: COLOR.none }[k]);
   function flipStatus(r) {
-    const lp = likelyParty(r), op = oldParty(r);
+    const lp = resultParty(r), op = oldParty(r);
     if (!lp || !op) return 'unknown';
     if (lp === op) return 'hold-' + lp.toLowerCase();
     return 'gain-' + lp.toLowerCase();
   }
   const FLIP_COLOR = { 'gain-d': COLOR['solid-d'], 'gain-r': COLOR['solid-r'], 'hold-d': COLOR['lean-d'], 'hold-r': COLOR['lean-r'], unknown: COLOR.none };
-  const FLIP_LABEL = { 'gain-d': 'Favored D pickup', 'gain-r': 'Favored R pickup', 'hold-d': 'D hold', 'hold-r': 'R hold', unknown: 'Unclear' };
+  const FLIP_LABEL = { 'gain-d': 'Now D, largest 2021 source seat was not', 'gain-r': 'Now R, largest 2021 source seat was not', 'hold-d': 'D, same as largest 2021 source seat', 'hold-r': 'R, same as largest 2021 source seat', unknown: 'Not yet called' };
 
-  let mode = 'rating';
+  let mode = Res ? 'result' : 'rating';
+  { const sel = document.getElementById('mode'); if (!Res) sel.querySelector('option[value=result]').remove(); sel.value = mode; }
   function fillFor(d) {
     const r = D[d];
+    if (mode === 'result') return resColor(resultKey(d));
     if (mode === 'flip') return FLIP_COLOR[flipStatus(r)];
     if (mode === 'margin') { const p = likelyParty(r); return p ? PARTY_COLOR[p] : COLOR.none; }
     return COLOR[category(r)];
@@ -152,7 +171,8 @@
   }
   function tooltipHTML(d, oldD) {
     const r = D[d];
-    let s = `<b>District ${d}</b> · ${CAT_LABEL[category(r)]}<br>${matchup(r)}`;
+    const x = RH[d];
+    let s = x ? `<b>District ${d}</b> · ${x.winner ? 'Projected' : 'Not called'}<br>${x.candidates.map(c => `${esc(last(c.name))} ${c.pct}%`).join(' · ')}${x.pct_in != null ? `<br><span class="muted">${x.pct_in}% of expected vote counted</span>` : ''}` : `<b>District ${d}</b> · ${CAT_LABEL[category(r)]}<br>${matchup(r)}`;
     if (mode === 'flip') s += `<br><span class="muted">${FLIP_LABEL[flipStatus(r)]}</span>`;
     if (oldD) { const m = races.old_members[oldD]; s += `<br><span class="muted">2021 map: District ${oldD} · ${esc(m.name)} (${m.party})</span>`; }
     return s;
@@ -162,9 +182,10 @@
   const legend = document.getElementById('legend');
   function renderLegend() {
     const counts = {};
-    for (const d in D) { const k = mode === 'flip' ? flipStatus(D[d]) : mode === 'margin' ? (likelyParty(D[d]) || 'none') : category(D[d]); counts[k] = (counts[k] || 0) + 1; }
+    for (const d in D) { const k = mode === 'result' ? resultKey(d) : mode === 'flip' ? flipStatus(D[d]) : mode === 'margin' ? (likelyParty(D[d]) || 'none') : category(D[d]); counts[k] = (counts[k] || 0) + 1; }
     let rows;
-    if (mode === 'flip') rows = ['gain-d', 'hold-d', 'hold-r', 'gain-r', 'unknown'].map(k => [FLIP_COLOR[k], FLIP_LABEL[k], counts[k] || 0]);
+    if (mode === 'result') rows = ['won-d', 'lead-d', 'lead-o', 'lead-r', 'won-r', 'won-o'].map(k => [resColor(k), RES_LABEL[k], counts[k] || 0]).filter(r => r[2]);
+    else if (mode === 'flip') rows = ['gain-d', 'hold-d', 'hold-r', 'gain-r', 'unknown'].map(k => [FLIP_COLOR[k], FLIP_LABEL[k], counts[k] || 0]);
     else if (mode === 'margin') rows = ['D', 'R', 'none'].map(k => [k === 'none' ? COLOR.none : PARTY_COLOR[k], k === 'none' ? 'Unclear' : 'Favored: ' + PARTY_NAME[k], counts[k] || 0]);
     else rows = [...CATS, 'none'].map(k => [COLOR[k], CAT_LABEL[k], counts[k] || 0]).filter(r => r[2] || r[1] !== 'No data');
     legend.innerHTML = rows.map(([c, l, n]) => `<div class="row">${sw(c)}<span>${l}</span><span class="cnt">${n}</span></div>`).join('') +
@@ -201,9 +222,12 @@
       }).join('') + '</tbody></table>';
   }
   function candHTML(c, r) {
-    const lw = r.likely_winner && c.name === r.likely_winner;
+    const x = RH[r.district], v = x && x.candidates.find(y => y.name === c.name);
+    const lw = x ? x.winner === c.name : r.likely_winner && c.name === r.likely_winner;
+    const tag = x ? (x.winner === c.name ? '<span class="tag lw">Projected winner</span>' : !x.winner && x.leader === c.name ? '<span class="tag lead">Leading</span>' : '') : lw ? '<span class="tag lw">Favored</span>' : '';
     return `<div class="cand ${lw ? 'likely' : ''}">
-      <div class="cand-head">${c.party ? pd(c.party) : ''}<span class="name">${esc(c.name)}</span>${c.party ? `<span class="tag" title="${PARTY_NAME[c.party] || ''}">${esc(c.party)}</span>` : ''}${c.incumbent ? '<span class="tag">Incumbent</span>' : ''}${lw ? '<span class="tag lw">Favored</span>' : ''}${c.primary_pct != null ? `<span class="pct">${Math.round(c.primary_pct * 10) / 10}% in June primary</span>` : ''}</div>
+      <div class="cand-head">${c.party ? pd(c.party) : ''}<span class="name">${esc(c.name)}</span>${c.party ? `<span class="tag" title="${PARTY_NAME[c.party] || ''}">${esc(c.party)}</span>` : ''}${c.incumbent ? '<span class="tag">Incumbent</span>' : ''}${tag}${v ? `<span class="pct res">${v.pct}% · ${v.votes.toLocaleString('en-US')}</span>` : c.primary_pct != null ? `<span class="pct">${Math.round(c.primary_pct * 10) / 10}% in June primary</span>` : ''}</div>
+      ${v ? `<div class="res-bar"><span style="width:${v.pct}%;background:${PARTY_COLOR[c.party] || '#6b6b6b'}"></span></div>${c.primary_pct != null ? `<p class="lean-note">${Math.round(c.primary_pct * 10) / 10}% in June primary</p>` : ''}` : ''}
       ${c.bio ? `<p class="bio">${esc(c.bio)}</p>` : ''}
       <details><summary>Platform and links</summary>
         ${c.platform ? `<p class="platform">${esc(c.platform)}</p>` : '<p class="empty">No platform summary available.</p>'}
@@ -214,28 +238,32 @@
   function renderPanel(d) {
     const r = D[d], cat = category(r), fs = flipStatus(r);
     const old = r.old || [];
-    const demo = r.demo, lean = leanParts(r.partisan_lean);
+    const demo = r.demo, lean = leanParts(r.partisan_lean), x = RH[d], rk = resultKey(d);
+    const rank = c => { const i = x ? x.candidates.findIndex(y => y.name === c.name) : -1; return i < 0 ? 99 : i; };
+    const sosLink = `<a href="https://electionresults.sos.ca.gov/returns/us-rep/district/${d}" target="_blank" rel="noopener">Secretary of State</a>`;
     panel.innerHTML = `
       <button class="close" aria-label="Close" id="close">×</button>
       <h2>District ${d}</h2>
-      <div class="kicker"><span class="chip">${sw(COLOR[cat])}${CAT_LABEL[cat]}</span>${lean && lean.chip ? `<span class="chip" title="${esc(lean.full)}">${esc(lean.chip)}</span>` : ''}${fs.startsWith('gain') ? `<span class="chip">${FLIP_LABEL[fs]}</span>` : ''}</div>
+      <div class="kicker">${x ? `<span class="chip">${sw(resColor(rk))}${RES_LABEL[rk]}</span>` : `<span class="chip">${sw(COLOR[cat])}${CAT_LABEL[cat]}</span>`}${lean && lean.chip ? `<span class="chip" title="${esc(lean.full)}">${esc(lean.chip)}</span>` : ''}${!Res && fs.startsWith('gain') ? `<span class="chip">${FLIP_LABEL[fs]}</span>` : ''}</div>
       ${lean && lean.rest ? `<p class="lean-note">${esc(lean.rest)}</p>` : ''}
-      ${r.summary ? `<p class="summary">${esc(r.summary)}</p>` : r.pending ? '<p class="empty">Race details for this district are still being compiled.</p>' : ''}
+      ${x ? `<p class="res-line">${x.pct_in != null ? `${x.pct_in}% of expected vote counted · ` : ''}${x.winner ? `called by ${esc(x.called_by)}` : 'not yet called'} · count from ${esc(x.source)}, ${esc(x.as_of)} · ${sosLink}</p>` : ''}
+      ${r.summary && !x ? `<p class="summary">${esc(r.summary)}</p>` : r.pending ? '<p class="empty">Race details for this district are still being compiled.</p>' : ''}
       ${r.incumbent ? `<p class="summary" style="margin-top:6px">Incumbent: ${pd(r.incumbent.party)}${esc(r.incumbent.name)}${r.incumbent.note ? ` · ${esc(r.incumbent.note)}` : ''}</p>` : ''}
 
       <h3>Drawn from 2021 districts</h3>
       <div class="old-list">${old.map(o => `<button data-old="${o.district}" title="Show on map">District ${o.district} <span class="share">${pct(o.share)}</span> · ${pd(o.party)}${esc(o.rep)}</button>`).join('')}</div>
 
-      <h3>Candidates</h3>
-      ${(r.candidates || []).length ? r.candidates.map(c => candHTML(c, r)).join('') : '<p class="empty">No candidates listed yet.</p>'}
+      <h3>${x ? 'Results' : 'Candidates'}</h3>
+      ${(r.candidates || []).length ? [...r.candidates].sort((a, b) => rank(a) - rank(b)).map(c => candHTML(c, r)).join('') : '<p class="empty">No candidates listed yet.</p>'}
+      ${x && r.summary ? `<h3>Before the election</h3><p class="summary">${esc(r.summary)}</p>` : ''}
       ${r.likely_winner_basis ? `<p class="basis">${esc(r.likely_winner_basis)}</p>` : ''}
       <p class="links"><a href="ballot.html#cd=${d}">Full ballot for this district</a></p>
 
-      <h3>Ratings</h3>
+      <h3>${x ? 'Pre-election ratings' : 'Ratings'}</h3>
       <div class="ratings">${ratingCell('Cook', r.ratings?.cook)}${ratingCell('Sabato', r.ratings?.sabato)}${ratingCell('Inside Elections', r.ratings?.inside_elections)}</div>
       ${r.ratings?.as_of ? `<p class="asof">as of ${esc(r.ratings.as_of)}</p>` : ''}
 
-      <h3>Polls</h3>
+      <h3>${x ? 'Pre-election polls' : 'Polls'}</h3>
       ${pollsHTML(r)}
 
       ${demo ? `<h3>District</h3><p class="demo">${demo.pop.toLocaleString()} residents · citizen voting-age population ${pct(demo.hsp)} Hispanic, ${pct(demo.wht)} White, ${pct(demo.asn)} Asian, ${pct(demo.blk)} Black</p>` : ''}
@@ -246,8 +274,9 @@
   }
   function renderOverview() {
     const groups = {};
-    for (const d in D) (groups[category(D[d])] ||= []).push(+d);
-    const order = ['tossup', 'lean-d', 'lean-r', 'likely-d', 'likely-r', 'solid-d', 'solid-r', 'none'];
+    for (const d in D) (groups[Res ? resultKey(d) : category(D[d])] ||= []).push(+d);
+    const order = Res ? ['lead-d', 'lead-o', 'lead-r', 'won-d', 'won-r', 'won-o'] : ['tossup', 'lean-d', 'lean-r', 'likely-d', 'likely-r', 'solid-d', 'solid-r', 'none'];
+    const LABEL = k => Res ? RES_LABEL[k] : CAT_LABEL[k];
     const about = `<details class="about"><summary>About Proposition 50</summary>
       <p>Proposition 50 passed on November 4, 2025, 64.4% to 35.6% (7,453,339 votes to 4,116,998) in a special election in which about half of registered voters took part. Its ballot title was "Authorizes Temporary Changes to Congressional District Maps in Response to Texas' Partisan Redistricting," and the act names itself the Election Rigging Response Act.</p>
       <p>It sets aside the independent Citizens Redistricting Commission's 2021 congressional map for the 2026, 2028 and 2030 elections in favor of a map drawn by the Legislature. The Commission draws the lines again after the 2030 census.</p>
@@ -255,8 +284,8 @@
       <p class="links"><a href="https://lao.ca.gov/BallotAnalysis/Proposition?number=50&year=2025" target="_blank" rel="noopener">LAO analysis</a><a href="https://aelc.assembly.ca.gov/proposed-congressional-map" target="_blank" rel="noopener">The map (AB 604)</a><a href="https://en.wikipedia.org/wiki/2025_California_Proposition_50" target="_blank" rel="noopener">Background</a></p>
     </details>`;
     panel.innerHTML = `<div class="ov"><h2>Where the 52 races stand</h2><p class="lede">Click a district on the map, or pick one below. Toggle the 2021 boundaries to see how the lines moved.</p>${about}` +
-      order.filter(k => groups[k]).map(k => `<div class="grp"><h3>${CAT_LABEL[k]} · ${groups[k].length}</h3>` +
-        groups[k].sort((a, b) => a - b).map(d => { const r = D[d], fs = flipStatus(r); return `<button class="d" data-d="${d}">${sw(COLOR[k])}<span class="num">CA-${d}</span><span class="who">${matchup(r)}</span>${fs.startsWith('gain') ? `<span class="flip">${FLIP_LABEL[fs]}</span>` : ''}</button>`; }).join('') + '</div>').join('') + '</div>';
+      order.filter(k => groups[k]).map(k => `<div class="grp"><h3>${LABEL(k)} · ${groups[k].length}</h3>` +
+        groups[k].sort((a, b) => a - b).map(d => { const r = D[d], fs = flipStatus(r), x = RH[d]; return `<button class="d" data-d="${d}">${sw(Res ? resColor(k) : COLOR[k])}<span class="num">CA-${d}</span><span class="who">${x ? x.candidates.map(c => `${esc(last(c.name))} ${c.pct}`).join(' · ') : matchup(r)}</span>${!Res && fs.startsWith('gain') ? `<span class="flip">${FLIP_LABEL[fs]}</span>` : ''}</button>`; }).join('') + '</div>').join('') + '</div>';
     panel.querySelectorAll('[data-d]').forEach(b => b.onclick = () => select(+b.dataset.d, true));
   }
 

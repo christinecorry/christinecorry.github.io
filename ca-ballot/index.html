@@ -11,22 +11,23 @@
 <link rel="preconnect" href="https://tiles.openfreemap.org" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
-<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
 <header class="top">
   <div class="brand">
     <nav class="tabs"><a href="index.html" class="on">Map</a><a href="ballot.html">Ballot</a></nav>
     <h1>California's new congressional map</h1>
-    <p class="sub">52 districts under Proposition 50 · House elections, November 3, 2026</p>
+    <p class="sub">52 districts under Proposition 50 · House results, November 3, 2026 · votes are still being counted</p>
   </div>
-  <div class="strip" id="strip" role="group" aria-label="All 52 districts by race rating"></div>
+  <div class="strip" id="strip" role="group" aria-label="All 52 districts, colored by the selected view"></div>
   <div class="controls">
     <label class="ctl"><span>Color by</span>
       <select id="mode">
-        <option value="rating">race rating</option>
+        <option value="result">election results</option>
         <option value="flip">change from 2021 map</option>
-        <option value="margin">favored party</option>
+        <option value="rating">pre-election rating</option>
+        <option value="margin">pre-election favorite</option>
       </select>
     </label>
     <label class="ctl check"><input type="checkbox" id="overlay"> <span>2021 boundaries</span></label>
@@ -48,10 +49,10 @@
 <footer class="foot">
   <span>Compiled by Christine Corry from public sources. "Favored" summarizes the Cook, Sabato and Inside Elections ratings and primary results; it is a summary of public data, not a prediction or endorsement. Candidate descriptions paraphrase each campaign's own website or voter-guide statement.</span>
   <span>Boundaries: <a href="https://aelc.assembly.ca.gov/proposed-congressional-map">AB 604 (Prop 50)</a> and the <a href="https://wedrawthelines.ca.gov/final-maps/">2021 Citizens Redistricting Commission</a>.</span>
-  <span>Race data compiled from Ballotpedia, Wikipedia, Cook Political Report, Sabato's Crystal Ball and Inside Elections; <span id="updated"></span>.</span>
+  <span>Race data compiled from Ballotpedia, Wikipedia, Cook Political Report, Sabato's Crystal Ball and Inside Elections. Results and race calls from NBC News; figures are unofficial until the <a href="https://electionresults.sos.ca.gov/">Secretary of State</a> certifies them on December 11; <span id="updated"></span>.</span>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-<script src="app.js?v=16"></script>
+<script src="app.js?v=18"></script>
 </body>
 </html>
